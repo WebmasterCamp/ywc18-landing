@@ -1,6 +1,6 @@
-# ywc17-landing
+# ywc18-landing
 test
-> YWC17 Landing Page
+> YWC18 Landing Page
 
 ## Build Setup
 
