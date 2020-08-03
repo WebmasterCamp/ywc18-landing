@@ -3,7 +3,7 @@
   "hosting": [
     {
       "target": "landing",
-      "public": "dist",
+      "public": "landing",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -18,7 +18,7 @@
     },
     {
       "target": "landing-dev",
-      "public": "dist",
+      "public": "landing",
       "ignore": [
         "firebase.json",
         "**/.*",
