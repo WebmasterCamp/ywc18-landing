@@ -1,7 +1,6 @@
 <template>
   <div>
     <Hero />
-    <GradientButton link href="https://www.facebook.com/ywcth/live" target="_blank" theme="yellow" class="cta-button">ถ่ายทอดสด</GradientButton>
     <WhatIsYWC />
     <Majors />
     <Location />
