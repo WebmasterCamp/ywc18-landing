@@ -2,7 +2,11 @@
   <section class="ywc18-hero">
     <div class="container">
       <div class="logo__wrapper">
-        <img src="images/ywc18/ywc18-logo.png" class="ywc18-logo" alt="" />
+        <Picture
+          fileName="ywc18/ywc18-logo"
+          alt="18th Young Webmaster Camp"
+          class="ywc18-logo"
+        />
       </div>
       <p class="coming-soon">COMING SOON</p>
 
@@ -27,9 +31,9 @@
 </template>
 
 <script>
-// import Picture from '~/components/Picture.vue'
+import Picture from '~/components/Picture.vue'
 export default {
-  components: {},
+  components: { Picture },
 }
 </script>
 
