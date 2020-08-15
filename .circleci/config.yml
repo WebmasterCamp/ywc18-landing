@@ -7,8 +7,8 @@ jobs:
     working_directory: ~/repo/
     branches:
       only:
-        - develop
-        - master
+        - "ywc18/staging"
+        - "ywc18/master"
     steps:
       - checkout:
           path: ~/repo
@@ -33,9 +33,9 @@ jobs:
           name: Deploy
           command: |
             ./node_modules/.bin/firebase use ywc18-landing
-            if [ "${CIRCLE_BRANCH}" == "develop" ]; then
+            if [ "${CIRCLE_BRANCH}" == "ywc18/staging" ]; then
               ./node_modules/.bin/firebase deploy --non-interactive --only hosting:landing-dev --token=$FIREBASE_TOKEN
             fi
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            if [ "${CIRCLE_BRANCH}" == "ywc18/master" ]; then
               ./node_modules/.bin/firebase deploy --non-interactive --only hosting:landing --token=$FIREBASE_TOKEN
             fi
