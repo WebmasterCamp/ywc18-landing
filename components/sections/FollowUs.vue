@@ -3,12 +3,20 @@
     <SectionHead title="Follow Us" size="sm" />
     <Grid>
       <GridCol>
-        <SocialBtn href="https://www.facebook.com/ywcth" target="_blank" title="Facebook">
+        <SocialBtn
+          href="https://www.facebook.com/ywcth"
+          target="_blank"
+          title="Facebook"
+        >
           <SocialIcon fileName="facebook" alt="Facebook" />
         </SocialBtn>
       </GridCol>
       <GridCol>
-        <SocialBtn href="https://twitter.com/ywcth" target="_blank" title="Twitter">
+        <SocialBtn
+          href="https://twitter.com/ywcth"
+          target="_blank"
+          title="Twitter"
+        >
           <SocialIcon fileName="twitter" alt="Twitter" />
         </SocialBtn>
       </GridCol>
@@ -18,7 +26,11 @@
         </SocialBtn>
       </GridCol>
       <GridCol>
-        <SocialBtn href="https://instagram.com/ywcth" target="_blank" title="Instagram">
+        <SocialBtn
+          href="https://instagram.com/ywcth"
+          target="_blank"
+          title="Instagram"
+        >
           <SocialIcon fileName="instagram" alt="Instagram" />
         </SocialBtn>
       </GridCol>
@@ -37,7 +49,7 @@ const Grid = styled.div`
   max-width: 416px;
   margin: 0 auto;
 
-  @media(max-width:768px) {
+  @media (max-width: 768px) {
     grid-gap: 32px 32px;
     grid-template-columns: auto auto;
     max-width: 192px;
@@ -56,7 +68,7 @@ const SocialBtn = styled.a`
   height: 80px;
   border-radius: 50%;
   user-select: none;
-  transition: all .15s;
+  transition: all 0.15s;
 
   &:hover {
     color: black;
@@ -82,8 +94,8 @@ export default {
     GridCol,
     SectionHead,
     SocialBtn,
-    SocialIcon
-  }
+    SocialIcon,
+  },
 }
 </script>
 

@@ -1,10 +1,12 @@
 # ywc18-landing
+
 test
+
 > YWC18 Landing Page
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm run install
 
