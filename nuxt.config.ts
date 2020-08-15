@@ -6,15 +6,15 @@ const config = {
   ** Headers of the page
   */
   head: {
-    title: '17th Young Webmaster Camp',
+    title: '18th Young Webmaster Camp',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Young Webmaster Camp ครั้งที่ 17 “Social Change, Arrange The World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด' },
+      { hid: 'description', name: 'description', content: 'Young Webmaster Camp ครั้งที่ 18 “New normal New web New world” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด' },
 
       { name: 'og:type', content: 'website' },
-      { hid: 'og:title', name: 'og:title', content: '17th Young Webmaster Camp' },
-      { hid: 'og:description', name: 'og:description', content: 'Young Webmaster Camp ครั้งที่ 17 “Social Change, Arrange The World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด' },
+      { hid: 'og:title', name: 'og:title', content: '18th Young Webmaster Camp' },
+      { hid: 'og:description', name: 'og:description', content: 'Young Webmaster Camp ครั้งที่ 18 “New normal New web New world” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด' },
       { name: 'og:image', content: 'https://ywc17.ywc.in.th/images/ogImage.png' },
       { name: 'article:author', content: 'https://www.facebook.com/ywcth' },
 
@@ -24,7 +24,7 @@ const config = {
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Sarabun:300,400,700&display=swap&subset=thai' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Barlow:400,500,600|Sarabun:300,400,700&display=swap&subset=thai' }
     ]
   },
   /*
@@ -68,8 +68,8 @@ const config = {
       pixelId: '852229261558709',
       disabled: false
     }],
-    ['@netsells/nuxt-hotjar', { 
-      id: '1470912', 
+    ['@netsells/nuxt-hotjar', {
+      id: '1470912',
       sv: '6',
     }],
     ['vue-scrollto/nuxt', { duration: 600 }]
