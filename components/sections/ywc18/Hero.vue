@@ -2,27 +2,24 @@
   <section class="ywc18-hero">
     <div class="container">
       <div class="logo__wrapper">
-        <Picture
-          fileName="ywc18/ywc18-logo"
-          alt="18th Young Webmaster Camp"
-          class="ywc18-logo"
-        />
+        <Picture fileName="ywc18/ywc18-logo" alt="18th Young Webmaster Camp" class="ywc18-logo" />
       </div>
       <p class="coming-soon">COMING SOON</p>
 
       <div class="slogan">
-        <img src="images/ywc18/arrow-left.svg" class="arrow-left" alt="" />
+        <img src="images/ywc18/arrow-left.svg" class="arrow-left" alt />
         <span>For all webmasters</span>
-        <img src="images/ywc18/arrow-right.svg" class="arrow-right" alt="" />
+        <img src="images/ywc18/arrow-right.svg" class="arrow-right" alt />
         <p>Young Webmaster Camp is on its way</p>
       </div>
 
-      <div class="what-is-ywc">
-        YWC <span class="secondary-text">คืออะไร</span>
-      </div>
+      <a class="what-is-ywc" href="https://ywc17.ywc.in.th">
+        YWC
+        <span class="secondary-text">คืออะไร ?</span>
+      </a>
 
       <div class="copyright">
-        <p>copyright 2003 - 2020. Young Webmaster Camp.</p>
+        <p class="copyright__firstline">copyright 2003 - 2020. Young Webmaster Camp.</p>
         <p>in associate with thai webmaster association. all right reserved.</p>
       </div>
     </div>
@@ -33,7 +30,7 @@
 <script>
 import Picture from '~/components/Picture.vue'
 export default {
-  components: { Picture },
+  components: { Picture }
 }
 </script>
 
@@ -43,10 +40,11 @@ export default {
     url(/images/ywc18/bg/hero.png);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: top left, bottom right, center center;
-  background-size: 400px, 400px, cover;
+  background-size: 60%, 45%, cover;
   width: 100%;
   height: 100vh;
   padding: 0;
+  margin: 0;
 
   .logo__wrapper {
     padding-right: 28px;
@@ -79,7 +77,7 @@ export default {
   }
 
   .slogan {
-    margin-bottom: 44px;
+    margin-bottom: 40px;
     span,
     p {
       font-size: 22px;
@@ -97,7 +95,7 @@ export default {
     }
   }
   .coming-soon {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     font-weight: 600;
     font-size: 22px;
     line-height: 27px;
@@ -111,6 +109,84 @@ export default {
     height: 100%;
   }
   .what-is-ywc {
+    width: 260px;
+    height: 74px;
+    background: url(/images/ywc18/button/bg-cta.svg),
+      url(/images/ywc18/button/bg-dots.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    background-size: 260px, 260px;
+
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 62px;
+    letter-spacing: 0.085em;
+    color: #f2f6fc;
+    margin: 0 auto 24px;
+    padding-right: 12px;
+    span {
+      font-family: Anuphan;
+      font-weight: 500;
+    }
+  }
+
+  // Tablet
+  @media screen and (max-width: 428px) {
+    .ywc18-logo {
+      max-width: 50%;
+    }
+  }
+
+  // Mobile screen
+  @media screen and (max-width: 428px) {
+    background: url(/images/ywc18/bg/paper1-sm.png),
+      url(/images/ywc18/bg/paper2-sm.png), url(/images/ywc18/bg/hero.png);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: top left, bottom right, center center;
+    background-size: 100%, 100%, cover;
+    padding: 115px 0;
+    height: auto;
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+    }
+
+    .logo__wrapper {
+      padding: 25px 44px;
+      .ywc18-logo {
+        max-width: 100%;
+      }
+    }
+    .slogan {
+      margin-bottom: 24px;
+      p,
+      span {
+        font-size: 17px;
+      }
+      p {
+        width: 235px;
+        margin: 0 auto;
+      }
+    }
+    .coming-soon {
+      margin: 0 0 22px 0;
+    }
+
+    .copyright {
+      margin-bottom: 48px;
+      p {
+        line-height: 18px;
+      }
+
+      &__firstline {
+        width: 240px;
+        margin: 0 auto !important;
+      }
+    }
+    .what-is-ywc {
+      transform: scale(0.8);
+    }
   }
 }
 </style>
