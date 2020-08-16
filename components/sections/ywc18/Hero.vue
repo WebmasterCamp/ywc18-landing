@@ -23,7 +23,17 @@
         <p>in associate with thai webmaster association. all right reserved.</p>
       </div>
     </div>
-    <div class="social-icon__wrapper"></div>
+    <div class="social-icon__wrapper">
+      <a href="https://fb.com/ywcth" alt="Facebook YWC" target="_blank">
+        <Picture fileName="ywc18/icon/ywc_facebook.png" />
+      </a>
+      <a href="https://twitter.com/ywcth" alt="Twitter YWC" target="_blank">
+        <Picture fileName="ywc18/icon/ywc_twitter.png" />
+      </a>
+      <a href="https://instagram.com/ywcth" alt="Instagram YWC" target="_blank">
+        <Picture fileName="ywc18/icon/ywc_instagram.png" />
+      </a>
+    </div>
   </section>
 </template>
 
@@ -45,12 +55,25 @@ export default {
   height: 100vh;
   padding: 0;
   margin: 0;
+  position: relative;
 
   .logo__wrapper {
     padding-right: 28px;
     .ywc18-logo {
       width: 530px;
       margin: 0 auto;
+    }
+  }
+
+  .social-icon {
+    &__wrapper {
+      position: absolute;
+      top: 66px;
+      right: 92px;
+      display: grid;
+      grid-template-columns: 53px 53px 53px;
+      grid-template-rows: 53px;
+      column-gap: 10px;
     }
   }
 
