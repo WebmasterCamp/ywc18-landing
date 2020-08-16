@@ -131,9 +131,14 @@ export default {
   }
 
   // Tablet
-  @media screen and (max-width: 428px) {
+  @media screen and (max-width: 1024px) {
     .ywc18-logo {
-      max-width: 50%;
+      img {
+        max-width: 50%;
+      }
+    }
+    .copyright {
+      margin-bottom: 48px;
     }
   }
 
@@ -149,13 +154,15 @@ export default {
     .container {
       display: flex;
       flex-direction: column;
-      justify-content: start;
+      justify-content: flex-start;
     }
 
     .logo__wrapper {
       padding: 25px 44px;
       .ywc18-logo {
-        max-width: 100%;
+        img {
+          max-width: 100%;
+        }
       }
     }
     .slogan {
@@ -174,7 +181,6 @@ export default {
     }
 
     .copyright {
-      margin-bottom: 48px;
       p {
         line-height: 18px;
       }
