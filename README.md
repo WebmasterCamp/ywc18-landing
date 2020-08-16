@@ -1,10 +1,22 @@
 # ywc18-landing
-test
+
+# Branch
+
+YWC17
+staging : `develop`
+production : `master`
+
+YWC18
+staging : `ywc18/staging`
+production : `ywc18/master`
+
+To add new section or anything, Please checkout from staging branch
+
 > YWC18 Landing Page
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm run install
 

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Y18Hero />
     <Hero />
     <WhatIsYWC />
     <Majors />
@@ -16,14 +17,14 @@
 </template>
 
 <script>
-import GradientButton from '~/components/GradientButton'
+import Y18Hero from '~/components/sections/ywc18/Hero.vue'
 import WhatIsYWC from '~/components/sections/WhatIsYWC'
 import Hero from '~/components/sections/Hero'
 import Timeline from '~/components/sections/Timeline.vue'
 export default {
   components: {
+    Y18Hero,
     Hero,
-    GradientButton,
     WhatIsYWC,
     Location: () => import('~/components/sections/Location'),
     Timeline,
@@ -34,8 +35,8 @@ export default {
     Sponsor: () => import('~/components/sections/Sponsor'),
     Gallery: () => import('~/components/sections/Gallery'),
     PR: () => import('~/components/sections/PR'),
-    Footer: () => import('~/components/sections/Footer')
-  }
+    Footer: () => import('~/components/sections/Footer'),
+  },
 }
 </script>
 
@@ -51,18 +52,26 @@ export default {
   margin: 0 auto;
   animation: cta 0.9s alternate infinite ease-in;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .cta-button {
     transform: scale(1.1);
     animation: cta-mobile 0.9s alternate infinite ease-in;
   }
 }
 @keyframes cta {
-  0%   {transform: scale(1.3);}
-  100% {transform: scale(1.5);}
+  0% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1.5);
+  }
 }
 @keyframes cta-mobile {
-  0%   {transform: scale(1.1);}
-  100% {transform: scale(1.3);}
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
 }
 </style>

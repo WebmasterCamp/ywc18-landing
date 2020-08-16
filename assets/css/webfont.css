@@ -17,3 +17,11 @@
   font-weight: bold;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Anuphan';
+  src: url('~assets/fonts/Anuphan-Medium.ttf') format('truetype'),
+    url('~assets/fonts/Anuphan-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}

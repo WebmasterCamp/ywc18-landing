@@ -1,12 +1,12 @@
-$primary-color: #E1426F;
+$primary-color: #ff5d29;
 
-::-moz-selection{
+::-moz-selection {
   color: #fff;
-  background: $primary-color
+  background: $primary-color;
 }
-::selection{
+::selection {
   color: #fff;
-  background: $primary-color
+  background: $primary-color;
 }
 
 @media print {
