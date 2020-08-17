@@ -25,7 +25,7 @@
     </div>
     <div class="social-icon__wrapper">
       <a href="https://fb.com/ywcth" alt="Facebook YWC" target="_blank">
-        <Picture fileName="ywc18/icon/ywc_facebook.png" />
+        <Picture fileName="ywc18/icon/ywc_facebook_hover.svg" />
       </a>
       <a href="https://twitter.com/ywcth" alt="Twitter YWC" target="_blank">
         <Picture fileName="ywc18/icon/ywc_twitter.png" />
