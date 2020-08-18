@@ -15,16 +15,16 @@ const config = {
       { name: 'og:type', content: 'website' },
       { hid: 'og:title', name: 'og:title', content: '18th Young Webmaster Camp' },
       { hid: 'og:description', name: 'og:description', content: 'Young Webmaster Camp ครั้งที่ 18 “New normal New web New world” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด' },
-      { name: 'og:image', content: 'https://ywc17.ywc.in.th/images/ogImage.png' },
+      { name: 'og:image', content: 'https://ywc18.ywc.in.th/images/ywc18/ogImage.jpg' },
       { name: 'article:author', content: 'https://www.facebook.com/ywcth' },
 
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:image:src', content: 'https://ywc17.ywc.in.th/images/ogImage.png' }
+      { name: 'twitter:image:src', content: 'https://ywc18.ywc.in.th/images/ywc18/ogImage.jpg' }
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Barlow:400,500,600|Sarabun:300,400,700&display=swap&subset=thai' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Barlow:400,500,600&display=swap&subset=thai' }
     ]
   },
   /*
