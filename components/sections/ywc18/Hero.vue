@@ -2,7 +2,11 @@
   <section class="ywc18-hero">
     <div class="container">
       <div class="logo__wrapper">
-        <Picture fileName="ywc18/ywc18-logo" alt="18th Young Webmaster Camp" class="ywc18-logo" />
+        <Picture
+          fileName="ywc18/ywc18-logo.svg"
+          alt="18th Young Webmaster Camp"
+          class="ywc18-logo"
+        />
       </div>
       <p class="coming-soon">COMING SOON</p>
 
@@ -19,19 +23,33 @@
       </a>
 
       <div class="copyright">
-        <p class="copyright__firstline">copyright 2003 - 2020. Young Webmaster Camp.</p>
+        <p class="copyright__firstline">
+          copyright 2003 - 2020. Young Webmaster Camp.
+        </p>
         <p>in associate with thai webmaster association. all right reserved.</p>
       </div>
     </div>
     <div class="social-icon__wrapper">
-      <a href="https://fb.com/ywcth" alt="Facebook YWC" target="_blank">
-        <Picture fileName="ywc18/icon/ywc_facebook_hover.svg" />
+      <a
+        href="https://fb.com/ywcth"
+        alt="Facebook YWC"
+        target="_blank"
+        class="social-icon__facebook"
+      >
       </a>
-      <a href="https://twitter.com/ywcth" alt="Twitter YWC" target="_blank">
-        <Picture fileName="ywc18/icon/ywc_twitter.png" />
+      <a
+        href="https://twitter.com/ywcth"
+        alt="Twitter YWC"
+        target="_blank"
+        class="social-icon__twitter"
+      >
       </a>
-      <a href="https://instagram.com/ywcth" alt="Instagram YWC" target="_blank">
-        <Picture fileName="ywc18/icon/ywc_instagram.png" />
+      <a
+        href="https://instagram.com/ywcth"
+        alt="Instagram YWC"
+        target="_blank"
+        class="social-icon__instagram"
+      >
       </a>
     </div>
   </section>
@@ -40,14 +58,14 @@
 <script>
 import Picture from '~/components/Picture.vue'
 export default {
-  components: { Picture }
+  components: { Picture },
 }
 </script>
 
 <style lang="scss">
 .ywc18-hero {
   background: url(/images/ywc18/bg/paper1.png), url(/images/ywc18/bg/paper2.png),
-    url(/images/ywc18/bg/hero.png);
+    url(/images/ywc18/bg/hero.jpg);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: top left, bottom right, center center;
   background-size: 60%, 45%, cover;
@@ -71,9 +89,55 @@ export default {
       top: 66px;
       right: 92px;
       display: grid;
-      grid-template-columns: 53px 53px 53px;
-      grid-template-rows: 53px;
+      grid-template-columns: 60px 60px 60px;
+      grid-template-rows: 60px;
       column-gap: 10px;
+    }
+
+    &__facebook {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: url(~assets/images/ywc18/icon/ywc_facebook.svg),
+        url(~assets/images/ywc18/icon/ywc_facebook_hover.svg);
+      background-position: center center, center center;
+      background-repeat: no-repeat, no-repeat;
+      background-size: auto, 0;
+      &:hover {
+        background: url(~assets/images/ywc18/icon/ywc_facebook_hover.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+    &__twitter {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: url(~assets/images/ywc18/icon/ywc_twitter.svg),
+        url(~assets/images/ywc18/icon/ywc_twitter_hover.svg);
+      background-position: center center, center center;
+      background-repeat: no-repeat, no-repeat;
+      background-size: auto, 0;
+      &:hover {
+        background: url(~assets/images/ywc18/icon/ywc_twitter_hover.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+    &__instagram {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: url(~assets/images/ywc18/icon/ywc_instagram.svg),
+        url(~assets/images/ywc18/icon/ywc_instagram_hover.svg);
+      background-position: center center, center center;
+      background-repeat: no-repeat, no-repeat;
+      background-size: auto, 0;
+      &:hover {
+        background: url(~assets/images/ywc18/icon/ywc_instagram_hover.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
     }
   }
 
@@ -135,11 +199,11 @@ export default {
     width: 260px;
     height: 74px;
     background: url(/images/ywc18/button/bg-cta.svg),
-      url(/images/ywc18/button/bg-dots.svg);
-    background-repeat: no-repeat, no-repeat;
-    background-position: top left, bottom right;
-    background-size: 260px, 260px;
-
+      url(/images/ywc18/button/bg-dots.png),
+      url(/images/ywc18/button/bg-cta_hover.svg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: top left, bottom right, center center;
+    background-size: 260px, 260px, 0;
     font-weight: 500;
     font-size: 26px;
     line-height: 62px;
@@ -147,6 +211,16 @@ export default {
     color: #f2f6fc;
     margin: 0 auto 24px;
     padding-right: 12px;
+    text-decoration: none;
+
+    &:hover {
+      background: url(/images/ywc18/button/bg-cta_hover.svg),
+        url(/images/ywc18/button/bg-dots.png);
+      background-repeat: no-repeat, no-repeat;
+      background-position: top left, bottom right;
+      background-size: 260px, 260px;
+    }
+
     span {
       font-family: Anuphan;
       font-weight: 500;
@@ -162,6 +236,10 @@ export default {
     }
     .copyright {
       margin-bottom: 48px;
+    }
+    .social-icon__wrapper {
+      top: 50px;
+      right: 60px;
     }
   }
 
@@ -181,7 +259,7 @@ export default {
     }
 
     .logo__wrapper {
-      padding: 25px 44px;
+      padding: 8px 44px 25px;
       .ywc18-logo {
         img {
           max-width: 100%;
@@ -215,6 +293,12 @@ export default {
     }
     .what-is-ywc {
       transform: scale(0.8);
+    }
+
+    .social-icon__wrapper {
+      transform: scale(0.55);
+      top: 36px;
+      right: 0;
     }
   }
 }
