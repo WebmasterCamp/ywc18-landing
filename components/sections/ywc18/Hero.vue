@@ -70,10 +70,12 @@ export default {
   background-position: top left, bottom right, center center;
   background-size: 60%, 45%, cover;
   width: 100%;
-  height: 100vh;
-  padding: 0;
+  min-height: calc(100vh - 230px);
+  padding: 115px 0;
   margin: 0;
   position: relative;
+  display: flex;
+  align-items: center;
 
   .logo__wrapper {
     padding-right: 28px;
@@ -240,6 +242,11 @@ export default {
     .social-icon__wrapper {
       top: 50px;
       right: 60px;
+    }
+    .social-icon__wrapper {
+      transform: scale(0.8);
+      top: 36px;
+      right: 24px;
     }
   }
 
