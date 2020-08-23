@@ -14,7 +14,7 @@ const config = {
         hid: 'description',
         name: 'description',
         content:
-          'Young Webmaster Camp ครั้งที่ 18 “New Normal New Web New World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
+          'Young Webmaster Camp ครั้งที่ 18 “New Normal - New Web - New World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
       },
 
       { name: 'og:type', content: 'website' },
@@ -27,7 +27,7 @@ const config = {
         hid: 'og:description',
         name: 'og:description',
         content:
-          'Young Webmaster Camp ครั้งที่ 18 “New Normal New Web New World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
+          'Young Webmaster Camp ครั้งที่ 18 “New Normal - New Web - New World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
       },
       {
         name: 'og:image',
@@ -47,7 +47,7 @@ const config = {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Barlow:400,500,600&display=swap&subset=thai'
+          'https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap'
       }
     ]
   },
@@ -142,7 +142,7 @@ const config = {
     /*
      ** You can extend webpack config here
      */
-    extend(config: NuxtConfiguration, ctx: any) {
+    extend (config: NuxtConfiguration, ctx: any) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
