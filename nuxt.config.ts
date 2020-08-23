@@ -33,6 +33,9 @@ const config = {
         property: 'og:image',
         content: 'https://ywc18.ywc.in.th/images/ywc18/ogImage.jpg'
       },
+      { property: 'og:image:type', content: 'image/jpeg' },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
       { name: 'article:author', content: 'https://www.facebook.com/ywcth' },
 
       { name: 'twitter:card', content: 'summary_large_image' },
