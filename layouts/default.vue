@@ -8,7 +8,7 @@ export default {
   head () {
     return {
       meta: [
-        { name: 'og:url', content: `https://ywc17.ywc.in.th${this.$route.path}` }
+        { name: 'og:url', content: `https://ywc18.ywc.in.th${this.$route.path}` }
       ]
     }
   },
