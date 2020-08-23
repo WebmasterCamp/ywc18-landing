@@ -12,25 +12,25 @@ const config = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
-        name: 'description',
+        property: 'description',
         content:
           'Young Webmaster Camp ครั้งที่ 18 “New Normal - New Web - New World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
       },
 
-      { name: 'og:type', content: 'website' },
+      { property: 'og:type', content: 'website' },
       {
         hid: 'og:title',
-        name: 'og:title',
+        property: 'og:title',
         content: '18th Young Webmaster Camp'
       },
       {
         hid: 'og:description',
-        name: 'og:description',
+        property: 'og:description',
         content:
           'Young Webmaster Camp ครั้งที่ 18 “New Normal - New Web - New World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
       },
       {
-        name: 'og:image',
+        property: 'og:image',
         content: 'https://ywc18.ywc.in.th/images/ywc18/ogImage.jpg'
       },
       { name: 'article:author', content: 'https://www.facebook.com/ywcth' },
