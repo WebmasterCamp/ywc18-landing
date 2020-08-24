@@ -14,8 +14,14 @@ const config = {
         hid: 'description',
         property: 'description',
         content:
-          'Young Webmaster Camp ครั้งที่ 18 “New Normal - New Web - New World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
+          'Young Webmaster Camp ครั้งที่ 18 - ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
       },
+      // {
+      //   hid: 'description',
+      //   property: 'description',
+      //   content:
+      //     'Young Webmaster Camp ครั้งที่ 18 “New Normal - New Web - New World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
+      // },
 
       { property: 'og:type', content: 'website' },
       {
@@ -27,8 +33,14 @@ const config = {
         hid: 'og:description',
         property: 'og:description',
         content:
-          'Young Webmaster Camp ครั้งที่ 18 “New Normal - New Web - New World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
+          'Young Webmaster Camp ครั้งที่ 18 - ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
       },
+      // {
+      //   hid: 'og:description',
+      //   property: 'og:description',
+      //   content:
+      //     'Young Webmaster Camp ครั้งที่ 18 “New Normal - New Web - New World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
+      // },
       {
         property: 'og:image',
         content: 'https://ywc18.ywc.in.th/images/ywc18/ogImage.jpg'
