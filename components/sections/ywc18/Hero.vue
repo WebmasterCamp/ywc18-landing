@@ -105,11 +105,11 @@ export default {
       background-position: center center, center center;
       background-repeat: no-repeat, no-repeat;
       background-size: auto, 0;
-      &:hover {
+      /* &:hover {
         background: url(~assets/images/ywc18/icon/ywc_facebook_hover.svg);
         background-repeat: no-repeat;
         background-position: center center;
-      }
+      } */
     }
     &__twitter {
       width: 100%;
@@ -120,11 +120,11 @@ export default {
       background-position: center center, center center;
       background-repeat: no-repeat, no-repeat;
       background-size: auto, 0;
-      &:hover {
+      /* &:hover {
         background: url(~assets/images/ywc18/icon/ywc_twitter_hover.svg);
         background-repeat: no-repeat;
         background-position: center center;
-      }
+      } */
     }
     &__instagram {
       width: 100%;
@@ -135,11 +135,11 @@ export default {
       background-position: center center, center center;
       background-repeat: no-repeat, no-repeat;
       background-size: auto, 0;
-      &:hover {
+      /* &:hover {
         background: url(~assets/images/ywc18/icon/ywc_instagram_hover.svg);
         background-repeat: no-repeat;
         background-position: center center;
-      }
+      } */
     }
   }
 
