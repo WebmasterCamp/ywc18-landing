@@ -1,12 +1,20 @@
 <template>
   <ThemeProvider>
     <InfoContainer class="agenda-info">
-      <h2>กำหนดการโครงการอบรมเชิงปฏิบัติการ<br class="mdBreak"> Young Webmaster Camp ครั้งที่ 17</h2>
+      <h2>
+        กำหนดการโครงการอบรมเชิงปฏิบัติการ<br class="mdBreak" />
+        Young Webmaster Camp ครั้งที่ 17
+      </h2>
       <h3>
-        วันที่ 26 - 29 ธันวาคม 2562<br>
+        วันที่ 26 - 29 ธันวาคม 2562<br />
         ณ คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
       </h3>
-      <AgendaTable v-for="{ name, items } in AGENDA" :key="name" :name="name" :items="items" />
+      <AgendaTable
+        v-for="{ name, items } in AGENDA"
+        :key="name"
+        :name="name"
+        :items="items"
+      />
     </InfoContainer>
     <Footer />
   </ThemeProvider>
@@ -20,27 +28,45 @@ import { AGENDA } from '~/utils/const'
 
 export default {
   layout: 'secondary',
-  head () {
+  head() {
     return {
       title: `กำหนดการโครงการ - 17th Young Webmaster Camp`,
       meta: [
-        { hid: 'og:title', name: 'og:title', content: `กำหนดการโครงการ - 17th Young Webmaster Camp` },
-        { hid: 'og:description', name: 'og:description', content: 'กำหนดการโครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 17 วันที่ 26 - 29 ธันวาคม 2562 ณ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง' },
-        { hid: 'description', name: 'description', content: 'กำหนดการโครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 17 วันที่ 26 - 29 ธันวาคม 2562 ณ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง' }
-      ]
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: `กำหนดการโครงการ - 17th Young Webmaster Camp`,
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content:
+            'กำหนดการโครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 17 วันที่ 26 - 29 ธันวาคม 2562 ณ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง',
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'กำหนดการโครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 17 วันที่ 26 - 29 ธันวาคม 2562 ณ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง',
+        },
+      ],
     }
   },
   components: {
     ThemeProvider,
     InfoContainer,
     AgendaTable,
-    Footer
+    Footer,
   },
-  data () {
+  data() {
     return {
-      AGENDA
+      AGENDA,
     }
-  }
+  },
+
+  middleware({ redirect }) {
+    return redirect('/')
+  },
 }
 </script>
 <style lang="scss">
@@ -58,7 +84,7 @@ export default {
   }
   .agenda-info {
     font-size: 18px;
-    @media screen and (max-width:768px) {
+    @media screen and (max-width: 768px) {
       font-size: 16px;
     }
     h3 {
@@ -69,7 +95,8 @@ export default {
     h2 {
       line-height: 1.3;
     }
-    h2:first-of-type, h3:first-of-type {
+    h2:first-of-type,
+    h3:first-of-type {
       margin-top: 0px;
       text-align: center;
     }
@@ -95,7 +122,7 @@ export default {
       margin: 0;
       padding: 0;
     }
-    .ant-table { 
+    .ant-table {
       font-size: 16px;
     }
   }

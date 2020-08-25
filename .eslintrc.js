@@ -20,5 +20,7 @@ module.exports = {
     'vue/singleline-html-element-content-newline': 'off',
     'vue/attribute-hyphenation': 'off',
     'comma-dangle': 'off',
+    'space-before-function-paren': 'off',
+    'arrow-parens': 'off',
   },
 }
