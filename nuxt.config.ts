@@ -132,20 +132,20 @@ const config = {
    ** Build configuration
    */
   generate: {
-    fallback: true, // For Firebase Hosting, see https://nuxtjs.org/api/configuration-generate#fallback
+    fallback: false, // For Firebase Hosting, see https://nuxtjs.org/api/configuration-generate#fallback
     routes: [
-      '/interview',
-      '/interview/content',
-      '/interview/design',
-      '/interview/marketing',
-      '/interview/programming',
-      '/announcement',
-      '/announcement/majors',
-      '/announcement/majors/content',
-      '/announcement/majors/design',
-      '/announcement/majors/marketing',
-      '/announcement/majors/programming',
-      '/agenda'
+      // '/interview',
+      // '/interview/content',
+      // '/interview/design',
+      // '/interview/marketing',
+      // '/interview/programming',
+      // '/announcement',
+      // '/announcement/majors',
+      // '/announcement/majors/content',
+      // '/announcement/majors/design',
+      // '/announcement/majors/marketing',
+      // '/announcement/majors/programming',
+      // '/agenda'
     ]
   },
   build: {
