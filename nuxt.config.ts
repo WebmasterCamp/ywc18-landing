@@ -132,8 +132,9 @@ const config = {
    ** Build configuration
    */
   generate: {
-    fallback: false, // For Firebase Hosting, see https://nuxtjs.org/api/configuration-generate#fallback
+    fallback: true, // For Firebase Hosting, see https://nuxtjs.org/api/configuration-generate#fallback
     routes: [
+      '/sponsor'
       // '/interview',
       // '/interview/content',
       // '/interview/design',

@@ -1,7 +1,22 @@
 <template>
   <div class="secondary" :class="$route.name">
     <section class="container" v-show="!hideLogo">
-      <nuxt-link to="/" class="ywc-logo" title="ไปยังหน้าแรกของ 17th Young Webmaster Camp"><Picture fileName="ywc-logo" alt="17th Young Webmaster Camp" /></nuxt-link>
+      <div class="ywc-logo__wrapper">
+        <nuxt-link
+          to="/"
+          class="ywc-logo"
+          title="ไปยังหน้าแรกของ 18th Young Webmaster Camp"
+          ><Picture
+            fileName="ywc18/ywc18-logo-orange.svg"
+            alt="18th Young Webmaster Camp"
+        /></nuxt-link>
+        <div class="ywc-logo">
+          <Picture
+            fileName="ywc18/ywc18-logo-orange.svg"
+            alt="18th Young Webmaster Camp"
+          />
+        </div>
+      </div>
     </section>
     <nuxt />
   </div>
@@ -10,30 +25,34 @@
 import Picture from '~/components/Picture.vue'
 export default {
   components: {
-    Picture
+    Picture,
   },
-  head () {
+  head() {
     return {
       meta: [
-        { name: 'og:url', content: `https://ywc17.ywc.in.th${this.$route.path}` }
-      ]
+        {
+          name: 'og:url',
+          content: `https://ywc18.ywc.in.th${this.$route.path}`,
+        },
+      ],
     }
   },
-  beforeCreate () {
+  beforeCreate() {
     if (process.client) {
-      document
-        .getElementsByTagName('body')[0]
-        .setAttribute('style', `background: #401b19;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(69.01deg, #C73884 7.27%, #E13C6F 51.46%, #9B308E 95.22%);
+      document.getElementsByTagName('body')[0].setAttribute(
+        'style',
+        `background: #401b19;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(#061625 0%, #061625 100%);
     background-size: cover;
-    background-attachment: fixed;`)
+    background-attachment: fixed;`
+      )
     }
   },
   computed: {
-    hideLogo () {
+    hideLogo() {
       return ['/announcement'].includes(this.$route.path)
-    }
-  }
+    },
+  },
 }
 </script>
 <style lang="scss">
@@ -41,13 +60,21 @@ html {
   min-height: 100%;
 }
 div.secondary {
-  margin-top: 40px;
+  margin-top: 57px;
   section {
     margin-top: 40px;
   }
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-family: 'Maledpan';
   }
+
+  .ywc-logo__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .container {
     max-width: 960px;
     margin: 0 auto;
@@ -55,15 +82,12 @@ div.secondary {
   }
   .ywc-logo {
     display: block;
-    width: 168px;
-    height: 58px;
-    margin: 0 auto;
-    margin-top: 40px;
-    text-align: center;
+    width: 270px;
+    height: auto;
     img {
       @media screen and (max-width: 768px) {
-          width: 126px;
-          height: 43.5px;
+        width: 126px;
+        height: 43.5px;
       }
     }
   }
@@ -77,7 +101,7 @@ div.secondary {
     font-family: 'Maledpan';
     font-weight: normal;
     font-size: 24px;
-    color: #6C6C6C;
+    color: #6c6c6c;
     user-select: none;
     margin: 0;
     margin-top: 10px;
