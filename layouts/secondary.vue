@@ -12,7 +12,7 @@
         /></nuxt-link>
         <div class="ywc-logo">
           <Picture
-            fileName="ywc18/ywc18-logo-orange.svg"
+            fileName="ywc18/ywc18-theme-logo-orange.svg"
             alt="18th Young Webmaster Camp"
           />
         </div>
