@@ -3,24 +3,52 @@
     <Loading v-if="!isInit" />
     <!-- <CenterContainer v-else class="announcement-box">
       <div style="width:90%"></div>
-    </CenterContainer> -->
+    </CenterContainer>-->
     <section class="container" v-else>
       <SectionTitle title="สนับสนุน YWC18" />
+      <InfoContainer class="sponsor-info">
+        <p>มากกว่าสิบปีที่โครงการ Young Webmaster Camp (YWC) ของสมาคมผู้ดูแลเว็บไทยได้พัฒนา บุคลากรด้านออนไลน์และดิจิทัลเข้าสู่วงการออนไลน์ของไทยซึ่งสมาคมฯยังคงมุ่งมั่นที่จะพัฒนาโครงการอย่าง ต่อเนื่อง โดยสำหรับโครงการ YWC ครั้งที่ 18 ในปีนี้นั้น มีกำหนดจัดกิจกรรมระหว่างวันที่ 24 - 27 ธันวาคม 2563 (ไม่ค้างคืน) โดยสถานที่อยู่ระหว่างประสานงาน</p>
+        <p>ในการนี้สมาคมผู้ดูแลเว็บไทย เล็งเห็นถึงวิสัยทัศน์อันดีของหน่วยงานของท่านจึงใคร่ขอความอนุเคราะห์์ ท่านร่วมเป็นผู้สนับสนุนการจัดโครงการ Young Webmaster Camp ครั้งที่ 18 พวกเราเยาวชนผู้ดูแลเว็บไทย รุ่นที่ 17 หวังเป็นอย่างยิ่งว่าจะได้รับความอนุเคราะห์จากท่านและขอขอบพระคุณ ในความอนุเคราะห์ของท่านมา ณ โอกาสนี้</p>
+        <p>
+          หากสนใจสนับสนุนโครงการ Young Webmaster Camp ครั้งที่ 18 สามารถติดต่อสอบถามข้อมูล เพิ่มเติ่มได้ที่ นายณัฐพงศ์ คงลำธาร โทร.
+          <a
+            href="tel:+66894469127"
+          >089-446-9127</a> อีเมล
+          <a href="mailto:ywc@webmaster.or.th">ywc@webmaster.or.th</a>
+        </p>
+      </InfoContainer>
+
+      <SectionTitle title="Package Sponsor" />
+      <InfoContainer class="packages-sponsor">
+        <PackagesWrapper>
+          <SponsorPackage />
+          <SponsorPackage />
+          <SponsorPackage />
+        </PackagesWrapper>
+      </InfoContainer>
     </section>
   </ThemeProvider>
 </template>
 <script>
-import antDesignVueInput from '~/plugins/ant-design-vue-input'
+import styled from 'vue-styled-components'
 import ThemeProvider from '~/components/ThemeProvider.vue'
 import Loading from '~/components/result/Loading.vue'
+import SponsorPackage from '~/components/ywc18/SponsorPackage.vue'
 // import { colorScheme } from '~/utils/color'
 import {
   majors,
   FINALIST_FORM_LINK,
   FINALIST_LOAD_TIME,
-  FINALIST_BANKACCOUNT,
+  FINALIST_BANKACCOUNT
 } from '~/utils/const'
 import { selectText } from '~/utils/dom'
+
+const PackagesWrapper = styled.div`
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 21px;
+`
+
 export default {
   layout: 'secondary',
   head() {
@@ -30,18 +58,20 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: `สนับสนุน - 18th Young Webmaster Camp`,
+          content: `สนับสนุน - 18th Young Webmaster Camp`
         },
         { hid: 'og:description', property: 'og:description', content: '' }, // TODO: Add description
-        { hid: 'description', name: 'description', content: '' }, // TODO: Add description
-      ],
+        { hid: 'description', name: 'description', content: '' } // TODO: Add description
+      ]
     }
   },
   components: {
     ThemeProvider,
     Loading,
+    PackagesWrapper,
+    SponsorPackage,
     SectionTitle: () => import('~/components/ywc18/SectionHead.vue'),
-    // Button: () => import('~/components/result/Button.vue'),
+    InfoContainer: () => import('~/components/InfoContainer.vue')
     // Footer: () => import('~/components/sections/Footer.vue'),
   },
   data() {
@@ -60,7 +90,7 @@ export default {
 
       isFinalistLoading: true,
       statusText: 'ใจเย็น ๆ นะ ระบบยังโหลดไม่เสร็จ',
-      finalistInfo: null,
+      finalistInfo: null
     }
   },
   computed: {
@@ -80,10 +110,9 @@ export default {
         /-/g,
         `<span class="hyphen">-</span>`
       )
-    },
+    }
   },
   created() {
-    antDesignVueInput()
     if (process.client) {
       this.changeTheme()
     }
@@ -123,11 +152,28 @@ export default {
           elm.classList.add('three')
         }, parseInt((68 / 80) * FINALIST_LOAD_TIME))
       })
-    },
-  },
+    }
+  }
 }
 </script>
 <style lang="scss">
+@import '../assets/css/global';
+.sponsor-info {
+  background: #f2f6fc;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
+
+  p {
+    text-indent: 78px;
+    @media screen and (max-width: 576px) {
+      text-indent: 42px;
+    }
+    a {
+      color: #ff5d29;
+      text-decoration: none;
+    }
+  }
+}
+
 .secondary.announcement {
   .mobile {
     display: none;

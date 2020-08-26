@@ -10,10 +10,10 @@
         />
         <template v-if="!finalistInfo">
           <h3>
-            ประกาศผลสัมภาษณ์ <br class="mobile" />Young Webmaster Camp ครั้งที่
+            ประกาศผลสัมภาษณ์
+            <br class="mobile" />Young Webmaster Camp ครั้งที่
             17
-          </h3>
-          กรอกรหัสสัมภาษณ์ของคุณ
+          </h3>กรอกรหัสสัมภาษณ์ของคุณ
           <div class="ref-input">
             <div v-for="idx in [0, 1, 2, 3]" :key="`ref${idx}`">
               <a-input
@@ -30,29 +30,31 @@
               />
             </div>
           </div>
-          <Button :disabled="isCandidateLoading" @click="checkRefCode"
-            >ตรวจสอบผล</Button
-          >
+          <Button :disabled="isCandidateLoading" @click="checkRefCode">ตรวจสอบผล</Button>
         </template>
         <template v-else>
           <h3>
-            ผลสัมภาษณ์ <br class="mobile" />Young Webmaster Camp ครั้งที่ 17
+            ผลสัมภาษณ์
+            <br class="mobile" />Young Webmaster Camp ครั้งที่ 17
           </h3>
           ของ {{ finalistInfo.firstName }} {{ finalistInfo.lastName }} รหัส
           {{ refCode }}
-          <template v-if="isFinalistLoading">
+          <template
+            v-if="isFinalistLoading"
+          >
             <h1 class="themeText">
-              คุณ<span id="notPassText">ไม่</span>ผ่านการคัดเลือก
+              คุณ
+              <span id="notPassText">ไม่</span>ผ่านการคัดเลือก
             </h1>
             <p>{{ statusText }}</p>
           </template>
           <template v-else-if="isPass">
             <h2>ขอแสดงความยินดี</h2>
             <h1 class="themeText" style="margin-top:50px">
-              คุณผ่านการคัดเลือก<span v-if="isReserve"
-                ><br class="mobile" />
-                (ตัวสำรอง)</span
-              >
+              คุณผ่านการคัดเลือก
+              <span v-if="isReserve">
+                <br class="mobile" />(ตัวสำรอง)
+              </span>
             </h1>
 
             <p v-if="isReserve">กรุณารอการติดต่อกลับจากทีมงานภายหลัง</p>
@@ -60,10 +62,9 @@
               <div class="alignLeft">
                 <h3>รายละเอียดการยืนยันสิทธิ์</h3>
                 <p>
-                  เพื่อยืนยันสิทธิ์การเข้าค่าย กรุณา<b>โอนเงินมัดจำ</b> จำนวน
-                  <b class="themeText"
-                    >{{ finalistInfo.verificationAmount.toFixed(2) }} บาท</b
-                  >
+                  เพื่อยืนยันสิทธิ์การเข้าค่าย กรุณา
+                  <b>โอนเงินมัดจำ</b> จำนวน
+                  <b class="themeText">{{ finalistInfo.verificationAmount.toFixed(2) }} บาท</b>
                   เข้าบัญชี
                 </p>
                 <p style="text-align:center">
@@ -72,29 +73,24 @@
                     @mouseover="selectText"
                     @mouseclick="selectText"
                     v-html="FINALIST_BANKACCOUNT_no_html"
-                  ></b
-                  ><br />
-                  ชื่อบัญชี <b>{{ FINALIST_BANKACCOUNT.name }}</b
-                  ><br />
-                  ธนาคาร <b>{{ FINALIST_BANKACCOUNT.bank }}</b>
+                  ></b>
+                  <br />ชื่อบัญชี
+                  <b>{{ FINALIST_BANKACCOUNT.name }}</b>
+                  <br />ธนาคาร
+                  <b>{{ FINALIST_BANKACCOUNT.bank }}</b>
                 </p>
                 <p>ภายในวันศุกร์ที่ 8 พฤศจิกายน เวลา 23:59 น.</p>
               </div>
-              <Button
-                link
-                :href="FINALIST_FORM_LINK(finalistInfo)"
-                target="_blank"
-                >ยืนยันสิทธิ์</Button
-              >
+              <Button link :href="FINALIST_FORM_LINK(finalistInfo)" target="_blank">ยืนยันสิทธิ์</Button>
             </template>
           </template>
           <template v-else>
             <h2>ขอแสดงความเสียใจ</h2>
-            <h1 class="themeText" style="margin-top:50px">
-              คุณไม่ผ่านการคัดเลือก
-            </h1>
+            <h1 class="themeText" style="margin-top:50px">คุณไม่ผ่านการคัดเลือก</h1>
             <p>
-              พลาดโอกาสครั้งนี้อย่าเพิ่งเสียใจ<br />เราเชื่อว่าคุณมีศักยภาพและความสามารถในการพัฒนาตนเอง<br />ปีหน้าฟ้าใหม่
+              พลาดโอกาสครั้งนี้อย่าเพิ่งเสียใจ
+              <br />เราเชื่อว่าคุณมีศักยภาพและความสามารถในการพัฒนาตนเอง
+              <br />ปีหน้าฟ้าใหม่
               (ถ้ายังเข้าหลักเกณฑ์) กลับมาสมัครใหม่อีกครั้งนะ
             </p>
           </template>
@@ -102,9 +98,9 @@
       </div>
     </CenterContainer>
     <div class="more-details">
-      <NuxtLink v-if="!finalistInfo" to="/announcement/majors/"
-        ><b>แสดงรายชื่อทั้งหมด</b></NuxtLink
-      >
+      <NuxtLink v-if="!finalistInfo" to="/announcement/majors/">
+        <b>แสดงรายชื่อทั้งหมด</b>
+      </NuxtLink>
       <Footer />
     </div>
   </ThemeProvider>
@@ -119,7 +115,7 @@ import {
   majors,
   FINALIST_FORM_LINK,
   FINALIST_LOAD_TIME,
-  FINALIST_BANKACCOUNT,
+  FINALIST_BANKACCOUNT
 } from '~/utils/const'
 import { selectText } from '~/utils/dom'
 const isalpha = /^[a-zA-Z]$/
@@ -133,11 +129,11 @@ export default {
         {
           hid: 'og:title',
           name: 'og:title',
-          content: `ประกาศผลสัมภาษณ์ - 17th Young Webmaster Camp`,
+          content: `ประกาศผลสัมภาษณ์ - 17th Young Webmaster Camp`
         },
         { hid: 'og:description', name: 'og:description', content: '' }, // TODO: Add description
-        { hid: 'description', name: 'description', content: '' }, // TODO: Add description
-      ],
+        { hid: 'description', name: 'description', content: '' } // TODO: Add description
+      ]
     }
   },
   components: {
@@ -145,7 +141,7 @@ export default {
     Loading,
     CenterContainer,
     Button: () => import('~/components/result/Button.vue'),
-    Footer: () => import('~/components/sections/Footer.vue'),
+    Footer: () => import('~/components/sections/Footer.vue')
   },
   middleware({ redirect }) {
     return redirect('/')
@@ -166,7 +162,7 @@ export default {
 
       isFinalistLoading: true,
       statusText: 'ใจเย็น ๆ นะ ระบบยังโหลดไม่เสร็จ',
-      finalistInfo: null,
+      finalistInfo: null
     }
   },
   computed: {
@@ -186,7 +182,7 @@ export default {
         /-/g,
         `<span class="hyphen">-</span>`
       )
-    },
+    }
   },
   created() {
     antDesignVueInput()
@@ -300,7 +296,7 @@ export default {
           'ArrowRight',
           'Delete',
           'Enter',
-          'Tab',
+          'Tab'
         ].includes(value)
       ) {
         if (value === 'Enter') {
@@ -341,7 +337,7 @@ export default {
       const refIdx = parseInt(this.ref[2]) * 10 + parseInt(this.ref[3])
 
       let major = ''
-      Object.keys(majors).map((codename) => {
+      Object.keys(majors).map(codename => {
         if (refMajor === majors[codename][2]) {
           major = codename
         }
@@ -396,8 +392,8 @@ export default {
           vm.statusText =
             'เกิดข้อผิดพลาดในการประมวลข้อมูลประกาศผล โปรดลองใหม่อีกครั้ง'
         })
-    },
-  },
+    }
+  }
 }
 </script>
 <style lang="scss">
