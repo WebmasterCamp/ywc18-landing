@@ -67,7 +67,7 @@ div.secondary {
   h1,
   h2,
   h3 {
-    font-family: 'Maledpan';
+    font-family: 'CmPrasanmit';
   }
 
   .ywc-logo__wrapper {
@@ -98,7 +98,7 @@ div.secondary {
     letter-spacing: 0.2em;
     line-height: 1.1;
     text-indent: -0.3em;
-    font-family: 'Maledpan';
+    font-family: 'CmPrasanmit';
     font-weight: normal;
     font-size: 24px;
     color: #6c6c6c;

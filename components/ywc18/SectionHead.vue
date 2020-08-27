@@ -27,7 +27,7 @@ const sizes = {
 const Container = styled('div', { align: String, size: String, color: String })`
   height: ${(props) => sizes[props.size].height}px;
   color: white;
-  font-family: Barlow;
+  font-family: Barlow, Anuphan;
   font-style: normal;
   font-weight: bold;
   font-size: ${(props) => sizes[props.size].fontSize}px;
@@ -48,6 +48,11 @@ const Container = styled('div', { align: String, size: String, color: String })`
     background-position: center center;
     background-size: 324px 75px;
     background-repeat: no-repeat;
+  }
+  @media screen and (max-width: 576px) {
+    background-size: 100% auto;
+    font-size: 32px;
+    line-height: 96px;
   }
 `
 export default {

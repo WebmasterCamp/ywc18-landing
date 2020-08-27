@@ -21,7 +21,7 @@ transition: all 0.3s;
 cursor: pointer;
 user-select: none;
 
-font-family: Maledpan;
+font-family: CmPrasanmit;
 font-weight: bold;
 font-size: 20px;
 text-align: center;
@@ -41,19 +41,19 @@ color: white;
 }
 `
 const Button = styled(`button`)`
-${ButtonStyle}
+  ${ButtonStyle}
 `
 const ButtonLink = styled(`a`)`
-${ButtonStyle}
-text-decoration: none;
+  ${ButtonStyle}
+  text-decoration: none;
 `
 export default {
   components: {
     Button,
-    ButtonLink
+    ButtonLink,
   },
   props: {
-    link: { type: Boolean, default: false }
-  }
+    link: { type: Boolean, default: false },
+  },
 }
 </script>

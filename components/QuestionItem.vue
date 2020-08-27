@@ -8,7 +8,10 @@
         {{ qa.a }}
       </ABox>
       <ToggleBtn class="not-close-zone" @click="toggleAns">
-        <img :src="require(`~/assets/images/${showAns ? 'top':'down'}.png`)" alt="เปิด/ปิด" />
+        <img
+          :src="require(`~/assets/images/${showAns ? 'top' : 'down'}.png`)"
+          alt="เปิด/ปิด"
+        />
       </ToggleBtn>
     </FloatBox>
   </Container>
@@ -19,7 +22,7 @@ import styled from 'vue-styled-components'
 const Container = styled.div`
   position: relative;
   margin-bottom: 40px;
-  @media(max-width:768px) {
+  @media (max-width: 768px) {
     & {
       margin-bottom: 0px;
     }
@@ -27,12 +30,13 @@ const Container = styled.div`
 `
 const QBox = styled.div`
   cursor: pointer;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), #E1426F;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    #e1426f;
   border-radius: 2px;
   border-bottom: 1px solid #622738;
   padding: 24px 16px;
 
-  font-family: 'Maledpan', 'Sarabun';
+  font-family: 'CmPrasanmit', 'Sarabun';
   font-size: 20px;
   line-height: 36px;
   text-align: left;
@@ -41,7 +45,7 @@ const QBox = styled.div`
     margin: 0;
   }
 
-  @media(max-width:768px) {
+  @media (max-width: 768px) {
     & {
       font-size: 18px;
       padding: 12px 16px;
@@ -52,7 +56,7 @@ const FloatBox = styled.div`
   position: absolute;
   z-index: 100;
   width: 100%;
-  @media(max-width:768px) {
+  @media (max-width: 768px) {
     & {
       position: initial;
       z-index: initial;
@@ -60,21 +64,23 @@ const FloatBox = styled.div`
   }
 `
 const ABox = styled.div`
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), #E1426F;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    #e1426f;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 24px 16px;
 
   font-size: 16px;
   text-align: left;
-  
-  @media(max-width:768px) {
+
+  @media (max-width: 768px) {
     & {
       padding: 12px 16px;
     }
   }
 `
 const ToggleBtn = styled.div`
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), #E1426F;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    #e1426f;
   color: #622738;
   border-top: 1px solid #622738;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -83,7 +89,7 @@ const ToggleBtn = styled.div`
   cursor: pointer;
   user-select: none;
 
-  @media(max-width:768px) {
+  @media (max-width: 768px) {
     & {
       padding: 4px;
     }
@@ -95,20 +101,30 @@ export default {
     QBox,
     FloatBox,
     ABox,
-    ToggleBtn
+    ToggleBtn,
   },
   props: {
-    qa: { type: Object, default: () => { return { q: 'Question', a: 'Answer' } } },
+    qa: {
+      type: Object,
+      default: () => {
+        return { q: 'Question', a: 'Answer' }
+      },
+    },
     showAns: { type: Boolean, default: false },
-    selectQ: { type: Function, default: () => { return function () {} } }
+    selectQ: {
+      type: Function,
+      default: () => {
+        return function() {}
+      },
+    },
   },
   methods: {
-    dismissAns () {
+    dismissAns() {
       this.selectQ('')
     },
-    toggleAns () {
+    toggleAns() {
       this.selectQ(this.qa.q)
-    }
-  }
+    },
+  },
 }
 </script>

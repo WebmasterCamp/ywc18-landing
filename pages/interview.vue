@@ -312,10 +312,10 @@ export default {
       margin-bottom: 0;
     }
     button {
-      font-family: 'Maledpan';
+      font-family: 'CmPrasanmit';
     }
     .subheading {
-      font-family: 'Maledpan';
+      font-family: 'CmPrasanmit';
     }
     img {
       max-width: 100%;

@@ -55,12 +55,15 @@ export default styled('div', { name: String })`
     }
   }
   // Table Row Hover Color
+  .ant-table table {
+    font-family: Anuphan;
+  }
   .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
   .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
   .ant-table-thead > tr:hover:not(.ant-table-expanded-row) > td,
   .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
     background: ${(props) =>
-      props.name ? colorScheme[props.name].light : colorScheme.pink.light};
+      props.name ? colorScheme[props.name].light : colorScheme.orange.light};
   }
   // Table Sorter - Inactive Color
   .ant-table-thead
@@ -91,7 +94,7 @@ export default styled('div', { name: String })`
     > tr
     > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover {
     background: ${(props) =>
-      props.name ? colorScheme[props.name].light : colorScheme.pink.light};
+      props.name ? colorScheme[props.name].light : colorScheme.orange.light};
   }
   // Table Filter Active Color
   .ant-table-thead > tr > th .ant-table-filter-selected.anticon-filter {
@@ -121,6 +124,9 @@ export default styled('div', { name: String })`
       props.name ? colorScheme[props.name].normal : colorScheme.pink.normal};
   }
   // Button
+  .ant-btn {
+    font-family: Anuphan;
+  }
   .ant-btn-primary:hover,
   .ant-btn-primary:focus {
     color: white;

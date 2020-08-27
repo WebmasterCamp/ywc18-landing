@@ -1,7 +1,7 @@
 <template>
   <a-locale-provider :locale="ANTD_THAI">
     <a-table
-      class="agendaTable"
+      class="package-table"
       :columns="columns"
       :dataSource="items"
       :rowKey="'idx'"
@@ -62,21 +62,18 @@ export default {
             {
               title: 'VIP',
               dataIndex: 'vip',
-              width: '13%',
               align: 'center',
               customRender: renderContent,
             },
             {
               title: 'GOLD',
               dataIndex: 'gold',
-              width: '13%',
               align: 'center',
               customRender: renderContent,
             },
             {
               title: 'SILVER',
               dataIndex: 'silver',
-              width: '13%',
               align: 'center',
               customRender: renderContent,
             },
@@ -91,4 +88,32 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss">
+.package-table {
+  .ant-table-thead {
+    background: #fafafa;
+    tr:first-child {
+      display: none;
+    }
+  }
+  .ant-table-tbody {
+    background: white;
+  }
+  .ant-table-thead,
+  .ant-table-tbody {
+    tr > th {
+      color: rgba(0, 0, 0, 0.85);
+    }
+    tr > td {
+      color: #4f4f4f;
+    }
+    tr > th,
+    tr > td {
+      padding: 17px 16px !important;
+      @media screen and (max-width: 768px) {
+        padding: 8px 8px !important;
+      }
+    }
+  }
+}
+</style>

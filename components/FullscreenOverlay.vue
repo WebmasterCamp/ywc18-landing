@@ -18,18 +18,21 @@
         </div>
       </div>
       <BottomMenu>
-        <BackButton
-          :color="color"
-          @click="dismiss"
-        >
+        <BackButton :color="color" @click="dismiss">
           <span class="arrow-icon"></span>
           ย้อนกลับ
         </BackButton>
         <slot name="footer">
-          <RegisterButton v-if="isRegOpen" :color="color" href="https://register.ywc17.ywc.in.th/">
+          <RegisterButton
+            v-if="isRegOpen"
+            :color="color"
+            href="https://register.ywc17.ywc.in.th/"
+          >
             สมัครสาขานี้
           </RegisterButton>
-          <span v-else style="color: gray;margin:0 auto;">ขณะนี้ไม่อยู่ในช่วงรับสมัคร</span>
+          <span v-else style="color: gray;margin:0 auto;"
+            >ขณะนี้ไม่อยู่ในช่วงรับสมัคร</span
+          >
         </slot>
       </BottomMenu>
     </Container>
@@ -45,17 +48,17 @@ const majorImage = {
   green: '/images/major/content.svg',
   yellow: '/images/major/design.svg',
   pink: '/images/major/marketing.svg',
-  blue: '/images/major/developer.svg'
+  blue: '/images/major/developer.svg',
 }
 
 const withColorProps = {
-  color: String
+  color: String,
 }
 
 const containerProps = {
   color: String,
   exiting: Boolean,
-  normal: Boolean
+  normal: Boolean,
 }
 
 const fadein = keyframes`
@@ -75,23 +78,23 @@ const ModalOverlay = styled('div')`
   right: 0;
   bottom: 0;
   z-index: 998;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   display: none;
   transition: all 0.3s;
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     display: block;
   }
 `
 
 const Container = styled('div', containerProps)`
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     width: 70%;
     height: 72vh;
     min-width: 600px;
     max-width: 960px;
     margin: 0 auto;
     margin-top: 12vh;
-    box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
   }
   position: fixed;
   top: 0;
@@ -100,12 +103,15 @@ const Container = styled('div', containerProps)`
   bottom: 0;
   z-index: 999;
   background: black;
-  background: ${props => color[props.color].gradientDarker};
+  background: ${(props) => color[props.color].gradientDarker};
   padding: 32px 24px 0;
   text-align: left;
   transition: all 0.3s;
   animation: ${fadein} 0.5s;
-  ${props => props.normal ? '' : `
+  ${(props) =>
+    props.normal
+      ? ''
+      : `
   &:before {
     content: '';
     background: url('${majorImage[props.color]}') no-repeat bottom center;
@@ -124,7 +130,9 @@ const Container = styled('div', containerProps)`
   }
   `}
 
-  ${props => props.exiting && `
+  ${(props) =>
+    props.exiting &&
+    `
     animation: ${fadeout} 0.5s;
   `};
 
@@ -138,16 +146,17 @@ const Container = styled('div', containerProps)`
   }
 
   .content {
-    height: calc(90% - ${props => props.normal ? 90 : 130}px);
+    height: calc(90% - ${(props) => (props.normal ? 90 : 130)}px);
     overflow: hidden;
     overflow-y: auto;
-    line-height: 2.0;
+    line-height: 2;
     z-index: 998;
   }
-  .content p, .content li{
+  .content p,
+  .content li {
     font-weight: 300;
   }
-  .content li{
+  .content li {
     line-height: 1.8;
     margin-bottom: 12px;
   }
@@ -155,20 +164,19 @@ const Container = styled('div', containerProps)`
     padding-left: 24px;
   }
   .content h3 {
-    font-family: 'Maledpan', 'Sarabun';
+    font-family: 'CmPrasanmit', 'Sarabun';
   }
   .content p {
     margin-bottom: 32px;
   }
-
 `
 
 const Header = styled('div', { normal: Boolean })`
   display: grid;
-  grid-template-columns: auto${props => props.normal ? '' : ' 100px'};
-  ${props => props.normal ? 'margin-bottom: 20px;' : ''}
+  grid-template-columns: auto ${(props) => (props.normal ? '' : ' 100px')};
+  ${(props) => (props.normal ? 'margin-bottom: 20px;' : '')}
 
-  font-family: 'Maledpan', 'Sarabun', Arial, Helvetica, sans-serif;
+  font-family: 'CmPrasanmit', 'Sarabun', Arial, Helvetica, sans-serif;
 `
 
 const Title = styled.h1`
@@ -181,13 +189,13 @@ const Count = styled('div', withColorProps)`
   font-size: 20px;
 
   span {
-    }
+  }
 
   p {
     font-size: 32px;
     margin: 0.5em 0;
     font-weight: bold;
-    color: ${props => color[props.color].normal};
+    color: ${(props) => color[props.color].normal};
   }
 `
 
@@ -199,8 +207,8 @@ const BottomMenu = styled.div`
   left: 0;
   right: 0;
   padding: 16px 24px;
-  
-  font-family: 'Maledpan', 'Sarabun';
+
+  font-family: 'CmPrasanmit', 'Sarabun';
 
   display: grid;
   grid-template-columns: 108px auto;
@@ -212,7 +220,7 @@ const BottomMenu = styled.div`
 const defaultButton = css`
   width: 100%;
   height: 100%;
-  font-family: 'Maledpan', 'Sarabun';
+  font-family: 'CmPrasanmit', 'Sarabun';
   font-weight: bold;
   font-size: 18px;
   border: none;
@@ -223,9 +231,8 @@ const defaultButton = css`
 
 const BackButton = styled('button', withColorProps)`
   ${defaultButton};
-  color: ${props => color[props.color].darker};
+  color: ${(props) => color[props.color].darker};
   background-color: transparent;
-
 
   .arrow-icon {
     width: 8px;
@@ -236,7 +243,7 @@ const BackButton = styled('button', withColorProps)`
     border-left: 2px solid white;
     border-top: 2px solid white;
     transform: rotate(-45deg);
-    border-color: ${props => color[props.color].darker};
+    border-color: ${(props) => color[props.color].darker};
   }
 `
 
@@ -248,15 +255,16 @@ const RegisterButton = styled('a', withColorProps)`
   text-decoration: none;
   border-radius: 1000px;
   height: 48px;
-  background: ${props => color[props.color].darker};
-  background: ${props => color[props.color].gradient};
-  color: ${props => props.color === 'yellow' ? 'black' : 'white'};
+  background: ${(props) => color[props.color].darker};
+  background: ${(props) => color[props.color].gradient};
+  color: ${(props) => (props.color === 'yellow' ? 'black' : 'white')};
 
   &:hover {
-    background: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), ${props => color[props.color].gradient};
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+      ${(props) => color[props.color].gradient};
   }
   &:active {
-    background: ${props => color[props.color].darker};
+    background: ${(props) => color[props.color].darker};
     filter: brightness(75%);
   }
 `
@@ -270,40 +278,40 @@ export default Vue.extend({
     Count,
     BottomMenu,
     BackButton,
-    RegisterButton
+    RegisterButton,
   },
   props: {
     count: {
       default: 0,
-      type: Number
+      type: Number,
     },
     show: {
       default: false,
-      type: Boolean
+      type: Boolean,
     },
     normal: {
       default: false,
-      type: Boolean
+      type: Boolean,
     },
     isRegOpen: {
       default: true,
-      type: Boolean
-    }
+      type: Boolean,
+    },
   },
-  data () {
+  data() {
     return {
       title: '',
       color: '',
-      exiting: false
+      exiting: false,
     }
   },
-  mounted () {
+  mounted() {
     this.title = this.$parent.title
     this.color = this.$parent.color
-    
+
     if (process.client) {
       const vm = this
-      document.addEventListener('keyup', function (e) {
+      document.addEventListener('keyup', function(e) {
         if (e.keyCode === 27) {
           vm.dismiss()
         }
@@ -311,16 +319,16 @@ export default Vue.extend({
     }
   },
   methods: {
-    dismiss () {
+    dismiss() {
       this.showExitingAnimation()
     },
-    showExitingAnimation () {
+    showExitingAnimation() {
       this.exiting = true
       setTimeout(() => {
         this.$parent.dismissOverlay()
         this.exiting = false
       }, 500)
-    }
-  }
+    },
+  },
 })
 </script>

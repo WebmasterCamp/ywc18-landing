@@ -1,22 +1,25 @@
 <template>
   <div style="max-width: 100%;">
-    <div :class="`major ${color}`" :style="imageStyle" :title="`ดูรายละเอียดและสมัครสาขา Web ${title}`" @click="openDetail">
+    <div
+      :class="`major ${color}`"
+      :style="imageStyle"
+      :title="`ดูรายละเอียดและสมัครสาขา Web ${title}`"
+      @click="openDetail"
+    >
       <div
-        class="major-image" 
-        :style="{backgroundImage: `url(/images/register/${image}.jpg)`}"
+        class="major-image"
+        :style="{ backgroundImage: `url(/images/register/${image}.jpg)` }"
+      >
+        <small :class="{ bottom: isBottomText }"
+          >สมัครแล้ว <b>{{ count }} คน</b></small
         >
-        <small :class="{bottom: isBottomText}">สมัครแล้ว <b>{{ count }} คน</b></small>
       </div>
       <div :class="`title ${color}`">
         <span class="outline-text">Web</span>
         {{ title }}
       </div>
     </div>
-    <slot
-      :show="show"
-      :title="title"
-      @dismiss="dismissOverlay"
-    />
+    <slot :show="show" :title="title" @dismiss="dismissOverlay" />
   </div>
 </template>
 
@@ -24,56 +27,55 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  components: {
-  },
+  components: {},
   props: {
     title: {
       default: '',
-      type: String
+      type: String,
     },
     color: {
       default: '',
-      type: String
+      type: String,
     },
     count: {
       default: 0,
-      type: Number
+      type: Number,
     },
     image: {
       default: '',
-      type: String
+      type: String,
     },
     imageStyle: {
       default: '',
-      type: String
-    }
+      type: String,
+    },
   },
-  data () {
+  data() {
     return {
-      show: false
+      show: false,
     }
   },
   computed: {
-    isBottomText () {
+    isBottomText() {
       return ['green', 'pink'].includes(this.color)
-    }
+    },
   },
   methods: {
-    openDetail () {
+    openDetail() {
       document.querySelector('body').style.overflow = 'hidden'
       this.show = !this.show
     },
-    dismissOverlay () {
+    dismissOverlay() {
       document.querySelector('body').style.overflow = 'auto'
       this.show = false
-    }
-  }
+    },
+  },
 })
 </script>
 
 <style lang="scss">
 .blackout .major-image {
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     filter: grayscale(100%);
   }
 }
@@ -93,7 +95,7 @@ export default Vue.extend({
     top: 280px;
   }
 
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     &:hover {
       .major-image {
         background-size: 120% 120%;
@@ -101,7 +103,7 @@ export default Vue.extend({
     }
   }
 
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 768px) {
     top: 0 !important;
     transform: none !important;
   }
@@ -113,8 +115,8 @@ export default Vue.extend({
   transition: all 0.15s ease-in;
   small {
     display: block;
-    background: rgba(0,0,0,0.5);
-    font-family: 'Maledpan';
+    background: rgba(0, 0, 0, 0.5);
+    font-family: 'CmPrasanmit';
     font-size: 20px;
     transition: all 0.15s ease-in;
     @media screen and (max-width: 768px) {
@@ -171,7 +173,7 @@ export default Vue.extend({
     text-align: right;
   }
 
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 768px) {
     &.yellow {
       bottom: 0px;
     }
@@ -185,15 +187,15 @@ export default Vue.extend({
       top: 0px;
     }
   }
-  
-  @media screen and (max-width:428px) {
+
+  @media screen and (max-width: 428px) {
     &.blue {
       width: 92%;
       max-width: 155px;
     }
   }
 
-  @media screen and (max-width:375px) {
+  @media screen and (max-width: 375px) {
     & {
       font-size: 43px;
       line-height: 45px;

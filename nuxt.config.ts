@@ -63,6 +63,11 @@ const config = {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap'
       }
     ]
   },

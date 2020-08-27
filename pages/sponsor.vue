@@ -1,9 +1,6 @@
 <template>
   <ThemeProvider :name="currTheme">
     <Loading v-if="!isInit" />
-    <!-- <CenterContainer v-else class="announcement-box">
-      <div style="width:90%"></div>
-    </CenterContainer>-->
     <section class="container" v-else>
       <SectionTitle title="สนับสนุน YWC18" />
       <InfoContainer class="sponsor-info">
@@ -33,18 +30,18 @@
 
       <SectionTitle title="Package Sponsor" />
       <InfoContainer class="packages-sponsor">
-        <PackagesWrapper>
-          <SponsorPackage />
-          <SponsorPackage />
-          <SponsorPackage />
-        </PackagesWrapper>
+        <a-row :gutter="21">
+          <a-col :xs="24" :lg="8"><SponsorPackage type="vip"/></a-col>
+          <a-col :xs="24" :lg="8"><SponsorPackage type="gold"/></a-col>
+          <a-col :xs="24" :lg="8"><SponsorPackage type="silver"/></a-col>
+        </a-row>
+        <h1 class="package-detail-heading">รายละเอียด Package</h1>
         <PackageTable :items="PACKAGES" />
       </InfoContainer>
     </section>
   </ThemeProvider>
 </template>
 <script>
-import styled from 'vue-styled-components'
 import ThemeProvider from '~/components/ThemeProvider.vue'
 import Loading from '~/components/result/Loading.vue'
 import SponsorPackage from '~/components/ywc18/SponsorPackage.vue'
@@ -58,12 +55,6 @@ import {
   PACKAGES,
 } from '~/utils/const'
 import { selectText } from '~/utils/dom'
-
-const PackagesWrapper = styled.div`
-  display: grid;
-  grid-template-columns: auto auto auto;
-  column-gap: 21px;
-`
 
 export default {
   layout: 'secondary',
@@ -84,7 +75,6 @@ export default {
   components: {
     ThemeProvider,
     Loading,
-    PackagesWrapper,
     SponsorPackage,
     PackageTable,
     SectionTitle: () => import('~/components/ywc18/SectionHead.vue'),
@@ -176,148 +166,36 @@ export default {
 </script>
 <style lang="scss">
 @import '../assets/css/global';
+.packages-sponsor,
 .sponsor-info {
   background: #f2f6fc;
   box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
-
+}
+.sponsor-info {
   p {
+    font-family: CmPrasanmit;
+    font-size: 24px;
+    font-weight: 700;
     text-indent: 78px;
     @media screen and (max-width: 576px) {
       text-indent: 42px;
     }
     a {
-      color: #ff5d29;
+      color: $primary-color;
       text-decoration: none;
     }
   }
 }
 
-.secondary.announcement {
-  .mobile {
-    display: none;
-    @media screen and (max-width: 576px) {
-      display: inline-block;
-    }
-  }
-  .container {
-    max-width: 1056px;
-  }
-  .ywc-logo {
-    display: none;
-  }
-  input {
-    font-family: 'Sarabun', serif, Tahoma;
-  }
-  .announcement-box {
-    padding: 40px 0;
-
-    font-family: 'Maledpan';
-    font-size: 18px;
-    @media screen and (max-width: 576px) {
-      font-size: 16px;
-    }
-
-    .ywc-logo {
-      display: block;
-      width: 280px;
-      height: 97px;
-      margin: 0 auto;
-      @media screen and (max-width: 576px) {
-        width: 187px;
-        height: 65px;
-      }
-    }
-    p {
-      font-family: 'Sarabun';
-    }
-    h1 {
-      font-size: 48px;
-      margin-top: 60px;
-      margin-bottom: 60px;
-      @media screen and (max-width: 576px) {
-        font-size: 36px;
-        line-height: 1;
-      }
-    }
-    h2 {
-      font-weight: normal;
-      margin: 0;
-      margin-top: 10px;
-      font-size: 24px;
-    }
-    .alignLeft {
-      text-align: left;
-    }
-    .ref-input {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      margin: 0 auto;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      max-width: 400px;
-      input {
-        font-size: 64px;
-        width: 88px;
-        height: 137px;
-        text-transform: uppercase;
-        text-align: center !important;
-
-        @media screen and (max-width: 576px) {
-          font-size: 48px;
-          width: 66px;
-          height: 104px;
-        }
-      }
-    }
-    .hyphen {
-      user-select: none;
-    }
-  }
-  .more-details {
-    position: absolute;
-    text-align: center;
-    top: 90%;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-    @media screen and (max-height: 750px) {
-      position: static;
-      left: unset;
-      top: unset;
-    }
-    a,
-    a:hover,
-    a:visited,
-    a:active {
-      color: white;
-      text-decoration: underline !important;
-    }
-    & > div {
-      margin-top: 100px;
-    }
-  }
-  .animateText {
-    opacity: 0;
-  }
-  .animateText.one {
-    animation: animateText 0.5s infinite;
-  }
-  .animateText.two {
-    animation: animateText 0.3s infinite;
-  }
-  .animateText.three {
-    animation: animateText 0.1s infinite;
-  }
-}
-@keyframes animateText {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+.package-detail-heading {
+  font-family: Anuphan !important;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46px;
+  color: $primary-color;
+  margin-bottom: 23px;
+  @media screen and (max-width: 576px) {
+    font-size: 22px;
   }
 }
 </style>
