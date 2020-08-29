@@ -1,7 +1,15 @@
+<template>
+  <div class="center__container">
+    <div>
+      <slot></slot>
+    </div>
+  </div>
+</template>
 <script>
-import styled from 'vue-styled-components'
-
-const CenterContainer = styled.div`
+export default {}
+</script>
+<style lang="scss">
+.center__container {
   color: rgba(0, 0, 0, 0.65);
   transition: max-height 0.5s ease-out;
   max-width: 960px;
@@ -19,7 +27,7 @@ const CenterContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  & > div {
+  div {
     text-align: center;
   }
   @media screen and (max-height: 750px) {
@@ -32,6 +40,5 @@ const CenterContainer = styled.div`
     margin-bottom: 44px;
     min-height: 350px;
   }
-`
-export default CenterContainer
-</script>
+}
+</style>

@@ -30,7 +30,7 @@
         </p>
       </InfoContainer>
       <div>
-        <CTAButton>ดูรายละเอียดโครงการ</CTAButton>
+        <CTAButton @click="viewProposal">ดูรายละเอียดโครงการ</CTAButton>
       </div>
       <SectionTitle title="Package Sponsor" />
       <InfoContainer class="packages-sponsor">
@@ -143,6 +143,9 @@ export default {
   methods: {
     FINALIST_FORM_LINK,
     selectText,
+    viewProposal() {
+      window.open(window.location.host + '/archive/ywc18-sponsor-proposal.pdf')
+    },
     changeTheme(major) {
       if (major) {
         const majorColor = !this.isPass ? 'gray' : majors[major][1]
