@@ -12,27 +12,42 @@ const config = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
-        name: 'description',
+        property: 'description',
         content:
-          'Young Webmaster Camp ครั้งที่ 18 “New Normal - New Web - New World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
+          'Young Webmaster Camp ครั้งที่ 18 - ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
       },
+      // {
+      //   hid: 'description',
+      //   property: 'description',
+      //   content:
+      //     'Young Webmaster Camp ครั้งที่ 18 “New Normal - New Web - New World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
+      // },
 
-      { name: 'og:type', content: 'website' },
+      { property: 'og:type', content: 'website' },
       {
         hid: 'og:title',
-        name: 'og:title',
+        property: 'og:title',
         content: '18th Young Webmaster Camp'
       },
       {
         hid: 'og:description',
-        name: 'og:description',
+        property: 'og:description',
         content:
-          'Young Webmaster Camp ครั้งที่ 18 “New Normal - New Web - New World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
+          'Young Webmaster Camp ครั้งที่ 18 - ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
       },
+      // {
+      //   hid: 'og:description',
+      //   property: 'og:description',
+      //   content:
+      //     'Young Webmaster Camp ครั้งที่ 18 “New Normal - New Web - New World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
+      // },
       {
-        name: 'og:image',
+        property: 'og:image',
         content: 'https://ywc18.ywc.in.th/images/ywc18/ogImage.jpg'
       },
+      { property: 'og:image:type', content: 'image/jpeg' },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
       { name: 'article:author', content: 'https://www.facebook.com/ywcth' },
 
       { name: 'twitter:card', content: 'summary_large_image' },
@@ -48,6 +63,11 @@ const config = {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap'
       }
     ]
   },
@@ -119,18 +139,19 @@ const config = {
   generate: {
     fallback: true, // For Firebase Hosting, see https://nuxtjs.org/api/configuration-generate#fallback
     routes: [
-      '/interview',
-      '/interview/content',
-      '/interview/design',
-      '/interview/marketing',
-      '/interview/programming',
-      '/announcement',
-      '/announcement/majors',
-      '/announcement/majors/content',
-      '/announcement/majors/design',
-      '/announcement/majors/marketing',
-      '/announcement/majors/programming',
-      '/agenda'
+      '/sponsor'
+      // '/interview',
+      // '/interview/content',
+      // '/interview/design',
+      // '/interview/marketing',
+      // '/interview/programming',
+      // '/announcement',
+      // '/announcement/majors',
+      // '/announcement/majors/content',
+      // '/announcement/majors/design',
+      // '/announcement/majors/marketing',
+      // '/announcement/majors/programming',
+      // '/agenda'
     ]
   },
   build: {

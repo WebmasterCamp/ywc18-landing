@@ -20,5 +20,9 @@ export default styled.div`
   @media only screen and (max-width: 575px) {
     padding: 24px;
   }
+  @media only screen and (max-width: 425px) {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 `
 </script>

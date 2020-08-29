@@ -1,7 +1,7 @@
 export const majors = {
   content: ['Content', 'green', 'CT'],
   design: ['Design', 'yellow', 'DS'],
-  marketing: ['Marketing', 'pink', 'MK'], 
+  marketing: ['Marketing', 'pink', 'MK'],
   programming: ['Programming', 'blue', 'PG']
 }
 
@@ -85,7 +85,7 @@ export const FINALIST_BANKACCOUNT = {
   name: 'น.ส. วรัญญา วิมลเกียรติ',
   bank: 'ออมสิน'
 }
-export const FINALIST_FORM_LINK = (info) => {
+export const FINALIST_FORM_LINK = info => {
   return `https://bit.ly/ywc17-cf`
 }
 export const FINALIST_COLUMNS = [
@@ -123,21 +123,278 @@ export const RESERVE_COLUMNS = [
   }
 ]
 
+export const SPONSOT_PACKAGES = {
+  vip: {
+    benefits: [
+      'บรรยายพิเศษเดี่ยว 30 นาที',
+      'โลโก้',
+      'โลโก้ในกิจกรรมในค่ายทุกกิจกรรม',
+      'หลังจบค่ายแนะนำข้อมูลบริษัทและ ข้อมูลใบสมัครงานทุกช่องทาง'
+    ],
+    price: '200,000'
+  },
+  gold: {
+    benefits: [
+      'บรรยายพิเศษเดี่ยว 30 นาที',
+      'โลโก้',
+      'โลโก้ในกิจกรรมในค่ายทุกกิจกรรม',
+      'หลังจบค่ายแนะนำข้อมูลบริษัทและ ข้อมูลใบสมัครงานทุกช่องทาง'
+    ],
+    price: '50,000'
+  },
+  silver: {
+    benefits: [
+      'บรรยายพิเศษเดี่ยว 30 นาที',
+      'โลโก้',
+      'โลโก้ในกิจกรรมในค่ายทุกกิจกรรม',
+      'หลังจบค่ายแนะนำข้อมูลบริษัทและ ข้อมูลใบสมัครงานทุกช่องทาง'
+    ],
+    price: '30,000'
+  }
+}
+
+export const PACKAGES = [
+  {
+    description: 'ก่อนกิจกรรม',
+    vip: false,
+    gold: false,
+    silver: false,
+    isTitle: true
+  },
+  {
+    description: 'สัมภาษณ์ผู้บริหารลงใน Facebook Page',
+    vip: true,
+    gold: false,
+    silver: false
+  },
+  {
+    description: 'หน้าเว็บไซต์',
+    vip: false,
+    gold: false,
+    silver: false,
+    isTitle: true
+  },
+  {
+    description: 'โลโก้หัวเว็บไซต์ (Header)',
+    vip: true,
+    gold: false,
+    silver: false
+  },
+  {
+    description: 'โลโก้ท้ายเว็บไซต์ (Footer)',
+    vip: true,
+    gold: false,
+    silver: false
+  },
+  {
+    description: 'โลโก้ที่หัวข้อผู้สนับสนุน',
+    vip: true,
+    gold: true,
+    silver: true
+  },
+  {
+    description: 'สื่อประชาสัมพันธ์',
+    vip: false,
+    gold: false,
+    silver: false,
+    isTitle: true
+  },
+  {
+    description: 'โลโก้บนรูปภาพประชาสัมพันธ์ค่าย',
+    vip: true,
+    gold: false,
+    silver: false
+  },
+  {
+    description: 'โลโก้บนหน้าปกของ Facebook Page',
+    vip: true,
+    gold: true,
+    silver: false
+  },
+  {
+    description: 'โลโก้ในวีดีโอ',
+    vip: true,
+    gold: true,
+    silver: true
+  },
+  {
+    description: 'โลโก้ใน Live ถ่ายทอดสด (วันสุดท้าย)',
+    vip: true,
+    gold: true,
+    silver: false
+  },
+  {
+    description: 'โลโก้บนโปสเตอร์',
+    vip: true,
+    gold: false,
+    silver: false
+  },
+  {
+    description: 'สื่อประชาสัมพันธ์',
+    vip: false,
+    gold: false,
+    silver: false,
+    isTitle: true
+  },
+  {
+    description: 'เอกสารแนะนำบริษัทและใบสมัครงาน',
+    vip: true,
+    gold: true,
+    silver: true
+  },
+  {
+    description: 'ป้ายชื่อ: โลโก้บนป้ายชื่อผู้เข้าค่ายและทีมงาน',
+    vip: true,
+    gold: false,
+    silver: false
+  },
+  {
+    description: 'เสื้อยืด: โลโก้บนหลังเสื้อผู้เข้าค่ายและทีมงาน',
+    vip: true,
+    gold: true,
+    silver: false
+  },
+  {
+    description: 'ประกาศนียบัตร: โลโก้บนประกาศนียบัตรผู้เข้าค่าย',
+    vip: true,
+    gold: false,
+    silver: false
+  },
+  {
+    description: 'กิจกรรม',
+    vip: false,
+    gold: false,
+    silver: false,
+    isTitle: true
+  },
+  {
+    description: 'โลโก้ในกิจกรรมย่อยภายในค่าย',
+    vip: 'ทุกกิจกรรม',
+    gold: '5 กิจกรรม',
+    silver: '3 กิจกรรม'
+  },
+  {
+    description: 'โลโก้บนป้ายรางวัล',
+    vip: true,
+    gold: false,
+    silver: false
+  },
+  {
+    description: 'เวที',
+    vip: false,
+    gold: false,
+    silver: false,
+    isTitle: true
+  },
+  {
+    description:
+      'ช่วงบรรยายพิเศษให้ความรู้โดยผู้สนับสนุน (บรรยายเดี่ยว 30 นาที)',
+    vip: true,
+    gold: false,
+    silver: false
+  },
+  {
+    description: 'Panel Discussion แบ่งปันประสบการณ์การทำงาน (ร่วมเวทีเสวนา)',
+    vip: false,
+    gold: true,
+    silver: true
+  },
+  {
+    description: 'โลโก้บนเวที',
+    vip: true,
+    gold: true,
+    silver: true
+  },
+  {
+    description: 'หลังกิจกรรม',
+    vip: false,
+    gold: false,
+    silver: false,
+    isTitle: true
+  },
+  {
+    description:
+      'ตัวแทนผู้เข้าค่ายขอบคุณผู้สนับสนุนและนำเสนอรายงานสรุปโครงการที่สำนักงาน พร้อมถ่ายภาพและโพสต์ขอบคุณผ่าน Facebook Page',
+    vip: true,
+    gold: false,
+    silver: false
+  },
+  {
+    description: 'กล่าวถึงผู้สนับสนุนหลักในข่าวประชาสัมพันธ์ในสื่อต่าง ๆ',
+    vip: true,
+    gold: false,
+    silver: false
+  },
+  {
+    description: 'แนะนำข้อมูลบริษัทและข้อมูลการรับสมัครงานผ่าน Facebook Page',
+    vip: true,
+    gold: false,
+    silver: false
+  },
+  {
+    description:
+      'แนะนำข้อมูลบริษัทและข้อมูลการรับสม้ัครงานผ่านอีเมลของผู้เข้าค่าย',
+    vip: true,
+    gold: false,
+    silver: false
+  },
+  {
+    description: 'โพสต์ขอขอบคุณผู้สนับสนุนทางสื่อสังคมออนไลน์',
+    vip: true,
+    gold: false,
+    silver: false
+  }
+]
+
 export const AGENDA = [
   {
     name: 'วันพฤหัสบดีที่ 26 ธันวาคม พ.ศ.2562',
     items: [
-      { time: '8:30 - 9:00', events: [`ลงทะเบียน ณ ห้องประชุมใหญ่คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง`] },
-      { time: '9:00 - 9:30', events: [`พิธีเปิด โครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 17`] },
-      { time: '9:30 - 10:30', events: [`เสวนาหัวข้อ “การทำงานในวงการดิจิทัล” <br>ดำเนินรายการโดย คุณเมธปริยา คำนวนวุฒิ<br><ul><li>คุณณัฏฐชัย เลาหชัย, <i>Solution Advisor at ExxonMobil</i></li><li>คุณวโรรส โรจนะ, <i>นายกสมาคมผู้ดูแลเว็บไทยและ Co-Founder at Dek-D</i></li></ul>`] },
+      {
+        time: '8:30 - 9:00',
+        events: [
+          `ลงทะเบียน ณ ห้องประชุมใหญ่คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง`
+        ]
+      },
+      {
+        time: '9:00 - 9:30',
+        events: [
+          `พิธีเปิด โครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 17`
+        ]
+      },
+      {
+        time: '9:30 - 10:30',
+        events: [
+          `เสวนาหัวข้อ “การทำงานในวงการดิจิทัล” <br>ดำเนินรายการโดย คุณเมธปริยา คำนวนวุฒิ<br><ul><li>คุณณัฏฐชัย เลาหชัย, <i>Solution Advisor at ExxonMobil</i></li><li>คุณวโรรส โรจนะ, <i>นายกสมาคมผู้ดูแลเว็บไทยและ Co-Founder at Dek-D</i></li></ul>`
+        ]
+      },
       { time: '10:30 - 10:45', events: [`พักรับประทานอาหารว่าง`] },
-      { time: '10:45 - 11:45', events: [`การบรรยายในหัวข้อ “จริยธรรมและกฎหมายควรรู้ในยุคดิจิทัล”<br>โดย กรรมการควบคุมจริยธรรม สมาคมผู้ดูแลเว็บไทย<br><ul><li>คุณชวรงค์ ลิมป์ปัทมปาณี</li><li>คุณอัครวุฒิ ตำราเรียง</li></ul>`] },
+      {
+        time: '10:45 - 11:45',
+        events: [
+          `การบรรยายในหัวข้อ “จริยธรรมและกฎหมายควรรู้ในยุคดิจิทัล”<br>โดย กรรมการควบคุมจริยธรรม สมาคมผู้ดูแลเว็บไทย<br><ul><li>คุณชวรงค์ ลิมป์ปัทมปาณี</li><li>คุณอัครวุฒิ ตำราเรียง</li></ul>`
+        ]
+      },
       { time: '11:45 - 12:45', events: [`รับประทานอาหารกลางวัน`] },
-      { time: '12:45 - 14:45', events: [`การบรรยายแยกสาขา 1`, `สาขา Web Marketing หัวข้อ <br>“ภาพรวม Digital Marketing ในปัจจุบัน”<br>โดย คุณศิวัตร เชาวรียวงษ์, <i>นายกสมาคม DAAT</i>`, `สาขา Web Design หัวข้อ <br>1. “Basic Web Design (UI)”<br>โดย คุณอินทนนท์ ปัญญาโสภา, <i>Founder at Grappik</i><br>2. “ทฤษฎีที่เกี่ยวข้องกับการออกแบบและเทรนด์ในปัจจุบัน”<br>โดย คุณคนที่หนึ่ง แสงหิรัญ, <i>อาจารย์ประจำภาควิชาสาขาการออกแบบนิเทศศิลป์ คณะนิเทศศาสตร์ มหาวิทยาลัยอัสสัมชัญ</i>`, `สาขา Web Content หัวข้อ<br>“ภาพรวมการทำ Content ในปัจจุบัน”<br>โดย คุณขจร เจียรนัยพานิชย์, <i>Founder at The Zero Publishing</i><br> คุณจักรพงษ์ คงมาลัย, <i>Managing Director at Moonshot Digital</i>`, `สาขา Web Programming หัวข้อ<br>1. “Web Development Trends and Technologies in 2019”<br>โดย คุณธนนันท์ ตั้งธนาชัยกุล, <i>Head of Technology of TakeMeTour</i><br>2. “Web Optimization”<br>โดย คุณวรัทธน์ วงศ์มณีกิจ, <i>Product Owner at WISESIGHT</i>`] },
+      {
+        time: '12:45 - 14:45',
+        events: [
+          `การบรรยายแยกสาขา 1`,
+          `สาขา Web Marketing หัวข้อ <br>“ภาพรวม Digital Marketing ในปัจจุบัน”<br>โดย คุณศิวัตร เชาวรียวงษ์, <i>นายกสมาคม DAAT</i>`,
+          `สาขา Web Design หัวข้อ <br>1. “Basic Web Design (UI)”<br>โดย คุณอินทนนท์ ปัญญาโสภา, <i>Founder at Grappik</i><br>2. “ทฤษฎีที่เกี่ยวข้องกับการออกแบบและเทรนด์ในปัจจุบัน”<br>โดย คุณคนที่หนึ่ง แสงหิรัญ, <i>อาจารย์ประจำภาควิชาสาขาการออกแบบนิเทศศิลป์ คณะนิเทศศาสตร์ มหาวิทยาลัยอัสสัมชัญ</i>`,
+          `สาขา Web Content หัวข้อ<br>“ภาพรวมการทำ Content ในปัจจุบัน”<br>โดย คุณขจร เจียรนัยพานิชย์, <i>Founder at The Zero Publishing</i><br> คุณจักรพงษ์ คงมาลัย, <i>Managing Director at Moonshot Digital</i>`,
+          `สาขา Web Programming หัวข้อ<br>1. “Web Development Trends and Technologies in 2019”<br>โดย คุณธนนันท์ ตั้งธนาชัยกุล, <i>Head of Technology of TakeMeTour</i><br>2. “Web Optimization”<br>โดย คุณวรัทธน์ วงศ์มณีกิจ, <i>Product Owner at WISESIGHT</i>`
+        ]
+      },
       { time: '14:45 - 15:30', events: [`กิจกรรม Ice Breaking`] },
       { time: '15:30 - 15:45', events: [`พักรับประทานอาหารว่าง`] },
       { time: '15:45 - 16:00', events: [`ชี้แจงกำหนดการ`] },
-      { time: '16:00 - 18:00', events: [`การคิดเชิงออกแบบ (Design Thinking)<br>โดย คุณวรัทธน์ วงศ์มณีกิจ, <i>Product Owner at WISESIGHT</i>`] },
+      {
+        time: '16:00 - 18:00',
+        events: [
+          `การคิดเชิงออกแบบ (Design Thinking)<br>โดย คุณวรัทธน์ วงศ์มณีกิจ, <i>Product Owner at WISESIGHT</i>`
+        ]
+      },
       { time: '18:00 - 19:00', events: [`รับประทานอาหารเย็น`] },
       { time: '19:00 - 21:00', events: [`ระดมความคิด (Brainstorm) 1`] },
       { time: '21:00 - 21:15', events: [`ชี้แจงกำหนดการ`] },
@@ -151,10 +408,27 @@ export const AGENDA = [
       { time: '8:00 - 8:30', events: ['เดินทางสู่สถานที่จัดกิจกรรม'] },
       { time: '8:30 - 10:00', events: ['กิจกรรมสันทนาการ'] },
       { time: '10:00 - 10:15', events: ['พักรับประทานอาหารว่าง'] },
-      { time: '10:15 - 11:15', events: ['การบรรยายแยกสาขา 2', 'สาขา Web Marketing หัวข้อ <br>“เครื่องมือโฆษณาสำหรับนักการตลาดดิจิทัล”<br>โดย คุณเมธปรียา คํานวนวุฒิ, <i>ผู้จัดการฝ่ายการตลาด LnwShop Co., Ltd.</i>', 'สาขา Web Design หัวข้อ <br>“User Experience for Web Design”<br>โดย คุณสุธัม ธรรมวงศ์, <i>Senior UX Designer at SCB10X</i>', 'สาขา Web Content หัวข้อ<br>“การสร้างและจัดการ Community”<br>โดย คุณอภิศิลป์ ตรุงกานนท์, <i>Chief Product Officer at Pantip</i>', 'สาขา Web Programming หัวข้อ<br>“How to be Great Software Developer”<br>โดย คุณปัญจมพงศ์ เสริมสวัสดิ์ศรี, <i>C-3PO at Cleverse</i>'] },
-      { time: '11:15 - 12:30', events: ['ระดมความคิด (Brainstorm) 3', 'รับประทานอาหารกลางวัน'] },
+      {
+        time: '10:15 - 11:15',
+        events: [
+          'การบรรยายแยกสาขา 2',
+          'สาขา Web Marketing หัวข้อ <br>“เครื่องมือโฆษณาสำหรับนักการตลาดดิจิทัล”<br>โดย คุณเมธปรียา คํานวนวุฒิ, <i>ผู้จัดการฝ่ายการตลาด LnwShop Co., Ltd.</i>',
+          'สาขา Web Design หัวข้อ <br>“User Experience for Web Design”<br>โดย คุณสุธัม ธรรมวงศ์, <i>Senior UX Designer at SCB10X</i>',
+          'สาขา Web Content หัวข้อ<br>“การสร้างและจัดการ Community”<br>โดย คุณอภิศิลป์ ตรุงกานนท์, <i>Chief Product Officer at Pantip</i>',
+          'สาขา Web Programming หัวข้อ<br>“How to be Great Software Developer”<br>โดย คุณปัญจมพงศ์ เสริมสวัสดิ์ศรี, <i>C-3PO at Cleverse</i>'
+        ]
+      },
+      {
+        time: '11:15 - 12:30',
+        events: ['ระดมความคิด (Brainstorm) 3', 'รับประทานอาหารกลางวัน']
+      },
       { time: '12:30 - 16:30', events: ['ลงพื้นที่เก็บข้อมูลจริงจากผู้ใช้'] },
-      { time: '16:30 - 18:00', events: ['การบรรยาย “วิธีการนำเสนอผลงานอย่างมืออาชีพ”<br>โดย คุณผรินทร์ สงฆ์ประชา, <i>Chief Executive and Founder of Nasket</i>'] },
+      {
+        time: '16:30 - 18:00',
+        events: [
+          'การบรรยาย “วิธีการนำเสนอผลงานอย่างมืออาชีพ”<br>โดย คุณผรินทร์ สงฆ์ประชา, <i>Chief Executive and Founder of Nasket</i>'
+        ]
+      },
       { time: '18:00 - 18:45', events: ['รับประทานอาหารเย็น'] },
       { time: '18:45 - 21:00', events: ['ระดมความคิด (Brainstorm) 4'] },
       { time: '21:00 - 21:15', events: ['ชี้แจงกฎการ Workshop'] },
@@ -184,7 +458,12 @@ export const AGENDA = [
       { time: '13:00 - 14:30', events: ['การนำเสนอผลงาน (ต่อ)'] },
       { time: '14:30 - 15:15', events: ['พิธีมอบเกียรติบัตร'] },
       { time: '15:15 - 16:00', events: ['พิธีประกาศผลและมอบรางวัล'] },
-      { time: '16:00 - 16:30', events: ['พิธีปิด โครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 17'] }
+      {
+        time: '16:00 - 16:30',
+        events: [
+          'พิธีปิด โครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 17'
+        ]
+      }
     ]
   }
 ]

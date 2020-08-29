@@ -5,10 +5,14 @@
         <div>
           <p><img src="~/assets/images/ywc-logo.png" /></p>
           <a-spin>
-            <a-icon slot="indicator" type="loading" style="font-size: 24px; color: white;" spin />
+            <a-icon
+              slot="indicator"
+              type="loading"
+              style="font-size: 24px; color: white;"
+              spin
+            />
           </a-spin>
-          &nbsp;
-          โปรดรอสักครู่
+          &nbsp; โปรดรอสักครู่
         </div>
       </CenterContainer>
     </FullscreenContainer>
@@ -25,7 +29,11 @@ const FullscreenContainer = styled('div', { color: String })`
   top: 0;
   left: 0;
   z-index: 9999;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), ${props => props.color ? colorScheme[props.color].background : `linear-gradient(49.41deg, #C73884 7.27%, #E13C6F 51.46%, #9B308E 95.22%)`};
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    ${(props) =>
+      props.color
+        ? colorScheme[props.color].background
+        : `linear-gradient(49.41deg, #FF5D29 7.27%, #F89742 95.22%)`};
 `
 const CenterContainer = styled.div`
   max-width: 960px;
@@ -39,7 +47,7 @@ const CenterContainer = styled.div`
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  font-family: 'Maledpan', 'Sarabun';
+  font-family: 'Anuphan', 'Sarabun';
   font-size: 24px;
   font-weight: bold;
   align-items: center;
@@ -67,18 +75,21 @@ const CenterContainer = styled.div`
 export default {
   components: {
     FullscreenContainer,
-    CenterContainer
+    CenterContainer,
   },
   data: () => ({
-    loading: false
+    loading: false,
   }),
   computed: {
-    currColor () {
-      if (!this.$route.params.major || typeof majors[this.$route.params.major] === 'undefined') {
+    currColor() {
+      if (
+        !this.$route.params.major ||
+        typeof majors[this.$route.params.major] === 'undefined'
+      ) {
         return ''
       }
       return majors[this.$route.params.major][1]
-    }
+    },
   },
   // watch: {
   //   loading: (value) => {
@@ -90,25 +101,25 @@ export default {
   //   // setTimeout(this.finish, 3000)
   // },
   methods: {
-    start () {
+    start() {
       this.loading = true
     },
-    finish () {
+    finish() {
       this.loading = false
-    }
-  }
+    },
+  },
 }
 </script>
 <style lang="scss">
 .anticon-spin::before {
   display: inline-block;
   -webkit-animation: loadingCircle 1s infinite linear;
-          animation: loadingCircle 1s infinite linear;
+  animation: loadingCircle 1s infinite linear;
 }
 .anticon-spin {
   display: inline-block;
   -webkit-animation: loadingCircle 1s infinite linear;
-          animation: loadingCircle 1s infinite linear;
+  animation: loadingCircle 1s infinite linear;
 }
 @-webkit-keyframes loadingCircle {
   100% {
@@ -120,8 +131,9 @@ export default {
     transform: rotate(360deg);
   }
 }
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .25s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;

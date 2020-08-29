@@ -2,10 +2,10 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true,
+    node: true
   },
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: 'babel-eslint'
   },
   extends: ['@nuxtjs'],
   // required to lint *.vue files
@@ -20,5 +20,8 @@ module.exports = {
     'vue/singleline-html-element-content-newline': 'off',
     'vue/attribute-hyphenation': 'off',
     'comma-dangle': 'off',
-  },
+    'space-before-function-paren': 'off',
+    'arrow-parens': 'off',
+    indent: 'off'
+  }
 }

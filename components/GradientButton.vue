@@ -41,18 +41,18 @@ const BtnStyle = `
 const StyledBorder = styled('button', BtnProps)`
   ${BtnStyle}
   &:hover > div {
-    background: ${props => color[props.color].gradient};
+    background: ${(props) => color[props.color].gradient};
   }
-  background: ${props => color[props.color].darker};
-  background: ${props => color[props.color].gradient};
+  background: ${(props) => color[props.color].darker};
+  background: ${(props) => color[props.color].gradient};
 `
 const StyledBorderLink = styled('a', BtnProps)`
   ${BtnStyle}
   &:hover > div {
-    background: ${props => color[props.color].gradient};
+    background: ${(props) => color[props.color].gradient};
   }
-  background: ${props => color[props.color].darker};
-  background: ${props => color[props.color].gradient};
+  background: ${(props) => color[props.color].darker};
+  background: ${(props) => color[props.color].gradient};
 `
 const StyledBtn = styled('div', BtnProps)`
   background: black;
@@ -63,11 +63,11 @@ const StyledBtn = styled('div', BtnProps)`
   user-select: none;
 `
 const StyledText = styled('span', BtnProps)`
-  font-family: 'Maledpan', 'Sarabun';
+  font-family: 'CmPrasanmit', 'Sarabun';
   font-size: 18px;
   font-weight: bold;
-  color: ${props => color[props.color].darker};
-  background: ${props => color[props.color].gradient};
+  color: ${(props) => color[props.color].darker};
+  background: ${(props) => color[props.color].gradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `
@@ -76,11 +76,11 @@ export default {
     StyledBorder,
     StyledBorderLink,
     StyledBtn,
-    StyledText
+    StyledText,
   },
   props: {
     theme: { type: String, default: 'main' },
-    link: { type: Boolean, default: false }
-  }
+    link: { type: Boolean, default: false },
+  },
 }
 </script>
