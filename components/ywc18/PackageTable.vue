@@ -108,6 +108,7 @@ export default {
   }
   .ant-table-thead,
   .ant-table-tbody {
+    font-weight: 500;
     tr > th {
       color: rgba(0, 0, 0, 0.85);
     }
