@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <p>
-      Copyright 2003 - 2019. Young Webmaster Camp,
+      Copyright 2003 - 2020. Young Webmaster Camp,
       <br />in associate with Thai Webmaster Association. All right reserved.
     </p>
   </div>
