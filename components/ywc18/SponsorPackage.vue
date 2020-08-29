@@ -1,16 +1,17 @@
 <template>
   <SponsorPackage>
     <div>
-      <Badge :type="type">
-        {{ type }}
-      </Badge>
-      <h1 class="package-price">{{ price }}<span>บาท</span></h1>
+      <Badge :type="type">{{ type }}</Badge>
+      <h1 class="package-price">
+        {{ price }}
+        <span>บาท</span>
+      </h1>
       <ul class="benefit-list">
         <li v-for="(benefit, i) in benefits" :key="i">{{ benefit }}</li>
       </ul>
     </div>
     <div class="sponsor-button__wrapper">
-      <a-button type="primary" size="large">สนับสนุน YWC18</a-button>
+      <a-button type="primary" size="large" @click="viewResponseFile">สนับสนุน YWC18</a-button>
     </div>
   </SponsorPackage>
 </template>
@@ -42,7 +43,7 @@ const SponsorPackage = styled.div`
 const Badge = styled('div', { type: String })`
   width: 175px;
   height: 51px;
-  background: url(${(props) =>
+  background: url(${props =>
     require(`../../assets/images/ywc18/sponsor-${props.type}-badge.svg`)});
   color: white;
   font-family: 'Barlow Semi Condensed';
@@ -61,8 +62,8 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'vip',
-    },
+      default: 'vip'
+    }
   },
   computed: {
     benefits() {
@@ -76,11 +77,16 @@ export default {
         return SPONSOT_PACKAGES[this.type].price
       }
       return ''
-    },
+    }
   },
   created() {
     antDesignVueButton()
   },
+  methods: {
+    viewResponseFile() {
+      window.open(window.location.host + '/archive/ywc18-response-proposal.pdf')
+    }
+  }
 }
 </script>
 

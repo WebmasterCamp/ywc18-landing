@@ -3,16 +3,12 @@
     <FullscreenContainer v-show="loading" :color="currColor">
       <CenterContainer>
         <div>
-          <p><img src="~/assets/images/ywc-logo.png" /></p>
+          <p>
+            <img src="~/assets/images/ywc-logo.png" />
+          </p>
           <a-spin>
-            <a-icon
-              slot="indicator"
-              type="loading"
-              style="font-size: 24px; color: white;"
-              spin
-            />
-          </a-spin>
-          &nbsp; โปรดรอสักครู่
+            <a-icon slot="indicator" type="loading" style="font-size: 24px; color: white;" spin />
+          </a-spin>&nbsp; โปรดรอสักครู่
         </div>
       </CenterContainer>
     </FullscreenContainer>
@@ -20,6 +16,7 @@
 </template>
 <script>
 import styled from 'vue-styled-components'
+import CenterContainer from '~/components/CenterContainer.vue'
 import { majors } from '~/utils/const'
 import { colorScheme } from '~/utils/color'
 const FullscreenContainer = styled('div', { color: String })`
@@ -30,55 +27,55 @@ const FullscreenContainer = styled('div', { color: String })`
   left: 0;
   z-index: 9999;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    ${(props) =>
+    ${props =>
       props.color
         ? colorScheme[props.color].background
         : `linear-gradient(49.41deg, #FF5D29 7.27%, #F89742 95.22%)`};
 `
-const CenterContainer = styled.div`
-  max-width: 960px;
-  width: 100%;
-  height: 60%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: transparent;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  font-family: 'Anuphan', 'Sarabun';
-  font-size: 24px;
-  font-weight: bold;
-  align-items: center;
-  user-select: none;
-  & > div {
-    text-align: center;
-  }
-  p {
-    margin-bottom: 90px;
-  }
-  img {
-    width: 280px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  }
-  @media screen and (max-width: 576px) {
-    font-size: 20px;
-    p {
-      margin-bottom: 60px;
-    }
-    img {
-      width: 210px;
-    }
-  }
-`
+// const CenterContainer = styled.div`
+//   max-width: 960px;
+//   width: 100%;
+//   height: 60%;
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+//   background: transparent;
+//   border-radius: 10px;
+//   display: flex;
+//   justify-content: center;
+//   font-family: 'Anuphan', 'Sarabun';
+//   font-size: 24px;
+//   font-weight: bold;
+//   align-items: center;
+//   user-select: none;
+//   & > div {
+//     text-align: center;
+//   }
+//   p {
+//     margin-bottom: 90px;
+//   }
+//   img {
+//     width: 280px;
+//     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+//   }
+//   @media screen and (max-width: 576px) {
+//     font-size: 20px;
+//     p {
+//       margin-bottom: 60px;
+//     }
+//     img {
+//       width: 210px;
+//     }
+//   }
+// `
 export default {
   components: {
     FullscreenContainer,
-    CenterContainer,
+    CenterContainer
   },
   data: () => ({
-    loading: false,
+    loading: false
   }),
   computed: {
     currColor() {
@@ -89,7 +86,7 @@ export default {
         return ''
       }
       return majors[this.$route.params.major][1]
-    },
+    }
   },
   // watch: {
   //   loading: (value) => {
@@ -106,8 +103,8 @@ export default {
     },
     finish() {
       this.loading = false
-    },
-  },
+    }
+  }
 }
 </script>
 <style lang="scss">
