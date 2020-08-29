@@ -144,7 +144,7 @@ export default {
     FINALIST_FORM_LINK,
     selectText,
     viewProposal() {
-      window.open(window.location.host + '/archive/ywc18-sponsor-proposal.pdf')
+      window.open('/archive/ywc18-sponsor-proposal.pdf')
     },
     changeTheme(major) {
       if (major) {

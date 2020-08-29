@@ -7,7 +7,12 @@
             <img src="~/assets/images/ywc-logo.png" />
           </p>
           <a-spin>
-            <a-icon slot="indicator" type="loading" style="font-size: 24px; color: white;" spin />
+            <a-icon
+              slot="indicator"
+              type="loading"
+              style="font-size: 24px; color: white; width:unset;height:unset;"
+              spin
+            />
           </a-spin>&nbsp; โปรดรอสักครู่
         </div>
       </CenterContainer>

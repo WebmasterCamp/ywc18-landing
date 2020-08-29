@@ -2,7 +2,12 @@
   <CenterContainer>
     <div>
       <a-spin>
-        <a-icon slot="indicator" type="loading" style="font-size: 128px; color: #FF5D29;" spin />
+        <a-icon
+          slot="indicator"
+          type="loading"
+          style="font-size: 128px; color: #FF5D29; width:unset;height:unset;"
+          spin
+        />
       </a-spin>
       <br />
       <h1>โปรดรอซักครู่</h1>
