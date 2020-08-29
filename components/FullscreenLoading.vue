@@ -32,43 +32,6 @@ const FullscreenContainer = styled('div', { color: String })`
         ? colorScheme[props.color].background
         : `linear-gradient(49.41deg, #FF5D29 7.27%, #F89742 95.22%)`};
 `
-// const CenterContainer = styled.div`
-//   max-width: 960px;
-//   width: 100%;
-//   height: 60%;
-//   position: absolute;
-//   left: 50%;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-//   background: transparent;
-//   border-radius: 10px;
-//   display: flex;
-//   justify-content: center;
-//   font-family: 'Anuphan', 'Sarabun';
-//   font-size: 24px;
-//   font-weight: bold;
-//   align-items: center;
-//   user-select: none;
-//   & > div {
-//     text-align: center;
-//   }
-//   p {
-//     margin-bottom: 90px;
-//   }
-//   img {
-//     width: 280px;
-//     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-//   }
-//   @media screen and (max-width: 576px) {
-//     font-size: 20px;
-//     p {
-//       margin-bottom: 60px;
-//     }
-//     img {
-//       width: 210px;
-//     }
-//   }
-// `
 export default {
   components: {
     FullscreenContainer,
