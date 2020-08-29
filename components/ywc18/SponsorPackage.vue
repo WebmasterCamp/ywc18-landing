@@ -84,7 +84,7 @@ export default {
   },
   methods: {
     viewResponseFile() {
-      window.open(window.location.host + '/archive/ywc18-response-proposal.pdf')
+      window.open('/archive/ywc18-response-proposal.pdf')
     }
   }
 }
