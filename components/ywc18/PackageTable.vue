@@ -8,8 +8,7 @@
       size="middle"
       :pagination="false"
       bordered
-    >
-    </a-table>
+    ></a-table>
   </a-locale-provider>
 </template>
 
@@ -17,7 +16,6 @@
 import ANTD_THAI from 'ant-design-vue/lib/locale-provider/th_TH'
 import antDesignVueTable from '~/plugins/ant-design-vue-table'
 import { colorScheme } from '~/utils/color'
-ANTD_THAI.Table.sortTitle = 'เรียง'
 
 export default {
   props: {
@@ -25,9 +23,9 @@ export default {
       type: Array,
       default: () => {
         return []
-      },
+      }
     },
-    name: { type: String, default: 'วันที่' },
+    name: { type: String, default: 'วันที่' }
   },
   data() {
     const renderContent = (value, row, index) => {
@@ -41,8 +39,8 @@ export default {
             <span style={{ color: colorScheme.orange.normal }}>{value}</span>
           ),
           attrs: {
-            colSpan: value ? 4 : 0, // 0 = the cell will not be rendered.
-          },
+            colSpan: value ? 4 : 0 // 0 = the cell will not be rendered.
+          }
         }
       } else {
         return { children: value }
@@ -57,39 +55,48 @@ export default {
               title: 'สิทธิประโยชน์',
               dataIndex: 'description',
               align: 'left',
-              customRender: renderContent,
+              key: 'desc',
+              customRender: renderContent
             },
             {
               title: 'VIP',
               dataIndex: 'vip',
               align: 'center',
-              customRender: renderContent,
+              key: 'vip',
+              width: '14%',
+              customRender: renderContent
             },
             {
               title: 'GOLD',
               dataIndex: 'gold',
               align: 'center',
-              customRender: renderContent,
+              key: 'gold',
+              width: '14%',
+              customRender: renderContent
             },
             {
               title: 'SILVER',
               dataIndex: 'silver',
               align: 'center',
-              customRender: renderContent,
-            },
-          ],
-        },
-      ],
+              key: 'silver',
+              width: '14%',
+              customRender: renderContent
+            }
+          ]
+        }
+      ]
     }
   },
   created() {
     antDesignVueTable()
-  },
+  }
 }
 </script>
 
 <style lang="scss">
 .package-table {
+  max-width: 100%;
+  overflow-x: scroll;
   .ant-table-thead {
     background: #fafafa;
     tr:first-child {
