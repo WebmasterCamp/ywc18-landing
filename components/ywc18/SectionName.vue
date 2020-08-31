@@ -30,8 +30,10 @@ const Wrapper = styled.div`
     width: 35%;
     max-width: 500px;
     height: 100%;
+    max-height: 100px;
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: -1;
     -webkit-mask-image: -webkit-gradient(
       linear,
@@ -46,7 +48,7 @@ const Wrapper = styled.div`
     }
 
     &.bg-right {
-      transform: scaleX(-1);
+      transform: translateY(-50%) scaleX(-1);
       right: 0;
     }
 
