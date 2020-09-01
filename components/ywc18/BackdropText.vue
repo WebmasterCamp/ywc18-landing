@@ -3,8 +3,12 @@
     <BackdropString
       v-for="(text,index) in texts"
       :key="index"
-      :class="index === 0 && highlight ? 'highlight' : ''"
+      :class="filled || (index === 0 && highlight) ? 'filled' : ''"
       :gap="gap"
+      :bright="bright"
+      :style="{
+          opacity: fade ? ((texts.length - index)/texts.length): 1
+        }"
     >{{ text }}</BackdropString>
   </Wrapper>
 </template>
@@ -18,22 +22,20 @@ const Wrapper = styled.div`
   flex-direction: column;
 `
 
-const BackdropString = styled('span', { gap: Boolean })`
+const BackdropString = styled('span', { gap: Boolean, bright: Boolean })`
   font-family: Barlow Semi Condensed, Anuphan;
-  color: rgba(242, 246, 252, 0.09);
-  -webkit-text-fill-color: hsl(
-    209deg,
-    72%,
-    8%
-  ); /* Will override color (regardless of order) */
+  color: ${({ bright }) =>
+    bright ? 'rgba(242, 246, 252, 0.7)' : 'rgba(74, 80, 92, 0.29)'};
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: rgba(242, 246, 252, 0.09);
+  -webkit-text-stroke-color: ${({ bright }) =>
+    bright ? 'rgba(242, 246, 252, 0.7)' : 'rgba(74, 80, 92, 0.29)'};
   font-style: italic;
   font-weight: bold;
   font-size: 500%;
   line-height: ${({ gap }) => (gap ? '90.5%' : '75%')};
 
-  &.highlight {
+  &.filled {
     -webkit-text-fill-color: unset;
     -webkit-text-stroke-width: 0px;
   }
@@ -49,7 +51,9 @@ export default {
     times: { type: Number, default: 1 },
     fade: { type: Boolean, default: false },
     highlight: { type: Boolean, default: false },
-    gap: { type: Boolean, default: true }
+    gap: { type: Boolean, default: false },
+    bright: { type: Boolean, default: false },
+    filled: { type: Boolean, default: false }
   },
   computed: {
     texts() {

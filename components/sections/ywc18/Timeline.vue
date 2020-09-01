@@ -4,10 +4,10 @@
       <div class="backdrop__wrapper">
         <div class="timeline__backdrop">
           <div class="timeline__backdrop__top-left">
-            <BackdropText text="TIMELINE" :times="4" highlight />
+            <BackdropText text="TIMELINE" :times="4" gap highlight />
           </div>
           <div class="timeline__backdrop__center-right">
-            <BackdropText text="TIMELINE" :times="3" />
+            <BackdropText text="TIMELINE" :times="3" gap />
           </div>
         </div>
         <div class="content">
@@ -246,7 +246,7 @@ export default {
     color: #ff5d29;
     text-align: left;
     font-weight: 600;
-    line-height: 110%;
+    line-height: 125%;
   }
 }
 .content {
