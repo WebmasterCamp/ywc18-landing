@@ -1,9 +1,9 @@
 <template>
   <div>
     <Y18Hero />
-    <!-- <Hero />
-    <WhatIsYWC />
-    <Timeline />
+    <!-- <Hero /> -->
+    <!-- <WhatIsYWC /> -->
+    <!-- <Timeline />
     <Majors />
     <Location />
     <Guru />
@@ -12,18 +12,18 @@
     <QA />
     <FollowUs />
     <Footer />
-    <PR />-->
+    <PR /> -->
   </div>
 </template>
 
 <script>
 import Y18Hero from '~/components/sections/ywc18/Hero.vue'
-// import WhatIsYWC from '~/components/sections/WhatIsYWC'
+// import WhatIsYWC from '~/components/sections/ywc18/WhatIsYWC'
 // import Hero from '~/components/sections/Hero'
 // import Timeline from '~/components/ sections/ywc18/Timeline.vue'
 export default {
   components: {
-    Y18Hero
+    Y18Hero,
     // Hero,
     // WhatIsYWC,
     // Location: () => import('~/components/sections/Location'),
@@ -36,13 +36,13 @@ export default {
     // Gallery: () => import('~/components/sections/Gallery'),
     // PR: () => import('~/components/sections/PR'),
     // Footer: () => import('~/components/sections/Footer'),
-  }
+  },
 }
 </script>
 
 <style>
 .container {
-  max-width: 960px;
+  max-width: 1140px;
   margin: 0 auto;
   text-align: center;
 }

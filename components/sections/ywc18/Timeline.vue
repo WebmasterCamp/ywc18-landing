@@ -17,17 +17,23 @@
               v-for="(item, key) in items"
               :key="key"
               class="event"
-              :class="{ active: isActive[key], pending: isPending[key]}"
+              :class="{ active: isActive[key], pending: isPending[key] }"
             >
-              <div v-if="item.topDate" class="event__date__from">{{ item.topDate }}</div>
+              <div v-if="item.topDate" class="event__date__from">
+                {{ item.topDate }}
+              </div>
               <div class="event__image">
-                <div v-if="item.bottomDate" class="event__date__to">{{ item.bottomDate }}</div>
+                <div v-if="item.bottomDate" class="event__date__to">
+                  {{ item.bottomDate }}
+                </div>
                 <div class="event__image__text">
                   <div
-                    v-for="(word, index) in item.text.split(' ').slice(0,-1)"
+                    v-for="(word, index) in item.text.split(' ').slice(0, -1)"
                     :key="index"
                     class="event__text"
-                  >{{ word }}</div>
+                  >
+                    {{ word }}
+                  </div>
                 </div>
                 <div class="event__image__filter"></div>
                 <img :src="item.image" alt="register" />
@@ -36,12 +42,16 @@
                 v-for="(word, index) in item.text.split(' ').slice(-1)"
                 :key="index"
                 class="event__text"
-              >{{ word }}</div>
+              >
+                {{ word }}
+              </div>
               <div
                 v-for="(word, index) in item.subText.split(' ')"
                 :key="index"
                 class="event__subtext"
-              >{{ word }}</div>
+              >
+                {{ word }}
+              </div>
             </div>
           </div>
         </div>
@@ -60,7 +70,7 @@ dayjs.locale('th')
 export default {
   components: {
     SectionName,
-    BackdropText
+    BackdropText,
   },
   data() {
     return {
@@ -70,53 +80,53 @@ export default {
           subText: 'สมัครค่าย',
           image: require('~/assets/images/ywc18/timeline/register.png'),
           topDate: '14 SEP',
-          bottomDate: '- 7 NOV'
+          bottomDate: '- 7 NOV',
         },
         announce: {
           text: 'AN NOUNCE MENT #1',
           subText: 'ประกาศผล รอบใบสมัคร',
           image: require('~/assets/images/ywc18/timeline/announcement1.png'),
-          bottomDate: '16 NOV'
+          bottomDate: '16 NOV',
         },
         interview: {
           text: 'INTER VIEW',
           subText: 'สัมภาษณ์',
           image: require('~/assets/images/ywc18/timeline/interview.png'),
-          topDate: '21 NOV'
+          topDate: '21 NOV',
         },
         finalist: {
           text: 'AN NOUNCE MENT #2',
           subText: 'ประกาศผล รอบสัมภาษณ์',
           image: require('~/assets/images/ywc18/timeline/announcement2.png'),
-          bottomDate: '25 NOV'
+          bottomDate: '25 NOV',
         },
         camp: {
           text: 'CAMP DAY',
           subText: 'วันเข้าค่าย (ไม่ค้างคืน)',
           image: require('~/assets/images/ywc18/timeline/camp-day.png'),
           topDate: 'TO BE',
-          bottomDate: 'ANNOUNCED'
-        }
+          bottomDate: 'ANNOUNCED',
+        },
       },
       isActive: {
         register: true,
         announce: false,
         interview: false,
         finalist: false,
-        camp: false
+        camp: false,
       },
       isPending: {
         register: false,
         announce: false,
         interview: false,
         finalist: false,
-        camp: true
-      }
+        camp: true,
+      },
     }
   },
   mounted() {
     // this.timelineProcess()
-  }
+  },
   // methods: {}
 }
 </script>
@@ -227,6 +237,7 @@ export default {
       left: 0;
       bottom: 0;
       z-index: 4;
+      letter-spacing: 0.1em;
     }
   }
   &__text {

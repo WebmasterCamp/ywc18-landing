@@ -2,11 +2,21 @@
   <div class="secondary" :class="$route.name">
     <section class="container" v-show="!hideLogo">
       <div class="ywc-logo__wrapper">
-        <nuxt-link to="/" class="ywc-logo" title="ไปยังหน้าแรกของ 18th Young Webmaster Camp">
-          <Picture fileName="ywc18/ywc18-logo-orange.svg" alt="18th Young Webmaster Camp" />
+        <nuxt-link
+          to="/"
+          class="ywc-logo"
+          title="ไปยังหน้าแรกของ 18th Young Webmaster Camp"
+        >
+          <Picture
+            fileName="ywc18/ywc18-logo-orange.svg"
+            alt="18th Young Webmaster Camp"
+          />
         </nuxt-link>
         <div class="ywc-logo">
-          <Picture fileName="ywc18/ywc18-theme-logo-orange.svg" alt="18th Young Webmaster Camp" />
+          <Picture
+            fileName="ywc18/ywc18-theme-logo-orange.svg"
+            alt="18th Young Webmaster Camp"
+          />
         </div>
       </div>
     </section>
@@ -17,16 +27,16 @@
 import Picture from '~/components/Picture.vue'
 export default {
   components: {
-    Picture
+    Picture,
   },
   head() {
     return {
       meta: [
         {
           name: 'og:url',
-          content: `https://ywc18.ywc.in.th${this.$route.path}`
-        }
-      ]
+          content: `https://ywc18.ywc.in.th${this.$route.path}`,
+        },
+      ],
     }
   },
   beforeCreate() {
@@ -43,8 +53,8 @@ export default {
   computed: {
     hideLogo() {
       return ['/announcement'].includes(this.$route.path)
-    }
-  }
+    },
+  },
 }
 </script>
 <style lang="scss">
@@ -69,7 +79,7 @@ div.secondary {
   }
 
   .container {
-    max-width: 960px;
+    max-width: 1140px;
     margin: 0 auto;
     text-align: left;
   }

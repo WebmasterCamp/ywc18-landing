@@ -1,15 +1,16 @@
 <template>
   <Wrapper>
     <BackdropString
-      v-for="(text,index) in texts"
+      v-for="(text, index) in texts"
       :key="index"
       :class="filled || (index === 0 && highlight) ? 'filled' : ''"
       :gap="gap"
       :bright="bright"
       :style="{
-          opacity: fade ? ((texts.length - index)/texts.length): 1
-        }"
-    >{{ text }}</BackdropString>
+        opacity: fade ? (texts.length - index) / texts.length : 1,
+      }"
+      >{{ text }}</BackdropString
+    >
   </Wrapper>
 </template>
 
@@ -32,8 +33,25 @@ const BackdropString = styled('span', { gap: Boolean, bright: Boolean })`
     bright ? 'rgba(242, 246, 252, 0.7)' : 'rgba(242, 246, 252, 0.1);'};
   font-style: italic;
   font-weight: bold;
-  font-size: 500%;
+  font-size: 88px;
   line-height: ${({ gap }) => (gap ? '90.5%' : '75%')};
+  letter-spacing: 0.04em;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 76px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 74px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 60px;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 54px;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 45px;
+  }
 
   &.filled {
     -webkit-text-fill-color: unset;
@@ -44,7 +62,7 @@ const BackdropString = styled('span', { gap: Boolean, bright: Boolean })`
 export default {
   components: {
     BackdropString,
-    Wrapper
+    Wrapper,
   },
   props: {
     text: { type: String, default: '' },
@@ -53,12 +71,12 @@ export default {
     highlight: { type: Boolean, default: false },
     gap: { type: Boolean, default: false },
     bright: { type: Boolean, default: false },
-    filled: { type: Boolean, default: false }
+    filled: { type: Boolean, default: false },
   },
   computed: {
     texts() {
       return Array(this.times).fill(String(this.text))
-    }
-  }
+    },
+  },
 }
 </script>

@@ -1,4 +1,4 @@
-import NuxtConfiguration from "@nuxt/config";
+import NuxtConfiguration from "@nuxt/config"
 
 const config = {
   mode: "universal",
@@ -67,7 +67,7 @@ const config = {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap",
+          "https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,700&display=swap",
       },
     ],
   },
@@ -163,7 +163,7 @@ const config = {
     /*
      ** You can extend webpack config here
      */
-    extend(config: NuxtConfiguration, ctx: any) {
+    extend (config: NuxtConfiguration, ctx: any) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
@@ -171,10 +171,10 @@ const config = {
           test: /\.(js|vue)$/,
           loader: "eslint-loader",
           exclude: /(node_modules)/,
-        });
+        })
       }
     },
   },
-};
+}
 
-export default config;
+export default config
