@@ -93,6 +93,7 @@ export default {
     letter-spacing: 0.01em;
     color: rgba(242, 246, 252, 0.9);
     p {
+      color: #bdbdbd;
       @media screen and (max-width: 768px) {
         font-size: 18px;
       }
