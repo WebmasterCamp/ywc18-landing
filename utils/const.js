@@ -328,21 +328,21 @@ export const PACKAGES = [
   {
     description: 'แนะนำข้อมูลบริษัทและข้อมูลการรับสมัครงานผ่าน Facebook Page',
     vip: true,
-    gold: false,
+    gold: true,
     silver: false,
   },
   {
     description:
       'แนะนำข้อมูลบริษัทและข้อมูลการรับสม้ัครงานผ่านอีเมลของผู้เข้าค่าย',
     vip: true,
-    gold: false,
-    silver: false,
+    gold: true,
+    silver: true,
   },
   {
     description: 'โพสต์ขอขอบคุณผู้สนับสนุนทางสื่อสังคมออนไลน์',
     vip: true,
-    gold: false,
-    silver: false,
+    gold: true,
+    silver: true,
   },
 ]
 
