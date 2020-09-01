@@ -25,11 +25,11 @@ const Wrapper = styled.div`
 const BackdropString = styled('span', { gap: Boolean, bright: Boolean })`
   font-family: Barlow Semi Condensed, Anuphan;
   color: ${({ bright }) =>
-    bright ? 'rgba(242, 246, 252, 0.7)' : 'rgba(74, 80, 92, 0.29)'};
+    bright ? 'rgba(242, 246, 252, 0.7)' : 'rgba(242, 246, 252, 0.1)'};
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: ${({ bright }) =>
-    bright ? 'rgba(242, 246, 252, 0.7)' : 'rgba(74, 80, 92, 0.29)'};
+    bright ? 'rgba(242, 246, 252, 0.7)' : 'rgba(242, 246, 252, 0.1);'};
   font-style: italic;
   font-weight: bold;
   font-size: 500%;
