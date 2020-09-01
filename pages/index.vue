@@ -2,7 +2,7 @@
   <div>
     <Y18Hero />
     <!-- <Hero /> -->
-    <WhatIsYWC />
+    <!-- <WhatIsYWC /> -->
     <!-- <Timeline />
     <Majors />
     <Location />
@@ -18,14 +18,14 @@
 
 <script>
 import Y18Hero from '~/components/sections/ywc18/Hero.vue'
-import WhatIsYWC from '~/components/sections/ywc18/WhatIsYWC'
+// import WhatIsYWC from '~/components/sections/ywc18/WhatIsYWC'
 // import Hero from '~/components/sections/Hero'
 // import Timeline from '~/components/ sections/ywc18/Timeline.vue'
 export default {
   components: {
     Y18Hero,
     // Hero,
-    WhatIsYWC,
+    // WhatIsYWC,
     // Location: () => import('~/components/sections/Location'),
     // Timeline
     // Guru: () => import('~/components/sections/Guru'),
