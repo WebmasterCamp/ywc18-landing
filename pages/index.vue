@@ -1,9 +1,9 @@
 <template>
   <div>
     <Y18Hero />
-    <Timeline />
     <!-- <Hero />
     <WhatIsYWC />
+    <Timeline />
     <Majors />
     <Location />
     <Guru />
@@ -12,7 +12,7 @@
     <QA />
     <FollowUs />
     <Footer />
-    <PR /> -->
+    <PR />-->
   </div>
 </template>
 
@@ -20,14 +20,14 @@
 import Y18Hero from '~/components/sections/ywc18/Hero.vue'
 // import WhatIsYWC from '~/components/sections/WhatIsYWC'
 // import Hero from '~/components/sections/Hero'
-import Timeline from '~/components/sections/ywc18/Timeline.vue'
+// import Timeline from '~/components/ sections/ywc18/Timeline.vue'
 export default {
   components: {
-    Y18Hero,
+    Y18Hero
     // Hero,
     // WhatIsYWC,
     // Location: () => import('~/components/sections/Location'),
-    Timeline
+    // Timeline
     // Guru: () => import('~/components/sections/Guru'),
     // Majors: () => import('~/components/sections/Majors'),
     // QA: () => import('~/components/sections/QA'),
