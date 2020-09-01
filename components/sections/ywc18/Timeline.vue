@@ -4,92 +4,44 @@
       <div class="backdrop__wrapper">
         <div class="timeline__backdrop">
           <div class="timeline__backdrop__top-left">
-            <span class="filled">TIMELINE</span>
-            <span>TIMELINE</span>
-            <span>TIMELINE</span>
-            <span>TIMELINE</span>
+            <BackdropText text="TIMELINE" :times="4" highlight />
           </div>
           <div class="timeline__backdrop__center-right">
-            <span>TIMELINE</span>
-            <span>TIMELINE</span>
-            <span>TIMELINE</span>
+            <BackdropText text="TIMELINE" :times="3" />
           </div>
         </div>
         <div class="content">
-          <div class="header">
-            <h3 class="title">กำหนดการ</h3>
-            <span class="subtitle">TIMELINE</span>
-          </div>
+          <SectionName class="header" title="กำหนดการ" subTitle="TIMELINE" />
           <div class="events">
-            <div class="event active">
-              <div class="event__date__from">14 SEP</div>
+            <div
+              v-for="(item, key) in items"
+              :key="key"
+              class="event"
+              :class="{ active: isActive[key], pending: isPending[key]}"
+            >
+              <div v-if="item.topDate" class="event__date__from">{{ item.topDate }}</div>
               <div class="event__image">
-                <div class="event__date__to">- 7 NOV</div>
+                <div v-if="item.bottomDate" class="event__date__to">{{ item.bottomDate }}</div>
                 <div class="event__image__text">
-                  <div class="event__text">RE</div>
-                  <div class="event__text">GIS</div>
+                  <div
+                    v-for="(word, index) in item.text.split(' ').slice(0,-1)"
+                    :key="index"
+                    class="event__text"
+                  >{{ word }}</div>
                 </div>
                 <div class="event__image__filter"></div>
-                <img src="~/assets/images/ywc18/timeline/register.png" alt="register" />
+                <img :src="item.image" alt="register" />
               </div>
-              <div class="event__text">TER</div>
-              <div class="event__subtext">สมัครค่าย</div>
-            </div>
-            <div class="event">
-              <div class="event__image">
-                <div class="event__date__to">16 NOV</div>
-                <div class="event__image__text">
-                  <div class="event__text">AN</div>
-                  <div class="event__text">NOUNCE</div>
-                  <div class="event__text">MENT</div>
-                </div>
-                <div class="event__image__filter"></div>
-                <img src="~/assets/images/ywc18/timeline/announcement1.png" alt="announcement1" />
-              </div>
-              <div class="event__text">#1</div>
-              <div class="event__subtext">ประกาศผล</div>
-              <div class="event__subtext">รอบใบสมัคร</div>
-            </div>
-            <div class="event">
-              <div class="event__date__from">21 NOV</div>
-              <div class="event__image">
-                <div class="event__image__text">
-                  <div class="event__text">INTER</div>
-                </div>
-                <div class="event__image__filter"></div>
-                <img src="~/assets/images/ywc18/timeline/interview.png" alt="interview" />
-              </div>
-              <div class="event__text">VIEW</div>
-              <div class="event__subtext">สัมภาษณ์</div>
-            </div>
-            <div class="event">
-              <div class="event__image">
-                <div class="event__date__to">25 NOV</div>
-                <div class="event__image__text">
-                  <div class="event__text">AN</div>
-                  <div class="event__text">NOUNCE</div>
-                  <div class="event__text">MENT</div>
-                </div>
-                <div class="event__image__filter"></div>
-                <img src="~/assets/images/ywc18/timeline/announcement2.png" alt="announcement2" />
-              </div>
-              <div class="event__text">#2</div>
-              <div class="event__subtext">ประกาศผล</div>
-              <div class="event__subtext">รอบสัมภาษณ์</div>
-            </div>
-            <div class="event pending">
-              <div class="event__date__from">TO BE</div>
-              <div class="event__image">
-                <div class="event__date__to">ANNOUNCED</div>
-                <div class="event__image__text">
-                  <div class="event__text">CAMP</div>
-                </div>
-                <div class="event__image__filter"></div>
-                <img src="~/assets/images/ywc18/timeline/camp-day.png" alt="camp-day" />
-              </div>
-              <div class="event__text">DAY</div>
-              <div class="event__subtext">วันเข้าค่าย</div>
-              <div class="event__subtext">(ไม่ค้างคืน)</div>
+              <div
+                v-for="(word, index) in item.text.split(' ').slice(-1)"
+                :key="index"
+                class="event__text"
+              >{{ word }}</div>
+              <div
+                v-for="(word, index) in item.subText.split(' ')"
+                :key="index"
+                class="event__subtext"
+              >{{ word }}</div>
             </div>
           </div>
         </div>
@@ -100,34 +52,65 @@
 <script>
 import dayjs from 'dayjs'
 import 'dayjs/locale/th'
+import SectionName from '../../ywc18/SectionName'
+import BackdropText from '../../ywc18/BackdropText'
 
 dayjs.locale('th')
 
 export default {
-  components: {},
+  components: {
+    SectionName,
+    BackdropText
+  },
   data() {
     return {
       items: {
         register: {
-          name: 'รับสมัคร',
-          startDate: '2019-09-02',
-          endDate: '2019-10-15'
+          text: 'RE GIS TER',
+          subText: 'สมัครค่าย',
+          image: require('~/assets/images/ywc18/timeline/register.png'),
+          topDate: '14 SEP',
+          bottomDate: '- 7 NOV'
         },
-        announce: { name: 'ประกาศผล', startDate: '2019-10-26' },
-        interview: { name: 'สัมภาษณ์', startDate: '2019-11-02', oneDay: true },
-        finalist: { name: 'ประกาศผลสัมภาษณ์', startDate: '2019-11-05' },
+        announce: {
+          text: 'AN NOUNCE MENT #1',
+          subText: 'ประกาศผล รอบใบสมัคร',
+          image: require('~/assets/images/ywc18/timeline/announcement1.png'),
+          bottomDate: '16 NOV'
+        },
+        interview: {
+          text: 'INTER VIEW',
+          subText: 'สัมภาษณ์',
+          image: require('~/assets/images/ywc18/timeline/interview.png'),
+          topDate: '21 NOV'
+        },
+        finalist: {
+          text: 'AN NOUNCE MENT #2',
+          subText: 'ประกาศผล รอบสัมภาษณ์',
+          image: require('~/assets/images/ywc18/timeline/announcement2.png'),
+          bottomDate: '25 NOV'
+        },
         camp: {
-          name: 'วันค่าย',
-          startDate: '2019-12-26',
-          endDate: '2019-12-29'
+          text: 'CAMP DAY',
+          subText: 'วันเข้าค่าย (ไม่ค้างคืน)',
+          image: require('~/assets/images/ywc18/timeline/camp-day.png'),
+          topDate: 'TO BE',
+          bottomDate: 'ANNOUNCED'
         }
       },
       isActive: {
-        register: false,
+        register: true,
         announce: false,
         interview: false,
         finalist: false,
         camp: false
+      },
+      isPending: {
+        register: false,
+        announce: false,
+        interview: false,
+        finalist: false,
+        camp: true
       }
     }
   },
@@ -151,43 +134,46 @@ export default {
 .header {
   margin-bottom: 40px;
 }
-.pending {
-  opacity: 0.6;
-  .event__date__from {
-    color: #f89742;
-  }
-  .event__date__to {
-    color: #f89742;
-  }
-  .event__image__filter {
-    background: linear-gradient(
-        0deg,
-        rgba(6, 22, 37, 0.2),
-        rgba(6, 22, 37, 0.2)
-      ),
-      linear-gradient(
-        180deg,
-        rgba(255, 93, 41, 0.1) 0%,
-        rgba(248, 151, 66, 0.1) 100%
-      );
-  }
-}
-.active {
-  .event__image__filter {
-    background: linear-gradient(
-      180deg,
-      rgba(255, 93, 41, 0.6) 0%,
-      rgba(248, 151, 66, 0.6) 100%
-    );
-  }
-}
 .event {
   position: relative;
   flex-grow: 0;
   height: 100%;
   line-height: 0;
   padding: 10px;
+
+  &.pending {
+    opacity: 0.6;
+    .event__date__from {
+      color: #f89742;
+    }
+    .event__date__to {
+      color: #f89742;
+    }
+    .event__image__filter {
+      background: linear-gradient(
+          0deg,
+          rgba(6, 22, 37, 0.2),
+          rgba(6, 22, 37, 0.2)
+        ),
+        linear-gradient(
+          180deg,
+          rgba(255, 93, 41, 0.1) 0%,
+          rgba(248, 151, 66, 0.1) 100%
+        );
+    }
+  }
+  &.active {
+    .event__image__filter {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 93, 41, 0.6) 0%,
+        rgba(248, 151, 66, 0.6) 100%
+      );
+    }
+  }
+
   &__date__from {
+    font-family: Barlow Semi Condensed;
     padding: 4px;
     font-weight: 600;
     font-size: 24px;
@@ -195,6 +181,7 @@ export default {
     line-height: 100%;
   }
   &__date__to {
+    font-family: Barlow Semi Condensed;
     padding: 4px;
     font-weight: 600;
     font-size: 24px;
@@ -243,6 +230,7 @@ export default {
     }
   }
   &__text {
+    font-family: Barlow Semi Condensed;
     padding-left: 5px;
     font-size: 34px;
     font-weight: bold;
@@ -266,32 +254,6 @@ export default {
   padding: 64px 0;
   position: relative;
   z-index: 2;
-
-  .title {
-    font-size: 2.5em;
-    font-weight: bold;
-    letter-spacing: 0.016em;
-    margin-bottom: 24px;
-    color: #f5f4f0;
-    &::before {
-      content: '←';
-      padding-right: 10px;
-      font-size: 40px;
-      font-weight: lighter;
-    }
-    &::after {
-      content: '→';
-      padding-left: 10px;
-      font-size: 40px;
-      font-weight: lighter;
-    }
-  }
-  .subtitle {
-    font-size: 24px;
-    font-style: italic;
-    letter-spacing: 0.16em;
-    color: #ff5d29;
-  }
 }
 .backdrop__wrapper {
   width: 100%;
@@ -307,39 +269,15 @@ export default {
     position: absolute;
     z-index: 1;
     overflow: hidden;
-    span {
-      // border: 2px solid rgba(242, 246, 252, 0.09);
-      color: rgba(242, 246, 252, 0.09);
-      -webkit-text-fill-color: hsl(
-        209deg,
-        72%,
-        8%
-      ); /* Will override color (regardless of order) */
-      -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color: rgba(242, 246, 252, 0.09);
-      font-style: italic;
-      font-weight: bold;
-      font-size: 500%;
-      line-height: 90.5%;
-
-      &.filled {
-        -webkit-text-fill-color: unset;
-        -webkit-text-stroke-width: 0px;
-      }
-    }
     &__top-left {
       position: absolute;
-      display: flex;
       top: 0;
       left: 0;
-      flex-direction: column;
     }
     &__center-right {
       position: absolute;
       top: 30%;
       right: 0;
-      display: flex;
-      flex-direction: column;
     }
   }
 }
@@ -352,13 +290,6 @@ export default {
   }
   .event {
     width: calc(50% - 20px);
-
-    // &__text {
-    //   font-size: 24px;
-    // }
-    // &__subtext {
-    //   font-size: 14px;
-    // }
   }
 }
 </style>
