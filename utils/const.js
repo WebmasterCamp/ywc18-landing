@@ -230,7 +230,7 @@ export const PACKAGES = [
     silver: false,
   },
   {
-    description: 'สื่อประชาสัมพันธ์',
+    description: 'สิ่งที่ผู้เข้าร่วมโครงการทุกคนจะได้รับ',
     vip: false,
     gold: false,
     silver: false,

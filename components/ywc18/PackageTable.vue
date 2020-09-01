@@ -23,9 +23,9 @@ export default {
       type: Array,
       default: () => {
         return []
-      }
+      },
     },
-    name: { type: String, default: 'วันที่' }
+    name: { type: String, default: 'วันที่' },
   },
   data() {
     const renderContent = (value, row, index) => {
@@ -39,8 +39,8 @@ export default {
             <span style={{ color: colorScheme.orange.normal }}>{value}</span>
           ),
           attrs: {
-            colSpan: value ? 4 : 0 // 0 = the cell will not be rendered.
-          }
+            colSpan: value ? 4 : 0, // 0 = the cell will not be rendered.
+          },
         }
       } else {
         return { children: value }
@@ -56,7 +56,7 @@ export default {
               dataIndex: 'description',
               align: 'left',
               key: 'desc',
-              customRender: renderContent
+              customRender: renderContent,
             },
             {
               title: 'VIP',
@@ -64,7 +64,7 @@ export default {
               align: 'center',
               key: 'vip',
               width: '14%',
-              customRender: renderContent
+              customRender: renderContent,
             },
             {
               title: 'GOLD',
@@ -72,7 +72,7 @@ export default {
               align: 'center',
               key: 'gold',
               width: '14%',
-              customRender: renderContent
+              customRender: renderContent,
             },
             {
               title: 'SILVER',
@@ -80,16 +80,16 @@ export default {
               align: 'center',
               key: 'silver',
               width: '14%',
-              customRender: renderContent
-            }
-          ]
-        }
-      ]
+              customRender: renderContent,
+            },
+          ],
+        },
+      ],
     }
   },
   created() {
     antDesignVueTable()
-  }
+  },
 }
 </script>
 
