@@ -1,6 +1,11 @@
 <template>
   <section class="container" @click="dismissQ($event)">
-    <SectionHead title="Q & A" class="qa__head" />
+    <SectionHead
+      title="Q & A"
+      subtitle="ตอบคำถามยอดฮิต"
+      type="b"
+      class="qa__head"
+    />
     <QuestionZone>
       <div
         v-for="(a, q) in questions"

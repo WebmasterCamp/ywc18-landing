@@ -1,6 +1,7 @@
 <template>
   <Container :align="align" :size="size" :color="color">
-    {{ title }}
+    <h1>{{ title }}</h1>
+    <p v-if="subtitle">{{ subtitle }}</p>
   </Container>
 </template>
 
@@ -17,7 +18,7 @@ const sizes = {
     fontSmallSize: 32, // For Mobile + Tablet
     height: 101,
   },
-  timeline: {
+  lg: {
     fontSize: 60,
     fontSmallSize: 36,
     height: 100,
@@ -25,24 +26,47 @@ const sizes = {
 }
 const Container = styled('div', { align: String, size: String, color: String })`
   height: ${(props) => sizes[props.size].height}px;
-  color: white;
-  font-family: Barlow, Anuphan;
-  font-style: normal;
-  font-weight: bold;
-  font-size: ${(props) => sizes[props.size].fontSize}px;
-  line-height: 101px;
-  background: url(${require('../../assets/images/ywc18/section-head-bg.png')});
+  h1 {
+    color: white;
+    font-family: Barlow, Anuphan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: ${(props) => sizes[props.size].fontSize}px;
+    line-height: 101px;
+    margin: 0;
+  }
+  background: url(${(props) =>
+    props.type === 'a'
+      ? require('~/assets/images/ywc18/section-head-bg.png')
+      : require('~/assets/images/ywc18/section-head-bg-2.png')});
   background-position: center center;
-  background-size: 436px 101px;
+  background-size: ${(props) =>
+    props.type === 'a' ? '436px 101px' : '438px 130px'};
+  height: ${(props) => (props.type === 'a' ? '101px' : '130px')};
   background-repeat: no-repeat;
   text-align: ${(props) => props.align};
+
+  p {
+    font-family: Anuphan;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: #061625;
+  }
 
   user-select: none;
 
   @media screen and (max-width: 768px) {
     text-align: center;
     font-size: ${(props) => sizes[props.size].fontSmallSize}px;
-    background: url(${require('../../assets/images/ywc18/section-head-bg.png')});
+    background: url(${(props) =>
+      props.type === 'a'
+        ? require('~/assets/images/ywc18/section-head-bg.png')
+        : require('~/assets/images/ywc18/section-head-bg-2.png')});
     background-position: center center;
     background-size: 324px 75px;
     background-repeat: no-repeat;
@@ -59,6 +83,8 @@ export default {
   },
   props: {
     title: { type: String, default: '' },
+    subtitle: { type: String, default: '' },
+    type: { type: String, default: 'a' },
     size: { type: String, default: 'md' },
     align: { type: String, default: 'center' },
     color: { type: String, default: '#FFFFFF' },
