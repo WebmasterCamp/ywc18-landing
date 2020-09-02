@@ -17,10 +17,15 @@
         <p>Young Webmaster Camp is on its way</p>
       </div>
 
-      <a class="what-is-ywc" href="https://ywc17.ywc.in.th">
-        YWC
-        <span class="secondary-text">คืออะไร ?</span>
-      </a>
+      <div class="button__groups">
+        <a class="what-is-ywc" href="https://ywc17.ywc.in.th">
+          YWC
+          <span class="secondary-text">คืออะไร ?</span>
+        </a>
+        <a class="what-is-ywc" href="/sponsor">
+          <span class="secondary-text">สนับสนุนโครงการ</span>
+        </a>
+      </div>
 
       <div class="copyright">
         <p class="copyright__firstline">
@@ -189,6 +194,13 @@ export default {
     font-size: 22px;
     line-height: 27px;
     letter-spacing: 0.5em;
+  }
+
+  .button__groups {
+    display: flex;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   .container {

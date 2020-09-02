@@ -149,7 +149,7 @@ const BannerCol = styled('div')`
 const BannerButton = styled('a', { color: String })`
   width: 100%;
   height: 100%;
-  font-family: 'Maledpan', 'Sarabun';
+  font-family: 'CmPrasanmit', 'Sarabun';
   font-weight: bold;
   font-size: 18px;
   border: none;

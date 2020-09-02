@@ -1,26 +1,30 @@
 <template>
-  <LoadingContainer>
+  <CenterContainer>
     <div>
       <a-spin>
-        <a-icon slot="indicator" type="loading" style="font-size: 128px; color: #E1426F; width: unset; height: unset;" spin />
+        <a-icon
+          slot="indicator"
+          type="loading"
+          style="font-size: 128px; color: #FF5D29; width:unset;height:unset;"
+          spin
+        />
       </a-spin>
       <br />
       <h1>โปรดรอซักครู่</h1>
     </div>
-  </LoadingContainer>
+  </CenterContainer>
 </template>
 <script>
-import styled from 'vue-styled-components'
-import CenterContainer from '~/components/CenterContainer'
-const LoadingContainer = styled(CenterContainer)`
-  h1 {
-    font-weight: bold;
-    margin-top: 2em;
-  }
-`
+import CenterContainer from '~/components/CenterContainer.vue'
+
 export default {
-  components: {
-    LoadingContainer
-  }
+  components: { CenterContainer }
 }
 </script>
+
+<style scoped>
+h1 {
+  font-weight: bold;
+  margin-top: 2em;
+}
+</style>

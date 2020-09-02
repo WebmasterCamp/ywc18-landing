@@ -64,9 +64,9 @@ export default {
     }
   },
 
-  middleware({ redirect }) {
-    return redirect('/')
-  },
+  // middleware({ redirect }) {
+  //   return redirect('/')
+  // },
 }
 </script>
 <style lang="scss">

@@ -1,48 +1,44 @@
 <template>
   <div>
-    <Y18Hero />
-    <!-- <Hero />
-    <WhatIsYWC />
-    <Majors />
-    <Location />
-    <Timeline />
-    <Guru />
-    <Gallery />
-    <Sponsor />
-    <QA />
-    <FollowUs />
-    <Footer />
-    <PR />-->
+    <Hero />
+    <!-- <WhatIsYWC /> -->
+    <!-- <Timeline /> -->
+    <!-- <Majors /> -->
+    <!-- <Location /> -->
+    <!-- <Guru /> -->
+    <!-- <Gallery /> -->
+    <!-- <Sponsor /> -->
+    <!-- <QA /> -->
+    <!-- <FollowUs /> -->
+    <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
-import Y18Hero from '~/components/sections/ywc18/Hero.vue'
-// import WhatIsYWC from '~/components/sections/WhatIsYWC'
-// import Hero from '~/components/sections/Hero'
-// import Timeline from '~/components/sections/Timeline.vue'
+import Hero from '~/components/sections/ywc18/Hero.vue'
+// import WhatIsYWC from '~/components/sections/ywc18/WhatIsYWC'
+// import Timeline from '~/components/sections/ywc18/Timeline.vue'
 export default {
   components: {
-    Y18Hero
-    // Hero,
+    Hero,
     // WhatIsYWC,
-    // Location: () => import('~/components/sections/Location'),
     // Timeline,
-    // Guru: () => import('~/components/sections/Guru'),
-    // Majors: () => import('~/components/sections/Majors'),
-    // QA: () => import('~/components/sections/QA'),
-    // FollowUs: () => import('~/components/sections/FollowUs'),
-    // Sponsor: () => import('~/components/sections/Sponsor'),
-    // Gallery: () => import('~/components/sections/Gallery'),
-    // PR: () => import('~/components/sections/PR'),
-    // Footer: () => import('~/components/sections/Footer'),
-  }
+    // TODO: Majors: () => import('~/components/sections/Majors'),
+    // TODO: Blog,
+    // TODO: Location: () => import('~/components/sections/Location'),
+    // TODO: Guru: () => import('~/components/sections/Guru'),
+    // Gallery: () => import('~/components/sections/ywc18/Gallery'),
+    // TODO: Sponsor: () => import('~/components/sections/Sponsor'),
+    // TODO: QA: () => import('~/components/sections/QA'),
+    // TODO: FollowUs: () => import('~/components/sections/FollowUs'),
+    // TODO: Footer: () => import('~/components/sections/Footer'),
+  },
 }
 </script>
 
 <style>
 .container {
-  max-width: 960px;
+  max-width: 1140px;
   margin: 0 auto;
   text-align: center;
 }
