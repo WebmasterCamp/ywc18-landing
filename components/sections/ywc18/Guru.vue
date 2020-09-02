@@ -5,13 +5,15 @@
       <div class="container">
         <Picture :fileName="`guru/${gurus[currentGuru].img}`" />
         <div class="guru-content">
-          <h1 48px;>{{ gurus[currentGuru].name }}</h1>
+          <h1>{{ gurus[currentGuru].name }}</h1>
           <p v-html="gurus[currentGuru].role" />
           <div v-if="gurus[currentGuru].major" :class="`major major-${gurus[currentGuru].major}`">
             {{ gurus[currentGuru].major }}
           </div>
         </div>
       </div>
+      <Picture class="bg bg-top" fileName="ywc18/paper-guru-top" />
+      <Picture class="bg bg-bottom" fileName="ywc18/paper-guru-bottom" />
     </CurrentGuru>
     <Gurus>
       <div
@@ -22,6 +24,7 @@
         @click="selectGuru(idx)"
       >
         <Picture :fileName="`guru/${g.img}`" :alt="g.name" />
+        <div :class="`major major-${g.major}`" />
       </div>
     </Gurus>
   </section>
@@ -39,23 +42,51 @@ import SectionName from '~/components/ywc18/SectionName.vue'
 import Picture from '~/components/Picture.vue'
 
 const CurrentGuru = styled.div`
-  background:
-    url(/images/ywc18/bg/paper-guru-top.png),
-    url(/images/ywc18/bg/paper-guru-bottom.png),
+  background: 
+    url(/images/ywc18/bg/guru-typo.svg),
     linear-gradient(100.19deg, #f66b3f -0.48%, #f89742 47.88%, #fe5722 96.18%);
-  background-size: 100% auto, 100% auto, contain;
-  background-position: top left, bottom right, center;
+  background-blend-mode: color-dodge;
+  background-size: 60% auto, contain;
+  background-position: left center;
   background-repeat: no-repeat;
-  margin: 50px 0;
-  padding: 150px 0 50px;
+  padding: 120px 0 30px;
+  position: relative;
+
+  @media screen and (max-width: 960px) {
+    background: linear-gradient(100.19deg, #f66b3f -0.48%, #f89742 47.88%, #fe5722 96.18%);
+    padding: 80px 0 0;
+    margin-bottom: 30px;
+  }
+
+  > .bg {
+    width: 100%;
+    position: absolute;
+    left: 0;
+
+    &.bg-top {
+      top: -5px;
+    }
+
+    &.bg-bottom {
+      bottom: -10px;
+    }
+  }
 
   > .container {
     display: flex;
 
+    @media screen and (max-width: 960px) {
+      flex-direction: column-reverse;
+    }
+
     img {
       width: 400px;
-      height: 400px;
+      max-width: 80%;
       margin: 0 50px;
+
+      @media screen and (max-width: 960px) {
+        margin: 0;
+      }
     }
 
     > .guru-content {
@@ -64,16 +95,30 @@ const CurrentGuru = styled.div`
 
       > h1 {
         color: #002144;
-        font-size: 40px;
+        font-size: 38px;
         font-weight: 600;
         margin-top: 0;
         margin-bottom: 12px;
+
+        @media screen and (max-width: 1048px) {
+          font-size: 30px;
+        }
+
+        @media screen and (max-width: 960px) {
+          font-size: 24px;
+        }
       }
 
       > p {
         color: #002144;
         font-size: 20px;
         font-weight: 500;
+        line-height: 1.5;
+
+        @media screen and (max-width: 960px) {
+          font-size: 12px;
+          font-weight: 400;
+        }
       }
 
       > .major {
@@ -82,6 +127,7 @@ const CurrentGuru = styled.div`
         border-radius: 2px;
         font-size: 18px;
         font-weight: 500;
+        line-height: 1.5;
         width: fit-content;
         padding-left: 30px;
         padding-right: 20px;
@@ -100,6 +146,12 @@ const CurrentGuru = styled.div`
           transform: translateY(-50%);
           top: 50%;
           left: 10px;
+
+          @media screen and (max-width: 960px) {
+            width: 8px;
+            height: 8px;
+            left: 8px;
+          }
         }
 
         &.major-programming:before {
@@ -117,6 +169,19 @@ const CurrentGuru = styled.div`
         &.major-content:before {
           background: #00c42b;
         }
+
+        @media screen and (max-width: 960px) {
+          font-size: 10px;
+          margin: 0 auto;
+          padding-left: 20px;
+          padding-right: 10px;
+        }
+      }
+
+      @media screen and (max-width: 960px) {
+        text-align: center;
+        margin-top: 0;
+        padding: 0 15px;
       }
     }
   }
@@ -133,21 +198,48 @@ const Gurus = styled.div`
   > div {
     display: inline-block;
     margin: 12px;
-    background: url(/images/ywc18/bg/guru.png);
-    background-size: cover;
-    background-position: center;
     width: 125px;
-    height: 125px;
     user-select: none;
     cursor: pointer;
 
     img {
+      background: url(/images/ywc18/bg/guru.png);
+      background-size: cover;
+      background-position: center;
       user-drag: none;
+    }
+
+    > .major {
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      margin: 10px auto 0;
+
+      &.major-programming {
+        background: #1451c7;
+      }
+
+      &.major-design {
+        background: #ffce21;
+      }
+
+      &.major-marketing {
+        background: #e73239;
+      }
+
+      &.major-content {
+        background: #00c42b;
+      }
+
+      @media screen and (max-width: 960px) {
+        width: 8px;
+        height: 8px;
+        margin-top: 8px;
+      }
     }
 
     @media screen and (max-width: 960px) {
       width: 80px;
-      height: 80px;
     }
   }
 

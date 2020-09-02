@@ -26,7 +26,7 @@ export default {
     // TODO: Majors: () => import('~/components/sections/Majors'),
     // TODO: Blog,
     // TODO: Location: () => import('~/components/sections/Location'),
-    // TODO: Guru: () => import('~/components/sections/Guru'),
+    // Guru: () => import('~/components/sections/ywc18/Guru'),
     // Gallery: () => import('~/components/sections/ywc18/Gallery'),
     // TODO: Sponsor: () => import('~/components/sections/Sponsor'),
     // TODO: QA: () => import('~/components/sections/QA'),
