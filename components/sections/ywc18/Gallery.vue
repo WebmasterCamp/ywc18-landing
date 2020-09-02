@@ -103,6 +103,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.container
+  max-width: 1000px;
 img
   background: url(~assets/images/loading.svg) no-repeat
   background-size: 64px
