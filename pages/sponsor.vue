@@ -32,7 +32,7 @@
       <div>
         <CTAButton @click="viewProposal">ดูรายละเอียดโครงการ</CTAButton>
       </div>
-      <SectionTitle title="Package Sponsor" />
+      <SectionTitle title="Sponsorship Packages" />
       <InfoContainer class="packages-sponsor">
         <a-row :gutter="21">
           <a-col :xs="24" :lg="8">

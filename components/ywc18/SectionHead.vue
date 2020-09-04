@@ -13,7 +13,7 @@ const sizes = {
     height: 100,
   },
   md: {
-    fontSize: 44, // For Desktop
+    fontSize: 38, // For Desktop
     fontSmallSize: 32, // For Mobile + Tablet
     height: 101,
   },
