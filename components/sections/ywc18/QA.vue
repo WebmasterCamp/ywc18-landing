@@ -1,11 +1,6 @@
 <template>
   <section class="container" @click="dismissQ($event)">
-    <SectionHead
-      title="Q & A"
-      subtitle="ตอบคำถามยอดฮิต"
-      type="b"
-      class="qa__head"
-    />
+    <SectionTitle title="Q & A" subtitle="ตอบคำถามยอดฮิต" />
     <QuestionZone>
       <div
         v-for="(a, q) in questions"
@@ -32,7 +27,7 @@
 </style>
 <script>
 import styled from 'vue-styled-components'
-import SectionHead from '~/components/ywc18/SectionHead.vue'
+import SectionTitle from '~/components/ywc18/SectionTitle.vue'
 import QuestionItem from '~/components/ywc18/QuestionItem.vue'
 
 const QuestionZone = styled.div`
@@ -48,7 +43,7 @@ const QuestionZone = styled.div`
 `
 export default {
   components: {
-    SectionHead,
+    SectionTitle,
     QuestionZone,
     QuestionItem,
   },
@@ -83,8 +78,4 @@ export default {
   },
 }
 </script>
-<style scoped>
-.qa__head {
-  margin-bottom: 66px;
-}
-</style>
+<style></style>

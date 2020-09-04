@@ -1,7 +1,6 @@
 <template>
   <Container :align="align" :size="size" :color="color">
     <h1>{{ title }}</h1>
-    <p v-if="subtitle">{{ subtitle }}</p>
   </Container>
 </template>
 
@@ -36,13 +35,11 @@ const Container = styled('div', { align: String, size: String, color: String })`
     margin: 0;
   }
   background: url(${(props) =>
-    props.type === 'a'
-      ? require('~/assets/images/ywc18/section-head-bg.png')
-      : require('~/assets/images/ywc18/section-head-bg-2.png')});
+    require('~/assets/images/ywc18/section-head-bg.png')});
   background-position: center center;
   background-size: ${(props) =>
     props.type === 'a' ? '436px 101px' : '438px 130px'};
-  height: ${(props) => (props.type === 'a' ? '101px' : '130px')};
+  height: '101px';
   background-repeat: no-repeat;
   text-align: ${(props) => props.align};
 
@@ -83,8 +80,6 @@ export default {
   },
   props: {
     title: { type: String, default: '' },
-    subtitle: { type: String, default: '' },
-    type: { type: String, default: 'a' },
     size: { type: String, default: 'md' },
     align: { type: String, default: 'center' },
     color: { type: String, default: '#FFFFFF' },
