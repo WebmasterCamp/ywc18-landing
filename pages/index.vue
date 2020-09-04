@@ -30,7 +30,7 @@ export default {
     // Timeline
     // Guru: () => import('~/components/sections/Guru'),
     // Majors: () => import('~/components/sections/Majors'),
-    QA: () => import('~/components/sections/ywc18/QA'),
+    // QA: () => import('~/components/sections/ywc18/QA'),
     // FollowUs: () => import('~/components/sections/FollowUs'),
     // Sponsor: () => import('~/components/sections/Sponsor'),
     // Gallery: () => import('~/components/sections/Gallery'),
