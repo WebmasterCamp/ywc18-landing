@@ -1,51 +1,49 @@
 <template>
   <section class="container what-is-ywc__container">
-    <div>
-      <a-row :gutter="15">
-        <a-col :lg="12">
-          <div class="what-is-ywc__heading">
-            <h1>
-              ชีวิตในโลก<span>โลกใบใหม่</span><br />
-              ออกแบบได้ ด้วย<span>ตัวคุณ</span>
-            </h1>
-          </div>
-          <div class="what-is-ywc__arrow">
-            <img src="~/assets/images/ywc18/arrow-right-long.svg" alt="" />
-          </div>
-          <div class="what-is-ywc__description">
-            <p>
-              เชิญชวนนิสิตนักศึกษาทั่วประเทศ มาร่วมเป็นส่วนหนึ่งในการสร้าง
-              เว็บไซต์จากการใช้ความรู้ และความสามารถ เพื่อสร้างทางออก
-              ให้กับวิถีชีวิตที่เปลี่ยนแปลงไป หลังจากสถานการณ์ COVID-19
-              ของคนในสังคม ให้พบเจอกับโลกใบใหม่ที่ดีกว่าเดิม จากการ ร่วมกันคิด
-              ร่วมกันสร้างสรรค์ และร่วมออกแบบไปด้วยกัน
-            </p>
-            <p>
-              โอกาสเดียวที่ตัวคุณและสังคมจะได้รับการพัฒนา<br />
-              ไปพร้อม ๆ กันกับ Young Webmaster Camp ครั้งที่ 18 <br /><span
-                >“New Normal, New Web, New World”<br
-              /></span>
+    <div class="what-is-ywc__wrapper">
+      <div>
+        <div class="what-is-ywc__heading">
+          <h1>
+            ชีวิตในโลก<span>โลกใบใหม่</span><br />
+            ออกแบบได้ ด้วย<span>ตัวคุณ</span>
+          </h1>
+        </div>
+        <div class="what-is-ywc__arrow">
+          <img src="~/assets/images/ywc18/arrow-right-long.svg" alt="" />
+        </div>
+        <div class="what-is-ywc__description">
+          <p>
+            เชิญชวนนิสิตนักศึกษาทั่วประเทศ มาร่วมเป็นส่วนหนึ่งในการสร้าง
+            เว็บไซต์จากการใช้ความรู้ และความสามารถ เพื่อสร้างทางออก
+            ให้กับวิถีชีวิตที่เปลี่ยนแปลงไป หลังจากสถานการณ์ COVID-19
+            ของคนในสังคม ให้พบเจอกับโลกใบใหม่ที่ดีกว่าเดิม จากการ ร่วมกันคิด
+            ร่วมกันสร้างสรรค์ และร่วมออกแบบไปด้วยกัน
+          </p>
+          <p>
+            โอกาสเดียวที่ตัวคุณและสังคมจะได้รับการพัฒนา<br />
+            ไปพร้อม ๆ กันกับ Young Webmaster Camp ครั้งที่ 18 <br /><span
+              >“New Normal, New Web, New World”<br
+            /></span>
 
-              ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุดในประเทศไทย
-            </p>
+            ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุดในประเทศไทย
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="what-is-ywc__images">
+          <BackdropText
+            text="WHAT IS YWC ?"
+            :times="6"
+            gap
+            highlight
+            fade
+            class="backdrop-text"
+          />
+          <div class="image">
+            <Picture fileName="what-is-ywc.png"></Picture>
           </div>
-        </a-col>
-        <a-col :lg="12">
-          <div class="what-is-ywc__images">
-            <BackdropText
-              text="WHAT IS YWC ?"
-              :times="6"
-              gap
-              highlight
-              fade
-              class="backdrop-text"
-            />
-            <div class="image">
-              <Picture fileName="what-is-ywc.png"></Picture>
-            </div>
-          </div>
-        </a-col>
-      </a-row>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -69,6 +67,25 @@ export default {
     padding-top: 80px;
     padding-bottom: 80px;
   }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 7.5px));
+    gap: 60px 15px;
+    div {
+      position: relative;
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: auto;
+      grid-template-rows: repeat(2, auto);
+      div {
+        &:nth-child(2) {
+          order: -1;
+        }
+      }
+    }
+  }
+
   &__heading {
     display: flex;
     justify-content: flex-start;
@@ -84,6 +101,17 @@ export default {
         color: $primary-color;
       }
     }
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+      h1 {
+        text-align: center;
+      }
+    }
+    @media screen and (max-width: 425px) {
+      h1 {
+        font-size: 28px;
+      }
+    }
   }
   &__description {
     text-align: left;
@@ -92,14 +120,21 @@ export default {
     line-height: 150%;
     letter-spacing: 0.01em;
     color: rgba(242, 246, 252, 0.9);
+    @media screen and (max-width: 768px) {
+      margin: auto;
+    }
     p {
       color: #bdbdbd;
       @media screen and (max-width: 768px) {
         font-size: 18px;
+        text-align: center;
       }
       margin-bottom: 2.5rem;
       span {
         color: $primary-color;
+      }
+      @media screen and (max-width: 425px) {
+        font-size: 16px;
       }
     }
   }
@@ -107,11 +142,15 @@ export default {
     position: relative;
     display: flex;
     justify-content: center;
+    min-height: 324px;
     .backdrop-text {
       z-index: 0;
-      position: absolute;
       top: 0;
       right: 0;
+      left: unset;
+      @media screen and (max-width: 768px) {
+        left: 0; // center
+      }
     }
     .image {
       position: absolute;
@@ -120,11 +159,17 @@ export default {
       width: 368px;
       top: 54px;
       max-width: 100%;
+      @media screen and (max-width: 768px) {
+        width: 260px;
+      }
     }
   }
   &__arrow {
     display: flex;
     justify-content: flex-start;
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
   }
 }
 </style>
