@@ -62,12 +62,12 @@ const config = {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap",
+          "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap",
       },
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,700&display=swap",
+          "https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,700;1,800&display=swap",
       },
     ],
   },

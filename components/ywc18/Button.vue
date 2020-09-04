@@ -1,5 +1,5 @@
 <template>
-  <a class="cta__btn" @click="onClick">
+  <a class="cta__btn" :class="{ isSmall: size === 'sm' }" @click="onClick">
     <slot></slot>
   </a>
 </template>
@@ -9,8 +9,14 @@ export default {
   methods: {
     onClick() {
       this.$emit('click')
-    }
-  }
+    },
+  },
+  props: {
+    size: {
+      type: String,
+      default: 'md',
+    },
+  },
 }
 </script>
 
@@ -45,6 +51,15 @@ export default {
   }
   @media screen and (max-width: 428px) {
     transform: scale(0.8);
+  }
+
+  &.isSmall {
+    transform: scale(0.7);
+    font-size: 32px;
+    @media screen and (max-width: 428px) {
+      transform: scale(0.5);
+      font-size: 32px;
+    }
   }
 }
 </style>

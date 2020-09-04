@@ -11,7 +11,9 @@
       </ul>
     </div>
     <div class="sponsor-button__wrapper">
-      <a-button type="primary" size="large" @click="viewResponseFile">สนับสนุน YWC18</a-button>
+      <a-button type="primary" size="large" @click="viewResponseFile"
+        >สนับสนุน YWC18</a-button
+      >
     </div>
   </SponsorPackage>
 </template>
@@ -25,7 +27,7 @@ const SponsorPackage = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 430px;
+  min-height: 494px;
   width: 100%;
   height: 100%;
   background: white;
@@ -43,7 +45,7 @@ const SponsorPackage = styled.div`
 const Badge = styled('div', { type: String })`
   width: 175px;
   height: 51px;
-  background: url(${props =>
+  background: url(${(props) =>
     require(`../../assets/images/ywc18/sponsor-${props.type}-badge.svg`)});
   color: white;
   font-family: 'Barlow Semi Condensed';
@@ -62,8 +64,8 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'vip'
-    }
+      default: 'vip',
+    },
   },
   computed: {
     benefits() {
@@ -77,7 +79,7 @@ export default {
         return SPONSOT_PACKAGES[this.type].price
       }
       return ''
-    }
+    },
   },
   created() {
     antDesignVueButton()
@@ -85,8 +87,8 @@ export default {
   methods: {
     viewResponseFile() {
       window.open('/archive/ywc18-response-proposal.pdf')
-    }
-  }
+    },
+  },
 }
 </script>
 
