@@ -5,8 +5,8 @@
         <a-col :lg="12">
           <div class="what-is-ywc__heading">
             <h1>
-              ชีวิตในโลก<span>โลกใบใหม่</span><br />
-              ออกแบบได้ ด้วย<span>ตัวคุณ</span>
+              ชีวิตใน<span>โลกใบใหม่</span><br />
+              ออกแบบได้ด้วย<span>ตัวคุณ</span>
             </h1>
           </div>
           <div class="what-is-ywc__arrow">
