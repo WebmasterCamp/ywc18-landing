@@ -167,6 +167,6 @@ img
     height: auto
     padding: 0 15px
     transition: opacity .3s
-    &::hover
+    &:hover
       opacity: 1
 </style>
