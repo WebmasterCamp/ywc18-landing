@@ -2,18 +2,31 @@
   <section>
     <SectionName title="Guru" />
     <CurrentGuru>
-      <div class="container">
-        <Picture :fileName="`guru/${gurus[currentGuru].img}`" />
-        <div class="guru-content">
-          <h1>{{ gurus[currentGuru].name }}</h1>
-          <p v-html="gurus[currentGuru].role" />
+      <div class="container guru-detail">
+        <transition name="guru-img" mode="out-in">
+          <template v-for="(img, index) in guruImages">
+            <Picture
+              :fileName="`guru/${gurus[currentGuru].img}`"
+              :key="`guru-${index}`"
+              v-if="gurus[currentGuru].img === img"
+            />
+          </template>
+        </transition>
+        <transition name="guru-detail" mode="out-in">
           <div
-            v-if="gurus[currentGuru].major"
-            :class="`major major-${gurus[currentGuru].major}`"
+            class="guru-content"
+            :key="`guru-detail-${gurus[currentGuru].img}`"
           >
-            {{ gurus[currentGuru].major }}
+            <h1>{{ gurus[currentGuru].name }}</h1>
+            <p v-html="gurus[currentGuru].role" />
+            <div
+              v-if="gurus[currentGuru].major"
+              :class="`major major-${gurus[currentGuru].major}`"
+            >
+              {{ gurus[currentGuru].major }}
+            </div>
           </div>
-        </div>
+        </transition>
       </div>
       <Cover>
         <Picture class="bg bg-top" fileName="ywc18/paper-guru-top" />
@@ -54,7 +67,7 @@ const CurrentGuru = styled.div`
   background-size: 60% auto, contain;
   background-position: left center;
   background-repeat: no-repeat;
-  padding: 120px 0 30px;
+  padding: 140px 0 30px;
   position: relative;
   overflow: hidden;
 
@@ -69,7 +82,7 @@ const CurrentGuru = styled.div`
     margin-bottom: 30px;
   }
 
-  > .container {
+  > .guru-detail {
     display: flex;
 
     @media screen and (max-width: 960px) {
@@ -265,6 +278,15 @@ const Cover = styled.div`
   .bg-bottom {
     margin-bottom: -10px;
   }
+
+  /* Block draging image cover  */
+  ::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
 `
 
 export default {
@@ -347,6 +369,11 @@ export default {
         },
       ],
     }
+  },
+  computed: {
+    guruImages() {
+      return this.gurus.map((guru) => guru.img)
+    },
   },
   created() {
     this.setAutoplay()
