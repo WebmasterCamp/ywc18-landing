@@ -69,6 +69,10 @@ const Wrapper = styled.div`
       height: 100%;
       object-fit: cover;
     }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 `
 
@@ -94,7 +98,7 @@ const Title = styled('div', { wrap: Boolean })`
 
   @media screen and (max-width: 576px) {
     > span {
-      font-size: 32px;
+      font-size: 35px;
     }
   }
 `
