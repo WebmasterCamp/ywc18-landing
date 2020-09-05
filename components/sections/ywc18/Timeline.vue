@@ -133,7 +133,7 @@ export default {
 
 <style lang="scss">
 * {
-  font-family: Barlow, Anuphan;
+  /* font-family: Barlow, Anuphan; */
 }
 .events {
   display: flex;
