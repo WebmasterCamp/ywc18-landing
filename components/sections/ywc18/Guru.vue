@@ -7,7 +7,10 @@
         <div class="guru-content">
           <h1>{{ gurus[currentGuru].name }}</h1>
           <p v-html="gurus[currentGuru].role" />
-          <div v-if="gurus[currentGuru].major" :class="`major major-${gurus[currentGuru].major}`">
+          <div
+            v-if="gurus[currentGuru].major"
+            :class="`major major-${gurus[currentGuru].major}`"
+          >
             {{ gurus[currentGuru].major }}
           </div>
         </div>
@@ -42,8 +45,8 @@ import SectionName from '~/components/ywc18/SectionName.vue'
 import Picture from '~/components/Picture.vue'
 
 const CurrentGuru = styled.div`
-  background: 
-    url(/images/ywc18/bg/guru-typo.svg),
+  font-family: Barlow, Anuphan;
+  background: url(/images/ywc18/bg/guru-typo.svg),
     linear-gradient(100.19deg, #f66b3f -0.48%, #f89742 47.88%, #fe5722 96.18%);
   background-blend-mode: color-dodge;
   background-size: 60% auto, contain;
@@ -53,7 +56,12 @@ const CurrentGuru = styled.div`
   position: relative;
 
   @media screen and (max-width: 960px) {
-    background: linear-gradient(100.19deg, #f66b3f -0.48%, #f89742 47.88%, #fe5722 96.18%);
+    background: linear-gradient(
+      100.19deg,
+      #f66b3f -0.48%,
+      #f89742 47.88%,
+      #fe5722 96.18%
+    );
     padding: 80px 0 0;
     margin-bottom: 30px;
   }
