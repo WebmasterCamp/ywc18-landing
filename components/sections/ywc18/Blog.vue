@@ -11,13 +11,13 @@
       <no-ssr placeholder="Loading...">
         <agile ref="thumbnails" class="thumbnails" :options="options">
           <div
-            v-for="(slide, index) in slides"
+            v-for="(blog, index) in blogs"
             :key="index"
             class="blog blog--thumbnail"
             :class="`blog--${index}`"
-            @click="$refs.thumbnails.goTo(index)"
+            @click="onClickBlog(blog)"
           >
-            <Blog />
+            <Blog :detail="blog" />
           </div>
           <template slot="prevButton">
             <Picture fileName="ywc18/button-arrow-left" />
@@ -34,6 +34,7 @@
 <script>
 import SectionName from '~/components/ywc18/SectionName'
 import Blog from '~/components/ywc18/Blog'
+import { BLOGS } from '~/utils/const'
 import Picture from '~/components/Picture.vue'
 export default {
   components: {
@@ -42,29 +43,28 @@ export default {
     Picture,
   },
   data: () => ({
-    slides: [
-      '/images/gallery/ywc17/1.jpg',
-      '/images/gallery/ywc17/2.jpg',
-      '/images/gallery/ywc17/3.jpg',
-    ],
+    blogs: BLOGS,
     options: {
       autoplay: false,
-      centerMode: true,
-      autoplaySpeed: 5000,
+      centerMode: false,
+      autoplaySpeed: 4500,
       dots: false,
       navButtons: false,
       slidesToShow: 1,
       responsive: [
         {
-          breakpoint: 425,
+          breakpoint: 426,
           settings: {
             slidesToShow: 2,
+            navButtons: true,
+            autoplay: true,
           },
         },
         {
-          breakpoint: 768,
+          breakpoint: 769,
           settings: {
             slidesToShow: 3,
+            navButtons: BLOGS.length > 3,
           },
         },
         {
@@ -76,6 +76,11 @@ export default {
       ],
     },
   }),
+  methods: {
+    onClickBlog(blog) {
+      window.open(blog.url)
+    },
+  },
 }
 </script>
 

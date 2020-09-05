@@ -1,26 +1,17 @@
 <template>
   <div class="blog-card__wrapper">
     <div class="blog-card__cover">
-      <img
-        v-lazy="`https://miro.medium.com/max/700/1*GXYBJclQ686PDgFD0mgVWg.jpeg`"
-        alt=""
-      />
+      <img v-lazy="detail.cover" alt="" />
     </div>
     <div class="blog-card__detail">
       <div>
-        <h3>YWC ก็เหมือนเซ็กส์ (บันทึกชีวิตในค่าย + ระบายจากใจฝั่งคอนเทนต์)</h3>
+        <h3>{{ detail.title }}</h3>
       </div>
       <div class="blog-card__author">
-        <img
-          v-lazy="
-            `https://miro.medium.com/max/700/1*GXYBJclQ686PDgFD0mgVWg.jpeg`
-          "
-          alt=""
-          class="blog-card__author--img"
-        />
+        <img v-lazy="detail.avatar" alt="" class="blog-card__author--img" />
         <div class="blog-card__author--name">
-          <span>Chayanon Thongpila</span>
-          <span>YWC17 Programming</span>
+          <span>{{ detail.name }}</span>
+          <span v-if="detail.major">{{ detail.major }}</span>
         </div>
       </div>
     </div>
@@ -28,7 +19,12 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    detail: Object,
+    default: () => ({}),
+  },
+}
 </script>
 
 <style lang="scss">
@@ -52,9 +48,14 @@ export default {}
     background: rgba(242, 246, 252, 0.9);
     h3 {
       font-weight: 600;
-      font-size: 20px;
+      font-size: 18px;
       text-align: left;
-      margin: 0 0 12px;
+      margin: 0 0 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* number of lines to show */
+      -webkit-box-orient: vertical;
     }
   }
   &__author {
