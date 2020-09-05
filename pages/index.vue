@@ -1,14 +1,16 @@
 <template>
   <div>
     <Hero />
-    <!-- <WhatIsYWC /> -->
-    <!-- <Timeline /> -->
-    <!-- <Majors /> -->
+    <WhatIsYWC />
+    <Timeline />
+    <DiverderTwoM />
+    <Majors />
     <!-- <Location /> -->
-    <!-- <Guru /> -->
-    <!-- <Gallery /> -->
+    <Guru />
+    <Gallery />
     <!-- <Sponsor /> -->
-    <!-- <QA /> -->
+    <PaperDivider />
+    <QA />
     <!-- <FollowUs /> -->
     <!-- <Footer /> -->
   </div>
@@ -16,20 +18,22 @@
 
 <script>
 import Hero from '~/components/sections/ywc18/Hero.vue'
-// import WhatIsYWC from '~/components/sections/ywc18/WhatIsYWC'
-// import Timeline from '~/components/sections/ywc18/Timeline.vue'
+import WhatIsYWC from '~/components/sections/ywc18/WhatIsYWC'
+import Timeline from '~/components/sections/ywc18/Timeline.vue'
 export default {
   components: {
     Hero,
-    // WhatIsYWC,
-    // Timeline,
-    // Majors: () => import('~/components/sections/ywc18/Majors'),
+    WhatIsYWC,
+    Timeline,
+    DiverderTwoM: () => import('~/components/sections/ywc18/2m'),
+    Majors: () => import('~/components/sections/ywc18/Majors'),
     // TODO: Blog,
     // TODO: Location: () => import('~/components/sections/Location'),
-    // Guru: () => import('~/components/sections/ywc18/Guru'),
-    // Gallery: () => import('~/components/sections/ywc18/Gallery'),
+    Guru: () => import('~/components/sections/ywc18/Guru'),
+    Gallery: () => import('~/components/sections/ywc18/Gallery'),
     // TODO: Sponsor: () => import('~/components/sections/Sponsor'),
-    // QA: () => import('~/components/sections/ywc18/QA'),
+    PaperDivider: () => import('~/components/sections/ywc18/PaperDivider'),
+    QA: () => import('~/components/sections/ywc18/QA'),
     // TODO: FollowUs: () => import('~/components/sections/FollowUs'),
     // TODO: Footer: () => import('~/components/sections/Footer'),
   },
