@@ -1,8 +1,8 @@
 <template>
   <section>
-    <SectionName title="Sponsors" subTitle="ผู้สนับสนุนค่าย YWC18" bgLeft />
+    <SectionName title="SPONSOR" subTitle="ผู้สนับสนุนค่าย YWC18" bgLeft />
     <SponsorGroup style="margin-top: 70px;">
-      <SponsorBadge
+      <LogoBadge
         v-for="(sponsor, index) in sponsors.vip"
         :key="index"
         :fileName="`ywc18/sponsors/${sponsor.img}`"
@@ -12,7 +12,7 @@
       />
     </SponsorGroup>
     <SponsorGroup>
-      <SponsorBadge
+      <LogoBadge
         v-for="(sponsor, index) in sponsors.gold"
         :key="index"
         :fileName="`ywc18/sponsors/${sponsor.img}`"
@@ -22,7 +22,7 @@
       />
     </SponsorGroup>
     <SponsorGroup>
-      <SponsorBadge
+      <LogoBadge
         v-for="(sponsor, index) in sponsors.silver"
         :key="index"
         :fileName="`ywc18/sponsors/${sponsor.img}`"
@@ -32,7 +32,7 @@
       />
     </SponsorGroup>
     <NuxtLink to="/sponsor" style="text-decoration: none;">
-      <Button>ร่วมสนับสนุน YWC 18 </Button>
+      <Button>ร่วมสนับสนุน YWC 18</Button>
     </NuxtLink>
   </section>
 </template>
@@ -43,7 +43,7 @@ section {
   margin-top: 150px;
 
   @media screen and (max-width: 768px) {
-    margin-top: 50px;
+    margin-top: 100px;
   }
 }
 </style>
@@ -52,7 +52,7 @@ section {
 import styled from 'vue-styled-components'
 import Button from '~/components/ywc18/Button.vue'
 import SectionName from '~/components/ywc18/SectionName.vue'
-import SponsorBadge from '~/components/ywc18/SponsorBadge.vue'
+import LogoBadge from '~/components/ywc18/LogoBadge.vue'
 
 const SponsorGroup = styled.div`
   display: flex;
@@ -69,7 +69,7 @@ export default {
   components: {
     Button,
     SectionName,
-    SponsorBadge,
+    LogoBadge,
     SponsorGroup,
   },
   data() {

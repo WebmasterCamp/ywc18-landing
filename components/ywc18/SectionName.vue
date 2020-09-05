@@ -98,7 +98,7 @@ const Title = styled('div', { wrap: Boolean })`
 
   @media screen and (max-width: 576px) {
     > span {
-      font-size: 32px;
+      font-size: 35px;
     }
   }
 `
