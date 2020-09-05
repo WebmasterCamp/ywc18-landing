@@ -15,8 +15,10 @@
           </div>
         </div>
       </div>
-      <Picture class="bg bg-top" fileName="ywc18/paper-guru-top" />
-      <Picture class="bg bg-bottom" fileName="ywc18/paper-guru-bottom" />
+      <Cover>
+        <Picture class="bg bg-top" fileName="ywc18/paper-guru-top" />
+        <Picture class="bg bg-bottom" fileName="ywc18/paper-guru-bottom" />
+      </Cover>
     </CurrentGuru>
     <Gurus>
       <div
@@ -54,6 +56,7 @@ const CurrentGuru = styled.div`
   background-repeat: no-repeat;
   padding: 120px 0 30px;
   position: relative;
+  overflow: hidden;
 
   @media screen and (max-width: 960px) {
     background: linear-gradient(
@@ -64,20 +67,6 @@ const CurrentGuru = styled.div`
     );
     padding: 80px 0 0;
     margin-bottom: 30px;
-  }
-
-  > .bg {
-    width: 100%;
-    position: absolute;
-    left: 0;
-
-    &.bg-top {
-      top: -5px;
-    }
-
-    &.bg-bottom {
-      bottom: -10px;
-    }
   }
 
   > .container {
@@ -257,12 +246,34 @@ const Gurus = styled.div`
   }
 `
 
+const Cover = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 1920px;
+
+  /* Fixed center */
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .bg-bottom {
+    margin-bottom: -10px;
+  }
+`
+
 export default {
   components: {
     SectionName,
     Picture,
     CurrentGuru,
     Gurus,
+    Cover,
   },
   data() {
     return {
