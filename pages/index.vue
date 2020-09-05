@@ -5,6 +5,7 @@
     <Timeline />
     <DiverderTwoM />
     <Majors />
+    <Blog />
     <!-- <Location /> -->
     <Guru />
     <Gallery />
@@ -27,7 +28,7 @@ export default {
     Timeline,
     DiverderTwoM: () => import('~/components/sections/ywc18/2m'),
     Majors: () => import('~/components/sections/ywc18/Majors'),
-    // TODO: Blog,
+    Blog: () => import('~/components/sections/ywc18/Blog'),
     // TODO: Location: () => import('~/components/sections/Location'),
     Guru: () => import('~/components/sections/ywc18/Guru'),
     Gallery: () => import('~/components/sections/ywc18/Gallery'),
