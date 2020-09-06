@@ -1,7 +1,7 @@
 <template>
   <div>
     <Hero />
-    <PaperDivider />
+    <!-- <PaperDivider /> -->
     <WhatIsYWC />
     <Timeline />
     <DiverderTwoM />
@@ -12,7 +12,7 @@
     <Gallery />
     <Sponsor />
     <MediaPartner />
-    <PaperDivider />
+    <!-- <PaperDivider /> -->
     <QA />
     <FollowUs />
     <!-- <Footer /> -->
@@ -36,7 +36,7 @@ export default {
     Gallery: () => import('~/components/sections/ywc18/Gallery'),
     Sponsor: () => import('~/components/sections/ywc18/Sponsor'),
     MediaPartner: () => import('~/components/sections/ywc18/MediaPartner'),
-    PaperDivider: () => import('~/components/sections/ywc18/PaperDivider'),
+    // PaperDivider: () => import('~/components/sections/ywc18/PaperDivider'),
     QA: () => import('~/components/sections/ywc18/QA'),
     FollowUs: () => import('~/components/sections/ywc18/FollowUs'),
     // TODO: Footer: () => import('~/components/sections/Footer'),

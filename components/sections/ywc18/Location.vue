@@ -130,7 +130,6 @@ export default {
 }
 .location-content {
   font-family: Barlow, Anuphan;
-  min-height: 700px;
   padding: 64px 0;
   position: relative;
   z-index: 2;
@@ -140,12 +139,19 @@ export default {
 }
 .location-container {
   width: 100%;
-  margin: 20px 0;
+  padding: 150px 0;
+  @media screen and (max-width: 768px) {
+    padding: 75px 0;
+  }
+  @media screen and (max-width: 425px) {
+    padding: 20px 0;
+  }
 }
 .location {
   position: relative;
   padding: 30px 0 30px 0;
-  background-color: #0c1521;
+  background-color: #061625;
+  margin-bottom: 120px;
 }
 .location-split {
   display: flex;
@@ -188,12 +194,25 @@ export default {
   height: 100%;
 }
 .location-detail {
+  font-weight: 600;
+  font-family: Anuphan;
   text-align: left;
   font-size: 30px;
   .highlight {
+    text-transform: uppercase;
+    font-family: Barlow Semi Condensed;
+    letter-spacing: 0.05em;
     font-size: 36px;
     line-height: 50px;
     font-weight: bold;
+    @media screen and (max-width: 425px) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 24px;
+    line-height: 30px;
   }
   @media screen and (max-width: 950px) {
     text-align: center;
