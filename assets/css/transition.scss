@@ -1,0 +1,32 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+// Guru Transition
+.guru-img-leave,
+.guru-img-enter-to,
+.guru-detail-leave,
+.guru-detail-enter-to {
+  transform: translateX(0);
+  opacity: 1;
+}
+.guru-img-leave-active,
+.guru-img-enter-active,
+.guru-detail-leave-active,
+.guru-detail-enter-active {
+  transition: all 0.3s ease-in-out;
+}
+.guru-img-leave-to,
+.guru-img-enter {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+.guru-detail-leave-to,
+.guru-detail-enter {
+  transform: translateX(20px);
+  opacity: 0;
+}
