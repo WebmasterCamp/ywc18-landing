@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <SectionHead title="FOLLOW YWC" subTitle="ติดตามข่าวสารของเรา" size="sm" />
+    <SectionTitle title="FOLLOW YWC" subtitle="ติดตามข่าวสารของเรา" />
     <Grid>
       <GridCol>
         <SocialBtn
@@ -39,7 +39,7 @@
 </template>
 <script>
 import styled from 'vue-styled-components'
-import SectionHead from '~/components/ywc18/SectionHead.vue'
+import SectionTitle from '~/components/ywc18/SectionTitle.vue'
 import Picture from '~/components/Picture.vue'
 
 const Grid = styled.div`
@@ -91,7 +91,7 @@ export default {
   components: {
     Grid,
     GridCol,
-    SectionHead,
+    SectionTitle,
     SocialBtn,
     SocialIcon,
   },

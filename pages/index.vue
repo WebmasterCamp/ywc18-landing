@@ -14,7 +14,7 @@
     <MediaPartner />
     <PaperDivider />
     <QA />
-    <!-- <FollowUs /> -->
+    <FollowUs />
     <!-- <Footer /> -->
   </div>
 </template>
@@ -38,7 +38,7 @@ export default {
     MediaPartner: () => import('~/components/sections/ywc18/MediaPartner'),
     PaperDivider: () => import('~/components/sections/ywc18/PaperDivider'),
     QA: () => import('~/components/sections/ywc18/QA'),
-    // FollowUs: () => import('~/components/sections/ywc18/FollowUs'),
+    FollowUs: () => import('~/components/sections/ywc18/FollowUs'),
     // TODO: Footer: () => import('~/components/sections/Footer'),
   },
 }
