@@ -53,6 +53,9 @@ export default {
     flex-direction: column;
     align-items: center;
     padding-top: 225px;
+    @media screen and (min-width: 1920px) {
+      padding-top: 300px;
+    }
   }
 }
 .ywc-logo {
