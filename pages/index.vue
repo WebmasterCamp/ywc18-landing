@@ -7,7 +7,7 @@
     <DiverderTwoM />
     <Majors />
     <Blog />
-    <!-- <Location /> -->
+    <Location />
     <Guru />
     <Gallery />
     <Sponsor />
@@ -31,14 +31,14 @@ export default {
     DiverderTwoM: () => import('~/components/sections/ywc18/2m'),
     Majors: () => import('~/components/sections/ywc18/Majors'),
     Blog: () => import('~/components/sections/ywc18/Blog'),
-    // TODO: Location: () => import('~/components/sections/Location'),
+    Location: () => import('~/components/sections/ywc18/Location'),
     Guru: () => import('~/components/sections/ywc18/Guru'),
     Gallery: () => import('~/components/sections/ywc18/Gallery'),
     Sponsor: () => import('~/components/sections/ywc18/Sponsor'),
     MediaPartner: () => import('~/components/sections/ywc18/MediaPartner'),
     PaperDivider: () => import('~/components/sections/ywc18/PaperDivider'),
     QA: () => import('~/components/sections/ywc18/QA'),
-    // TODO: FollowUs: () => import('~/components/sections/FollowUs'),
+    // FollowUs: () => import('~/components/sections/ywc18/FollowUs'),
     // TODO: Footer: () => import('~/components/sections/Footer'),
   },
 }
