@@ -48,7 +48,7 @@ export default {
       autoplay: false,
       centerMode: false,
       autoplaySpeed: 4500,
-      dots: false,
+      dots: true,
       navButtons: false,
       slidesToShow: 1,
       responsive: [
@@ -63,6 +63,7 @@ export default {
         {
           breakpoint: 769,
           settings: {
+            dots: false,
             slidesToShow: 3,
             navButtons: BLOGS.length > 3,
           },

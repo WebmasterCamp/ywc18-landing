@@ -5,11 +5,11 @@
         class="major__image"
         :style="{ backgroundImage: `url(/images/ywc18/major/${image}.svg)` }"
       >
-        <p>
+        <p v-if="showCount">
           สมัครแล้ว <span>{{ count }}</span> คน
         </p>
       </div>
-      <div class="major__button">
+      <div class="major__button" v-if="showButton">
         <Button size="sm">สมัครสาขานี้</Button>
       </div>
     </div>
@@ -30,6 +30,14 @@ export default {
       default: 123,
       type: Number,
     },
+    showButton: {
+      default: true,
+      type: Boolean,
+    },
+    showCount: {
+      default: false,
+      type: Boolean,
+    },
   },
 }
 </script>
@@ -37,7 +45,7 @@ export default {
 <style lang="scss">
 @import '~/assets/css/global';
 .major {
-  cursor: pointer;
+  cursor: unset;
   position: relative;
   width: 100%;
   max-width: 100%;
