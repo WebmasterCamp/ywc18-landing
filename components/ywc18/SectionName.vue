@@ -2,12 +2,24 @@
   <Wrapper>
     <Title :wrap="!subTitle">
       <img src="images/ywc18/arrow-left.svg" alt />
-      <span>{{ title }}</span>
+      <span class="section__name--title">{{ title }}</span>
       <img src="images/ywc18/arrow-right.svg" alt />
     </Title>
-    <SubTitle>{{ subTitle }}</SubTitle>
-    <Picture v-show="bgLeft" fileName="ywc18/section-name-bg" class="bg bg-left" alt />
-    <Picture v-show="bgRight" fileName="ywc18/section-name-bg" class="bg bg-right" alt />
+    <SubTitle :color="subTitleColor" class="section__name--subtitle">{{
+      subTitle
+    }}</SubTitle>
+    <Picture
+      v-show="bgLeft"
+      fileName="ywc18/section-name-bg"
+      class="bg bg-left"
+      alt
+    />
+    <Picture
+      v-show="bgRight"
+      fileName="ywc18/section-name-bg"
+      class="bg bg-right"
+      alt
+    />
   </Wrapper>
 </template>
 
@@ -17,7 +29,7 @@ import color from '~/utils/color'
 import Picture from '~/components/Picture.vue'
 
 const Wrapper = styled.div`
-  font-family: Barlow, Anuphan;
+  font-family: Barlow Semi Condensed, Anuphan !important;
   text-align: center;
   position: relative;
   display: flex;
@@ -57,6 +69,10 @@ const Wrapper = styled.div`
       height: 100%;
       object-fit: cover;
     }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 `
 
@@ -70,7 +86,7 @@ const Title = styled('div', { wrap: Boolean })`
     font-size: 60px;
     font-weight: 600;
     line-height: 100%;
-    width: ${(props) => props.wrap ? 'min-content' : 'auto'};
+    width: ${(props) => (props.wrap ? 'min-content' : 'auto')};
     margin: 0 15px;
   }
 
@@ -82,13 +98,13 @@ const Title = styled('div', { wrap: Boolean })`
 
   @media screen and (max-width: 576px) {
     > span {
-      font-size: 32px;
+      font-size: 35px;
     }
   }
 `
 
-const SubTitle = styled.div`
-  color: ${color.primary};
+const SubTitle = styled('div', { color: String })`
+  color: ${(props) => (props.color ? props.color : color.primary)};
   font-size: 24px;
   margin-top: 15px;
 
@@ -113,6 +129,7 @@ export default {
   props: {
     title: { type: String, default: '' },
     subTitle: { type: String, default: '' },
+    subTitleColor: { type: String, default: '' },
     bgLeft: { type: Boolean, default: false },
     bgRight: { type: Boolean, default: false },
   },

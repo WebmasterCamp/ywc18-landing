@@ -28,7 +28,7 @@ const sizes = {
     fontSmallSize: 32, // For Mobile + Tablet
     height: 101,
   },
-  timeline: {
+  lg: {
     fontSize: 60,
     fontSmallSize: 36,
     height: 100,
@@ -130,19 +130,36 @@ const Container = styled('div', { align: String, size: String, color: String })`
   font-size: ${(props) => sizes[props.size].fontSize}px;
   background: url(${require('../../assets/images/ywc18/section-head-bg.png')});
   background-position: center center;
-  background-size: 436px 101px;
+  background-size: ${(props) =>
+    props.type === 'a' ? '436px 101px' : '438px 130px'};
+  height: '101px';
   background-repeat: no-repeat;
   text-align: ${(props) => props.align};
   display: flex;
   justify-content: center;
   margin: 50px;
 
+  p {
+    font-family: Anuphan;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: #061625;
+  }
+
   user-select: none;
 
   @media screen and (max-width: 768px) {
     text-align: center;
     font-size: ${(props) => sizes[props.size].fontSmallSize}px;
-    background: url(${require('../../assets/images/ywc18/section-head-bg.png')});
+    background: url(${(props) =>
+      props.type === 'a'
+        ? require('~/assets/images/ywc18/section-head-bg.png')
+        : require('~/assets/images/ywc18/section-head-bg-2.png')});
     background-position: center center;
     background-size: 436px 101px;
     background-repeat: no-repeat;
