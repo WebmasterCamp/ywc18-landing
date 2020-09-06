@@ -1,50 +1,65 @@
 <template>
-  <section class="location">
+  <div class="location">
     <SectionName class="header" title="LOCATION" subTitle="สถานที่จัดกิจกรรม" />
-      <div class="content">
-        <img class="location-image" v-lazy="locationImage" style="object-fit: cover;" />
-        <div class="location-image-gradient" />
-        <div class="container">
-          <div class="location-split">
-            <div class="location-backdrop-wrapper">
-              <div class="location-backdrop">
-                <BackdropText style="transform: rotate(-90deg);" text="LOCATION" :times="4" gap highlight bright fade />
-              </div>
+    <div class="location-content">
+      <img
+        class="location-image"
+        v-lazy="locationImage"
+        style="object-fit: cover;"
+      />
+      <div class="location-image-gradient" />
+      <section class="container location-container">
+        <div class="location-split">
+          <div class="location-backdrop-wrapper">
+            <div class="location-backdrop">
+              <BackdropText
+                style="transform: rotate(-90deg);"
+                text="LOCATION"
+                :times="4"
+                gap
+                highlight
+                bright
+                fade
+              />
             </div>
-            <div class="location-map">
-              <div class="location-gmap-text">
-                <div v-if="isActive" class="location-gmap">
-                  <no-ssr>
-                    <lazy-component tag="div" class="video">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.793301226501!2d100.77898871535137!3d13.730960501474286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d66308ce98ffd%3A0xcb43a76f038c38ca!2sFaculty%20of%20Information%20Technology!5e0!3m2!1sen!2sth!4v1567244733954!5m2!1sen!2sth"
-                        width="100%"
-                        height="100%"
-                        frameborder="0"
-                        style="border:0;"
-                        allowfullscreen=""
-                      ></iframe>
-                    </lazy-component>
-                  </no-ssr>
+          </div>
+          <div class="location-map">
+            <div class="location-gmap-text">
+              <div v-if="isActive" class="location-gmap">
+                <no-ssr>
+                  <lazy-component tag="div" class="video">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.793301226501!2d100.77898871535137!3d13.730960501474286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d66308ce98ffd%3A0xcb43a76f038c38ca!2sFaculty%20of%20Information%20Technology!5e0!3m2!1sen!2sth!4v1567244733954!5m2!1sen!2sth"
+                      width="100%"
+                      height="100%"
+                      frameborder="0"
+                      style="border:0;"
+                      allowfullscreen=""
+                    ></iframe>
+                  </lazy-component>
+                </no-ssr>
+              </div>
+              <div class="location-text">
+                <div v-if="isActive" class="location-detail">
+                  <span class="highlight">Chulalongkorn University</span>
+                  <br />
+                  จุฬาลงกรณ์มหาวิทยาลัย
                 </div>
-                <div class="location-text">
-                  <div v-if="isActive" class="location-detail">
-                    <span class="highlight">Chulalongkorn University</span>
-                    <br />
-                    จุฬาลงกรณ์มหาวิทยาลัย
-                  </div>
-                  <div v-else class="location-detail-soon">
-                    Coming Soon!
-                  </div>
+                <div v-else class="location-detail-soon">
+                  Coming Soon!
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <Picture class="bg bg-top" fileName="ywc18/location/paper-location-top" />
-        <Picture class="bg bg-bottom" fileName="ywc18/location/paper-location-bottom" />
-      </div>
-  </section>
+      </section>
+      <Picture class="bg bg-top" fileName="ywc18/location/paper-location-top" />
+      <Picture
+        class="bg bg-bottom"
+        fileName="ywc18/location/paper-location-bottom"
+      />
+    </div>
+  </div>
 </template>
 <script>
 import SectionName from '../../ywc18/SectionName'
@@ -71,11 +86,8 @@ export default {
 </script>
 
 <style lang="scss">
-* {
-  font-family: Barlow, Anuphan;
-}
 .header {
-  margin-bottom: 80px;
+  margin-bottom: 0px;
 }
 .bg {
   width: 100%;
@@ -110,10 +122,14 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
 }
-.content {
-  min-height: 700px;
+.location-content {
+  font-family: Barlow, Anuphan;
   padding: 64px 0;
   position: relative;
   z-index: 2;
@@ -121,14 +137,21 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.container {
+.location-container {
   width: 100%;
-  margin: 20px;
+  padding: 150px 0;
+  @media screen and (max-width: 768px) {
+    padding: 75px 0;
+  }
+  @media screen and (max-width: 425px) {
+    padding: 20px 0;
+  }
 }
 .location {
   position: relative;
   padding: 30px 0 30px 0;
-  background-color: #0c1521;
+  background-color: #061625;
+  margin-bottom: 120px;
 }
 .location-split {
   display: flex;
@@ -171,12 +194,25 @@ export default {
   height: 100%;
 }
 .location-detail {
+  font-weight: 600;
+  font-family: Anuphan;
   text-align: left;
   font-size: 30px;
   .highlight {
+    text-transform: uppercase;
+    font-family: Barlow Semi Condensed;
+    letter-spacing: 0.05em;
     font-size: 36px;
     line-height: 50px;
     font-weight: bold;
+    @media screen and (max-width: 425px) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 24px;
+    line-height: 30px;
   }
   @media screen and (max-width: 950px) {
     text-align: center;
@@ -187,6 +223,5 @@ export default {
   font-size: 60px;
 }
 @media screen and (max-width: 950px) {
-  
 }
 </style>

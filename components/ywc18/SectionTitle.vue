@@ -35,12 +35,21 @@ const Wrapper = styled.div`
     font-family: Barlow Semi Condensed;
     font-style: normal;
     font-weight: 600;
-    font-size: 60px;
-    line-height: 65px;
+    font-size: 48px;
+    line-height: 55px;
     text-align: center;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     margin: 0 1rem;
+    @media screen and (max-width: 768px) {
+      font-size: 35px;
+      line-height: 46px;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 30px;
+      line-height: 46px;
+    }
   }
   .subtitle {
     font-family: Anuphan;
@@ -51,6 +60,15 @@ const Wrapper = styled.div`
     text-align: center;
     letter-spacing: -0.02em;
     color: #061625;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 `
 export default {

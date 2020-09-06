@@ -8,7 +8,6 @@ export default {}
 
 <style lang="scss">
 .paper-divider {
-  margin: 120px 0;
   height: 135px;
   width: 100%;
   background: url('~assets/images/ywc18/section-hero.png');

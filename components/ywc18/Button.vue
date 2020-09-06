@@ -42,6 +42,7 @@ export default {
   padding-right: 12px;
   text-decoration: none;
   text-align: center;
+  user-select: none;
   &:hover {
     background: url(/images/ywc18/button/bg-cta_hover.svg),
       url(/images/ywc18/button/bg-dots.png);
