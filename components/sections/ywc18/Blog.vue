@@ -48,7 +48,7 @@ export default {
       autoplay: false,
       centerMode: false,
       autoplaySpeed: 4500,
-      dots: false,
+      dots: true,
       navButtons: false,
       slidesToShow: 1,
       responsive: [
@@ -63,6 +63,7 @@ export default {
         {
           breakpoint: 769,
           settings: {
+            dots: false,
             slidesToShow: 3,
             navButtons: BLOGS.length > 3,
           },
@@ -90,6 +91,12 @@ export default {
 }
 .blog__heading {
   margin-bottom: 55px;
+  @media screen and (max-width: 425px) {
+    margin-bottom: 20px;
+  }
+}
+.agile__dots {
+  margin: 1.5rem auto;
 }
 </style>
 
@@ -136,7 +143,7 @@ img
     margin: 0 10px
 
     button
-      background-color: #eee
+      // background-color: #eee
       border: none
       border-radius: 50%
       cursor: pointer
@@ -152,7 +159,7 @@ img
     &--current,
     &:hover
       button
-        background-color: #888
+        // background-color: #888
 
 .blog
   align-items: center

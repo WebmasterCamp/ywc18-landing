@@ -42,7 +42,7 @@ import SectionName from '~/components/ywc18/SectionName.vue'
 const MajorsSection = styled.div`
   position: relative;
   min-height: 800px;
-  margin: 100px 0;
+  margin: 0 0 50px;
   @media screen and (min-width: 1440px) {
     min-height: 900px;
   }
@@ -123,6 +123,8 @@ const MajorsWrapper = styled.div`
   padding: 160px 0;
   .section__name--subtitle {
     letter-spacing: 0.16em;
+    font-family: Barlow;
+    font-weight: 400;
     font-style: italic;
   }
   @media screen and (max-width: 325px) {
@@ -141,6 +143,7 @@ const MajorsList = styled.div`
   margin-top: 50px;
   justify-items: center;
   justify-content: center;
+  padding: 0 15px;
 `
 
 export default {

@@ -12,7 +12,7 @@
         class="ywc-logo"
       />
       <Picture
-        fileName="ywc18/theme-logo.svg"
+        fileName="ywc18/new-normal.svg"
         alt="Theme Logo"
         class="theme-logo"
       />

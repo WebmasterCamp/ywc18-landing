@@ -1,6 +1,10 @@
 <template>
   <div class="location">
-    <SectionName class="header" title="LOCATION" subTitle="สถานที่จัดกิจกรรม" />
+    <SectionName
+      class="location__header"
+      title="LOCATION"
+      subTitle="สถานที่จัดกิจกรรม"
+    />
     <div class="location-content">
       <img
         class="location-image"
@@ -86,7 +90,7 @@ export default {
 </script>
 
 <style lang="scss">
-.header {
+.location__header {
   margin-bottom: 0px;
 }
 .bg {

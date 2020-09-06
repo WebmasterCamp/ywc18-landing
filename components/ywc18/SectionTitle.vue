@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   background-size: contain;
   background-position: center, center;
   background-repeat: no-repeat;
-  margin: 0 auto 66px;
+  margin: 0 auto 55px;
 
   display: flex;
   flex-direction: column;
