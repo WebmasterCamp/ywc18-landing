@@ -43,11 +43,7 @@ export default {
       no-repeat top center,
     url(/images/ywc18/bg/hero-bg.jpg) no-repeat center center;
   background-size: cover;
-  min-height: 85vh;
   padding: 0;
-  @media screen and (max-width: 425px) {
-    min-height: 90vh;
-  }
 
   .container {
     text-align: left;

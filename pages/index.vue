@@ -1,6 +1,7 @@
 <template>
   <div>
     <Hero />
+    <PaperDivider />
     <WhatIsYWC />
     <Timeline />
     <DiverderTwoM />
