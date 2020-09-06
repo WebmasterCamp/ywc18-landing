@@ -51,7 +51,7 @@ const Grid = styled.div`
   @media (max-width: 768px) {
     grid-gap: 32px 32px;
     grid-template-columns: auto auto;
-    max-width: 192px;
+    justify-content: center;
   }
 `
 const GridCol = styled.div`

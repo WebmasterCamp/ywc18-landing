@@ -1,6 +1,6 @@
 <template>
   <section>
-    <SectionName title="Guru" />
+    <SectionName title="Guru" class="guru-header" />
     <CurrentGuru>
       <div class="container guru-detail">
         <transition name="guru-img" mode="out-in">
@@ -56,6 +56,9 @@
 <style scoped>
 section {
   padding: 0;
+}
+.guru-header {
+  margin-bottom: 0;
 }
 </style>
 

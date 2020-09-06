@@ -36,6 +36,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 50px;
   z-index: 0;
 
   > .bg {
@@ -82,6 +83,7 @@ const Title = styled('div', { wrap: Boolean })`
   justify-content: center;
 
   > span {
+    text-transform: uppercase;
     color: white;
     font-size: 60px;
     font-weight: 600;
@@ -98,7 +100,7 @@ const Title = styled('div', { wrap: Boolean })`
 
   @media screen and (max-width: 576px) {
     > span {
-      font-size: 35px;
+      font-size: 32px;
     }
   }
 `
