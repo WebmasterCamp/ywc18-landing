@@ -87,7 +87,7 @@ export default {
 
 <style lang="scss">
 .header {
-  margin-bottom: 80px;
+  margin-bottom: 0px;
 }
 .bg {
   width: 100%;
