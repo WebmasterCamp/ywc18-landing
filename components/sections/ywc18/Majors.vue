@@ -90,6 +90,7 @@ const MajorsBackground = styled.div`
     rgba(248, 151, 66, 0.5) 100%
   );
   .backdrop__wrapper {
+    box-sizing: border-box;
     padding-top: 42px;
     display: flex;
     justify-content: space-between;

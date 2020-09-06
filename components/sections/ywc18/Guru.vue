@@ -2,18 +2,37 @@
   <section>
     <SectionName title="Guru" />
     <CurrentGuru>
-      <div class="container">
-        <Picture :fileName="`guru/${gurus[currentGuru].img}`" />
-        <div class="guru-content">
-          <h1>{{ gurus[currentGuru].name }}</h1>
-          <p v-html="gurus[currentGuru].role" />
-          <div v-if="gurus[currentGuru].major" :class="`major major-${gurus[currentGuru].major}`">
-            {{ gurus[currentGuru].major }}
+      <div class="container guru-detail">
+        <transition name="guru-img" mode="out-in">
+          <template v-for="(img, index) in guruImages">
+            <Picture
+              :fileName="`guru/${gurus[currentGuru].img}`"
+              :key="`guru-${index}`"
+              v-if="gurus[currentGuru].img === img"
+            />
+          </template>
+        </transition>
+        <transition name="guru-detail" mode="out-in">
+          <div
+            class="guru-content"
+            :key="`guru-detail-${gurus[currentGuru].img}`"
+          >
+            <h1>{{ gurus[currentGuru].name }}</h1>
+            <p v-html="gurus[currentGuru].role" />
+            <div
+              v-for="major in gurus[currentGuru].majors"
+              :class="`major major-${major}`"
+              :key="major"
+            >
+              {{ major }}
+            </div>
           </div>
-        </div>
+        </transition>
       </div>
-      <Picture class="bg bg-top" fileName="ywc18/paper-guru-top" />
-      <Picture class="bg bg-bottom" fileName="ywc18/paper-guru-bottom" />
+      <Cover>
+        <Picture class="bg bg-top" fileName="ywc18/paper-guru-top" />
+        <Picture class="bg bg-bottom" fileName="ywc18/paper-guru-bottom" />
+      </Cover>
     </CurrentGuru>
     <Gurus>
       <div
@@ -24,7 +43,11 @@
         @click="selectGuru(idx)"
       >
         <Picture :fileName="`guru/${g.img}`" :alt="g.name" />
-        <div :class="`major major-${g.major}`" />
+        <div
+          v-for="major in g.majors"
+          :class="`major major-${major}`"
+          :key="`${idx + major}`"
+        />
       </div>
     </Gurus>
   </section>
@@ -42,41 +65,37 @@ import SectionName from '~/components/ywc18/SectionName.vue'
 import Picture from '~/components/Picture.vue'
 
 const CurrentGuru = styled.div`
-  background: 
-    url(/images/ywc18/bg/guru-typo.svg),
+  font-family: Barlow, Anuphan;
+  background: url(/images/ywc18/bg/guru-typo.svg),
     linear-gradient(100.19deg, #f66b3f -0.48%, #f89742 47.88%, #fe5722 96.18%);
   background-blend-mode: color-dodge;
   background-size: 60% auto, contain;
   background-position: left center;
   background-repeat: no-repeat;
-  padding: 120px 0 30px;
+  padding: 140px 0 30px;
   position: relative;
+  overflow: hidden;
 
   @media screen and (max-width: 960px) {
-    background: linear-gradient(100.19deg, #f66b3f -0.48%, #f89742 47.88%, #fe5722 96.18%);
+    background: linear-gradient(
+      100.19deg,
+      #f66b3f -0.48%,
+      #f89742 47.88%,
+      #fe5722 96.18%
+    );
     padding: 80px 0 0;
     margin-bottom: 30px;
   }
-
-  > .bg {
-    width: 100%;
-    position: absolute;
-    left: 0;
-
-    &.bg-top {
-      top: -5px;
-    }
-
-    &.bg-bottom {
-      bottom: -10px;
-    }
+  @media screen and (min-width: 1950px) {
+    padding: 230px 0 30px;
   }
 
-  > .container {
+  > .guru-detail {
     display: flex;
 
     @media screen and (max-width: 960px) {
       flex-direction: column-reverse;
+      padding: 30px 0;
     }
 
     img {
@@ -86,6 +105,13 @@ const CurrentGuru = styled.div`
 
       @media screen and (max-width: 960px) {
         margin: 0;
+        max-width: 50%;
+      }
+      @media screen and (max-width: 425px) {
+        max-width: 80%;
+      }
+      @media screen and (min-width: 1900px) {
+        width: 430px;
       }
     }
 
@@ -249,12 +275,58 @@ const Gurus = styled.div`
   }
 `
 
+const Cover = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 1920px;
+
+  /* Fixed center */
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (max-width: 800px) {
+    width: 800px;
+  }
+  @media screen and (min-width: 1920px) {
+    width: 101%;
+  }
+
+  .bg {
+    img {
+      width: 101%;
+      object-fit: cover;
+    }
+  }
+
+  .bg-bottom {
+    margin-bottom: -10px;
+  }
+
+  /* Block draging image cover  */
+  ::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+`
+
 export default {
   components: {
     SectionName,
     Picture,
     CurrentGuru,
     Gurus,
+    Cover,
   },
   data() {
     return {
@@ -265,69 +337,75 @@ export default {
           img: 1,
           name: 'วโรรส โรจนะ (โน้ต)',
           role: `CEO Dek-D Interactive Co., Ltd.<br>นายกสมาคมผู้ดูแลเว็บไทย`,
-          major: 'programming',
+          majors: ['programming'],
         },
         {
           img: 2,
           name: 'อัครวุฒิ ตำราเรียง (บัง)',
           role: `กรรมการผู้จัดการ บ.มาร์เวลิค เอ็นจิ้น จก.<br>กรรมการควบคุมจริยธรรม สมาคมผู้ดูแลเว็บไทย`,
+          majors: [],
         },
         {
           img: 3,
           name: 'อภิศิลป์ ตรุงกานนท์ (บอย)',
           role: `Co-founder & Chief Product Officer, Pantip.com`,
-          major: 'content',
+          majors: ['content'],
         },
         {
           img: 4,
           name: 'ขจร เจียรนัยพานิชย์ (เอ็ม)',
           role: `Blogger & Managing Director : Mango Zero, MacThai, RAiNMaker`,
-          major: 'content',
+          majors: ['content'],
         },
         {
           img: 5,
           name: 'ณปสก สันติสุนทรกูล (ปอล)',
           role: `COO, Dek-D Intertactive Co., Ltd.`,
-          major: 'design',
+          majors: ['design'],
         },
         {
           img: 6,
           name: 'คนที่หนึ่ง แสงหิรัญ (หนึ่ง)',
           role: `อาจารย์ประจำภาควิชาการออกแบบนิเทศศิลป์<br>คณะนิเทศศาสตร์ มหาวิทยาลัยอัสสัมชัญ`,
-          major: 'design',
+          majors: ['design'],
         },
         {
           img: 7,
           name: 'อินทนนท์ ปัญญาโสภา (เบนซ์)',
           role: `ผู้ก่อตั้งเว็บไซต์ Grappik`,
-          major: 'design',
+          majors: ['design'],
         },
         {
           img: 8,
           name: 'เจริญ ลักษณ์เลิศกุล (เจ)',
           role: `Associate Director - Strategic planning<br>หน่วยงาน Online Station (True Digital Group)`,
-          major: 'marketing',
+          majors: ['marketing'],
         },
         {
           img: 9,
           name: 'จักรพงษ์ คงมาลัย (ปอง)',
           role: `Managing Director, Moonshot Digital Co., Ltd`,
-          major: 'content',
+          majors: ['marketing'],
         },
         {
           img: 10,
           name: 'ปัญจมพงศ์ เสริมสวัสดิ์ศรี (ปันเจ)',
           role: `C-3PO at Cleverse`,
-          major: 'programming',
+          majors: ['programming'],
         },
         {
           img: 11,
           name: 'เมธปริยา คำนวนวุฒิ (ว่าน)',
           role: `Head of Marketing, Lnw co., Ltd`,
-          major: 'marketing',
+          majors: ['marketing'],
         },
       ],
     }
+  },
+  computed: {
+    guruImages() {
+      return this.gurus.map((guru) => guru.img)
+    },
   },
   created() {
     this.setAutoplay()

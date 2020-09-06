@@ -10,8 +10,8 @@
     <!-- <Location /> -->
     <Guru />
     <Gallery />
-    <!-- <Sponsor /> -->
-    <!-- <MediaPartner /> -->
+    <Sponsor />
+    <MediaPartner />
     <PaperDivider />
     <QA />
     <!-- <FollowUs /> -->
@@ -34,8 +34,8 @@ export default {
     // TODO: Location: () => import('~/components/sections/Location'),
     Guru: () => import('~/components/sections/ywc18/Guru'),
     Gallery: () => import('~/components/sections/ywc18/Gallery'),
-    // Sponsor: () => import('~/components/sections/ywc18/Sponsor'),
-    // MediaPartner: () => import('~/components/sections/ywc18/MediaPartner'),
+    Sponsor: () => import('~/components/sections/ywc18/Sponsor'),
+    MediaPartner: () => import('~/components/sections/ywc18/MediaPartner'),
     PaperDivider: () => import('~/components/sections/ywc18/PaperDivider'),
     QA: () => import('~/components/sections/ywc18/QA'),
     // TODO: FollowUs: () => import('~/components/sections/FollowUs'),
