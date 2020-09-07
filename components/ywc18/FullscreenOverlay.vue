@@ -5,10 +5,14 @@
       <div class="overlay-content">
         <Header :normal="normal">
           <template v-if="!normal">
-            <Title>Web {{ title }}</Title>
+            <Title>
+              Web
+              <br />
+              {{ title }}
+            </Title>
             <Count :color="color">
-              <span>ยอดผู้สมัคร</span>
-              <p>{{ count }} คน</p>
+              <span v-if="showCount">ยอดผู้สมัคร</span>
+              <p v-if="showCount">{{ count }} คน</p>
             </Count>
           </template>
           <Title v-else>{{ title }}</Title>
@@ -28,7 +32,10 @@
             :color="color"
             href="https://register.ywc17.ywc.in.th/"
           >สมัครสาขานี้</RegisterButton>
-          <span v-else style="color: gray;margin:0 auto;">ขณะนี้ไม่อยู่ในช่วงรับสมัคร</span>
+          <span
+            v-else
+            style="color: gray;margin:0 auto;font-family: Anuphan;"
+          >ขณะนี้ไม่อยู่ในช่วงรับสมัคร</span>
         </slot>
       </BottomMenu>
     </Container>
@@ -100,7 +107,7 @@ const Container = styled('div', containerProps)`
   z-index: 999;
   background: black;
   background: ${props => color[props.color].gradientDarker};
-  padding: 32px 24px 0;
+  padding: 32px 32px 0;
   text-align: left;
   transition: all 0.3s;
   animation: ${fadein} 0.5s;
@@ -142,6 +149,7 @@ const Container = styled('div', containerProps)`
   }
 
   .content {
+    font-family: Barlow, CmPrasanmit;
     height: calc(90% - ${props => (props.normal ? 90 : 130)}px);
     overflow: hidden;
     overflow-y: auto;
@@ -150,6 +158,9 @@ const Container = styled('div', containerProps)`
   }
   .content p,
   .content li {
+    font-family: Barlow, CmPrasanmit;
+    font-size: 26px;
+    line-height: 32px;
     font-weight: 300;
   }
   .content li {
@@ -176,8 +187,17 @@ const Header = styled('div', { normal: Boolean })`
 `
 
 const Title = styled.h1`
-  font-size: 32px;
   margin: 0;
+  text-transform: uppercase;
+  font-family: Barlow Semi Condensed;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 75px;
+  line-height: 90px;
+  @media screen and (max-width: 425px) {
+    font-size: 46px;
+    line-height: 55px;
+  }
 `
 
 const Count = styled('div', withColorProps)`
@@ -196,7 +216,7 @@ const Count = styled('div', withColorProps)`
 `
 
 const BottomMenu = styled.div`
-  background-color: #222;
+  background: rgba(0, 0, 0, 0.25);
   z-index: 999;
   position: absolute;
   bottom: 0;
@@ -204,7 +224,8 @@ const BottomMenu = styled.div`
   right: 0;
   padding: 16px 24px;
 
-  font-family: 'CmPrasanmit', 'Sarabun';
+  font-family: 'Barlow Semi Condensed', 'CmPrasanmit';
+  font-size: 18px;
 
   display: grid;
   grid-template-columns: 108px auto;
@@ -216,7 +237,7 @@ const BottomMenu = styled.div`
 const defaultButton = css`
   width: 100%;
   height: 100%;
-  font-family: 'CmPrasanmit', 'Sarabun';
+  font-family: 'Barlow Semi Condensed', 'CmPrasanmit';
   font-weight: bold;
   font-size: 18px;
   border: none;
@@ -227,9 +248,12 @@ const defaultButton = css`
 
 const BackButton = styled('button', withColorProps)`
   ${defaultButton};
-  color: ${props => color[props.color].darker};
+  color: ${props => color.primary};
   background-color: transparent;
-
+  font-family: Anuphan;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
   .arrow-icon {
     width: 8px;
     height: 8px;
@@ -239,7 +263,7 @@ const BackButton = styled('button', withColorProps)`
     border-left: 2px solid white;
     border-top: 2px solid white;
     transform: rotate(-45deg);
-    border-color: ${props => color[props.color].darker};
+    border-color: ${props => color.primary};
   }
 `
 
@@ -292,17 +316,20 @@ export default Vue.extend({
     isRegOpen: {
       default: true,
       type: Boolean
+    },
+    title: {
+      default: '',
+      type: String
     }
   },
   data() {
     return {
-      title: '',
       color: '',
-      exiting: false
+      exiting: false,
+      showCount: false
     }
   },
   mounted() {
-    this.title = this.$parent.title
     this.color = this.$parent.color
 
     if (process.client) {
