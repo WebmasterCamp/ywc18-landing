@@ -11,13 +11,15 @@
         </p>
       </div>
       <div class="major__button" v-if="showButton">
-        <Button size="sm">ดูรายละเอียด</Button>
+        <Button size="sm" @click="openDetail">ดูรายละเอียด</Button>
       </div>
     </div>
+    <slot :show="show" title="Programming" @dismiss="dismissOverlay" />
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
 import styled from 'vue-styled-components'
 
 const Button = styled.div`
@@ -43,7 +45,7 @@ const Button = styled.div`
   transition: all 0.25s ease;
 `
 
-export default {
+export default Vue.extend({
   components: {
     Button
   },
@@ -53,8 +55,12 @@ export default {
       type: String
     },
     count: {
-      default: 123,
+      default: 0,
       type: Number
+    },
+    color: {
+      default: 'pink',
+      type: String
     },
     showButton: {
       default: true,
@@ -64,8 +70,25 @@ export default {
       default: false,
       type: Boolean
     }
+  },
+  data() {
+    return {
+      show: false
+    }
+  },
+  methods: {
+    openDetail() {
+      console.log('opendetail')
+      document.querySelector('body').style.overflow = 'hidden'
+      this.show = true
+      console.log(this.show)
+    },
+    dismissOverlay() {
+      document.querySelector('body').style.overflow = 'auto'
+      this.show = false
+    }
   }
-}
+})
 </script>
 
 <style lang="scss">
