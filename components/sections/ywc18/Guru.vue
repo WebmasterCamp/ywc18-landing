@@ -144,7 +144,7 @@ const CurrentGuru = styled.div`
 
     @media screen and (max-width: 960px) {
       flex-direction: column-reverse;
-      padding: 30px 0;
+      padding: 30px 0 0;
     }
 
     img {
