@@ -4,7 +4,7 @@
       <div>
         <div class="what-is-ywc__heading">
           <h1>
-            ชีวิตในโลก<span>โลกใบใหม่</span><br />
+            ชีวิตใน<span>โลกใบใหม่</span><br />
             ออกแบบได้ ด้วย<span>ตัวคุณ</span>
           </h1>
         </div>
