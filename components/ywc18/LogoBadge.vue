@@ -12,14 +12,18 @@ import Picture from '~/components/Picture.vue'
 
 const Wrapper = styled.div`
   background: rgba(242, 246, 252, 0.9);
-  box-shadow: 0px 0px 6.42664px rgba(255, 93, 41, 0.5),
-    inset 0px 2.57066px 2.57066px 6.42664px #F27236;
+  /* box-shadow: 0px 0px 6.42664px rgba(255, 93, 41, 0.5),
+    inset 0px 2.57066px 2.57066px 6.42664px #F27236; */
+  border: 8px solid #f27236;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  
+  @media screen and (max-width: 425px) {
+    border: 6px solid #f27236;
+  }
+
   &.lg {
     width: 200px;
     height: 200px;
@@ -76,21 +80,20 @@ export default {
   props: {
     size: {
       type: String,
-      default: 'md'
+      default: 'md',
     },
     fileName: {
       type: String,
-      default: ''
+      default: '',
     },
     link: {
       type: String,
-      default: '#'
+      default: '#',
     },
     alt: {
       type: String,
-      default: ''
-    }
-  }
+      default: '',
+    },
+  },
 }
-
 </script>
