@@ -145,7 +145,7 @@ const Container = styled('div', containerProps)`
   `};
 
   .overlay-content {
-    padding: 32px 24px 0;
+    padding: 32px 32px 0;
     position: absolute;
     left: 0;
     right: 0;
