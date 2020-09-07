@@ -1,7 +1,7 @@
 <template>
   <a class="cta__btn" :class="{ isSmall: size === 'sm' }" @click="onClick">
     <!-- <div class="button__content">
-      <div class="button__bg"></div> -->
+    <div class="button__bg"></div>-->
     <slot></slot>
     <!-- </div> -->
   </a>
@@ -11,15 +11,23 @@
 export default {
   methods: {
     onClick() {
+      if (this.link) {
+        window.open(this.link)
+        return
+      }
       this.$emit('click')
-    },
+    }
   },
   props: {
     size: {
       type: String,
-      default: 'md',
+      default: 'md'
     },
-  },
+    link: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
 

@@ -1,21 +1,13 @@
 <template>
   <section class="hero">
-    <Picture
+    <!-- <Picture
       fileName="ywc18/top-paper-extended-cropped"
       alt="Paper ripped"
       class="hero-paper"
-    />
+    />-->
     <div class="container">
-      <Picture
-        fileName="ywc18/ywc18-logo-orange.svg"
-        alt="YWC18 Logo"
-        class="ywc-logo"
-      />
-      <Picture
-        fileName="ywc18/new-normal.svg"
-        alt="Theme Logo"
-        class="theme-logo"
-      />
+      <Picture fileName="ywc18/ywc18-logo-orange.svg" alt="YWC18 Logo" class="ywc-logo" />
+      <Picture fileName="ywc18/new-normal.svg" alt="Theme Logo" class="theme-logo" />
       <Button>สมัครค่าย</Button>
     </div>
     <SponsorBox />
@@ -30,8 +22,8 @@ export default {
   components: {
     Picture,
     SponsorBox,
-    Button,
-  },
+    Button
+  }
 }
 </script>
 
@@ -52,7 +44,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 225px;
+    padding-top: 150px;
     @media screen and (min-width: 1920px) {
       padding-top: 300px;
     }

@@ -1,7 +1,7 @@
 <template>
   <ThemeProvider :name="currTheme">
     <Loading v-if="!isInit" />
-    <section class="container" v-else>
+    <section v-else class="container">
       <SectionTitle title="สนับสนุน YWC18" />
       <InfoContainer class="sponsor-info">
         <p>
@@ -14,10 +14,8 @@
         </p>
         <p>
           ในการนี้สมาคมผู้ดูแลเว็บไทย
-          ได้เล็งเห็นถึงวิสัยทัศน์อันดีของหน่วยงานของท่าน จึงใคร่ขอความ<span
-            style="white-space:nowrap"
-            >อนุเคราะห์์</span
-          >ท่านร่วมเป็นผู้สนับสนุนการจัดโครงการ Young Webmaster Camp ครั้งที่ 18
+          ได้เล็งเห็นถึงวิสัยทัศน์อันดีของหน่วยงานของท่าน จึงใคร่ขอความ
+          <span style="white-space:nowrap">อนุเคราะห์์</span>ท่านร่วมเป็นผู้สนับสนุนการจัดโครงการ Young Webmaster Camp ครั้งที่ 18
           พวกเราเยาวชนผู้ดูแลเว็บไทย รุ่นที่ 17
           หวังเป็นอย่างยิ่งว่าจะได้รับความอนุเคราะห์จากท่านและขอขอบพระคุณในความอนุเคราะห์ของท่านมา
           ณ โอกาสนี้
@@ -25,7 +23,9 @@
         <p>
           หากสนใจสนับสนุนโครงการ Young Webmaster Camp ครั้งที่ 18
           สามารถติดต่อสอบถามข้อมูลเพิ่มเติมได้ที่ นายณัฐพงศ์ คงลำธาร โทร.
-          <a href="tel:+66894469127">089-446-9127</a> อีเมล
+          <a
+            href="tel:+66894469127"
+          >089-446-9127</a> อีเมล
           <a href="mailto:ywc@webmaster.or.th">ywc@webmaster.or.th</a>
         </p>
       </InfoContainer>
@@ -69,11 +69,11 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: `สนับสนุน - 18th Young Webmaster Camp`,
+          content: `สนับสนุน - 18th Young Webmaster Camp`
         },
         { hid: 'og:description', property: 'og:description', content: '' }, // TODO: Add description
-        { hid: 'description', name: 'description', content: '' }, // TODO: Add description
-      ],
+        { hid: 'description', name: 'description', content: '' } // TODO: Add description
+      ]
     }
   },
   components: {
@@ -84,14 +84,14 @@ export default {
     SectionTitle: () => import('~/components/ywc18/SectionHead.vue'),
     InfoContainer: () => import('~/components/InfoContainer.vue'),
     Footer: () => import('~/components/sections/ywc18/Footer.vue'),
-    CTAButton: () => import('~/components/ywc18/Button.vue'),
+    CTAButton: () => import('~/components/ywc18/Button.vue')
   },
   data() {
     return {
       PACKAGES,
 
       currTheme: '',
-      isInit: false,
+      isInit: false
     }
   },
   mounted() {
@@ -101,8 +101,8 @@ export default {
     selectText,
     viewProposal() {
       window.open('/archive/ywc18-sponsor-proposal.pdf')
-    },
-  },
+    }
+  }
 }
 </script>
 <style lang="scss">
