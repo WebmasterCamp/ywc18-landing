@@ -1,8 +1,17 @@
 <template>
   <div class="location">
-    <SectionName class="location__header" title="LOCATION" subTitle="สถานที่จัดกิจกรรม" />
+    <SectionName
+      class="location__header"
+      title="LOCATION"
+      subTitle="สถานที่จัดกิจกรรม"
+    />
     <div class="location-content">
-      <img v-lazy="locationImage" class="location-image" style="object-fit: cover;" />
+      <img
+        v-lazy="locationImage"
+        class="location-image"
+        style="object-fit: cover;"
+        v-if="false"
+      />
       <div class="location-image-gradient" />
       <section class="container location-container">
         <div class="location-split">
@@ -50,7 +59,10 @@
         </div>
       </section>
       <Picture class="bg bg-top" fileName="ywc18/location/paper-location-top" />
-      <Picture class="bg bg-bottom" fileName="ywc18/location/paper-location-bottom" />
+      <Picture
+        class="bg bg-bottom"
+        fileName="ywc18/location/paper-location-bottom"
+      />
     </div>
   </div>
 </template>
@@ -63,17 +75,17 @@ export default {
   components: {
     SectionName,
     Picture,
-    BackdropText
+    BackdropText,
   },
   data() {
     return {
       locationImage: require('~/assets/images/ywc18/location-bg.png'),
-      isActive: false
+      isActive: false,
     }
   },
   mounted() {
     // this.timelineProcess()
-  }
+  },
   // methods: {}
 }
 </script>
@@ -132,7 +144,7 @@ export default {
 }
 .location-container {
   width: 100%;
-  padding: 150px 0;
+  padding: 50px 0;
   @media screen and (max-width: 768px) {
     padding: 75px 0;
   }
