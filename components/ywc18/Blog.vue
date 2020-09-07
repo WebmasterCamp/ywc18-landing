@@ -1,14 +1,14 @@
 <template>
   <div class="blog-card__wrapper">
     <div class="blog-card__cover">
-      <img v-lazy="detail.cover" alt="" />
+      <img v-lazy="detail.cover" alt />
     </div>
     <div class="blog-card__detail">
       <div>
         <h3>{{ detail.title }}</h3>
       </div>
       <div class="blog-card__author">
-        <img v-lazy="detail.avatar" alt="" class="blog-card__author--img" />
+        <img v-lazy="detail.avatar" alt class="blog-card__author--img" />
         <div class="blog-card__author--name">
           <span>{{ detail.name }}</span>
           <span v-if="detail.major">{{ detail.major }}</span>
@@ -21,9 +21,11 @@
 <script>
 export default {
   props: {
-    detail: Object,
-    default: () => ({}),
-  },
+    detail: {
+      type: Object,
+      default: () => ({})
+    }
+  }
 }
 </script>
 

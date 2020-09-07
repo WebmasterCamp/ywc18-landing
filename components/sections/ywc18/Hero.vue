@@ -61,6 +61,9 @@ export default {
   img {
     width: 588px;
     height: auto;
+    @media screen and (max-width: 768px) {
+      width: 450px !important;
+    }
   }
 }
 .hero-paper {
