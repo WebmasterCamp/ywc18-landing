@@ -34,7 +34,11 @@ export default {
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(6, 22, 37, 0.7) 38.54%, #061625 100%)
+  background: linear-gradient(
+        180deg,
+        rgba(6, 22, 37, 0.85) 38.54%,
+        #061625 100%
+      )
       no-repeat top center,
     url(/images/ywc18/bg/hero-bg.jpg) no-repeat center center;
   background-size: cover;
