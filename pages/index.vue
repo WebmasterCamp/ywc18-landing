@@ -15,7 +15,8 @@
     <!-- <PaperDivider /> -->
     <QA />
     <FollowUs />
-    <!-- <Footer /> -->
+    <SponsorBox class="sponsor-box" />
+    <Footer />
   </div>
 </template>
 
@@ -38,9 +39,10 @@ export default {
     // MediaPartner: () => import('~/components/sections/ywc18/MediaPartner'),
     // PaperDivider: () => import('~/components/sections/ywc18/PaperDivider'),
     QA: () => import('~/components/sections/ywc18/QA'),
-    FollowUs: () => import('~/components/sections/ywc18/FollowUs')
-    // TODO: Footer: () => import('~/components/sections/Footer'),
-  }
+    FollowUs: () => import('~/components/sections/ywc18/FollowUs'),
+    SponsorBox: () => import('~/components/SponsorBox'),
+    Footer: () => import('~/components/sections/ywc18/Footer'),
+  },
 }
 </script>
 
@@ -50,6 +52,11 @@ export default {
   margin: 0 auto;
   text-align: center;
 }
+
+.sponsor-box {
+  margin: 50px 0;
+}
+
 .cta-button {
   transform: scale(1.3);
   display: block !important;
