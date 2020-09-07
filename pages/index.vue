@@ -11,7 +11,7 @@
     <Guru />
     <Gallery />
     <Sponsor />
-    <MediaPartner />
+    <!-- <MediaPartner /> -->
     <!-- <PaperDivider /> -->
     <QA />
     <FollowUs />
@@ -35,12 +35,12 @@ export default {
     Guru: () => import('~/components/sections/ywc18/Guru'),
     Gallery: () => import('~/components/sections/ywc18/Gallery'),
     Sponsor: () => import('~/components/sections/ywc18/Sponsor'),
-    MediaPartner: () => import('~/components/sections/ywc18/MediaPartner'),
+    // MediaPartner: () => import('~/components/sections/ywc18/MediaPartner'),
     // PaperDivider: () => import('~/components/sections/ywc18/PaperDivider'),
     QA: () => import('~/components/sections/ywc18/QA'),
-    FollowUs: () => import('~/components/sections/ywc18/FollowUs'),
+    FollowUs: () => import('~/components/sections/ywc18/FollowUs')
     // TODO: Footer: () => import('~/components/sections/Footer'),
-  },
+  }
 }
 </script>
 

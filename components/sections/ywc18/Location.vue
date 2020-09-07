@@ -155,6 +155,10 @@ export default {
   max-width: 1140px;
   width: 100%;
   position: relative;
+  @media screen and (max-width: 425px) {
+    padding: 32px 0;
+    height: unset;
+  }
 }
 .location-backdrop-wrapper {
   z-index: 2;
@@ -219,7 +223,8 @@ export default {
   font-size: 60px;
   letter-spacing: 0.03em;
   color: rgba(242, 246, 252, 0.8);
-}
-@media screen and (max-width: 950px) {
+  @media screen and (max-width: 425px) {
+    font-size: 32px;
+  }
 }
 </style>
