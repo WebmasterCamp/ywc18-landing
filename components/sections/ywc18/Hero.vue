@@ -16,7 +16,7 @@
         alt="Theme Logo"
         class="theme-logo"
       />
-      <Button>สมัครค่าย</Button>
+      <Button v-if="false">สมัครค่าย</Button>
     </div>
     <SponsorBox />
   </section>
