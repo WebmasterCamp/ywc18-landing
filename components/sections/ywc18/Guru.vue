@@ -13,14 +13,19 @@
           </template>
         </transition>
         <transition name="guru-detail" mode="out-in">
-          <div class="guru-content" :key="`guru-detail-${gurus[currentGuru].img}`">
+          <div
+            class="guru-content"
+            :key="`guru-detail-${gurus[currentGuru].img}`"
+          >
             <h1>{{ gurus[currentGuru].name }}</h1>
             <p v-html="gurus[currentGuru].role" />
             <div
               v-for="major in gurus[currentGuru].majors"
               :class="`major major-${major}`"
               :key="major"
-            >{{ major }}</div>
+            >
+              {{ major }}
+            </div>
           </div>
         </transition>
       </div>
@@ -38,7 +43,11 @@
         @click="selectGuru(idx)"
       >
         <Picture :fileName="`guru/${g.img}`" :alt="g.name" />
-        <div v-for="major in g.majors" :class="`major major-${major}`" :key="`${idx + major}`" />
+        <div
+          v-for="major in g.majors"
+          :class="`major major-${major}`"
+          :key="`${idx + major}`"
+        />
       </div>
     </Gurus>
   </section>
@@ -221,19 +230,19 @@ const CurrentGuru = styled.div`
         }
 
         &.major-programming:before {
-          background: #1451c7;
+          background: #123e84;
         }
 
         &.major-design:before {
-          background: #ffce21;
+          background: #e8b72e;
         }
 
         &.major-marketing:before {
-          background: #e73239;
+          background: #11631d;
         }
 
         &.major-content:before {
-          background: #00c42b;
+          background: #8c0d1c;
         }
 
         @media screen and (max-width: 960px) {
@@ -282,19 +291,19 @@ const Gurus = styled.div`
       margin: 10px auto 0;
 
       &.major-programming {
-        background: #1451c7;
+        background: #123e84;
       }
 
       &.major-design {
-        background: #ffce21;
+        background: #e8b72e;
       }
 
       &.major-marketing {
-        background: #e73239;
+        background: #11631d;
       }
 
       &.major-content {
-        background: #00c42b;
+        background: #8c0d1c;
       }
 
       @media screen and (max-width: 960px) {
@@ -320,7 +329,7 @@ export default {
     SectionName,
     Picture,
     CurrentGuru,
-    Gurus
+    Gurus,
   },
   data() {
     return {
@@ -330,76 +339,100 @@ export default {
         {
           img: 1,
           name: 'วโรรส โรจนะ (โน้ต)',
-          role: `CEO Dek-D Interactive Co., Ltd.<br>นายกสมาคมผู้ดูแลเว็บไทย`,
-          majors: ['programming']
+          role: `CEO - Dek-D Interactive Co., Ltd.<br>นายกสมาคมผู้ดูแลเว็บไทย`,
+          majors: ['programming'],
         },
-        {
-          img: 2,
-          name: 'อัครวุฒิ ตำราเรียง (บัง)',
-          role: `กรรมการผู้จัดการ บ.มาร์เวลิค เอ็นจิ้น จก.<br>กรรมการควบคุมจริยธรรม สมาคมผู้ดูแลเว็บไทย`,
-          majors: []
-        },
+        // {
+        //   img: 2,
+        //   name: 'อัครวุฒิ ตำราเรียง (บัง)',
+        //   role: `กรรมการผู้จัดการ บ.มาร์เวลิค เอ็นจิ้น จก.<br>กรรมการควบคุมจริยธรรม สมาคมผู้ดูแลเว็บไทย`,
+        //   majors: []
+        // },
         {
           img: 3,
           name: 'อภิศิลป์ ตรุงกานนท์ (บอย)',
-          role: `Co-founder & Chief Product Officer, Pantip.com`,
-          majors: ['content']
+          role: `Co-Founder & Chief Product Officer - Pantip.com`,
+          majors: ['content'],
         },
         {
           img: 4,
           name: 'ขจร เจียรนัยพานิชย์ (เอ็ม)',
-          role: `Blogger & Managing Director : Mango Zero, MacThai, RAiNMaker`,
-          majors: ['content']
+          role: `Executive Editor - MangoZero.com & The Zero Publishing`,
+          majors: ['content'],
         },
         {
           img: 5,
           name: 'ณปสก สันติสุนทรกูล (ปอล)',
-          role: `COO, Dek-D Intertactive Co., Ltd.`,
-          majors: ['design']
+          role: `Co-Founder & Chief Operation Officer - Dek-D Interactive Co.,Ltd.`,
+          majors: ['design'],
         },
         {
           img: 6,
           name: 'คนที่หนึ่ง แสงหิรัญ (หนึ่ง)',
           role: `อาจารย์ประจำภาควิชาการออกแบบนิเทศศิลป์<br>คณะนิเทศศาสตร์ มหาวิทยาลัยอัสสัมชัญ`,
-          majors: ['design']
+          majors: ['design'],
         },
         {
           img: 7,
           name: 'อินทนนท์ ปัญญาโสภา (เบนซ์)',
           role: `ผู้ก่อตั้งเว็บไซต์ Grappik`,
-          majors: ['design']
+          majors: ['design'],
         },
         {
           img: 8,
           name: 'เจริญ ลักษณ์เลิศกุล (เจ)',
-          role: `Associate Director - Strategic planning<br>หน่วยงาน Online Station (True Digital Group)`,
-          majors: ['marketing']
+          role: `Associate Director - Strategic Planning<br>หน่วยงาน Online Station (True Digital Group)`,
+          majors: ['marketing'],
         },
         {
           img: 9,
           name: 'จักรพงษ์ คงมาลัย (ปอง)',
-          role: `Managing Director, Moonshot Digital Co., Ltd`,
-          majors: ['marketing']
+          role: `Managing Director - Moonshot Digital Co., Ltd`,
+          majors: ['content'],
         },
         {
           img: 10,
           name: 'ปัญจมพงศ์ เสริมสวัสดิ์ศรี (ปันเจ)',
-          role: `C-3PO at Cleverse`,
-          majors: ['programming']
+          role: `C-3PO - Cleverse`,
+          majors: ['programming'],
         },
         {
           img: 11,
           name: 'เมธปริยา คำนวนวุฒิ (ว่าน)',
-          role: `Head of Marketing, Lnw co., Ltd`,
-          majors: ['marketing']
-        }
-      ]
+          role: `Head of Marketing - Lnw co., Ltd`,
+          majors: ['marketing'],
+        },
+        {
+          img: 12,
+          name: 'ศุภเดช สุทธิพงศ์คณาสัย (โก๋)',
+          role: `Founder - VR Online Co.,Ltd. Tech<br>Blogger - Freeware.in.th, พิธีกรรายการล้ำหน้าโชว์`,
+          majors: ['content'],
+        },
+        {
+          img: 13,
+          name: 'วีระ เจียรนัยพาณิชย์ (โอ)',
+          role: `ที่ปรึกษาด้านพัฒนากลยุทธ์ธุรกิจ SME<br> Line Certified Coach 2019`,
+          majors: ['marketing'],
+        },
+        {
+          img: 14,
+          name: 'ไชยพงศ์ ลาภเลี้ยงตระกูล (พงศ์)',
+          role: `Co-Founder & Chief Executive Officer - 3DS Interactive`,
+          majors: ['programming'],
+        },
+        {
+          img: 15,
+          name: 'วรัทธน์ วงศ์มณีกิจ (ตั้ง)',
+          role: `Chief Product Officer - WISESIGHT Insight Platform`,
+          majors: ['programming'],
+        },
+      ],
     }
   },
   computed: {
     guruImages() {
-      return this.gurus.map(guru => guru.img)
-    }
+      return this.gurus.map((guru) => guru.img)
+    },
   },
   created() {
     this.setAutoplay()
@@ -430,7 +463,7 @@ export default {
     selectGuru(id) {
       this.currentGuru = id
       this.setAutoplay()
-    }
-  }
+    },
+  },
 }
 </script>
