@@ -97,13 +97,15 @@ export default {
   margin-bottom: 0px;
 }
 .bg {
-  width: 1920px;
-  position: absolute;
-  z-index: 3;
-
   &.bg-location-cover {
     width: 1920px;
+    position: absolute;
+    z-index: 3;
+    width: 1920px;
     max-width: unset !important;
+    @media screen and (min-width: 1920px) {
+      width: 100%;
+    }
   }
 
   &.bg-top {
