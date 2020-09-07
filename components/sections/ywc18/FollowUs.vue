@@ -60,8 +60,8 @@ const GridCol = styled.div`
 `
 const SocialBtn = styled.a`
   display: flex;
-  color: rgba(242, 246, 252, 0.8);
-  border: 4px solid rgba(242, 246, 252, 0.8);
+  color: #ff5d29;
+  border: 4px solid #ff5d29;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -70,7 +70,7 @@ const SocialBtn = styled.a`
 
   &:hover {
     color: black;
-    background: rgba(242, 246, 252, 0.8);
+    background: #ff5d29;
   }
   &:hover img {
     filter: saturate(0%) brightness(0%) contrast(100%);

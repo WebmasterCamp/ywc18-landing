@@ -1,10 +1,5 @@
 <template>
   <section class="hero">
-    <!-- <Picture
-      fileName="ywc18/top-paper-extended-cropped"
-      alt="Paper ripped"
-      class="hero-paper"
-    />-->
     <div class="container">
       <Picture
         fileName="ywc18/ywc18-logo-orange.svg"
