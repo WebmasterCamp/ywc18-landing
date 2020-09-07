@@ -47,6 +47,7 @@ const Grid = styled.div`
   grid-template-columns: repeat(4, auto);
   max-width: 416px;
   margin: 0 auto;
+  gap: 30px;
 
   @media (max-width: 768px) {
     grid-gap: 32px 32px;
