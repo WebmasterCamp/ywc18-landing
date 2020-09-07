@@ -58,11 +58,11 @@
         </div>
       </section>
       <Picture
-        class="bg bg-top bg-location-cover"
+        class="bg bg-location-cover bg-location-top"
         fileName="ywc18/location/paper-location-top"
       />
       <Picture
-        class="bg bg-bottom bg-location-cover"
+        class="bg bg-location-cover bg-location-bottom"
         fileName="ywc18/location/paper-location-bottom"
       />
     </div>
@@ -96,6 +96,30 @@ export default {
 .location__header {
   margin-bottom: 0px;
 }
+
+.location__bg__cover {
+  position: absolute;
+  top: 0;
+  height: 840px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1920px;
+  @media screen and (min-width: 1921px) {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  img {
+    max-width: unset !important;
+  }
+
+  &--bottom {
+    transform: rotate(180deg);
+  }
+}
+
 .bg {
   &.bg-location-cover {
     width: 1920px;
@@ -103,17 +127,16 @@ export default {
     z-index: 3;
     width: 1920px;
     max-width: unset !important;
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: 1921px) {
       width: 100%;
     }
-  }
+    &.bg-location-top {
+      top: 0;
+    }
 
-  &.bg-top {
-    top: 0;
-  }
-
-  &.bg-bottom {
-    bottom: -10px;
+    &.bg-location-bottom {
+      bottom: 0;
+    }
   }
 
   img {
@@ -129,6 +152,7 @@ export default {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  height: calc(100% - 10px);
 }
 .location-image-gradient {
   position: absolute;
@@ -141,6 +165,7 @@ export default {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.7) 100%
   );
+  height: calc(100% - 10px);
 }
 .location-content {
   font-family: Barlow, Anuphan;
