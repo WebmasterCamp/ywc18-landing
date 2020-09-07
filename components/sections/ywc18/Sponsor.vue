@@ -11,7 +11,7 @@
         size="lg"
       />
     </SponsorGroup>
-    <SponsorGroup>
+    <SponsorGroup v-if="sponsors.gold.length > 0">
       <LogoBadge
         v-for="(sponsor, index) in sponsors.gold"
         :key="index"
@@ -21,7 +21,7 @@
         size="md"
       />
     </SponsorGroup>
-    <SponsorGroup>
+    <SponsorGroup v-if="sponsors.gold.length > 0">
       <LogoBadge
         v-for="(sponsor, index) in sponsors.silver"
         :key="index"
@@ -77,57 +77,15 @@ export default {
       sponsors: {
         vip: [
           {
-            img: 'ExxonMobil.svg',
-            alt: 'ExxonMobil',
-            link: 'https://corporate.exxonmobil.com'
-          },
-          {
             img: 'TWA.svg',
             alt: 'Thai Webmaster Association',
-            link: 'https://www.webmaster.or.th'
+            link: 'https://www.webmaster.or.th',
           },
-          {
-            img: 'IT-KMITL.svg',
-            alt: 'IT KMITL',
-            link: 'https://www.it.kmitl.ac.th'
-          }
         ],
-        gold: [
-          {
-            img: 'ExxonMobil.svg',
-            alt: 'ExxonMobil',
-            link: 'https://corporate.exxonmobil.com'
-          },
-          {
-            img: 'TWA.svg',
-            alt: 'Thai Webmaster Association',
-            link: 'https://www.webmaster.or.th'
-          },
-          {
-            img: 'IT-KMITL.svg',
-            alt: 'IT KMITL',
-            link: 'https://www.it.kmitl.ac.th'
-          }
-        ],
-        silver: [
-          {
-            img: 'ExxonMobil.svg',
-            alt: 'ExxonMobil',
-            link: 'https://corporate.exxonmobil.com'
-          },
-          {
-            img: 'TWA.svg',
-            alt: 'Thai Webmaster Association',
-            link: 'https://www.webmaster.or.th'
-          },
-          {
-            img: 'IT-KMITL.svg',
-            alt: 'IT KMITL',
-            link: 'https://www.it.kmitl.ac.th'
-          }
-        ]
-      }
+        gold: [],
+        silver: [],
+      },
     }
-  }
+  },
 }
 </script>
