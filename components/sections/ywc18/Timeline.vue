@@ -289,6 +289,11 @@ export default {
     position: absolute;
     z-index: 1;
     overflow: hidden;
+
+    @media screen and (max-width: 425px) {
+      display: none;
+    }
+
     &__top-left {
       position: absolute;
       top: 0;
