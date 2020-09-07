@@ -13,9 +13,9 @@
         <MajorsList>
           <a-row :gutter="30">
             <a-col :xs="12" :lg="6">
-              <Major image="content">
+              <Major image="content" title="Web Programming">
                 <template slot-scope="scope">
-                  <FullscreenOverlay :show="scope.show" :count="0" :isRegOpen="true">
+                  <FullscreenOverlay :show="scope.show" :count="0" :isRegOpen="false">
                     <template v-slot:content>
                       <p>
                         ทำหน้าที่คิดและเขียนเนื้อหาต่าง ๆ บนเว็บไซต์
@@ -41,13 +41,88 @@
               </Major>
             </a-col>
             <a-col :xs="12" :lg="6">
-              <Major image="design" />
+              <Major image="design">
+                <template slot-scope="scope">
+                  <FullscreenOverlay :show="scope.show" :count="0" :isRegOpen="false">
+                    <template v-slot:content>
+                      <p>
+                        ทำหน้าที่คิดและเขียนเนื้อหาต่าง ๆ บนเว็บไซต์
+                        เหมาะกับผู้ที่รักในการเขียนและเล่าเรื่องทุกรูปแบบ เช่น
+                        บ่นในทวิตและเขียนแคปชั่นในไอจี เป็นต้น
+                      </p>
+                      <h3>คำถามประจำสาขา</h3>
+                      <ol>
+                        <li>
+                          ให้น้องเขียน Fake News หรือ Fake Content
+                          เรื่องอะไรก็ได้ที่ทำให้กรรมการอ่านแล้วรู้สึกเชื่อจนเผลอแชร์ก่อนเช็ก
+                          (ส่งคอนเทนต์นี้ในเว็บค่ายเท่านั้น
+                          ห้ามเผยแพร่คอนเทนต์ออกไปในโซเชียล)
+                        </li>
+                        <li>
+                          ให้น้องเขียนคอนเทนต์แก้ Fake News/Content ในข้อ 1
+                          ที่ทำให้กรรมการอ่านแล้วอยากแชร์เพื่อแก้ข่าว
+                        </li>
+                      </ol>
+                    </template>
+                  </FullscreenOverlay>
+                </template>
+              </Major>
             </a-col>
             <a-col :xs="12" :lg="6">
-              <Major image="marketing" />
+              <Major image="marketing">
+                <template slot-scope="scope">
+                  <FullscreenOverlay :show="scope.show" :count="0" :isRegOpen="false">
+                    <template v-slot:content>
+                      <p>
+                        ทำหน้าที่คิดและเขียนเนื้อหาต่าง ๆ บนเว็บไซต์
+                        เหมาะกับผู้ที่รักในการเขียนและเล่าเรื่องทุกรูปแบบ เช่น
+                        บ่นในทวิตและเขียนแคปชั่นในไอจี เป็นต้น
+                      </p>
+                      <h3>คำถามประจำสาขา</h3>
+                      <ol>
+                        <li>
+                          ให้น้องเขียน Fake News หรือ Fake Content
+                          เรื่องอะไรก็ได้ที่ทำให้กรรมการอ่านแล้วรู้สึกเชื่อจนเผลอแชร์ก่อนเช็ก
+                          (ส่งคอนเทนต์นี้ในเว็บค่ายเท่านั้น
+                          ห้ามเผยแพร่คอนเทนต์ออกไปในโซเชียล)
+                        </li>
+                        <li>
+                          ให้น้องเขียนคอนเทนต์แก้ Fake News/Content ในข้อ 1
+                          ที่ทำให้กรรมการอ่านแล้วอยากแชร์เพื่อแก้ข่าว
+                        </li>
+                      </ol>
+                    </template>
+                  </FullscreenOverlay>
+                </template>
+              </Major>
             </a-col>
             <a-col :xs="12" :lg="6">
-              <Major image="programming" />
+              <Major image="programming">
+                <template slot-scope="scope">
+                  <FullscreenOverlay :show="scope.show" :count="0" :isRegOpen="false">
+                    <template v-slot:content>
+                      <p>
+                        ทำหน้าที่คิดและเขียนเนื้อหาต่าง ๆ บนเว็บไซต์
+                        เหมาะกับผู้ที่รักในการเขียนและเล่าเรื่องทุกรูปแบบ เช่น
+                        บ่นในทวิตและเขียนแคปชั่นในไอจี เป็นต้น
+                      </p>
+                      <h3>คำถามประจำสาขา</h3>
+                      <ol>
+                        <li>
+                          ให้น้องเขียน Fake News หรือ Fake Content
+                          เรื่องอะไรก็ได้ที่ทำให้กรรมการอ่านแล้วรู้สึกเชื่อจนเผลอแชร์ก่อนเช็ก
+                          (ส่งคอนเทนต์นี้ในเว็บค่ายเท่านั้น
+                          ห้ามเผยแพร่คอนเทนต์ออกไปในโซเชียล)
+                        </li>
+                        <li>
+                          ให้น้องเขียนคอนเทนต์แก้ Fake News/Content ในข้อ 1
+                          ที่ทำให้กรรมการอ่านแล้วอยากแชร์เพื่อแก้ข่าว
+                        </li>
+                      </ol>
+                    </template>
+                  </FullscreenOverlay>
+                </template>
+              </Major>
             </a-col>
           </a-row>
         </MajorsList>
@@ -177,7 +252,7 @@ export default {
     MajorsSection,
     MajorsList,
     Major: () => import('~/components/ywc18/Major'),
-    FullscreenOverlay: () => import('~/components/FullscreenOverlay')
+    FullscreenOverlay: () => import('~/components/ywc18/FullscreenOverlay')
   }
 }
 </script>

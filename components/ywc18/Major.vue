@@ -14,7 +14,7 @@
         <Button size="sm" @click="openDetail">ดูรายละเอียด</Button>
       </div>
     </div>
-    <slot :show="show" title="Programming" @dismiss="dismissOverlay" />
+    <slot :show="show" :title="`Programming`" @dismiss="dismissOverlay" />
   </div>
 </template>
 
