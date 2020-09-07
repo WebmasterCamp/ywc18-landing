@@ -86,7 +86,7 @@ export default {
           text: 'AN NOUNCE MENT #1',
           subText: 'ประกาศผู้มีสิทธิ์ สัมภาษณ์',
           image: require('~/assets/images/ywc18/timeline/announcement1.png'),
-          bottomDate: '16 NOV',
+          bottomDate: '14 NOV',
         },
         interview: {
           text: 'INTER VIEW',
@@ -104,12 +104,11 @@ export default {
           text: 'CAMP DAY',
           subText: 'วันเข้าค่าย (ไม่ค้างคืน)',
           image: require('~/assets/images/ywc18/timeline/camp-day.png'),
-          topDate: 'TO BE',
-          bottomDate: 'ANNOUNCED',
+          topDate: '24 - 27 DEC',
         },
       },
       isActive: {
-        register: true,
+        register: false,
         announce: false,
         interview: false,
         finalist: false,
@@ -120,7 +119,7 @@ export default {
         announce: false,
         interview: false,
         finalist: false,
-        camp: true,
+        camp: false,
       },
     }
   },
