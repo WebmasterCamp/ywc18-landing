@@ -84,7 +84,7 @@ export default {
         },
         announce: {
           text: 'AN NOUNCE MENT #1',
-          subText: 'ประกาศผล รอบใบสมัคร',
+          subText: 'ประกาศผู้มีสิทธิ์ สัมภาษณ์',
           image: require('~/assets/images/ywc18/timeline/announcement1.png'),
           bottomDate: '16 NOV',
         },
