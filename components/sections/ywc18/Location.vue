@@ -57,9 +57,12 @@
           </div>
         </div>
       </section>
-      <Picture class="bg bg-top" fileName="ywc18/location/paper-location-top" />
       <Picture
-        class="bg bg-bottom"
+        class="bg bg-top bg-location-cover"
+        fileName="ywc18/location/paper-location-top"
+      />
+      <Picture
+        class="bg bg-bottom bg-location-cover"
         fileName="ywc18/location/paper-location-bottom"
       />
     </div>
@@ -94,9 +97,14 @@ export default {
   margin-bottom: 0px;
 }
 .bg {
-  width: 100%;
+  width: 1920px;
   position: absolute;
   z-index: 3;
+
+  &.bg-location-cover {
+    width: 1920px;
+    max-width: unset !important;
+  }
 
   &.bg-top {
     top: 0;
@@ -140,6 +148,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .location-container {
   width: 100%;
