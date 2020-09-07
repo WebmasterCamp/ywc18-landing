@@ -55,7 +55,7 @@ export default {
         {
           breakpoint: 426,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
             navButtons: true,
             autoplay: true,
           },
@@ -71,7 +71,8 @@ export default {
         {
           breakpoint: 1008,
           settings: {
-            navButtons: true,
+            autoplay: false,
+            navButtons: false,
           },
         },
       ],
