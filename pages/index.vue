@@ -15,7 +15,7 @@
     <!-- <PaperDivider /> -->
     <QA />
     <FollowUs />
-    <SponsorBox class="sponsor-box" />
+    <SponsorGroup class="sponsor-box" />
     <Footer />
   </div>
 </template>
@@ -40,7 +40,7 @@ export default {
     // PaperDivider: () => import('~/components/sections/ywc18/PaperDivider'),
     QA: () => import('~/components/sections/ywc18/QA'),
     FollowUs: () => import('~/components/sections/ywc18/FollowUs'),
-    SponsorBox: () => import('~/components/SponsorBox'),
+    SponsorGroup: () => import('~/components/ywc18/SponsorGroup'),
     Footer: () => import('~/components/sections/ywc18/Footer'),
   },
 }
