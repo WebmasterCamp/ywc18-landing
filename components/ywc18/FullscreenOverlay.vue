@@ -1,7 +1,13 @@
 <template>
   <div>
     <ModalOverlay v-if="show" @click="dismiss" />
-    <Container v-if="show" :color="color" :normal="normal" :exiting="exiting">
+    <Container
+      v-if="show"
+      :color="color"
+      :normal="normal"
+      :exiting="exiting"
+      :major="major"
+    >
       <div class="overlay-content">
         <Header :normal="normal">
           <template v-if="!normal">
@@ -31,11 +37,11 @@
             v-if="isRegOpen"
             :color="color"
             href="https://register.ywc17.ywc.in.th/"
-          >สมัครสาขานี้</RegisterButton>
-          <span
-            v-else
-            style="color: gray;margin:0 auto;font-family: Anuphan;"
-          >ขณะนี้ไม่อยู่ในช่วงรับสมัคร</span>
+            >สมัครสาขานี้</RegisterButton
+          >
+          <span v-else style="color: gray;margin:0 auto;font-family: Anuphan;"
+            >ขณะนี้ไม่อยู่ในช่วงรับสมัคร</span
+          >
         </slot>
       </BottomMenu>
     </Container>
@@ -48,20 +54,21 @@ import styled, { css, keyframes } from 'vue-styled-components'
 import color from '~/utils/color'
 
 const majorImage = {
-  green: '/images/major/content.svg',
-  yellow: '/images/major/design.svg',
-  pink: '/images/major/marketing.svg',
-  blue: '/images/major/developer.svg'
+  content: '/images/ywc18/modal/content.jpg',
+  design: '/images/ywc18/modal/design.jpg',
+  marketing: '/images/ywc18/modal/marketing.jpg',
+  programming: '/images/ywc18/modal/programming.jpg',
 }
 
 const withColorProps = {
-  color: String
+  color: String,
 }
 
 const containerProps = {
   color: String,
   exiting: Boolean,
-  normal: Boolean
+  normal: Boolean,
+  major: String,
 }
 
 const fadein = keyframes`
@@ -105,35 +112,33 @@ const Container = styled('div', containerProps)`
   right: 0;
   bottom: 0;
   z-index: 999;
-  background: black;
-  background: ${props => color[props.color].gradientDarker};
   padding: 32px 32px 0;
   text-align: left;
   transition: all 0.3s;
   animation: ${fadein} 0.5s;
-  ${props =>
+  ${(props) =>
     props.normal
       ? ''
       : `
   &:before {
     content: '';
-    background: url('${majorImage[props.color]}') no-repeat bottom center;
+    background: url('${majorImage[props.major]}') no-repeat bottom center;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 30px;
-    opacity: 0.3;
     background-size: 100%;
+    height: 100%;
 
     @media screen and (min-width: 768px) {
-      background-size: 500px;
-      background-position: bottom right;
+    background-size: cover;
+    background-position: center center;
     }
   }
   `}
 
-  ${props =>
+  ${(props) =>
     props.exiting &&
     `
     animation: ${fadeout} 0.5s;
@@ -150,7 +155,7 @@ const Container = styled('div', containerProps)`
 
   .content {
     font-family: Barlow, CmPrasanmit;
-    height: calc(90% - ${props => (props.normal ? 90 : 130)}px);
+    height: calc(90% - ${(props) => (props.normal ? 90 : 130)}px);
     overflow: hidden;
     overflow-y: auto;
     line-height: 2;
@@ -180,8 +185,8 @@ const Container = styled('div', containerProps)`
 
 const Header = styled('div', { normal: Boolean })`
   display: grid;
-  grid-template-columns: auto ${props => (props.normal ? '' : ' 100px')};
-  ${props => (props.normal ? 'margin-bottom: 20px;' : '')}
+  grid-template-columns: auto ${(props) => (props.normal ? '' : ' 100px')};
+  ${(props) => (props.normal ? 'margin-bottom: 20px;' : '')}
 
   font-family: 'CmPrasanmit', 'Sarabun', Arial, Helvetica, sans-serif;
 `
@@ -211,7 +216,7 @@ const Count = styled('div', withColorProps)`
     font-size: 32px;
     margin: 0.5em 0;
     font-weight: bold;
-    color: ${props => color[props.color].normal};
+    color: ${(props) => color[props.color].normal};
   }
 `
 
@@ -248,7 +253,7 @@ const defaultButton = css`
 
 const BackButton = styled('button', withColorProps)`
   ${defaultButton};
-  color: ${props => color.primary};
+  color: ${(props) => color.primary};
   background-color: transparent;
   font-family: Anuphan;
   font-style: normal;
@@ -263,7 +268,7 @@ const BackButton = styled('button', withColorProps)`
     border-left: 2px solid white;
     border-top: 2px solid white;
     transform: rotate(-45deg);
-    border-color: ${props => color.primary};
+    border-color: ${(props) => color.primary};
   }
 `
 
@@ -275,16 +280,16 @@ const RegisterButton = styled('a', withColorProps)`
   text-decoration: none;
   border-radius: 1000px;
   height: 48px;
-  background: ${props => color[props.color].darker};
-  background: ${props => color[props.color].gradient};
-  color: ${props => (props.color === 'yellow' ? 'black' : 'white')};
+  background: ${(props) => color[props.color].darker};
+  background: ${(props) => color[props.color].gradient};
+  color: ${(props) => (props.color === 'yellow' ? 'black' : 'white')};
 
   &:hover {
     background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-      ${props => color[props.color].gradient};
+      ${(props) => color[props.color].gradient};
   }
   &:active {
-    background: ${props => color[props.color].darker};
+    background: ${(props) => color[props.color].darker};
     filter: brightness(75%);
   }
 `
@@ -298,35 +303,39 @@ export default Vue.extend({
     Count,
     BottomMenu,
     BackButton,
-    RegisterButton
+    RegisterButton,
   },
   props: {
+    major: {
+      type: String,
+      default: '',
+    },
     count: {
       default: 0,
-      type: Number
+      type: Number,
     },
     show: {
       default: false,
-      type: Boolean
+      type: Boolean,
     },
     normal: {
       default: false,
-      type: Boolean
+      type: Boolean,
     },
     isRegOpen: {
       default: true,
-      type: Boolean
+      type: Boolean,
     },
     title: {
       default: '',
-      type: String
-    }
+      type: String,
+    },
   },
   data() {
     return {
       color: '',
       exiting: false,
-      showCount: false
+      showCount: false,
     }
   },
   mounted() {
@@ -351,7 +360,7 @@ export default Vue.extend({
         this.$parent.dismissOverlay()
         this.exiting = false
       }, 500)
-    }
-  }
+    },
+  },
 })
 </script>

@@ -9,7 +9,11 @@
     </MajorsBackground>
     <MajorsWrapper>
       <section class="container">
-        <SectionName title="สาขาที่รับสมัคร" subTitle="MAJORS REGISTER" subTitleColor="#061625" />
+        <SectionName
+          title="สาขาที่รับสมัคร"
+          subTitle="MAJORS REGISTER"
+          subTitleColor="#061625"
+        />
         <MajorsList>
           <a-row :gutter="30">
             <a-col :xs="12" :lg="6">
@@ -17,12 +21,21 @@
                 <template slot-scope="scope">
                   <FullscreenOverlay
                     :show="scope.show"
+                    major="content"
                     title="Content"
                     :count="0"
                     :isRegOpen="false"
                   >
                     <template v-slot:content>
-                      <p>หน้าที่ในทีมคือการวางแผนกลยุทธ์การขายสินค้า การวิเคราะห์ และการหาความต้องการ ของลูกค้า เพื่อนำมาสร้างผลงานมาให้ตอบโจทย์ ความต้องการของลูกค้ามากที่สุด รวมไปถึงการสร้างรายได้ให้กับธุรกิจ เหมาะสำหรับผู้ที่ชอบการคิด วิเคราะห์ มีความรู้เบื้องต้นเกี่ยวกับการทำธุรกิจ และการตลาด</p>
+                      <p>
+                        หน้าที่ในทีมคือการวางแผนกลยุทธ์การขายสินค้า การวิเคราะห์
+                        และการหาความต้องการ ของลูกค้า
+                        เพื่อนำมาสร้างผลงานมาให้ตอบโจทย์
+                        ความต้องการของลูกค้ามากที่สุด
+                        รวมไปถึงการสร้างรายได้ให้กับธุรกิจ
+                        เหมาะสำหรับผู้ที่ชอบการคิด วิเคราะห์
+                        มีความรู้เบื้องต้นเกี่ยวกับการทำธุรกิจ และการตลาด
+                      </p>
                     </template>
                   </FullscreenOverlay>
                 </template>
@@ -32,6 +45,7 @@
               <Major image="design">
                 <template slot-scope="scope">
                   <FullscreenOverlay
+                    major="design"
                     :show="scope.show"
                     :count="0"
                     title="Design"
@@ -39,8 +53,9 @@
                   >
                     <template v-slot:content>
                       <p>
-                        หน้าที่ในทีมคือการทำงานด้านกราฟิกดีไซน์ ออกแบบเว็บไซต์ รวมถึงองค์ประกอบศิลป์อื่น ๆ
-                        เพื่อสร้างผลงานให้มีสีสัน และความสวยงาม เหมาะสำหรับผู้ที่มีความชอบในด้านศิลปะ
+                        หน้าที่ในทีมคือการทำงานด้านกราฟิกดีไซน์ ออกแบบเว็บไซต์
+                        รวมถึงองค์ประกอบศิลป์อื่น ๆ เพื่อสร้างผลงานให้มีสีสัน
+                        และความสวยงาม เหมาะสำหรับผู้ที่มีความชอบในด้านศิลปะ
                         มีความสามารถในด้านกราฟิกดีไซน์ และการทำเว็บไซต์
                       </p>
                     </template>
@@ -52,6 +67,7 @@
               <Major image="marketing">
                 <template slot-scope="scope">
                   <FullscreenOverlay
+                    major="marketing"
                     :show="scope.show"
                     :count="0"
                     title="Marketing"
@@ -59,8 +75,12 @@
                   >
                     <template v-slot:content>
                       <p>
-                        หน้าที่ในทีมคือการวางแผนกลยุทธ์การขายสินค้า การวิเคราะห์ และการหาความต้องการของลูกค้า เพื่อนำมาสร้างผลงานมาให้ตอบโจทย์ความต้องการของลูกค้ามากที่สุด รวมไปถึงการสร้างรายได้ให้กับธุรกิจ
-                        เหมาะสำหรับผู้ที่ชอบการคิด วิเคราะห์ มีความรู้เบื้องต้นเกี่ยวกับการทำธุรกิจ และการตลาด
+                        หน้าที่ในทีมคือการวางแผนกลยุทธ์การขายสินค้า การวิเคราะห์
+                        และการหาความต้องการของลูกค้า
+                        เพื่อนำมาสร้างผลงานมาให้ตอบโจทย์ความต้องการของลูกค้ามากที่สุด
+                        รวมไปถึงการสร้างรายได้ให้กับธุรกิจ
+                        เหมาะสำหรับผู้ที่ชอบการคิด วิเคราะห์
+                        มีความรู้เบื้องต้นเกี่ยวกับการทำธุรกิจ และการตลาด
                       </p>
                     </template>
                   </FullscreenOverlay>
@@ -71,13 +91,20 @@
               <Major image="programming">
                 <template slot-scope="scope">
                   <FullscreenOverlay
+                    major="programming"
                     :show="scope.show"
                     :count="0"
                     title="Programming"
                     :isRegOpen="false"
                   >
                     <template v-slot:content>
-                      <p>หน้าที่ในทีมคือการเขียนโค้ดสร้างเว็บไซต์ ไม่ว่าจะเป็น html, css ,js หรืออื่น ๆ เพื่อสร้างเว็บไซต์ ออกมาให้สามารถใช้งานได้จริง เหมาะสำหรับผู้ที่มีความสามารถ และความรู้ในการเขียนโปรแกรมได้ดี</p>
+                      <p>
+                        หน้าที่ในทีมคือการเขียนโค้ดสร้างเว็บไซต์ ไม่ว่าจะเป็น
+                        html, css ,js หรืออื่น ๆ เพื่อสร้างเว็บไซต์
+                        ออกมาให้สามารถใช้งานได้จริง
+                        เหมาะสำหรับผู้ที่มีความสามารถ
+                        และความรู้ในการเขียนโปรแกรมได้ดี
+                      </p>
                     </template>
                   </FullscreenOverlay>
                 </template>
@@ -211,8 +238,8 @@ export default {
     MajorsSection,
     MajorsList,
     Major: () => import('~/components/ywc18/Major'),
-    FullscreenOverlay: () => import('~/components/ywc18/FullscreenOverlay')
-  }
+    FullscreenOverlay: () => import('~/components/ywc18/FullscreenOverlay'),
+  },
 }
 </script>
 
