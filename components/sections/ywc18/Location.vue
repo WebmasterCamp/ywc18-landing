@@ -10,7 +10,6 @@
         v-lazy="locationImage"
         class="location-image"
         style="object-fit: cover;"
-        v-if="false"
       />
       <div class="location-image-gradient" />
       <section class="container location-container">
@@ -79,7 +78,7 @@ export default {
   },
   data() {
     return {
-      locationImage: require('~/assets/images/ywc18/location-bg.png'),
+      locationImage: require('~/assets/images/ywc18/location/location-bg-pending.jpg'),
       isActive: false,
     }
   },
@@ -144,7 +143,7 @@ export default {
 }
 .location-container {
   width: 100%;
-  padding: 50px 0;
+  padding: 100px 0;
   @media screen and (max-width: 768px) {
     padding: 75px 0;
   }
