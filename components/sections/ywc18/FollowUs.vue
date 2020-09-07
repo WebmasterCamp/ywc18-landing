@@ -8,12 +8,12 @@
           target="_blank"
           title="Facebook"
         >
-          <SocialIcon fileName="ywc18/social-facebook" alt="Facebook" />
+          <SocialIcon fileName="ywc18/icon/facebook.svg" alt="Facebook" />
         </SocialBtn>
       </GridCol>
       <GridCol>
         <SocialBtn href="https://m.me/ywcth" target="_blank" title="Messenger">
-          <SocialIcon fileName="ywc18/social-messenger" alt="Messenger" />
+          <SocialIcon fileName="ywc18/icon/messenger.svg" alt="Messenger" />
         </SocialBtn>
       </GridCol>
       <GridCol>
@@ -22,7 +22,7 @@
           target="_blank"
           title="Instagram"
         >
-          <SocialIcon fileName="ywc18/social-instagram" alt="Instagram" />
+          <SocialIcon fileName="ywc18/icon/instagram.svg" alt="Instagram" />
         </SocialBtn>
       </GridCol>
       <GridCol>
@@ -31,7 +31,7 @@
           target="_blank"
           title="Twitter"
         >
-          <SocialIcon fileName="ywc18/social-twitter" alt="Twitter" />
+          <SocialIcon fileName="ywc18/icon/twitter.svg" alt="Twitter" />
         </SocialBtn>
       </GridCol>
     </Grid>
@@ -69,7 +69,7 @@ const SocialBtn = styled.a`
   transition: all 0.15s;
 
   &:hover {
-    color: black;
+    color: #061625;
     background: #ff5d29;
   }
   &:hover img {
