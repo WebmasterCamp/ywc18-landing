@@ -1,16 +1,8 @@
 <template>
   <div class="location">
-    <SectionName
-      class="location__header"
-      title="LOCATION"
-      subTitle="สถานที่จัดกิจกรรม"
-    />
+    <SectionName class="location__header" title="LOCATION" subTitle="สถานที่จัดกิจกรรม" />
     <div class="location-content">
-      <img
-        class="location-image"
-        v-lazy="locationImage"
-        style="object-fit: cover;"
-      />
+      <img v-lazy="locationImage" class="location-image" style="object-fit: cover;" />
       <div class="location-image-gradient" />
       <section class="container location-container">
         <div class="location-split">
@@ -38,7 +30,7 @@
                       height="100%"
                       frameborder="0"
                       style="border:0;"
-                      allowfullscreen=""
+                      allowfullscreen
                     ></iframe>
                   </lazy-component>
                 </no-ssr>
@@ -46,11 +38,11 @@
               <div class="location-text">
                 <div v-if="isActive" class="location-detail">
                   <span class="highlight">Chulalongkorn University</span>
-                  <br />
-                  จุฬาลงกรณ์มหาวิทยาลัย
+                  <br />จุฬาลงกรณ์มหาวิทยาลัย
                 </div>
                 <div v-else class="location-detail-soon">
-                  Coming Soon!
+                  <Picture fileName="ywc18/location-pending.svg" />
+                  <p>TO BE ANNOUNCED</p>
                 </div>
               </div>
             </div>
@@ -58,10 +50,7 @@
         </div>
       </section>
       <Picture class="bg bg-top" fileName="ywc18/location/paper-location-top" />
-      <Picture
-        class="bg bg-bottom"
-        fileName="ywc18/location/paper-location-bottom"
-      />
+      <Picture class="bg bg-bottom" fileName="ywc18/location/paper-location-bottom" />
     </div>
   </div>
 </template>
@@ -74,17 +63,17 @@ export default {
   components: {
     SectionName,
     Picture,
-    BackdropText,
+    BackdropText
   },
   data() {
     return {
-      locationImage: require('~/assets/images/ywc18/location/image-location.png'),
-      isActive: true,
+      locationImage: require('~/assets/images/ywc18/location-bg.png'),
+      isActive: false
     }
   },
   mounted() {
     // this.timelineProcess()
-  },
+  }
   // methods: {}
 }
 </script>
@@ -166,6 +155,10 @@ export default {
   max-width: 1140px;
   width: 100%;
   position: relative;
+  @media screen and (max-width: 425px) {
+    padding: 32px 0;
+    height: unset;
+  }
 }
 .location-backdrop-wrapper {
   z-index: 2;
@@ -223,9 +216,15 @@ export default {
   }
 }
 .location-detail-soon {
+  font-family: Barlow Semi Condensed;
   text-align: center;
+  font-style: italic;
+  font-weight: bold;
   font-size: 60px;
-}
-@media screen and (max-width: 950px) {
+  letter-spacing: 0.03em;
+  color: rgba(242, 246, 252, 0.8);
+  @media screen and (max-width: 425px) {
+    font-size: 32px;
+  }
 }
 </style>

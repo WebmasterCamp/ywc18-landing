@@ -1,10 +1,10 @@
 <template>
   <section class="hero">
-    <Picture
+    <!-- <Picture
       fileName="ywc18/top-paper-extended-cropped"
       alt="Paper ripped"
       class="hero-paper"
-    />
+    />-->
     <div class="container">
       <Picture
         fileName="ywc18/ywc18-logo-orange.svg"
@@ -52,8 +52,8 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 225px;
-    @media screen and (min-width: 1920px) {
+    padding-top: 150px;
+    @media screen and (min-width: 1921px) {
       padding-top: 300px;
     }
   }
@@ -69,6 +69,9 @@ export default {
   img {
     width: 588px;
     height: auto;
+    @media screen and (max-width: 768px) {
+      width: 450px !important;
+    }
   }
 }
 .hero-paper {

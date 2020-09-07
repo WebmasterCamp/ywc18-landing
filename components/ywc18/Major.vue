@@ -1,45 +1,94 @@
 <template>
-  <div style="max-width: 100%; width:100%">
+  <div style="max-width: 100%; width:100%; margin-bottom: 1em;">
     <div class="major">
       <div
         class="major__image"
         :style="{ backgroundImage: `url(/images/ywc18/major/${image}.svg)` }"
       >
         <p v-if="showCount">
-          สมัครแล้ว <span>{{ count }}</span> คน
+          สมัครแล้ว
+          <span>{{ count }}</span> คน
         </p>
       </div>
       <div class="major__button" v-if="showButton">
-        <Button size="sm">สมัครสาขานี้</Button>
+        <Button size="sm" @click="openDetail">ดูรายละเอียด</Button>
       </div>
     </div>
+    <slot :show="show" :title="`Programming`" @dismiss="dismissOverlay" />
   </div>
 </template>
 
 <script>
-export default {
+import Vue from 'vue'
+import styled from 'vue-styled-components'
+
+const Button = styled.div`
+  cursor: pointer;
+  background: #091827;
+  border: 3px solid #ff5d29;
+  padding: 0.325em 1em;
+  font-family: Anuphan;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #f2f6fc;
+  user-select: none;
+  &:hover {
+    background: #ff5d29;
+    border: 3px solid #091827;
+  }
+  transition: all 0.25s ease;
+`
+
+export default Vue.extend({
   components: {
-    Button: () => import('~/components/ywc18/Button'),
+    Button
   },
   props: {
     image: {
       default: '',
-      type: String,
+      type: String
     },
     count: {
-      default: 123,
-      type: Number,
+      default: 0,
+      type: Number
+    },
+    color: {
+      default: 'pink',
+      type: String
     },
     showButton: {
       default: true,
-      type: Boolean,
+      type: Boolean
     },
     showCount: {
       default: false,
-      type: Boolean,
-    },
+      type: Boolean
+    }
   },
-}
+  data() {
+    return {
+      show: false
+    }
+  },
+  methods: {
+    openDetail() {
+      console.log('opendetail')
+      document.querySelector('body').style.overflow = 'hidden'
+      this.show = true
+      console.log(this.show)
+    },
+    dismissOverlay() {
+      document.querySelector('body').style.overflow = 'auto'
+      this.show = false
+    }
+  }
+})
 </script>
 
 <style lang="scss">
