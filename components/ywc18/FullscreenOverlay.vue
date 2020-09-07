@@ -39,7 +39,7 @@
             href="https://register.ywc17.ywc.in.th/"
             >สมัครสาขานี้</RegisterButton
           >
-          <span v-else style="color: gray;margin:0 auto;font-family: Anuphan;"
+          <span v-else style="color: #eee;margin:0 auto;font-family: Anuphan;"
             >ขณะนี้ไม่อยู่ในช่วงรับสมัคร</span
           >
         </slot>
@@ -122,13 +122,13 @@ const Container = styled('div', containerProps)`
       : `
   &:before {
     content: '';
-    background: url('${majorImage[props.major]}') no-repeat bottom center;
+    background: url('${majorImage[props.major]}') no-repeat center center;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 30px;
-    background-size: 100%;
+    background-size: cover;
     height: 100%;
 
     @media screen and (min-width: 768px) {

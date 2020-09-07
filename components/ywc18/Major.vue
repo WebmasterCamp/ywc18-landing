@@ -43,37 +43,40 @@ const Button = styled.div`
     border: 3px solid #091827;
   }
   transition: all 0.25s ease;
+  @media screen and (max-width: 425px) {
+    font-size: 14px;
+  }
 `
 
 export default Vue.extend({
   components: {
-    Button
+    Button,
   },
   props: {
     image: {
       default: '',
-      type: String
+      type: String,
     },
     count: {
       default: 0,
-      type: Number
+      type: Number,
     },
     color: {
       default: 'pink',
-      type: String
+      type: String,
     },
     showButton: {
       default: true,
-      type: Boolean
+      type: Boolean,
     },
     showCount: {
       default: false,
-      type: Boolean
-    }
+      type: Boolean,
+    },
   },
   data() {
     return {
-      show: false
+      show: false,
     }
   },
   methods: {
@@ -86,8 +89,8 @@ export default Vue.extend({
     dismissOverlay() {
       document.querySelector('body').style.overflow = 'auto'
       this.show = false
-    }
-  }
+    },
+  },
 })
 </script>
 

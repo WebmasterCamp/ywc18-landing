@@ -2,13 +2,34 @@
   <section class="container">
     <SectionHead title="Gallery" style="position: sticky; top: 0;" />
     <no-ssr placeholder="Loading...">
-      <agile ref="main" class="main" :options="options1" :as-nav-for="asNavFor1">
-        <div v-for="(slide, index) in slides" :key="index" class="slide" :class="`slide--${index}`">
+      <agile
+        ref="main"
+        class="main"
+        :options="options1"
+        :as-nav-for="asNavFor1"
+      >
+        <div
+          v-for="(slide, index) in slides"
+          :key="index"
+          class="slide"
+          :class="`slide--${index}`"
+        >
           <img v-lazy="slide" />
         </div>
       </agile>
-      <agile ref="thumbnails" class="thumbnails" :options="options2" :as-nav-for="asNavFor2">
-        <div v-for="(slide, index) in slides" :key="index" class="slide slide--thumbnail" :class="`slide--${index}`" @click="$refs.thumbnails.goTo(index)">
+      <agile
+        ref="thumbnails"
+        class="thumbnails"
+        :options="options2"
+        :as-nav-for="asNavFor2"
+      >
+        <div
+          v-for="(slide, index) in slides"
+          :key="index"
+          class="slide slide--thumbnail"
+          :class="`slide--${index}`"
+          @click="$refs.thumbnails.goTo(index)"
+        >
           <img v-lazy="slide" />
         </div>
         <template slot="prevButton">
@@ -32,9 +53,9 @@ import Picture from '~/components/Picture.vue'
 export default {
   components: {
     SectionHead,
-    Picture
+    Picture,
   },
-  data () {
+  data() {
     return {
       asNavFor1: [],
       asNavFor2: [],
@@ -47,9 +68,9 @@ export default {
         responsive: [
           {
             breakpoint: 768,
-            settings: { unagile: false }
-          }
-        ]
+            settings: { unagile: false },
+          },
+        ],
       },
       options2: {
         autoplay: true,
@@ -62,16 +83,16 @@ export default {
           {
             breakpoint: 768,
             settings: {
-              slidesToShow: 4
-            }
+              slidesToShow: 4,
+            },
           },
           {
             breakpoint: 1008,
             settings: {
-              navButtons: true
-            }
-          }
-        ]
+              navButtons: true,
+            },
+          },
+        ],
       },
       slides: [
         '/images/gallery/ywc17/1.jpg',
@@ -89,16 +110,16 @@ export default {
         '/images/gallery/ywc17/13.jpg',
         '/images/gallery/ywc17/14.jpg',
         '/images/gallery/ywc17/15.jpg',
-        '/images/gallery/ywc17/16.jpg'
-      ]
+        '/images/gallery/ywc17/16.jpg',
+      ],
     }
   },
-  mounted () {
-    this.$nextTick(function () {
+  mounted() {
+    this.$nextTick(function() {
       this.asNavFor1.push(this.$refs.thumbnails)
       this.asNavFor2.push(this.$refs.main)
     })
-  }
+  },
 }
 </script>
 
@@ -157,7 +178,7 @@ img
         right: -30px
 
     &:hover
-      color: #888
+      color: #fff
 
   &__dot
     margin: 0 10px
@@ -179,7 +200,7 @@ img
     &--current,
     &:hover
       button
-        background-color: #888
+        background-color: #fff
 
 .slide
   align-items: center

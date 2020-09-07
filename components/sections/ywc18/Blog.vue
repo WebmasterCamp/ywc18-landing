@@ -137,7 +137,7 @@ img
         right: -30px
 
     &:hover
-      color: #888
+      color: #fff
 
   &__dot
     margin: 0 10px
@@ -159,7 +159,7 @@ img
     &--current,
     &:hover
       button
-        // background-color: #888
+        // background-color: #fff
 
 .blog
   align-items: center
