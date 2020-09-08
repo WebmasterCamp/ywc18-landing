@@ -160,6 +160,13 @@ const Container = styled('div', containerProps)`
     overflow-y: auto;
     line-height: 2;
     z-index: 998;
+    span {
+      font-family: Barlow;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+    }
   }
   .content p,
   .content li {
@@ -229,7 +236,7 @@ const BottomMenu = styled.div`
   right: 0;
   padding: 16px 24px;
 
-  font-family: 'Barlow Semi Condensed', 'CmPrasanmit';
+  font-family: 'Barlow', 'CmPrasanmit';
   font-size: 18px;
 
   display: grid;
@@ -237,6 +244,9 @@ const BottomMenu = styled.div`
   grid-column-gap: 12px;
   align-items: center;
   box-sizing: border-box;
+  span {
+    font-family: 'Barlow';
+  }
 `
 
 const defaultButton = css`
@@ -259,6 +269,7 @@ const BackButton = styled('button', withColorProps)`
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
+  white-space: nowrap;
   .arrow-icon {
     width: 8px;
     height: 8px;

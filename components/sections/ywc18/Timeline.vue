@@ -289,7 +289,7 @@ export default {
     z-index: 1;
     overflow: hidden;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 768px) {
       display: none;
     }
 
