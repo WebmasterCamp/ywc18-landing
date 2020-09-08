@@ -2,7 +2,7 @@
 import styled from 'vue-styled-components'
 
 export default styled.div`
-  color: #262626;
+  color: #333;
 
   max-width: 960px;
   margin: auto;
