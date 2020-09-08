@@ -76,7 +76,7 @@ const ABox = styled.div`
   padding: 24px 16px;
 
   text-align: left;
-  font-family: 'CmPrasanmit';
+  font-family: 'CmPrasanmit', system-ui, -apple-system, sans-sreif;
   font-size: 24px;
   font-weight: 500;
   @media (max-width: 768px) {

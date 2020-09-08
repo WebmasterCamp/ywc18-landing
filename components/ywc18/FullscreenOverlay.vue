@@ -236,7 +236,7 @@ const BottomMenu = styled.div`
   right: 0;
   padding: 16px 24px;
 
-  font-family: 'Barlow', 'CmPrasanmit';
+  font-family: 'Barlow', 'CmPrasanmit', system-ui, -apple-system, sans-sreif;
   font-size: 16px;
 
   display: grid;

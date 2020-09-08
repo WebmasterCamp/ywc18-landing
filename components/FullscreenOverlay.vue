@@ -164,7 +164,7 @@ const Container = styled('div', containerProps)`
     padding-left: 24px;
   }
   .content h3 {
-    font-family: 'CmPrasanmit', 'Sarabun';
+    font-family: 'CmPrasanmit', system-ui, -apple-system, sans-sreif;
   }
   .content p {
     margin-bottom: 32px;
