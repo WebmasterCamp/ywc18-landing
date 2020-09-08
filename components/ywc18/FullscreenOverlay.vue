@@ -240,7 +240,7 @@ const BottomMenu = styled.div`
   font-size: 16px;
 
   display: grid;
-  grid-template-columns: 90px auto;
+  grid-template-columns: 105px auto;
   grid-column-gap: 12px;
   align-items: center;
   box-sizing: border-box;
