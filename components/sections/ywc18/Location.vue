@@ -10,6 +10,7 @@
         v-lazy="locationImage"
         class="location-image"
         style="object-fit: cover;"
+        alt="สถานที่จัดค่าย"
       />
       <div class="location-image-gradient" />
       <section class="container location-container">

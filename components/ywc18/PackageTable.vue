@@ -31,7 +31,7 @@ export default {
     const renderContent = (value, row, index) => {
       if (value && typeof value === 'boolean') {
         return (
-          <img src={require('../../assets/images/ywc18/icon/icon_check.svg')} />
+          <img src={require('../../assets/images/ywc18/icon/icon_check.svg')} alt="" />
         )
       } else if (row.isTitle) {
         return {

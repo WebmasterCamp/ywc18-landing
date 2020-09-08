@@ -14,7 +14,7 @@
           class="slide"
           :class="`slide--${index}`"
         >
-          <img v-lazy="slide" />
+          <img v-lazy="slide" :alt="`รูปที่ ${index}`" />
         </div>
       </agile>
       <agile
@@ -30,7 +30,7 @@
           :class="`slide--${index}`"
           @click="$refs.thumbnails.goTo(index)"
         >
-          <img v-lazy="slide" />
+          <img v-lazy="slide" :alt="`รูปที่ ${index}`" />
         </div>
         <template slot="prevButton">
           <Picture fileName="ywc18/button-arrow-left" />

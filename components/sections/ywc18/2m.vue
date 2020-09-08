@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div class="divider-2m__wrapper">
-      <img src="~/assets/images/ywc18/vertical-line.svg" />
+      <img src="~/assets/images/ywc18/vertical-line.svg" alt="" />
       <span>2M</span>
     </div>
   </section>
