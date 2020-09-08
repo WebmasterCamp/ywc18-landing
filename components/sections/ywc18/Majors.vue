@@ -186,7 +186,7 @@ const Cover = styled.div`
   background-size: 1920px auto, 1920px auto;
   background-position: top center, bottom center;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 1px);
   position: absolute;
   top: 0;
   left: 0;

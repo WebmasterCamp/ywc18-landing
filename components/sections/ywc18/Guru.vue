@@ -13,6 +13,7 @@
             />
           </template>
         </transition>
+        <div class="guru-detail__pillar"></div>
         <transition name="guru-detail" mode="out-in">
           <div
             class="guru-content"
@@ -140,8 +141,12 @@ const CurrentGuru = styled.div`
     padding: 230px 0 30px;
   }
 
-  > .guru-detail {
+  .guru-detail {
     display: flex;
+    &__pillar {
+      width: 1px;
+      height: 427px;
+    }
 
     @media screen and (max-width: 960px) {
       flex-direction: column-reverse;
