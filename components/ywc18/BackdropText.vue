@@ -56,7 +56,8 @@ const BackdropString = styled('span', { gap: Boolean, bright: Boolean })`
   }
 
   &.filled {
-    -webkit-text-fill-color: unset;
+    -webkit-text-fill-color: ${({ bright }) =>
+    bright ? 'rgba(242, 246, 252, 0.7)' : 'rgba(242, 246, 252, 0.1);'};
     -webkit-text-stroke-width: 0px;
   }
 `
