@@ -6,6 +6,9 @@ const config = {
    ** Headers of the page
    */
   head: {
+    htmlAttrs: {
+      lang: 'th',
+    },
     title: "18th Young Webmaster Camp",
     meta: [
       { charset: "utf-8" },
