@@ -7,7 +7,7 @@
         class="ywc-logo"
       />
       <Picture
-        fileName="ywc18/new-normal.svg"
+        fileName="ywc18/new-normal"
         alt="Theme Logo"
         class="theme-logo"
       />
@@ -57,6 +57,15 @@ export default {
   }
 }
 .ywc-logo {
+  margin-bottom: 1em;
+  @media screen and (max-width: 425px) {
+    width: 70% !important;
+    margin: auto;
+    margin-bottom: 1em;
+    img {
+      width: 100%;
+    }
+  }
   img {
     width: 243px;
     height: auto;
