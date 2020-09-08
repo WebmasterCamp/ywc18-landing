@@ -43,7 +43,7 @@ section {
   margin-top: 150px;
 
   @media screen and (max-width: 768px) {
-    margin-top: 100px;
+    margin-top: 70px;
   }
 }
 </style>

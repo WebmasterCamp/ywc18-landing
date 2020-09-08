@@ -40,7 +40,7 @@
             >สมัครสาขานี้</RegisterButton
           >
           <span v-else style="color: #eee;margin:0 auto;font-family: Anuphan;"
-            >ขณะนี้ไม่อยู่ในช่วงรับสมัคร</span
+            >เปิดรับสมัคร 14 กันยายน</span
           >
         </slot>
       </BottomMenu>
@@ -160,11 +160,18 @@ const Container = styled('div', containerProps)`
     overflow-y: auto;
     line-height: 2;
     z-index: 998;
+    span {
+      font-family: Barlow;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+    }
   }
   .content p,
   .content li {
     font-family: Barlow, CmPrasanmit;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 32px;
     font-weight: 300;
   }
@@ -229,14 +236,17 @@ const BottomMenu = styled.div`
   right: 0;
   padding: 16px 24px;
 
-  font-family: 'Barlow Semi Condensed', 'CmPrasanmit';
-  font-size: 18px;
+  font-family: 'Barlow', 'CmPrasanmit';
+  font-size: 16px;
 
   display: grid;
-  grid-template-columns: 108px auto;
+  grid-template-columns: 90px auto;
   grid-column-gap: 12px;
   align-items: center;
   box-sizing: border-box;
+  span {
+    font-family: 'Barlow';
+  }
 `
 
 const defaultButton = css`
@@ -259,6 +269,7 @@ const BackButton = styled('button', withColorProps)`
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
+  white-space: nowrap;
   .arrow-icon {
     width: 8px;
     height: 8px;

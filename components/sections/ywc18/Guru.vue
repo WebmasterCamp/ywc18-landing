@@ -34,7 +34,7 @@
         <Picture class="bg bg-bottom" fileName="ywc18/paper-guru-bottom" />
       </div>
     </CurrentGuru>
-    <Gurus>
+    <Gurus class="container">
       <div
         v-for="(g, idx) in gurus"
         :id="`gurupic-${idx}`"
@@ -191,7 +191,7 @@ const CurrentGuru = styled.div`
         line-height: 1.5;
 
         @media screen and (max-width: 960px) {
-          font-size: 12px;
+          font-size: 16px;
           font-weight: 400;
         }
       }
@@ -246,7 +246,7 @@ const CurrentGuru = styled.div`
         }
 
         @media screen and (max-width: 960px) {
-          font-size: 10px;
+          font-size: 14px;
           margin: 0 auto;
           padding-left: 20px;
           padding-right: 10px;
@@ -263,8 +263,6 @@ const CurrentGuru = styled.div`
 `
 
 const Gurus = styled.div`
-  max-width: 1000px;
-  margin: 0 auto;
   display: block;
   overflow: hidden;
   overflow-x: auto;

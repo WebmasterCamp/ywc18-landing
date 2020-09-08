@@ -95,22 +95,20 @@ export default {
         ],
       },
       slides: [
-        '/images/gallery/ywc17/1.jpg',
-        '/images/gallery/ywc17/2.jpg',
-        '/images/gallery/ywc17/3.jpg',
-        '/images/gallery/ywc17/4.jpg',
-        '/images/gallery/ywc17/5.jpg',
-        '/images/gallery/ywc17/6.jpg',
-        '/images/gallery/ywc17/7.jpg',
-        '/images/gallery/ywc17/8.jpg',
-        '/images/gallery/ywc17/9.jpg',
-        '/images/gallery/ywc17/10.jpg',
-        '/images/gallery/ywc17/11.jpg',
-        '/images/gallery/ywc17/12.jpg',
-        '/images/gallery/ywc17/13.jpg',
-        '/images/gallery/ywc17/14.jpg',
-        '/images/gallery/ywc17/15.jpg',
-        '/images/gallery/ywc17/16.jpg',
+        '/images/gallery/ywc18/1.jpg',
+        '/images/gallery/ywc18/2.jpg',
+        '/images/gallery/ywc18/3.jpg',
+        '/images/gallery/ywc18/4.jpg',
+        '/images/gallery/ywc18/5.jpg',
+        '/images/gallery/ywc18/6.jpg',
+        '/images/gallery/ywc18/7.jpg',
+        '/images/gallery/ywc18/8.jpg',
+        '/images/gallery/ywc18/9.jpg',
+        '/images/gallery/ywc18/10.jpg',
+        '/images/gallery/ywc18/11.jpg',
+        '/images/gallery/ywc18/12.jpg',
+        '/images/gallery/ywc18/13.jpg',
+        '/images/gallery/ywc18/14.jpg',
       ],
     }
   },
@@ -125,7 +123,7 @@ export default {
 
 <style lang="sass" scoped>
 .container
-  max-width: 1000px;
+  max-width: 720px;
 img
   background: url(~assets/images/loading.svg) no-repeat
   background-size: 64px

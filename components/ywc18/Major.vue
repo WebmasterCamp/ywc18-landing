@@ -21,6 +21,7 @@
 <script>
 import Vue from 'vue'
 import styled from 'vue-styled-components'
+import { preloadImages } from '~/utils/helpers'
 
 const Button = styled.div`
   cursor: pointer;
@@ -90,6 +91,9 @@ export default Vue.extend({
       document.querySelector('body').style.overflow = 'auto'
       this.show = false
     },
+  },
+  mounted() {
+    preloadImages([`/images/ywc18/modal/${this.image}.jpg`])
   },
 })
 </script>

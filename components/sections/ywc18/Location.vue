@@ -94,6 +94,7 @@ export default {
 
 <style lang="scss">
 .location__header {
+  margin-top: 150px;
   margin-bottom: 0px;
 }
 
