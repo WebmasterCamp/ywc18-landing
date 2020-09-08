@@ -82,8 +82,9 @@
         color="pink"
         style="margin:0 auto;margin-top:10px;"
         @click="selectText($event, 'pr-content')"
-        >เลือกทั้งหมด</BannerButton
       >
+        เลือกทั้งหมด
+      </BannerButton>
     </section>
     <section class="container">
       <h3 style="margin-bottom:50px">ภาพแบนเนอร์</h3>
@@ -94,12 +95,12 @@
           </BannerCol>
           <BannerCol>
             ขนาด {{ size }}px
-            <BannerButton color="pink" :href="getSrc(size)" target="_blank"
-              >ดาวน์โหลด</BannerButton
-            >
-            <BannerButton color="pink" @click="viewCode(size)"
-              >{{ isShow ? 'ซ่อน' : 'แสดง' }} Code</BannerButton
-            >
+            <BannerButton color="pink" :href="getSrc(size)" target="_blank" rel="noopener noreferrer">
+              ดาวน์โหลด
+            </BannerButton>
+            <BannerButton color="pink" @click="viewCode(size)">
+              {{ isShow ? 'ซ่อน' : 'แสดง' }} Code
+            </BannerButton>
           </BannerCol>
         </BannerItem>
         <textarea

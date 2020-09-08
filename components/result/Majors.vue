@@ -13,7 +13,7 @@
         }"
         @click.prevent="clickHandler(codename)"
       >
-        <img :src="require(`~/assets/images/web-${codename}.png`)" />
+        <img :src="require(`~/assets/images/web-${codename}.png`)" :alt="codename" />
         Web {{ info[0] }}
       </Major>
     </MajorRow>

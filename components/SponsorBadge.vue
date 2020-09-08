@@ -1,6 +1,6 @@
 <template>
   <div class="circle">
-    <a :href="link" target="_blank">
+    <a :href="link" target="_blank" rel="noopener noreferrer">
       <!-- <Picture v-if="fileName != ''" :fileName="fileName" :alt="alt" /> -->
       <img :src="require(`~/assets/images/${fileName}`)" :alt="alt" />
     </a>
