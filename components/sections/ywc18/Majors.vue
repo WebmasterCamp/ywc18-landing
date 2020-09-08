@@ -203,7 +203,7 @@ const MajorsWrapper = styled.div`
   padding: 160px 0;
   .section__name--subtitle {
     letter-spacing: 0.16em;
-    font-family: Barlow;
+    font-family: Barlow, system-ui, -apple-system, sans-sreif;
     font-weight: 400;
     font-style: italic;
   }

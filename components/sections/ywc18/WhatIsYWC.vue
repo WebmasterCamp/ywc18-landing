@@ -64,7 +64,7 @@ export default {
 @import '~/assets/css/global.scss';
 .what-is-ywc {
   &__container {
-    font-family: Barlow, Anuphan;
+    font-family: Barlow, Anuphan, system-ui, -apple-system, sans-sreif;
     padding-top: 80px;
     padding-bottom: 80px;
   }

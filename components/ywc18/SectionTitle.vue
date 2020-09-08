@@ -32,7 +32,7 @@ const Wrapper = styled.div`
     justify-content: center;
   }
   .title {
-    font-family: Barlow Semi Condensed;
+    font-family: Barlow Semi Condensed, system-ui, -apple-system, sans-sreif;
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
@@ -52,7 +52,7 @@ const Wrapper = styled.div`
     }
   }
   .subtitle {
-    font-family: Anuphan;
+    font-family: Anuphan, system-ui, -apple-system, sans-sreif;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;

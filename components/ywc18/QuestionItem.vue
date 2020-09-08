@@ -41,7 +41,7 @@ const QBox = styled.div`
   border-bottom: 1px solid #1f65aa;
   padding: 24px 16px;
 
-  font-family: 'Anuphan';
+  font-family: 'Anuphan', system-ui, -apple-system, sans-sreif;
   font-size: 20px;
   line-height: 30px;
   text-align: left;
@@ -76,7 +76,7 @@ const ABox = styled.div`
   padding: 24px 16px;
 
   text-align: left;
-  font-family: 'CmPrasanmit';
+  font-family: 'CmPrasanmit', system-ui, -apple-system, sans-sreif;
   font-size: 24px;
   font-weight: 500;
   @media (max-width: 768px) {

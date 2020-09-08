@@ -19,7 +19,7 @@ export default {}
   width: 100%;
   margin-bottom: 2.5rem;
   p {
-    font-family: Barlow;
+    font-family: Barlow, system-ui, -apple-system, sans-sreif;
     font-style: normal;
     font-weight: normal;
     margin: auto;

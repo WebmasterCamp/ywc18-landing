@@ -169,7 +169,7 @@ export default {
   height: calc(100% - 10px);
 }
 .location-content {
-  font-family: Barlow, Anuphan;
+  font-family: Barlow, Anuphan, system-ui, -apple-system, sans-sreif;
   padding: 64px 0;
   position: relative;
   z-index: 2;
@@ -240,12 +240,12 @@ export default {
 }
 .location-detail {
   font-weight: 600;
-  font-family: Anuphan;
+  font-family: Anuphan, system-ui, -apple-system, sans-sreif;
   text-align: left;
   font-size: 30px;
   .highlight {
     text-transform: uppercase;
-    font-family: Barlow Semi Condensed;
+    font-family: Barlow Semi Condensed, system-ui, -apple-system, sans-sreif;
     letter-spacing: 0.05em;
     font-size: 36px;
     line-height: 50px;
@@ -264,7 +264,7 @@ export default {
   }
 }
 .location-detail-soon {
-  font-family: Barlow Semi Condensed;
+  font-family: Barlow Semi Condensed, system-ui, -apple-system, sans-sreif;
   text-align: center;
   font-style: italic;
   font-weight: bold;

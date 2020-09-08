@@ -91,7 +91,7 @@ export default {
   max-width: 450px;
 }
 .__nuxt-error-page .error-title {
-  font-family: 'CmPrasanmit', 'Sarabun';
+  font-family: 'CmPrasanmit', system-ui, -apple-system, sans-sreif;
   font-weight: bold;
   font-size: 1.5rem;
   margin-top: 15px;

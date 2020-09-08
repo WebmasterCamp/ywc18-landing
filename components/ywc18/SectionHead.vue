@@ -27,7 +27,7 @@ const sizes = {
 const Container = styled('div', { align: String, size: String, color: String })`
   height: ${(props) => sizes[props.size].height}px;
   color: white;
-  font-family: Barlow, Anuphan;
+  font-family: Barlow, Anuphan, system-ui, -apple-system, sans-sreif;
   font-style: normal;
   font-weight: bold;
   font-size: ${(props) => sizes[props.size].fontSize}px;

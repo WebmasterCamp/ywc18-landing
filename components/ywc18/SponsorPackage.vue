@@ -48,7 +48,7 @@ const Badge = styled('div', { type: String })`
   background: url(${(props) =>
     require(`../../assets/images/ywc18/sponsor-${props.type}-badge.svg`)});
   color: white;
-  font-family: 'Barlow Semi Condensed';
+  font-family: 'Barlow Semi Condensed', system-ui, -apple-system, sans-sreif;
   font-size: 36px;
   font-weight: 600;
   line-height: 48px;
@@ -98,7 +98,7 @@ export default {
   list-style: none;
   padding-left: 1.75rem;
   li {
-    font-family: Anuphan;
+    font-family: Anuphan, system-ui, -apple-system, sans-sreif;
     font-weight: 500;
     font-size: 16px;
     color: #4f4f4f;
@@ -126,7 +126,7 @@ export default {
   text-align: center;
   margin: 23px 0;
   span {
-    font-family: Anuphan;
+    font-family: Anuphan, system-ui, -apple-system, sans-sreif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;

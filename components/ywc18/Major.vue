@@ -28,7 +28,7 @@ const Button = styled.div`
   background: #091827;
   border: 3px solid #ff5d29;
   padding: 0.325em 1em;
-  font-family: Anuphan;
+  font-family: Anuphan, system-ui, -apple-system, sans-sreif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -117,7 +117,7 @@ export default Vue.extend({
       position: absolute;
       right: 0;
       top: -40px;
-      font-family: Anuphan;
+      font-family: Anuphan, system-ui, -apple-system, sans-sreif;
       font-style: normal;
       font-weight: 600;
       font-size: 20px;
@@ -129,7 +129,7 @@ export default Vue.extend({
         font-size: 12px;
       }
       span {
-        font-family: Barlow Semi Condensed;
+        font-family: Barlow Semi Condensed, system-ui, -apple-system, sans-sreif;
         font-style: italic;
         font-weight: 800;
         font-size: 48px;

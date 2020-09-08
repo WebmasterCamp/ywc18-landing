@@ -39,7 +39,9 @@
             href="https://register.ywc17.ywc.in.th/"
             >สมัครสาขานี้</RegisterButton
           >
-          <span v-else style="color: #eee;margin:0 auto;font-family: Anuphan;"
+          <span
+            v-else
+            style="color: #eee;margin:0 auto;font-family: Anuphan,system-ui,-apple-system, sans-sreif;"
             >เปิดรับสมัคร 14 กันยายน</span
           >
         </slot>
@@ -154,14 +156,14 @@ const Container = styled('div', containerProps)`
   }
 
   .content {
-    font-family: Barlow, CmPrasanmit;
+    font-family: Barlow, CmPrasanmit, system-ui, -apple-system, sans-sreif;
     height: calc(90% - ${(props) => (props.normal ? 90 : 130)}px);
     overflow: hidden;
     overflow-y: auto;
     line-height: 2;
     z-index: 998;
     span {
-      font-family: Barlow;
+      font-family: Barlow, system-ui, -apple-system, sans-sreif;
       font-weight: 700;
       text-transform: uppercase;
       font-size: 18px;
@@ -170,7 +172,7 @@ const Container = styled('div', containerProps)`
   }
   .content p,
   .content li {
-    font-family: Barlow, CmPrasanmit;
+    font-family: Barlow, CmPrasanmit, system-ui, -apple-system, sans-sreif;
     font-size: 24px;
     line-height: 32px;
     font-weight: 300;
@@ -183,7 +185,7 @@ const Container = styled('div', containerProps)`
     padding-left: 24px;
   }
   .content h3 {
-    font-family: 'CmPrasanmit', 'Sarabun';
+    font-family: 'CmPrasanmit', system-ui, -apple-system, sans-sreif;
   }
   .content p {
     margin-bottom: 32px;
@@ -195,13 +197,13 @@ const Header = styled('div', { normal: Boolean })`
   grid-template-columns: auto ${(props) => (props.normal ? '' : ' 100px')};
   ${(props) => (props.normal ? 'margin-bottom: 20px;' : '')}
 
-  font-family: 'CmPrasanmit', 'Sarabun', Arial, Helvetica, sans-serif;
+  font-family: 'CmPrasanmit', Arial, Helvetica, sans-serif;
 `
 
 const Title = styled.h1`
   margin: 0;
   text-transform: uppercase;
-  font-family: Barlow Semi Condensed;
+  font-family: Barlow Semi Condensed, system-ui, -apple-system, sans-sreif;
   font-style: italic;
   font-weight: 600;
   font-size: 75px;
@@ -236,7 +238,7 @@ const BottomMenu = styled.div`
   right: 0;
   padding: 16px 24px;
 
-  font-family: 'Barlow', 'CmPrasanmit';
+  font-family: 'Barlow', 'CmPrasanmit', system-ui, -apple-system, sans-sreif;
   font-size: 16px;
 
   display: grid;
@@ -245,14 +247,15 @@ const BottomMenu = styled.div`
   align-items: center;
   box-sizing: border-box;
   span {
-    font-family: 'Barlow';
+    font-family: 'Barlow', system-ui, -apple-system, sans-sreif;
   }
 `
 
 const defaultButton = css`
   width: 100%;
   height: 100%;
-  font-family: 'Barlow Semi Condensed', 'CmPrasanmit';
+  font-family: 'Barlow Semi Condensed', 'CmPrasanmit', system-ui, -apple-system,
+    sans-sreif;
   font-weight: bold;
   font-size: 18px;
   border: none;
@@ -265,7 +268,7 @@ const BackButton = styled('button', withColorProps)`
   ${defaultButton};
   color: ${(props) => color.primary};
   background-color: transparent;
-  font-family: Anuphan;
+  font-family: Anuphan, system-ui, -apple-system, sans-sreif;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
