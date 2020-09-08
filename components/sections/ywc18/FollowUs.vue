@@ -104,6 +104,6 @@ a {
   text-decoration: none;
 }
 section {
-  margin-top: 70px;
+  margin-top: 150px;
 }
 </style>
