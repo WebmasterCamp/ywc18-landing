@@ -23,7 +23,9 @@ const Wrapper = styled.div`
   @media screen and (max-width: 425px) {
     border: 6px solid #f27236;
   }
-
+  a {
+    transform: scale(1.25);
+  }
   &.lg {
     width: 200px;
     height: 200px;
@@ -49,6 +51,7 @@ const Wrapper = styled.div`
   }
 
   &.sm {
+    border: 6px solid #f27236;
     width: 100px;
     height: 100px;
     margin: 10px 10px;
