@@ -40,7 +40,7 @@
             >สมัครสาขานี้</RegisterButton
           >
           <span v-else style="color: #eee;margin:0 auto;font-family: Anuphan;"
-            >ขณะนี้ไม่อยู่ในช่วงรับสมัคร</span
+            >เปิดรับสมัคร 14 กันยายน</span
           >
         </slot>
       </BottomMenu>
@@ -171,7 +171,7 @@ const Container = styled('div', containerProps)`
   .content p,
   .content li {
     font-family: Barlow, CmPrasanmit;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 32px;
     font-weight: 300;
   }
@@ -237,10 +237,10 @@ const BottomMenu = styled.div`
   padding: 16px 24px;
 
   font-family: 'Barlow', 'CmPrasanmit';
-  font-size: 18px;
+  font-size: 16px;
 
   display: grid;
-  grid-template-columns: 108px auto;
+  grid-template-columns: 90px auto;
   grid-column-gap: 12px;
   align-items: center;
   box-sizing: border-box;
