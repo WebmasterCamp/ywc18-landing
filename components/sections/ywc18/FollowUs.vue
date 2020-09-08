@@ -7,12 +7,18 @@
           href="https://www.facebook.com/ywcth"
           target="_blank"
           title="Facebook"
+          rel="noopener noreferrer"
         >
           <SocialIcon fileName="ywc18/icon/facebook.svg" alt="Facebook" />
         </SocialBtn>
       </GridCol>
       <GridCol>
-        <SocialBtn href="https://m.me/ywcth" target="_blank" title="Messenger">
+        <SocialBtn
+          href="https://m.me/ywcth"
+          target="_blank"
+          title="Messenger"
+          rel="noopener noreferrer"
+        >
           <SocialIcon fileName="ywc18/icon/messenger.svg" alt="Messenger" />
         </SocialBtn>
       </GridCol>
@@ -21,6 +27,7 @@
           href="https://instagram.com/ywcth"
           target="_blank"
           title="Instagram"
+          rel="noopener noreferrer"
         >
           <SocialIcon fileName="ywc18/icon/instagram.svg" alt="Instagram" />
         </SocialBtn>
@@ -30,6 +37,7 @@
           href="https://twitter.com/ywcth"
           target="_blank"
           title="Twitter"
+          rel="noopener noreferrer"
         >
           <SocialIcon fileName="ywc18/icon/twitter.svg" alt="Twitter" />
         </SocialBtn>
