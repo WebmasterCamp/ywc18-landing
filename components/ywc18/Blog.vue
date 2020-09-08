@@ -23,16 +23,16 @@ export default {
   props: {
     detail: {
       type: Object,
-      default: () => ({})
-    }
-  }
+      default: () => ({}),
+    },
+  },
 }
 </script>
 
 <style lang="scss">
 .blog-card {
   &__wrapper {
-    font-family: Anuphan;
+    font-family: Anuphan, system-ui, -apple-system, sans-sreif;
     color: black;
   }
   &__cover {

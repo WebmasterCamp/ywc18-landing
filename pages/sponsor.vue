@@ -128,7 +128,7 @@ export default {
 }
 
 .package-detail-heading {
-  font-family: Anuphan !important;
+  font-family: Anuphan, system-ui, -apple-system, sans-sreif !important;
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;

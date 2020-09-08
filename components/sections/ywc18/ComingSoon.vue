@@ -152,7 +152,7 @@ export default {
   .copyright,
   .coming-soon,
   .what-is-ywc {
-    font-family: 'Barlow';
+    font-family: 'Barlow', system-ui, -apple-system, sans-sreif;
     text-transform: uppercase;
   }
   .copyright {
@@ -236,7 +236,7 @@ export default {
     }
 
     span {
-      font-family: Anuphan;
+      font-family: Anuphan, system-ui, -apple-system, sans-sreif;
       font-weight: 500;
     }
   }

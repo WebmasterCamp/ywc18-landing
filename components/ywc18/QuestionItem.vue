@@ -41,7 +41,7 @@ const QBox = styled.div`
   border-bottom: 1px solid #1f65aa;
   padding: 24px 16px;
 
-  font-family: 'Anuphan';
+  font-family: 'Anuphan', system-ui, -apple-system, sans-sreif;
   font-size: 20px;
   line-height: 30px;
   text-align: left;

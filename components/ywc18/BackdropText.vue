@@ -25,7 +25,8 @@ const Wrapper = styled.div`
 `
 
 const BackdropString = styled('span', { gap: Boolean, bright: Boolean })`
-  font-family: Barlow Semi Condensed, Anuphan;
+  font-family: Barlow Semi Condensed, Anuphan, system-ui, -apple-system,
+    sans-sreif;
   color: ${({ bright }) =>
     bright ? 'rgba(242, 246, 252, 0.7)' : 'rgba(242, 246, 252, 0.1)'};
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
@@ -57,7 +58,7 @@ const BackdropString = styled('span', { gap: Boolean, bright: Boolean })`
 
   &.filled {
     -webkit-text-fill-color: ${({ bright }) =>
-    bright ? 'rgba(242, 246, 252, 0.7)' : 'rgba(242, 246, 252, 0.1);'};
+      bright ? 'rgba(242, 246, 252, 0.7)' : 'rgba(242, 246, 252, 0.1);'};
     -webkit-text-stroke-width: 0px;
   }
 `

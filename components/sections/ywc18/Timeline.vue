@@ -132,7 +132,7 @@ export default {
 
 <style lang="scss">
 .events {
-  font-family: Barlow, Anuphan;
+  font-family: Barlow, Anuphan, system-ui, -apple-system, sans-sreif;
   display: flex;
   flex-basis: 190px;
   justify-content: space-between;
@@ -141,7 +141,7 @@ export default {
 .header {
   .section__name--subtitle {
     letter-spacing: 0.16em;
-    font-family: Barlow;
+    font-family: Barlow, system-ui, -apple-system, sans-sreif;
     font-weight: 400;
     font-style: italic;
   }
@@ -187,7 +187,7 @@ export default {
   }
 
   &__date__from {
-    font-family: Barlow Semi Condensed;
+    font-family: Barlow Semi Condensed, system-ui, -apple-system, sans-sreif;
     padding: 4px;
     font-weight: 600;
     font-size: 24px;
@@ -195,7 +195,7 @@ export default {
     line-height: 100%;
   }
   &__date__to {
-    font-family: Barlow Semi Condensed;
+    font-family: Barlow Semi Condensed, system-ui, -apple-system, sans-sreif;
     padding: 4px;
     font-weight: 600;
     font-size: 24px;
@@ -248,7 +248,7 @@ export default {
     }
   }
   &__text {
-    font-family: Barlow Semi Condensed;
+    font-family: Barlow Semi Condensed, system-ui, -apple-system, sans-sreif;
     padding-left: 5px;
     font-size: 34px;
     font-weight: bold;

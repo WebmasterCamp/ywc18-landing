@@ -115,7 +115,7 @@ import SectionName from '~/components/ywc18/SectionName.vue'
 import Picture from '~/components/Picture.vue'
 
 const CurrentGuru = styled.div`
-  font-family: Barlow, Anuphan;
+  font-family: Barlow, Anuphan, system-ui, -apple-system, sans-sreif;
   background: url(/images/ywc18/bg/guru-typo.svg),
     linear-gradient(100.19deg, #f66b3f -0.48%, #f89742 47.88%, #fe5722 96.18%);
   background-blend-mode: color-dodge;

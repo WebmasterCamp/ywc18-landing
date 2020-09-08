@@ -176,7 +176,7 @@ const Header = styled('div', { normal: Boolean })`
   grid-template-columns: auto ${(props) => (props.normal ? '' : ' 100px')};
   ${(props) => (props.normal ? 'margin-bottom: 20px;' : '')}
 
-  font-family: 'CmPrasanmit', 'Sarabun', Arial, Helvetica, sans-serif;
+  font-family: 'CmPrasanmit', Arial, Helvetica, sans-serif;
 `
 
 const Title = styled.h1`

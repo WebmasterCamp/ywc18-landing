@@ -16,18 +16,18 @@ export default {
         return
       }
       this.$emit('click')
-    }
+    },
   },
   props: {
     size: {
       type: String,
-      default: 'md'
+      default: 'md',
     },
     link: {
       type: String,
-      default: ''
-    }
-  }
+      default: '',
+    },
+  },
 }
 </script>
 
@@ -63,7 +63,7 @@ export default {
   cursor: pointer;
   display: block;
   position: relative;
-  font-family: Barlow, Anuphan;
+  font-family: Barlow, Anuphan, system-ui, -apple-system, sans-sreif;
   width: 260px;
   height: 74px;
   background: url(/images/ywc18/button/bg-cta.svg),

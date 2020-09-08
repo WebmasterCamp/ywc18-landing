@@ -22,7 +22,7 @@ export default {}
     margin-right: 0.5em;
   }
   span {
-    font-family: Barlow;
+    font-family: Barlow, system-ui, -apple-system, sans-sreif;
     font-style: italic;
     font-weight: normal;
     font-size: 24px;

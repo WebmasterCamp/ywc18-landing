@@ -29,7 +29,8 @@ import color from '~/utils/color'
 import Picture from '~/components/Picture.vue'
 
 const Wrapper = styled.div`
-  font-family: Barlow Semi Condensed, Anuphan !important;
+  font-family: Barlow Semi Condensed, Anuphan, system-ui, -apple-system,
+    sans-sreif !important;
   text-align: center;
   position: relative;
   display: flex;
