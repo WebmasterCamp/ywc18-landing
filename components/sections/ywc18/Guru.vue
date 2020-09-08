@@ -9,6 +9,7 @@
               :fileName="`guru/${gurus[currentGuru].img}`"
               :key="`guru-${index}`"
               v-if="gurus[currentGuru].img === img"
+              style="margin-bottom: 1em;"
             />
           </template>
         </transition>
@@ -376,12 +377,12 @@ export default {
           role: `ผู้ก่อตั้งเว็บไซต์ Grappik`,
           majors: ['design'],
         },
-        // {
-        //   img: 8,
-        //   name: 'เจริญ ลักษณ์เลิศกุล (เจ)',
-        //   role: `Associate Director - Strategic Planning<br>หน่วยงาน Online Station (True Digital Group)`,
-        //   majors: ['marketing'],
-        // },
+        {
+          img: 8,
+          name: 'เจริญ ลักษณ์เลิศกุล (เจ)',
+          role: `Associate Director - Strategic Planning<br>หน่วยงาน Online Station (True Digital Group)`,
+          majors: ['marketing'],
+        },
         {
           img: 9,
           name: 'จักรพงษ์ คงมาลัย (ปอง)',
