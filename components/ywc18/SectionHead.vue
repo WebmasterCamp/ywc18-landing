@@ -18,7 +18,7 @@ const sizes = {
     fontSmallSize: 32, // For Mobile + Tablet
     height: 101,
   },
-  timeline: {
+  lg: {
     fontSize: 60,
     fontSmallSize: 36,
     height: 100,

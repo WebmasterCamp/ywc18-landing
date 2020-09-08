@@ -1,37 +1,47 @@
 <template>
   <div>
     <Hero />
-    <!-- <WhatIsYWC /> -->
-    <!-- <Timeline /> -->
-    <!-- <Majors /> -->
-    <!-- <Location /> -->
-    <!-- <Guru /> -->
-    <!-- <Gallery /> -->
-    <!-- <Sponsor /> -->
-    <!-- <QA /> -->
-    <!-- <FollowUs /> -->
-    <!-- <Footer /> -->
+    <!-- <PaperDivider /> -->
+    <WhatIsYWC />
+    <Timeline />
+    <DiverderTwoM />
+    <Majors />
+    <Blog />
+    <Location />
+    <Guru />
+    <Gallery />
+    <Sponsor />
+    <!-- <MediaPartner /> -->
+    <!-- <PaperDivider /> -->
+    <QA />
+    <FollowUs />
+    <SponsorGroup class="sponsor-box" />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Hero from '~/components/sections/ywc18/Hero.vue'
-// import WhatIsYWC from '~/components/sections/ywc18/WhatIsYWC'
-// import Timeline from '~/components/sections/ywc18/Timeline.vue'
+import WhatIsYWC from '~/components/sections/ywc18/WhatIsYWC'
+import Timeline from '~/components/sections/ywc18/Timeline.vue'
 export default {
   components: {
     Hero,
-    // WhatIsYWC,
-    // Timeline,
-    // TODO: Majors: () => import('~/components/sections/Majors'),
-    // TODO: Blog,
-    // TODO: Location: () => import('~/components/sections/Location'),
-    // Guru: () => import('~/components/sections/ywc18/Guru'),
-    // Gallery: () => import('~/components/sections/ywc18/Gallery'),
-    // TODO: Sponsor: () => import('~/components/sections/Sponsor'),
-    // TODO: QA: () => import('~/components/sections/QA'),
-    // TODO: FollowUs: () => import('~/components/sections/FollowUs'),
-    // TODO: Footer: () => import('~/components/sections/Footer'),
+    WhatIsYWC,
+    Timeline,
+    DiverderTwoM: () => import('~/components/sections/ywc18/2m'),
+    Majors: () => import('~/components/sections/ywc18/Majors'),
+    Blog: () => import('~/components/sections/ywc18/Blog'),
+    Location: () => import('~/components/sections/ywc18/Location'),
+    Guru: () => import('~/components/sections/ywc18/Guru'),
+    Gallery: () => import('~/components/sections/ywc18/Gallery'),
+    Sponsor: () => import('~/components/sections/ywc18/Sponsor'),
+    // MediaPartner: () => import('~/components/sections/ywc18/MediaPartner'),
+    // PaperDivider: () => import('~/components/sections/ywc18/PaperDivider'),
+    QA: () => import('~/components/sections/ywc18/QA'),
+    FollowUs: () => import('~/components/sections/ywc18/FollowUs'),
+    SponsorGroup: () => import('~/components/ywc18/SponsorGroup'),
+    Footer: () => import('~/components/sections/ywc18/Footer'),
   },
 }
 </script>
@@ -42,6 +52,11 @@ export default {
   margin: 0 auto;
   text-align: center;
 }
+
+.sponsor-box {
+  margin: 50px 0;
+}
+
 .cta-button {
   transform: scale(1.3);
   display: block !important;

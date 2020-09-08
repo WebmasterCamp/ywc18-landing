@@ -84,9 +84,9 @@ export default {
         },
         announce: {
           text: 'AN NOUNCE MENT #1',
-          subText: 'ประกาศผล รอบใบสมัคร',
+          subText: 'ประกาศผู้มีสิทธิ์ สัมภาษณ์',
           image: require('~/assets/images/ywc18/timeline/announcement1.png'),
-          bottomDate: '16 NOV',
+          bottomDate: '14 NOV',
         },
         interview: {
           text: 'INTER VIEW',
@@ -104,12 +104,11 @@ export default {
           text: 'CAMP DAY',
           subText: 'วันเข้าค่าย (ไม่ค้างคืน)',
           image: require('~/assets/images/ywc18/timeline/camp-day.png'),
-          topDate: 'TO BE',
-          bottomDate: 'ANNOUNCED',
+          topDate: '24 - 27 DEC',
         },
       },
       isActive: {
-        register: true,
+        register: false,
         announce: false,
         interview: false,
         finalist: false,
@@ -120,7 +119,7 @@ export default {
         announce: false,
         interview: false,
         finalist: false,
-        camp: true,
+        camp: false,
       },
     }
   },
@@ -132,24 +131,28 @@ export default {
 </script>
 
 <style lang="scss">
-* {
-  font-family: Barlow, Anuphan;
-}
 .events {
+  font-family: Barlow, Anuphan;
   display: flex;
   flex-basis: 190px;
   justify-content: space-between;
   width: 100%;
 }
 .header {
-  margin-bottom: 40px;
+  .section__name--subtitle {
+    letter-spacing: 0.16em;
+    font-family: Barlow;
+    font-weight: 400;
+    font-style: italic;
+  }
 }
 .event {
   position: relative;
   flex-grow: 0;
   height: 100%;
   line-height: 0;
-  padding: 10px;
+  padding: 10px 15px;
+  box-sizing: border-box;
 
   &.pending {
     opacity: 0.6;
@@ -179,6 +182,7 @@ export default {
         rgba(255, 93, 41, 0.6) 0%,
         rgba(248, 151, 66, 0.6) 100%
       );
+      box-shadow: 0px 0px 20px rgba(255, 93, 41, 0.6);
     }
   }
 
@@ -239,6 +243,9 @@ export default {
       z-index: 4;
       letter-spacing: 0.1em;
     }
+    .event__text {
+      margin-bottom: 0 !important;
+    }
   }
   &__text {
     font-family: Barlow Semi Condensed;
@@ -248,6 +255,8 @@ export default {
     line-height: 100%;
     z-index: 4;
     text-align: left;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.25em;
   }
 
   &__subtext {
@@ -262,7 +271,6 @@ export default {
 }
 .content {
   min-height: 500px;
-  padding: 64px 0;
   position: relative;
   z-index: 2;
 }
@@ -280,6 +288,11 @@ export default {
     position: absolute;
     z-index: 1;
     overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
     &__top-left {
       position: absolute;
       top: 0;
@@ -293,14 +306,40 @@ export default {
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 768px) {
   .events {
     flex-wrap: wrap;
     flex-basis: 50%;
     justify-content: center;
   }
   .event {
-    width: calc(50% - 20px);
+    /* width: calc(50% - 20px); */
+    width: calc(33.33% - 30px);
+  }
+}
+@media screen and (max-width: 425px) {
+  .events {
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    justify-content: space-around;
+    align-items: space-between;
+  }
+  .event {
+    &__date__to,
+    &__date__from {
+      font-size: 16px;
+    }
+    &__text {
+      margin-bottom: 0.25em;
+    }
+    width: calc(50% - 7.5px);
+  }
+}
+@media screen and (max-width: 375px) {
+  .event {
+    &__text {
+      font-size: 24px;
+    }
   }
 }
 </style>

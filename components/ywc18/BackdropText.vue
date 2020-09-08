@@ -19,6 +19,7 @@ import styled from 'vue-styled-components'
 // import color from '~/utils/color'
 // import Picture from '~/components/Picture.vue'
 const Wrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
 `
@@ -36,6 +37,7 @@ const BackdropString = styled('span', { gap: Boolean, bright: Boolean })`
   font-size: 88px;
   line-height: ${({ gap }) => (gap ? '90.5%' : '75%')};
   letter-spacing: 0.04em;
+  user-select: none;
 
   @media screen and (max-width: 1024px) {
     font-size: 76px;
@@ -54,7 +56,8 @@ const BackdropString = styled('span', { gap: Boolean, bright: Boolean })`
   }
 
   &.filled {
-    -webkit-text-fill-color: unset;
+    -webkit-text-fill-color: ${({ bright }) =>
+    bright ? 'rgba(242, 246, 252, 0.7)' : 'rgba(242, 246, 252, 0.1);'};
     -webkit-text-stroke-width: 0px;
   }
 `

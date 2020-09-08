@@ -4,7 +4,7 @@
       <CenterContainer>
         <div>
           <p>
-            <img src="~/assets/images/ywc-logo.png" />
+            <img src="~/assets/images/ywc18/ywc18-logo-orange.svg" />
           </p>
           <a-spin>
             <a-icon
@@ -12,8 +12,8 @@
               type="loading"
               style="font-size: 24px; color: white; width:unset;height:unset;"
               spin
-            />
-          </a-spin>&nbsp; โปรดรอสักครู่
+            /> </a-spin
+          >&nbsp; โปรดรอสักครู่
         </div>
       </CenterContainer>
     </FullscreenContainer>
@@ -32,7 +32,7 @@ const FullscreenContainer = styled('div', { color: String })`
   left: 0;
   z-index: 9999;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    ${props =>
+    ${(props) =>
       props.color
         ? colorScheme[props.color].background
         : `linear-gradient(49.41deg, #FF5D29 7.27%, #F89742 95.22%)`};
@@ -40,10 +40,10 @@ const FullscreenContainer = styled('div', { color: String })`
 export default {
   components: {
     FullscreenContainer,
-    CenterContainer
+    CenterContainer,
   },
   data: () => ({
-    loading: false
+    loading: false,
   }),
   computed: {
     currColor() {
@@ -54,7 +54,7 @@ export default {
         return ''
       }
       return majors[this.$route.params.major][1]
-    }
+    },
   },
   // watch: {
   //   loading: (value) => {
@@ -71,8 +71,8 @@ export default {
     },
     finish() {
       this.loading = false
-    }
-  }
+    },
+  },
 }
 </script>
 <style lang="scss">

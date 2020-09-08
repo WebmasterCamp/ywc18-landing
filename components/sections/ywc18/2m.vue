@@ -17,6 +17,7 @@ export default {}
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 100px 0;
   img {
     margin-right: 0.5em;
   }
