@@ -13,18 +13,17 @@
       />
       <Button v-if="false">สมัครค่าย</Button>
     </div>
-    <SponsorBox />
   </section>
 </template>
 
 <script>
 import Picture from '~/components/Picture.vue'
 import Button from '~/components/ywc18/Button.vue'
-import SponsorBox from '~/components/SponsorBox.vue'
+// import SponsorBox from '~/components/SponsorBox.vue'
 export default {
   components: {
     Picture,
-    SponsorBox,
+    // SponsorBox,
     Button,
   },
 }
