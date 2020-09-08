@@ -34,7 +34,7 @@
         <Picture class="bg bg-bottom" fileName="ywc18/paper-guru-bottom" />
       </div>
     </CurrentGuru>
-    <Gurus>
+    <Gurus class="container">
       <div
         v-for="(g, idx) in gurus"
         :id="`gurupic-${idx}`"
@@ -263,8 +263,6 @@ const CurrentGuru = styled.div`
 `
 
 const Gurus = styled.div`
-  max-width: 1000px;
-  margin: 0 auto;
   display: block;
   overflow: hidden;
   overflow-x: auto;
