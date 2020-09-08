@@ -123,7 +123,7 @@ export default {
 
 <style lang="sass" scoped>
 .container
-  max-width: 1000px;
+  max-width: 720px;
 img
   background: url(~assets/images/loading.svg) no-repeat
   background-size: 64px
