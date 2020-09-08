@@ -21,7 +21,7 @@
         size="md"
       />
     </SponsorGroup>
-    <SponsorGroup v-if="sponsors.gold.length > 0">
+    <SponsorGroup>
       <LogoBadge
         v-for="(sponsor, index) in sponsors.silver"
         :key="index"
@@ -58,7 +58,7 @@ const SponsorGroup = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 60px auto;
+  margin: 40px auto;
 
   @media screen and (max-width: 768px) {
     margin: 20px auto;
@@ -83,7 +83,13 @@ export default {
           },
         ],
         gold: [],
-        silver: [],
+        silver: [
+          {
+            img: 'pantip.png',
+            alt: 'Pantip',
+            link: 'https://www.pantip.com',
+          },
+        ],
       },
     }
   },
