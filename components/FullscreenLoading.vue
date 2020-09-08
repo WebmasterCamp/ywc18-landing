@@ -4,7 +4,7 @@
       <CenterContainer>
         <div>
           <p>
-            <img src="~/assets/images/ywc18/ywc18-logo-orange.svg" />
+            <img src="~/assets/images/ywc18/ywc18-logo-orange.svg" alt="YWC18 Logo" />
           </p>
           <a-spin>
             <a-icon

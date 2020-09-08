@@ -42,14 +42,14 @@ export const INTERVIEW_QUESTIONS = {
   </ol>`,
   programming: `
   <div style="text-align:center">
-    <a href="/images/interview/programming_desktop_full.png" target="_blank" title="คลิกเพื่อแสดงภาพ Desktop ฉบับเต็ม"><img src="${require('~/assets/images/interview/programming_desktop.png')}" alt="ภาพตัวอย่างเว็บไซต์ Desktop" /></a>
-    <a href="/images/interview/programming_mobile_full.png" target="_blank" title="คลิกเพื่อแสดงภาพ Mobile ฉบับเต็ม"><img src="${require('~/assets/images/interview/programming_mobile.png')}" alt="ภาพตัวอย่างเว็บไซต์ Mobile" /></a>
+    <a href="/images/interview/programming_desktop_full.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อแสดงภาพ Desktop ฉบับเต็ม"><img src="${require('~/assets/images/interview/programming_desktop.png')}" alt="ภาพตัวอย่างเว็บไซต์ Desktop" /></a>
+    <a href="/images/interview/programming_mobile_full.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อแสดงภาพ Mobile ฉบับเต็ม"><img src="${require('~/assets/images/interview/programming_mobile.png')}" alt="ภาพตัวอย่างเว็บไซต์ Mobile" /></a>
   </div>
   <center><i>คลิกที่ภาพเพื่อแสดงฉบับเต็ม</i></center><br />
   ให้พัฒนาเว็บไซต์ให้เหมือนกับภาพข้างบน โดยมีคุณสมบัติดังต่อไปนี้
   <ol>
     <li>รองรับหน้าจอทั้งแบบ Desktop และ Mobile</li>
-    <li>สำหรับเนื้อหาต่าง ๆ ให้ใช้จาก JSON API ตาม URL นี้: <a href="https://panjs.com/ywc.json" target="_blank"><b>https://panjs.com/ywc.json</b></a></li>
+    <li>สำหรับเนื้อหาต่าง ๆ ให้ใช้จาก JSON API ตาม URL นี้: <a href="https://panjs.com/ywc.json" target="_blank" rel="noopener noreferrer"><b>https://panjs.com/ywc.json</b></a></li>
     <li>เนื้อหาส่วนใดที่ API ไม่ได้ส่งมา อนุญาตให้ระบุแบบ Hard coded ลงไปใน HTML ได้</li>
     <li>นำ Source Code ขึ้นไปบน GitHub และ Deploy โดยใช้ GitHub Pages</li>
   </ol>`,

@@ -30,9 +30,9 @@
               />
             </div>
           </div>
-          <Button :disabled="isCandidateLoading" @click="checkRefCode"
-            >ตรวจสอบผล</Button
-          >
+          <Button :disabled="isCandidateLoading" @click="checkRefCode">
+            ตรวจสอบผล
+          </Button>
         </template>
         <template v-else>
           <h3>
@@ -62,9 +62,7 @@
                 <p>
                   เพื่อยืนยันสิทธิ์การเข้าค่าย กรุณา
                   <b>โอนเงินมัดจำ</b> จำนวน
-                  <b class="themeText"
-                    >{{ finalistInfo.verificationAmount.toFixed(2) }} บาท</b
-                  >
+                  <b class="themeText">{{ finalistInfo.verificationAmount.toFixed(2) }} บาท</b>
                   เข้าบัญชี
                 </p>
                 <p style="text-align:center">
@@ -85,8 +83,10 @@
                 link
                 :href="FINALIST_FORM_LINK(finalistInfo)"
                 target="_blank"
-                >ยืนยันสิทธิ์</Button
+                rel="noopener noreferrer"
               >
+                ยืนยันสิทธิ์
+              </Button>
             </template>
           </template>
           <template v-else>

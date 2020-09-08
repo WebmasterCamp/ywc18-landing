@@ -1,6 +1,6 @@
 <template>
   <SponsorBadge :size="size" :transparent="transparent">
-    <a :href="link" target="_blank">
+    <a :href="link" target="_blank" rel="noopener noreferrer">
       <Picture v-if="fileName != ''" :fileName="fileName" :alt="alt" :defaultType="type" />
     </a>
   </SponsorBadge>

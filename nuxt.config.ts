@@ -6,13 +6,16 @@ const config = {
    ** Headers of the page
    */
   head: {
+    htmlAttrs: {
+      lang: 'th',
+    },
     title: "18th Young Webmaster Camp",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: 'description',
-        property: 'description',
+        name: 'description',
         content:
           'Young Webmaster Camp ครั้งที่ 18 “New Normal, New Web, New World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด'
       },
