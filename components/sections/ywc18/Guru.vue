@@ -146,6 +146,9 @@ const CurrentGuru = styled.div`
     &__pillar {
       width: 1px;
       height: 427px;
+      @media screen and (max-width: 960px) {
+        display: none;
+      }
     }
 
     @media screen and (max-width: 960px) {
