@@ -8,7 +8,12 @@
           (อ่านข้อมูลเพิ่มเติม)</NuxtLink
         >
       </div>
-      <a-button type="primary" @click="acceptPolicy">ยอมรับ</a-button>
+      <a-button
+        type="primary"
+        @click="acceptPolicy"
+        style="background-color: #FF5D29;"
+        >ยอมรับ</a-button
+      >
     </section>
   </transition>
 </template>
