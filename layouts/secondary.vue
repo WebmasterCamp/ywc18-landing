@@ -85,9 +85,10 @@ div.secondary {
   }
   .ywc-logo {
     display: block;
-    width: 270px;
-    height: auto;
+    width: auto;
+    height: 82px;
     img {
+      height: 100%;
       @media screen and (max-width: 768px) {
         width: 126px;
         height: 43.5px;

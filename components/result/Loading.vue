@@ -10,7 +10,7 @@
         />
       </a-spin>
       <br />
-      <h1>โปรดรอซักครู่</h1>
+      <h1>โปรดรอสักครู่</h1>
     </div>
   </CenterContainer>
 </template>
@@ -18,7 +18,7 @@
 import CenterContainer from '~/components/CenterContainer.vue'
 
 export default {
-  components: { CenterContainer }
+  components: { CenterContainer },
 }
 </script>
 

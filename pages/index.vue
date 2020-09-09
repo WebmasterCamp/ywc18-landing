@@ -17,6 +17,7 @@
     <FollowUs />
     <SponsorGroup class="sponsor-box" />
     <Footer />
+    <PolicyToast />
   </div>
 </template>
 
@@ -42,6 +43,7 @@ export default {
     FollowUs: () => import('~/components/sections/ywc18/FollowUs'),
     SponsorGroup: () => import('~/components/ywc18/SponsorGroup'),
     Footer: () => import('~/components/sections/ywc18/Footer'),
+    PolicyToast: () => import('~/components/ywc18/PolicyToast'),
   },
 }
 </script>
