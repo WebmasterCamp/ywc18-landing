@@ -1,9 +1,6 @@
 <template>
   <transition name="fade" mode="out-in">
-    <section
-      class="container policy-toast"
-      :class="{ showToast: !isAccepted && !isInit }"
-    >
+    <section class="container policy-toast" :class="{ showToast: !isAccepted }">
       <div class="policy-detail">
         เว็บไซต์ของเรามีการเก็บ Cookies เพื่อการทำ Analytics
         โปรดศึกษาและยอมรับนโยบายข้อมูลส่วนบุคคล
@@ -21,13 +18,14 @@ import antDesignVueButton from '~/plugins/ant-design-vue-button'
 export default {
   created() {
     antDesignVueButton()
-    this.isInit = false
   },
   mounted() {
-    const isAccepted = window.localStorage.getItem('accepted_policy')
-    if (isAccepted) {
-      this.isAccepted = true
-    }
+    setTimeout(() => {
+      const isAccepted = window.localStorage.getItem('accepted_policy')
+      if (!isAccepted) {
+        this.isAccepted = false
+      }
+    }, 3000)
   },
   methods: {
     acceptPolicy() {
@@ -35,7 +33,7 @@ export default {
       window.localStorage.setItem('accepted_policy', '1')
     },
   },
-  data: () => ({ isAccepted: false, isInit: true }),
+  data: () => ({ isAccepted: true }),
 }
 </script>
 
