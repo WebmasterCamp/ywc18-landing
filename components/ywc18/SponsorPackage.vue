@@ -12,7 +12,7 @@
     </div>
     <div class="sponsor-button__wrapper">
       <a-button type="primary" size="large" @click="viewResponseFile"
-        >สนับสนุน YWC18</a-button
+        >ตอบรับการสนับสนุน</a-button
       >
     </div>
   </SponsorPackage>
