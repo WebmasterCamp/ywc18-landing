@@ -274,6 +274,10 @@ export default {
   color: rgba(242, 246, 252, 0.8);
   @media screen and (max-width: 425px) {
     font-size: 32px;
+    img {
+      width: 50%;
+      padding: 32px 0;
+    }
   }
 }
 </style>

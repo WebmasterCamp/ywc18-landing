@@ -1,41 +1,43 @@
 <template>
-  <section>
+  <section class="guru__wrapper">
     <SectionName title="Guru" class="guru-header" />
-    <CurrentGuru>
-      <div class="container guru-detail">
-        <transition name="guru-img" mode="out-in">
-          <template v-for="(img, index) in guruImages">
-            <Picture
-              :fileName="`guru/${gurus[currentGuru].img}`"
-              :key="`guru-${index}`"
-              v-if="gurus[currentGuru].img === img"
-              style="margin-bottom: 1em;"
-            />
-          </template>
-        </transition>
-        <div class="guru-detail__pillar"></div>
-        <transition name="guru-detail" mode="out-in">
-          <div
-            class="guru-content"
-            :key="`guru-detail-${gurus[currentGuru].img}`"
-          >
-            <h1>{{ gurus[currentGuru].name }}</h1>
-            <p v-html="gurus[currentGuru].role" />
-            <div
-              v-for="major in gurus[currentGuru].majors"
-              :class="`major major-${major}`"
-              :key="major"
-            >
-              {{ major }}
-            </div>
+    <div class="current-guru__wrapper">
+      <Cover class="cover" />
+      <CurrentGuru>
+        <div class="container guru-detail">
+          <div class="guru-img__wrapper">
+            <transition name="guru-img" mode="out-in">
+              <template v-for="(img, index) in guruImages">
+                <Picture
+                  :fileName="`guru/${gurus[currentGuru].img}`"
+                  :key="`guru-${index}`"
+                  v-if="gurus[currentGuru].img === img"
+                  class="guru-image"
+                />
+              </template>
+            </transition>
           </div>
-        </transition>
-      </div>
-      <div class="guru-cover">
-        <Picture class="bg bg-top" fileName="ywc18/paper-guru-top" />
-        <Picture class="bg bg-bottom" fileName="ywc18/paper-guru-bottom" />
-      </div>
-    </CurrentGuru>
+          <div>
+            <transition name="guru-detail" mode="out-in">
+              <div
+                class="guru-content"
+                :key="`guru-detail-${gurus[currentGuru].img}`"
+              >
+                <h1>{{ gurus[currentGuru].name }}</h1>
+                <p v-html="gurus[currentGuru].role" />
+                <div
+                  v-for="major in gurus[currentGuru].majors"
+                  :class="`major major-${major}`"
+                  :key="major"
+                >
+                  {{ major }}
+                </div>
+              </div>
+            </transition>
+          </div>
+        </div>
+      </CurrentGuru>
+    </div>
     <Gurus class="container">
       <div
         v-for="(g, idx) in gurus"
@@ -64,6 +66,10 @@ section {
 }
 </style>
 <style lang="scss">
+.guru__wrapper,
+.current-guru__wrapper {
+  position: relative;
+}
 .guru-cover {
   position: absolute;
   top: 0;
@@ -95,10 +101,6 @@ section {
     }
   }
 
-  .bg-bottom {
-    margin-bottom: -10px;
-  }
-
   /* Block draging image cover  */
   ::before {
     content: '';
@@ -115,6 +117,33 @@ import styled from 'vue-styled-components'
 import SectionName from '~/components/ywc18/SectionName.vue'
 import Picture from '~/components/Picture.vue'
 
+const Cover = styled.div`
+  background: url(${require('~/assets/images/ywc18/paper-guru-top.png')}),
+    url(${require('~/assets/images/ywc18/paper-guru-bottom.png')});
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: calc(100% + 2px);
+  top: -1px;
+  background-repeat: no-repeat;
+  background-size: 1920px auto, 1920px auto;
+  background-position: top, bottom;
+  @media screen and (max-width: 960px) {
+    background-size: 1500px auto, 1500px auto;
+  }
+  @media screen and (max-width: 768px) {
+    background-size: 1000px auto, 1000px auto;
+  }
+  @media screen and (max-width: 425px) {
+    background-size: 700px auto, 700px auto;
+  }
+  @media screen and (min-width: 1961px) {
+    background-size: 100% auto, 100% auto;
+  }
+`
+
 const CurrentGuru = styled.div`
   font-family: Barlow, Anuphan, system-ui, -apple-system, sans-sreif;
   background: url(/images/ywc18/bg/guru-typo.svg),
@@ -124,58 +153,83 @@ const CurrentGuru = styled.div`
   background-position: left center;
   background-repeat: no-repeat;
   padding: 140px 0 30px;
+  height: 620px;
+  box-sizing: border-box;
   position: relative;
   overflow: hidden;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1024px) {
     background: linear-gradient(
       100.19deg,
       #f66b3f -0.48%,
       #f89742 47.88%,
       #fe5722 96.18%
     );
-    padding: 80px 0 0;
     margin-bottom: 30px;
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 65px 0 30px;
+    height: 660px;
+  }
+  @media screen and (max-width: 425px) {
+    padding: 34px 0 30px;
+    height: 525px;
+  }
+
   @media screen and (min-width: 1950px) {
-    padding: 230px 0 30px;
+    padding: 170px 0 30px;
+    height: 680px;
   }
 
   .guru-detail {
-    display: flex;
-    &__pillar {
-      width: 1px;
-      height: 427px;
-      @media screen and (max-width: 960px) {
-        display: none;
-      }
-    }
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 50%;
+    gap: 30px;
+    height: 450px;
+    box-sizing: border-box;
 
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 768px) {
+      display: flex !important;
       flex-direction: column-reverse;
-      padding: 30px 0 0;
+      height: auto !important;
+      align-items: center;
+    }
+    @media screen and (max-width: 425px) {
+      height: 550px !important;
+      padding: 50px 15px;
+      justify-content: space-between;
     }
 
-    img {
-      width: 400px;
-      max-width: 80%;
-      margin: 0 50px;
+    .guru-img__wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
 
       @media screen and (max-width: 960px) {
-        margin: 0;
-        max-width: 50%;
+        justify-content: center !important;
       }
-      @media screen and (max-width: 425px) {
-        max-width: 80%;
-      }
-      @media screen and (min-width: 1900px) {
-        width: 430px;
+
+      .guru-image {
+        margin-bottom: 20px;
+        img {
+          max-width: 80% !important;
+          @media screen and (max-width: 425px) {
+            width: 350px;
+            max-width: 75% !important;
+          }
+        }
       }
     }
 
-    > .guru-content {
+    .guru-content {
       text-align: left;
-      margin-top: 80px;
+      margin-top: 90px;
+      @media screen and (max-width: 425px) {
+        margin-top: 40px !important;
+      }
 
       > h1 {
         color: #002144;
@@ -191,6 +245,11 @@ const CurrentGuru = styled.div`
         @media screen and (max-width: 960px) {
           font-size: 24px;
         }
+        @media screen and (max-width: 768px) {
+          font-size: 24px;
+          text-align: center;
+          margin-bottom: 8px;
+        }
       }
 
       > p {
@@ -202,6 +261,10 @@ const CurrentGuru = styled.div`
         @media screen and (max-width: 960px) {
           font-size: 16px;
           font-weight: 400;
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+          text-align: center;
         }
       }
 
@@ -254,18 +317,12 @@ const CurrentGuru = styled.div`
           background: #8c0d1c;
         }
 
-        @media screen and (max-width: 960px) {
+        @media screen and (max-width: 768px) {
           font-size: 14px;
           margin: 0 auto;
           padding-left: 20px;
           padding-right: 10px;
         }
-      }
-
-      @media screen and (max-width: 960px) {
-        text-align: center;
-        margin-top: 0;
-        padding: 0 15px;
       }
     }
   }
@@ -337,6 +394,7 @@ export default {
     Picture,
     CurrentGuru,
     Gurus,
+    Cover,
   },
   data() {
     return {
