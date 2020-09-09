@@ -117,7 +117,7 @@ const config = {
     [
       "@netsells/nuxt-hotjar",
       {
-        id: "1470912",
+        id: "1983981",
         sv: "6",
       },
     ],
@@ -137,6 +137,7 @@ const config = {
     fallback: true, // For Firebase Hosting, see https://nuxtjs.org/api/configuration-generate#fallback
     routes: [
       "/sponsor",
+      "/policy"
       // '/interview',
       // '/interview/content',
       // '/interview/design',
