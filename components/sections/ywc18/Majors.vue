@@ -226,6 +226,13 @@ const MajorsList = styled.div`
   padding: 0 15px;
 `
 
+class CountMajorRegistant {
+  programming = 0
+  design = 0
+  marketing = 0
+  content = 0
+}
+
 export default {
   components: {
     MajorsBackground,
@@ -237,6 +244,31 @@ export default {
     MajorsList,
     Major: () => import('~/components/ywc18/Major'),
     FullscreenOverlay: () => import('~/components/ywc18/FullscreenOverlay'),
+  },
+  data() {
+    return {
+      major: new CountMajorRegistant(),
+    }
+  },
+  mounted() {
+    this.fetchCountRegistant().then((major) => {
+      this.major = major
+    })
+  },
+  methods: {
+    fetchCountRegistant() {
+      return this.$axios
+        .get('https://api-staging.ywc18.ywc.in.th/users/stat')
+        .then(({ status, data }) => {
+          if (status === 200) {
+            return data.payload
+          }
+          return new CountMajorRegistant()
+        })
+        .catch(() => {
+          return new CountMajorRegistant()
+        })
+    },
   },
 }
 </script>
