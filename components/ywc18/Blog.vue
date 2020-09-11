@@ -8,7 +8,11 @@
         <h3>{{ detail.title }}</h3>
       </div>
       <div class="blog-card__author">
-        <img v-lazy="detail.avatar" :alt="detail.name" class="blog-card__author--img" />
+        <img
+          v-lazy="detail.avatar"
+          :alt="detail.name"
+          class="blog-card__author--img"
+        />
         <div class="blog-card__author--name">
           <span>{{ detail.name }}</span>
           <span v-if="detail.major">{{ detail.major }}</span>
@@ -46,8 +50,11 @@ export default {
   &__detail {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
     padding: 15px;
     background: rgba(242, 246, 252, 0.9);
+    min-height: 134px;
     h3 {
       font-weight: 600;
       font-size: 18px;

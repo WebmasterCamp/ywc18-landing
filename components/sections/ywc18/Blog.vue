@@ -43,21 +43,19 @@ export default {
     Picture,
   },
   data: () => ({
-    blogs: BLOGS,
+    blogs: BLOGS.reverse(),
     options: {
-      autoplay: false,
+      autoplay: true,
       centerMode: false,
       autoplaySpeed: 4500,
       dots: true,
-      navButtons: false,
+      navButtons: true,
       slidesToShow: 1,
       responsive: [
         {
           breakpoint: 426,
           settings: {
             slidesToShow: 1,
-            navButtons: true,
-            autoplay: true,
           },
         },
         {
@@ -65,14 +63,12 @@ export default {
           settings: {
             dots: false,
             slidesToShow: 3,
-            navButtons: BLOGS.length > 3,
           },
         },
         {
           breakpoint: 1008,
           settings: {
-            autoplay: false,
-            navButtons: false,
+            navButtons: true,
           },
         },
       ],
