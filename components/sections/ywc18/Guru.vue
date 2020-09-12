@@ -129,7 +129,7 @@ const Cover = styled.div`
   top: -1px;
   background-repeat: no-repeat;
   background-size: 1920px auto, 1920px auto;
-  background-position: center -70px, center 310px;
+  background-position: center -60px, center 310px;
   @media screen and (max-width: 960px) {
     background-position: top, bottom;
     background-size: 1500px auto, 1500px auto;
