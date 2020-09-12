@@ -23,8 +23,8 @@
                     :show="scope.show"
                     major="content"
                     title="Content"
-                    :count="0"
-                    :isRegOpen="false"
+                    :count="major.content"
+                    :isRegOpen="isRegOpen"
                   >
                     <template v-slot:content>
                       <p>
@@ -45,9 +45,9 @@
                   <FullscreenOverlay
                     major="design"
                     :show="scope.show"
-                    :count="0"
+                    :count="major.design"
                     title="Design"
-                    :isRegOpen="false"
+                    :isRegOpen="isRegOpen"
                   >
                     <template v-slot:content>
                       <p>
@@ -67,9 +67,9 @@
                   <FullscreenOverlay
                     major="marketing"
                     :show="scope.show"
-                    :count="0"
+                    :count="major.marketing"
                     title="Marketing"
-                    :isRegOpen="false"
+                    :isRegOpen="isRegOpen"
                   >
                     <template v-slot:content>
                       <p>
@@ -91,9 +91,9 @@
                   <FullscreenOverlay
                     major="programming"
                     :show="scope.show"
-                    :count="0"
+                    :count="major.programming"
                     title="Programming"
-                    :isRegOpen="false"
+                    :isRegOpen="isRegOpen"
                   >
                     <template v-slot:content>
                       <p>
@@ -119,6 +119,7 @@
 import styled from 'vue-styled-components'
 import BackdropText from '~/components/ywc18/BackdropText.vue'
 import SectionName from '~/components/ywc18/SectionName.vue'
+// import { OPEN_REGISTRATION } from '~/utils/const'
 const MajorsSection = styled.div`
   position: relative;
   min-height: 800px;
@@ -180,8 +181,8 @@ const MajorsBackground = styled.div`
   }
 `
 const Cover = styled.div`
-  background: url(${require('~/assets/images/ywc18/paper-ripped-bg.png')}),
-    url(${require('~/assets/images/ywc18/paper-ripped-bg-bottom.png')});
+  background: url(${require('~/assets/images/ywc18/section-top.png')}),
+    url(${require('~/assets/images/ywc18/section-bottom.png')});
   background-repeat: no-repeat, no-repeat;
   background-size: 1920px auto, 1920px auto;
   background-position: top center, bottom center;
@@ -211,7 +212,7 @@ const MajorsWrapper = styled.div`
     padding: 150px 0;
   }
   @media screen and (min-width: 768px) {
-    padding: 200px 0;
+    padding: 240px 0 200px;
   }
   @media screen and (min-width: 2560px) {
     padding: 250px 0;
@@ -226,6 +227,13 @@ const MajorsList = styled.div`
   padding: 0 15px;
 `
 
+class CountMajorRegistant {
+  programming = 0
+  design = 0
+  marketing = 0
+  content = 0
+}
+
 export default {
   components: {
     MajorsBackground,
@@ -237,6 +245,33 @@ export default {
     MajorsList,
     Major: () => import('~/components/ywc18/Major'),
     FullscreenOverlay: () => import('~/components/ywc18/FullscreenOverlay'),
+  },
+  data() {
+    return {
+      major: new CountMajorRegistant(),
+      isRegOpen: false,
+    }
+  },
+  mounted() {
+    //  new Date() > new Date(OPEN_REGISTRATION)
+    this.fetchCountRegistant().then((major) => {
+      this.major = major
+    })
+  },
+  methods: {
+    fetchCountRegistant() {
+      return this.$axios
+        .get('https://api-staging.ywc18.ywc.in.th/users/stat')
+        .then(({ status, data }) => {
+          if (status === 200) {
+            return data.payload
+          }
+          return new CountMajorRegistant()
+        })
+        .catch(() => {
+          return new CountMajorRegistant()
+        })
+    },
   },
 }
 </script>

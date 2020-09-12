@@ -17,8 +17,10 @@
               {{ title }}
             </Title>
             <Count :color="color">
-              <span v-if="showCount">ยอดผู้สมัคร</span>
-              <p v-if="showCount">{{ count }} คน</p>
+              <span v-if="showCount">สมัครแล้ว</span>
+              <p v-if="showCount">
+                <span>{{ count }}</span> คน
+              </p>
             </Count>
           </template>
           <Title v-else>{{ title }}</Title>
@@ -173,7 +175,7 @@ const Container = styled('div', containerProps)`
   .content p,
   .content li {
     font-family: Barlow, CmPrasanmit, system-ui, -apple-system, sans-sreif;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 32px;
     font-weight: 300;
   }
@@ -194,7 +196,7 @@ const Container = styled('div', containerProps)`
 
 const Header = styled('div', { normal: Boolean })`
   display: grid;
-  grid-template-columns: auto ${(props) => (props.normal ? '' : ' 100px')};
+  grid-template-columns: auto ${(props) => (props.normal ? '' : ' 130px')};
   ${(props) => (props.normal ? 'margin-bottom: 20px;' : '')}
 
   font-family: 'CmPrasanmit', Arial, Helvetica, sans-serif;
@@ -209,8 +211,8 @@ const Title = styled.h1`
   font-size: 75px;
   line-height: 90px;
   @media screen and (max-width: 425px) {
-    font-size: 46px;
-    line-height: 55px;
+    font-size: 32px;
+    line-height: 38px;
   }
 `
 
@@ -219,13 +221,44 @@ const Count = styled('div', withColorProps)`
   font-size: 20px;
 
   span {
+    font-family: Anuphan;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: right;
+    color: #f2f6fc;
+    @media screen and (max-width: 425px) {
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
 
   p {
+    font-family: Anuphan, system-ui, -apple-system, sans-sreif;
     font-size: 32px;
     margin: 0.5em 0;
     font-weight: bold;
-    color: ${(props) => color[props.color].normal};
+    color: #f2f6fc;
+    span {
+      font-family: Barlow Semi Condensed, system-ui, -apple-system, sans-sreif;
+      font-style: italic;
+      font-weight: 800;
+      font-size: 64px;
+      text-align: right;
+      letter-spacing: 0.05em;
+      -webkit-text-stroke-color: ${color.primary};
+      -webkit-text-stroke-width: 3px;
+      text-align: right;
+      color: #061625;
+      @media screen and (max-width: 425px) {
+        font-size: 40px;
+        -webkit-text-stroke-width: 1.5px;
+      }
+    }
+    @media screen and (max-width: 425px) {
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
 `
 
@@ -354,7 +387,6 @@ export default Vue.extend({
   },
   mounted() {
     this.color = this.$parent.color
-
     if (process.client) {
       const vm = this
       document.addEventListener('keyup', function(e) {

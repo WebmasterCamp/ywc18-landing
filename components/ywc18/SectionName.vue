@@ -1,9 +1,9 @@
 <template>
   <Wrapper>
     <Title :wrap="!subTitle">
-      <img src="images/ywc18/arrow-left.svg" alt />
+      <img src="images/ywc18/arrow-left.svg" alt v-if="arrowLeft" />
       <span class="section__name--title">{{ title }}</span>
-      <img src="images/ywc18/arrow-right.svg" alt />
+      <img src="images/ywc18/arrow-right.svg" alt v-if="arrowRight" />
     </Title>
     <SubTitle :color="subTitleColor" class="section__name--subtitle">{{
       subTitle
@@ -135,6 +135,8 @@ export default {
     subTitleColor: { type: String, default: '' },
     bgLeft: { type: Boolean, default: false },
     bgRight: { type: Boolean, default: false },
+    arrowLeft: { type: Boolean, default: false },
+    arrowRight: { type: Boolean, default: false },
   },
 }
 </script>

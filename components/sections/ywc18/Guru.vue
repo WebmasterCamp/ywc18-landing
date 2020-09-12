@@ -1,6 +1,6 @@
 <template>
   <section class="guru__wrapper">
-    <SectionName title="Guru" class="guru-header" />
+    <SectionName title="Guru" class="guru-header" subTitle="วิทยากร" />
     <div class="current-guru__wrapper">
       <Cover class="cover" />
       <CurrentGuru>
@@ -118,8 +118,8 @@ import SectionName from '~/components/ywc18/SectionName.vue'
 import Picture from '~/components/Picture.vue'
 
 const Cover = styled.div`
-  background: url(${require('~/assets/images/ywc18/paper-guru-top.png')}),
-    url(${require('~/assets/images/ywc18/paper-guru-bottom.png')});
+  background: url(${require('~/assets/images/ywc18/section-guru-top.png')}),
+    url(${require('~/assets/images/ywc18/section-guru-bottom.png')});
   width: 100%;
   position: absolute;
   top: 0;
@@ -129,8 +129,9 @@ const Cover = styled.div`
   top: -1px;
   background-repeat: no-repeat;
   background-size: 1920px auto, 1920px auto;
-  background-position: top, bottom;
+  background-position: center -60px, center 310px;
   @media screen and (max-width: 960px) {
+    background-position: top, bottom;
     background-size: 1500px auto, 1500px auto;
   }
   @media screen and (max-width: 768px) {
@@ -152,7 +153,7 @@ const CurrentGuru = styled.div`
   background-size: 60% auto, contain;
   background-position: left center;
   background-repeat: no-repeat;
-  padding: 140px 0 30px;
+  padding: 110px 0 30px;
   height: 620px;
   box-sizing: border-box;
   position: relative;
