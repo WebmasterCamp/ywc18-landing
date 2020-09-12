@@ -2,9 +2,9 @@
   <!-- for Follow us and Q&A Section -->
   <Wrapper>
     <div class="title__wrapper">
-      <img src="images/ywc18/arrow-left.svg" alt />
+      <img src="images/ywc18/arrow-left.svg" alt v-if="arrowLeft" />
       <span class="title">{{ title }}</span>
-      <img src="images/ywc18/arrow-right.svg" alt />
+      <img src="images/ywc18/arrow-right.svg" alt v-if="arrowRight" />
     </div>
     <span class="subtitle">{{ subtitle }}</span>
   </Wrapper>
@@ -81,6 +81,14 @@ export default {
     subtitle: {
       type: String,
       default: '',
+    },
+    arrowLeft: {
+      type: Boolean,
+      defeault: false,
+    },
+    arrowRight: {
+      type: Boolean,
+      defeault: false,
     },
   },
 }
