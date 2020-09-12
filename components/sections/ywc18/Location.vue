@@ -60,11 +60,11 @@
       </section>
       <Picture
         class="bg bg-location-cover bg-location-top"
-        fileName="ywc18/location/paper-location-top"
+        fileName="ywc18/section-top.png"
       />
       <Picture
         class="bg bg-location-cover bg-location-bottom"
-        fileName="ywc18/location/paper-location-bottom"
+        fileName="ywc18/section-bottom.png"
       />
     </div>
   </div>
