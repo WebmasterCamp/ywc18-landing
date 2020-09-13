@@ -3,7 +3,7 @@
     <Loading v-if="!isInit" />
     <section v-else class="container">
       <SectionName
-        title="Pricacy Policy"
+        title="Privacy Policy"
         subTitle="นโยบายคุ้มครองข้อมูลส่วนบุคคล"
       />
       <InfoContainer class="policy-info">
