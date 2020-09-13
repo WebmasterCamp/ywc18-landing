@@ -11,7 +11,7 @@
         alt="Theme Logo"
         class="theme-logo"
       />
-      <Button v-if="false">สมัครค่าย</Button>
+      <Button to="https://register.ywc18.ywc.in.th">สมัครค่าย</Button>
     </div>
   </section>
 </template>
