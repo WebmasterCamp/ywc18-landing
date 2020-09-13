@@ -10,7 +10,7 @@
             <BackdropText text="TIMELINE" :times="3" gap />
           </div>
         </div>
-        <div class="content">
+        <div class="timeline-content">
           <SectionName class="header" title="กำหนดการ" subTitle="TIMELINE" />
           <div class="events">
             <div
@@ -269,7 +269,7 @@ export default {
     line-height: 125%;
   }
 }
-.content {
+.timeline-content {
   min-height: 500px;
   position: relative;
   z-index: 2;
