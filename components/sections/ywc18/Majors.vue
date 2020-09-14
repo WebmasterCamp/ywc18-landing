@@ -259,7 +259,6 @@
 import styled from 'vue-styled-components'
 import BackdropText from '~/components/ywc18/BackdropText.vue'
 import SectionName from '~/components/ywc18/SectionName.vue'
-import { OPEN_REGISTRATION } from '~/utils/const'
 const MajorsSection = styled.div`
   position: relative;
   min-height: 800px;
@@ -389,11 +388,10 @@ export default {
   data() {
     return {
       major: new CountMajorRegistant(),
-      isRegOpen: false,
+      isRegOpen: true,
     }
   },
   mounted() {
-    this.isRegOpen = new Date() > new Date(OPEN_REGISTRATION)
     this.fetchCountRegistant().then((major) => {
       this.major = major
     })
