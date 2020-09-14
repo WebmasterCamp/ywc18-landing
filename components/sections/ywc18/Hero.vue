@@ -11,7 +11,7 @@
         alt="Theme Logo"
         class="theme-logo"
       />
-      <Button to="https://register.ywc18.ywc.in.th" v-if="isRegOpen"
+      <Button to="https://ywc18-register.web.app/" v-if="isRegOpen"
         >สมัครค่าย</Button
       >
     </div>
