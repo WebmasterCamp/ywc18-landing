@@ -37,6 +37,7 @@
             class="register-btn"
             v-if="isRegOpen"
             @click="goToRegister"
+            style="background-color: #FF5D29;"
             >สมัครค่าย</a-button
           >
           <span
@@ -378,7 +379,7 @@ export default Vue.extend({
   },
   methods: {
     goToRegister() {
-      window.open('https://register.ywc18.ywc.in.th/')
+      window.open('https://ywc18-register.web.app/')
     },
     dismiss() {
       this.showExitingAnimation()
