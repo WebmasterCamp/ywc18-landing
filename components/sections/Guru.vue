@@ -38,12 +38,6 @@ section {
   height: 100px;
   text-align: center;
 }
-/* @media screen and (max-width:960px)  {
-  .height {
-    height: 80px;
-    text-align: center; 
-  }
-} */
 </style>
 <script>
 import styled from 'vue-styled-components'

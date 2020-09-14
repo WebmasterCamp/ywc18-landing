@@ -11,14 +11,10 @@
       <div class="overlay-content">
         <Header :normal="normal">
           <template v-if="!normal">
-            <Title>
-              Web
-              <br />
-              {{ title }}
-            </Title>
+            <Title> Web <br />{{ title }} </Title>
             <Count :color="color">
-              <span v-if="showCount">สมัครแล้ว</span>
-              <p v-if="showCount">
+              <span v-if="showCount || isRegOpen">สมัครแล้ว</span>
+              <p v-if="showCount || isRegOpen">
                 <span>{{ count }}</span> คน
               </p>
             </Count>
@@ -35,11 +31,13 @@
           ย้อนกลับ
         </BackButton>
         <slot name="footer">
-          <RegisterButton
+          <a-button
+            type="primary"
+            size="large"
+            class="register-btn"
             v-if="isRegOpen"
-            :color="color"
-            href="https://register.ywc17.ywc.in.th/"
-            >สมัครสาขานี้</RegisterButton
+            @click="goToRegister"
+            >สมัครค่าย</a-button
           >
           <span
             v-else
@@ -56,6 +54,7 @@
 import Vue from 'vue'
 import styled, { css, keyframes } from 'vue-styled-components'
 import color from '~/utils/color'
+import antDesignVueButton from '~/plugins/ant-design-vue-button'
 
 const majorImage = {
   content: '/images/ywc18/modal/content.jpg',
@@ -159,7 +158,7 @@ const Container = styled('div', containerProps)`
 
   .content {
     font-family: Barlow, CmPrasanmit, system-ui, -apple-system, sans-sreif;
-    height: calc(90% - ${(props) => (props.normal ? 90 : 130)}px);
+    height: calc(90% - 150px);
     overflow: hidden;
     overflow-y: auto;
     line-height: 2;
@@ -168,26 +167,27 @@ const Container = styled('div', containerProps)`
       font-family: Barlow, system-ui, -apple-system, sans-sreif;
       font-weight: 700;
       text-transform: uppercase;
-      font-size: 18px;
+      font-size: 16px;
       letter-spacing: 0.01em;
     }
   }
   .content p,
   .content li {
     font-family: Barlow, CmPrasanmit, system-ui, -apple-system, sans-sreif;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 32px;
     font-weight: 300;
   }
   .content li {
-    line-height: 1.8;
+    line-height: 1.2;
     margin-bottom: 12px;
   }
   .content ol {
     padding-left: 24px;
   }
   .content h3 {
-    font-family: 'CmPrasanmit', system-ui, -apple-system, sans-sreif;
+    font-family: Anuphan, system-ui, -apple-system, sans-sreif;
+    line-height: 100%;
   }
   .content p {
     margin-bottom: 32px;
@@ -208,8 +208,8 @@ const Title = styled.h1`
   font-family: Barlow Semi Condensed, system-ui, -apple-system, sans-sreif;
   font-style: italic;
   font-weight: 600;
-  font-size: 75px;
-  line-height: 90px;
+  font-size: 60px;
+  line-height: 65px;
   @media screen and (max-width: 425px) {
     font-size: 32px;
     line-height: 38px;
@@ -319,28 +319,6 @@ const BackButton = styled('button', withColorProps)`
   }
 `
 
-const RegisterButton = styled('a', withColorProps)`
-  ${defaultButton};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  border-radius: 1000px;
-  height: 48px;
-  background: ${(props) => color[props.color].darker};
-  background: ${(props) => color[props.color].gradient};
-  color: ${(props) => (props.color === 'yellow' ? 'black' : 'white')};
-
-  &:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-      ${(props) => color[props.color].gradient};
-  }
-  &:active {
-    background: ${(props) => color[props.color].darker};
-    filter: brightness(75%);
-  }
-`
-
 export default Vue.extend({
   components: {
     ModalOverlay,
@@ -350,7 +328,6 @@ export default Vue.extend({
     Count,
     BottomMenu,
     BackButton,
-    RegisterButton,
   },
   props: {
     major: {
@@ -385,6 +362,9 @@ export default Vue.extend({
       showCount: false,
     }
   },
+  created() {
+    antDesignVueButton()
+  },
   mounted() {
     this.color = this.$parent.color
     if (process.client) {
@@ -397,6 +377,9 @@ export default Vue.extend({
     }
   },
   methods: {
+    goToRegister() {
+      window.open('https://register.ywc18.ywc.in.th/')
+    },
     dismiss() {
       this.showExitingAnimation()
     },
@@ -410,3 +393,18 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style lang="scss">
+.register-btn {
+  width: 230px;
+  max-width: 100%;
+  margin-left: auto;
+  span {
+    font-family: Anuphan, system-ui, -apple-system, sans-sreif;
+  }
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  white-space: nowrap;
+}
+</style>

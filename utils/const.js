@@ -558,4 +558,4 @@ export const BLOGS = [
   },
 ]
 
-export const OPEN_REGISTRATION = '2020-09-12T19:38:00.007Z'
+export const OPEN_REGISTRATION = '2020-09-14T11:00:00.000Z' // 14/09/2020 18.00

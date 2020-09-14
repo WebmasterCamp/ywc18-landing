@@ -1,9 +1,12 @@
 <template>
-  <a class="cta__btn" :class="{ isSmall: size === 'sm' }" @click="onClick">
-    <!-- <div class="button__content">
-    <div class="button__bg"></div>-->
+  <a
+    class="cta__btn"
+    :class="{ isSmall: size === 'sm' }"
+    @click="onClick"
+    :href="to"
+    target="_blank"
+  >
     <slot></slot>
-    <!-- </div> -->
   </a>
 </template>
 
@@ -27,38 +30,16 @@ export default {
       type: String,
       default: '',
     },
+    to: {
+      type: String,
+      default: '#',
+    },
   },
 }
 </script>
 
 <style lang="scss">
 @import '~assets/css/global.scss';
-.button {
-  &__bg {
-    box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: #091827;
-    border: 3px solid $primary-color;
-    transform: skew(-30deg, 0deg);
-  }
-  &__content {
-    position: absolute;
-    padding: 0.375rem 0.75rem;
-    width: auto;
-    height: auto;
-    text-align: center;
-    white-space: nowrap;
-    user-select: none;
-    font-size: 1rem;
-    line-height: 1.5;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out;
-  }
-}
 .cta__btn {
   cursor: pointer;
   display: block;

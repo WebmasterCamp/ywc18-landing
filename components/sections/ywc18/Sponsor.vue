@@ -89,6 +89,11 @@ export default {
             alt: 'Pantip',
             link: 'https://www.pantip.com',
           },
+          {
+            img: 'CAMPHUB.svg',
+            alt: 'CampHUB',
+            link: 'https://www.camphub.in.th',
+          },
         ],
       },
     }

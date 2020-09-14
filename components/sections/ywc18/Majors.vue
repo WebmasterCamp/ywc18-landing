@@ -17,7 +17,11 @@
         <MajorsList>
           <a-row :gutter="30">
             <a-col :xs="12" :lg="6">
-              <Major image="content">
+              <Major
+                image="content"
+                :showCount="isRegOpen"
+                :count="major.content"
+              >
                 <template slot-scope="scope">
                   <FullscreenOverlay
                     :show="scope.show"
@@ -34,13 +38,31 @@
                         การเล่าเรื่อง มีความคิดสร้างสรรค์
                         และความรู้เกี่ยวกับการเขียนคอนเทนต์เป็นอย่างดี
                       </p>
+                      <h3>คำถามประจำสาขา</h3>
+                      <ol>
+                        <li>
+                          สมมติว่าน้องทำงานอยู่กรมประชาสัมพันธ์
+                          ได้รับมอบหมายให้ทำคอนเทนต์ประชาสัมพันธ์ผลงานของรัฐบาลลงบนโซเชียลมีเดีย
+                          เพื่อให้เยาวชนคนรุ่นใหม่รู้สึกว่ารัฐบาลยังมีผลงานที่ดีอยู่
+                          จะเป็นผลงานอะไรของกระทรวงไหนก็ได้ หลายผลงาน
+                          หลายกระทรวงก็ได้<br />
+                          ให้น้องสร้างสรรค์คอนเทนต์ประชาสัมพันธ์ตามโจทย์นี้
+                          ลงบนพื้นที่โซเชียลมีเดียใดก็ได้ แล้วนำลิงก์
+                          <span>URL</span>
+                          ของคอนเทนต์นั้นมาส่งเป็นคำตอบสำหรับโจทย์ข้อนี้
+                        </li>
+                      </ol>
                     </template>
                   </FullscreenOverlay>
                 </template>
               </Major>
             </a-col>
             <a-col :xs="12" :lg="6">
-              <Major image="design">
+              <Major
+                image="design"
+                :showCount="isRegOpen"
+                :count="major.design"
+              >
                 <template slot-scope="scope">
                   <FullscreenOverlay
                     major="design"
@@ -56,13 +78,48 @@
                         และความสวยงาม เหมาะสำหรับผู้ที่มีความชอบในด้านศิลปะ
                         มีความสามารถในด้านกราฟิกดีไซน์ และการทำเว็บไซต์
                       </p>
+                      <h3>คำถามประจำสาขา</h3>
+                      <ol>
+                        <li>
+                          ให้จัดทำ <span>Infographic</span> เพื่อเล่าว่า
+                          ทำไมน้องถึงควรได้รับการคัดเลือกเป็น <span>1</span> ใน
+                          <span>YWC</span> รุ่น <span>18</span> สาขา
+                          <span>Web Design</span>
+                        </li>
+                        <li>
+                          ให้ลองเสนอ <span>5</span> ไอเดียในฝัน ว่าภายในระยะ
+                          <span>10</span> ปีข้างหน้าจะมีเว็บหรือแอป
+                          <span>Service</span> อะไรได้ใหม่
+                          จากผลของการเปลี่ยนแปลงพฤติกรรม, สถานการณ์,
+                          เทคโนโลยีในอนาคต
+                        </li>
+                        <li>
+                          ให้ยกตัวอย่างเว็บหรือแอป
+                          <span>Corporate/Brand</span>
+                          พร้อมเขียนวิเคราะห์ข้อดี-ข้อด้อย
+                          โดยวิเคราะห์ให้เป็นรูปธรรม
+                          ที่ลึกซึ้งเกี่ยวข้องกับที่มาของการออกแบบ<span>
+                            / </span
+                          >ผลกระทบ<span> / </span>แนวทางแก้ไข
+                        </li>
+                        <li>
+                          ส่ง <span>Portfolio</span> การออกแบบผลงานที่เคยทำมาใน
+                          ไม่จำกัดจำนวน โดยมีขอบเขตคือเป็น เว็บหรือแอป
+                          <span>Corporate/Brand/Service</span> หรือ
+                          <span>Graphic Design</span>
+                        </li>
+                      </ol>
                     </template>
                   </FullscreenOverlay>
                 </template>
               </Major>
             </a-col>
             <a-col :xs="12" :lg="6">
-              <Major image="marketing">
+              <Major
+                image="marketing"
+                :showCount="isRegOpen"
+                :count="major.marketing"
+              >
                 <template slot-scope="scope">
                   <FullscreenOverlay
                     major="marketing"
@@ -80,13 +137,50 @@
                         เหมาะสำหรับผู้ที่ชอบการคิด วิเคราะห์
                         มีความรู้เบื้องต้นเกี่ยวกับการทำธุรกิจ และการตลาด
                       </p>
+                      <h3>คำถามประจำสาขา</h3>
+                      <ol>
+                        <li>น้องเคยเรียนวิชาทางการตลาดมาหรือไม่</li>
+                        <li>
+                          จงระบุชื่อวิชาทางการตลาดต่าง ๆ
+                          ที่ได้ศึกษามาแล้วในความเข้าใจของท่าน
+                          หรือที่ท่านคิดว่ามีความเกี่ยวข้องกับศาสตร์ทางการตลาด
+                          ไม่ว่าจะเป็นวิชาหลัก หรือวิชาเสริมในสถาบันการศึกษา
+                        </li>
+                        <li>
+                          จงอธิบายว่าจะทำอย่างไรในการทำแผนการตลาดเว็บไซต์
+                          เพื่อช่วยเหลือทีมในค่ายให้เป็นผู้ชนะการแข่งขันได้
+                        </li>
+                        <li>
+                          จงอธิบายว่านักการตลาดคืออะไร มีหน้าที่อะไร
+                          แตกต่างหรือเหมือนกับนักการตลาดดิจิทัลอย่างไร
+                        </li>
+                        <li>
+                          ตำแหน่งนักการตลาด ในทีมของ
+                          <span>YWC</span> มีหน้าที่ทำอะไร
+                          มีความสำคัญอย่างไรกับทีม ต้องทำอะไรบ้าง
+                        </li>
+                        <li>
+                          น้องคิดอย่างไรกับ "เว็บไซต์" ในยุคปัจจุบัน
+                          เว็บไซต์ยังมีความสำคัญอยู่ไหม อย่างไร
+                          ในยุคที่มีการเปลี่ยนแปลง พัฒนาทางเทคโนโลยี
+                          รวมทั้งการแพร่ระบาดของโควิด ที่เกิดขึ้น
+                        </li>
+                        <li>
+                          แนบผลงานพร้อมอธิบายท้ายผลงานว่าน้องเคยมีประสบการณ์การทำงานด้านการตลาดอะไรบ้าง
+                          ผลออกมาเป็นอย่างไร และอยากปรับปรุงตรงไหนอีก
+                        </li>
+                      </ol>
                     </template>
                   </FullscreenOverlay>
                 </template>
               </Major>
             </a-col>
             <a-col :xs="12" :lg="6">
-              <Major image="programming">
+              <Major
+                image="programming"
+                :showCount="isRegOpen"
+                :count="major.programming"
+              >
                 <template slot-scope="scope">
                   <FullscreenOverlay
                     major="programming"
@@ -103,6 +197,52 @@
                         เหมาะสำหรับผู้ที่มีความสามารถ
                         และความรู้ในการเขียนโปรแกรมได้ดี
                       </p>
+                      <h3>คำถามประจำสาขา</h3>
+                      <ol>
+                        <li>
+                          ให้น้องเล่าประสบการณ์การทำงานเกี่ยวกับการทำหรือพัฒนาเว็บไซต์
+                          รวมถึงเหตุผลที่ชอบการพัฒนาเว็บไซต์
+                          (สามารถแปะลิงก์ผลงานที่เคยทำไว้ได้)
+                        </li>
+                        <li>
+                          ให้น้องเลือก
+                          <span style="text-transform: capitalize;"
+                            >Technology, Library</span
+                          >
+                          หรือแนวคิดใหม่ ๆ
+                          ในการทำเว็บมาหนึ่งอย่างพร้อมกับอธิบายว่าคืออะไร
+                          และทำไมถึงตัดสินใจเลือกอันนี้
+                        </li>
+                        <li>
+                          ให้ออกแบบระบบกรอกและส่งใบสมัครค่าย
+                          <span>YWC#19</span> พร้อมระบบตรวจใบสมัครโดยคณะกรรมการ
+                          โดยให้ระบุ
+                          <span style="text-transform: capitalize;"
+                            >Feature</span
+                          >
+                          ที่อยากให้มี, เทคโนโลยีที่จะเลือกใช้,
+                          โครงสร้างของฐานข้อมูล และ
+                          <span style="text-transform: capitalize;"
+                            >wireframe</span
+                          >
+                          ของหน้าจอแบบคร่าว ๆ
+                        </li>
+                        <li>
+                          มี
+                          <span style="text-transform: capitalize;"
+                            >Code CSS</span
+                          >
+                          ใดที่เป็นไปได้บ้าง ในการจัดให้
+                          <span style="text-transform: lowercase;"
+                            >div#center</span
+                          >
+                          อยู่ตรงกลางภายใน
+                          <span style="text-transform: lowercase;"
+                            >div#wrapper</span
+                          >
+                          (สามารถตอบได้มากกว่า 1 รูปแบบ)<br />
+                        </li>
+                      </ol>
                     </template>
                   </FullscreenOverlay>
                 </template>
@@ -119,7 +259,7 @@
 import styled from 'vue-styled-components'
 import BackdropText from '~/components/ywc18/BackdropText.vue'
 import SectionName from '~/components/ywc18/SectionName.vue'
-// import { OPEN_REGISTRATION } from '~/utils/const'
+import { OPEN_REGISTRATION } from '~/utils/const'
 const MajorsSection = styled.div`
   position: relative;
   min-height: 800px;
@@ -253,7 +393,7 @@ export default {
     }
   },
   mounted() {
-    //  new Date() > new Date(OPEN_REGISTRATION)
+    this.isRegOpen = new Date() > new Date(OPEN_REGISTRATION)
     this.fetchCountRegistant().then((major) => {
       this.major = major
     })
@@ -261,7 +401,7 @@ export default {
   methods: {
     fetchCountRegistant() {
       return this.$axios
-        .get('https://api-staging.ywc18.ywc.in.th/users/stat')
+        .get('https://api-prod.ywc18.ywc.in.th/users/stat')
         .then(({ status, data }) => {
           if (status === 200) {
             return data.payload

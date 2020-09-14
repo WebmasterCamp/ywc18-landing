@@ -11,7 +11,9 @@
         alt="Theme Logo"
         class="theme-logo"
       />
-      <Button v-if="false">สมัครค่าย</Button>
+      <Button to="https://register.ywc18.ywc.in.th" v-if="isRegOpen"
+        >สมัครค่าย</Button
+      >
     </div>
   </section>
 </template>
@@ -19,12 +21,17 @@
 <script>
 import Picture from '~/components/Picture.vue'
 import Button from '~/components/ywc18/Button.vue'
+import { OPEN_REGISTRATION } from '~/utils/const'
 // import SponsorBox from '~/components/SponsorBox.vue'
 export default {
   components: {
     Picture,
     // SponsorBox,
     Button,
+  },
+  data: () => ({ isRegOpen: false }),
+  mounted() {
+    this.isRegOpen = new Date() > new Date(OPEN_REGISTRATION)
   },
 }
 </script>
