@@ -39,15 +39,3 @@ section {
 .ant-btn {
   font-family: Anuphan;
 }
-
-.ant-btn-primary {
-  background-color: #ff5d29;
-  border-color: #ff5d29;
-}
-
-.ant-btn-primary:hover,
-.ant-btn-primary:focus {
-  color: white;
-  background-color: #e65525;
-  border-color: #e65525;
-}
