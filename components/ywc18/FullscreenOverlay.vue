@@ -37,7 +37,6 @@
             class="register-btn"
             v-if="isRegOpen"
             @click="goToRegister"
-            style="background-color: #FF5D29;"
             >สมัครค่าย</a-button
           >
           <span
@@ -173,9 +172,10 @@ const Container = styled('div', containerProps)`
     }
   }
   .content p,
-  .content li {
-    font-family: Barlow, CmPrasanmit, system-ui, -apple-system, sans-sreif;
-    font-size: 24px;
+  .content li,
+  .content ol {
+    font-family: CmPrasanmit, system-ui, -apple-system, sans-sreif;
+    font-size: 26px;
     line-height: 32px;
     font-weight: 300;
   }
