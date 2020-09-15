@@ -37,7 +37,6 @@
             class="register-btn"
             v-if="isRegOpen"
             @click="goToRegister"
-            style="background-color: #FF5D29;"
             >สมัครค่าย</a-button
           >
           <span
