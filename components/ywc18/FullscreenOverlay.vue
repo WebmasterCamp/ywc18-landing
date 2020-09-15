@@ -407,5 +407,13 @@ export default Vue.extend({
   font-weight: 600;
   font-size: 18px;
   white-space: nowrap;
+  background-color: #ff5d29;
+  border-color: #ff5d29;
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: #e65525;
+    border-color: #e65525;
+  }
 }
 </style>

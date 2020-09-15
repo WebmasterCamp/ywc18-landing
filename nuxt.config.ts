@@ -80,6 +80,7 @@ const config = {
     "@/assets/css/global.css",
     "@/assets/css/webfont.css",
     "@/assets/css/global.scss",
+    "@/assets/css/button.scss",
   ],
   /*
    ** Plugins to load before mounting the App
@@ -137,7 +138,8 @@ const config = {
     fallback: true, // For Firebase Hosting, see https://nuxtjs.org/api/configuration-generate#fallback
     routes: [
       "/sponsor",
-      "/policy"
+      "/policy",
+      "/terms"
       // '/interview',
       // '/interview/content',
       // '/interview/design',
