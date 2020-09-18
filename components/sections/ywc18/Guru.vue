@@ -489,7 +489,7 @@ export default {
         {
           img: 15,
           name: 'วรัทธน์ วงศ์มณีกิจ (ตั้ง)',
-          role: `Chief Product Officer - WISESIGHT Insight Platform`,
+          role: `Chief Product Officer - WISESIGHT`,
           majors: ['programming'],
         },
       ],
