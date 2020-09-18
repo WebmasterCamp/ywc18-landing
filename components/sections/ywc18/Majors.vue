@@ -99,9 +99,9 @@
                         </li>
                         <li>
                           ส่ง Portfolio การออกแบบผลงานที่เคยทำมาใน 3 ขอบเขตนี้ ไม่จำกัดจำนวน<br>
-                          1) เว็บหรือแอป Corporate / Brand<br>
-                          2) เว็บหรือแอป Service<br>
-                          3) Graphic Design
+                          <li>เว็บหรือแอป Corporate / Brand</li>
+                          <li>เว็บหรือแอป Service</li>
+                          <li>Graphic Design</li>
                         </li>
                       </ol>
                     </template>
