@@ -98,9 +98,12 @@
                           แนวทางแก้ไข
                         </li>
                         <li>
-                          ส่ง Portfolio การออกแบบผลงานที่เคยทำมาใน ไม่จำกัดจำนวน
-                          โดยมีขอบเขตคือเป็น เว็บหรือแอป Corporate/Brand/Service
-                          หรือ Graphic Design
+                          ส่ง Portfolio การออกแบบผลงานที่เคยทำมาใน 3 ขอบเขตนี้ ไม่จำกัดจำนวน<br>
+                          <ul>
+                            <li>เว็บหรือแอป Corporate / Brand</li>
+                            <li>เว็บหรือแอป Service</li>
+                            <li>Graphic Design</li>
+                          </ul>
                         </li>
                       </ol>
                     </template>
