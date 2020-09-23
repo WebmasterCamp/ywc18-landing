@@ -185,6 +185,7 @@ const Container = styled('div', containerProps)`
   }
   .content ol {
     padding-left: 24px;
+    margin-left: 4px;
   }
   .content h3 {
     font-family: Anuphan, system-ui, -apple-system, sans-sreif;
