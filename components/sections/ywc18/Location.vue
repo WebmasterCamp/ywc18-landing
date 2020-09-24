@@ -34,7 +34,7 @@
                 <no-ssr>
                   <lazy-component tag="div" class="video">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.793301226501!2d100.77898871535137!3d13.730960501474286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d66308ce98ffd%3A0xcb43a76f038c38ca!2sFaculty%20of%20Information%20Technology!5e0!3m2!1sen!2sth!4v1567244733954!5m2!1sen!2sth"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2670.7220942538393!2d100.56467966540419!3d13.827329157437728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29d59355dc5ef%3A0xd5687dd26469bcad!2sSCB%20Academy!5e0!3m2!1sth!2sth!4v1600541332097!5m2!1sth!2sth"
                       width="100%"
                       height="100%"
                       frameborder="0"
@@ -46,8 +46,13 @@
               </div>
               <div class="location-text">
                 <div v-if="isActive" class="location-detail">
-                  <span class="highlight">Chulalongkorn University</span>
-                  <br />จุฬาลงกรณ์มหาวิทยาลัย
+                  <span class="highlight">SCB ACADEMY</span>
+                  <br /><span style="font-weight: 600;">
+                    ธนาคารไทยพาณิชย์ สำนักงานใหญ่</span
+                  ><br />
+                  <span
+                    >ชั้น 18-19 ณ อาคารไทยพาณิชย์ปาร์ค พลาซ่า (East Tower)</span
+                  >
                 </div>
                 <div v-else class="location-detail-soon">
                   <Picture fileName="ywc18/location-pending.svg" />
@@ -82,8 +87,8 @@ export default {
   },
   data() {
     return {
-      locationImage: require('~/assets/images/ywc18/location/location-bg-pending.jpg'),
-      isActive: false,
+      locationImage: require('~/assets/images/ywc18/location/scb-academy.jpg'),
+      isActive: true,
     }
   },
   mounted() {
@@ -162,12 +167,18 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.7) 100%
-  );
   height: calc(100% - 10px);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      180.38deg,
+      rgba(255, 93, 41, 0.45) 5.95%,
+      rgba(248, 151, 66, 0.45) 94.42%
+    );
+  background-blend-mode: multiply, normal;
 }
 .location-content {
   font-family: Barlow, Anuphan, system-ui, -apple-system, sans-sreif;
@@ -213,16 +224,22 @@ export default {
   z-index: 2;
   display: block;
   margin-right: 20px;
-
+  flex: 2;
   @media screen and (max-width: 950px) {
     display: none;
   }
 }
+.location-backdrop {
+  display: flex;
+}
 .location-map {
-  flex: 1;
+  flex: 3;
   width: 100%;
   height: 100%;
   position: relative;
+  @media screen and (max-width: 425px) {
+    padding: 20px 10px;
+  }
 }
 .location-gmap-text {
   display: flex;
@@ -233,7 +250,7 @@ export default {
 }
 .location-gmap {
   flex: 1;
-  margin: 20px;
+  margin: 20px 0;
 }
 .video {
   width: 100%;
@@ -243,12 +260,18 @@ export default {
   font-weight: 600;
   font-family: Anuphan, system-ui, -apple-system, sans-sreif;
   text-align: left;
-  font-size: 30px;
+  font-size: 26px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  span {
+    font-weight: 400;
+    color: #f2f6fc;
+  }
   .highlight {
     text-transform: uppercase;
     font-family: Barlow Semi Condensed, system-ui, -apple-system, sans-sreif;
     letter-spacing: 0.05em;
-    font-size: 36px;
+    font-size: 42px;
     line-height: 50px;
     font-weight: bold;
     @media screen and (max-width: 425px) {
@@ -257,7 +280,7 @@ export default {
     }
   }
   @media screen and (max-width: 425px) {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 30px;
   }
   @media screen and (max-width: 950px) {
