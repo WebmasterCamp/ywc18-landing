@@ -113,6 +113,7 @@ section {
 .sp-twa {
   width: 250px !important;
   height: 72px;
+  max-height: 72px;
   a picture {
     width: 250px !important;
     height: 72px;
@@ -121,6 +122,7 @@ section {
 .sp-scb-academy {
   width: 270px !important;
   height: 60px;
+  max-height: 60px;
   a picture {
     width: 270px !important;
     height: 60px;
