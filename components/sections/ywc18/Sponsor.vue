@@ -123,7 +123,7 @@ section {
   width: 270px !important;
   height: 60px;
   max-height: 60px;
-  a picture {
+  span picture {
     width: 270px !important;
     height: 60px;
   }
