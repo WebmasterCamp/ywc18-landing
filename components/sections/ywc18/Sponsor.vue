@@ -137,6 +137,7 @@ section {
 .sp-CampHUB {
   width: 100% !important;
   max-width: 145px !important;
+  max-height: 24px;
   a picture {
     width: 100% !important;
     height: 24px;
