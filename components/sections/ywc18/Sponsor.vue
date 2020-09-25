@@ -98,11 +98,13 @@ section {
 @media screen and (max-width: 768px) {
   .height {
     font-size: 36px;
+    box-sizing: border-box;
   }
 }
 @media screen and (max-width: 330px) {
   .height {
     font-size: 32px;
+    box-sizing: border-box;
   }
 }
 </style>
@@ -117,10 +119,10 @@ section {
   }
 }
 .sp-scb-academy {
-  width: 250px !important;
+  width: 270px !important;
   height: 60px;
   a picture {
-    width: 250px !important;
+    width: 270px !important;
     height: 60px;
   }
 }
@@ -135,7 +137,7 @@ section {
   max-width: 145px !important;
   a picture {
     width: 100% !important;
-    height: 30px;
+    height: 24px;
   }
 }
 </style>
@@ -149,7 +151,7 @@ section {
   grid-template-columns: repeat(1, auto);
   justify-items: center;
   grid-column-gap: 32px;
-  // grid-row-gap: 20px;
+  grid-row-gap: 20px;
   align-items: center;
   // HANDLE 3 LOGO, CAN BE REMOVED IF ADD MORE LOGO
   @media screen and (max-width: 736px) {
