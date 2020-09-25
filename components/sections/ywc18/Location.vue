@@ -46,7 +46,11 @@
               </div>
               <div class="location-text">
                 <div v-if="isActive" class="location-detail">
-                  <span class="highlight">SCB ACADEMY</span>
+                  <Picture
+                    fileName="sponsors/1-3-SCB-Academy.svg"
+                    alt="SCB Academy"
+                    class="horizontal scb-academy"
+                  />
                   <br /><span style="font-weight: 600;">
                     ธนาคารไทยพาณิชย์ สำนักงานใหญ่</span
                   ><br />
@@ -277,6 +281,11 @@ export default {
     @media screen and (max-width: 425px) {
       font-size: 25px;
       line-height: 30px;
+    }
+  }
+  .scb-academy {
+    img {
+      height: 64px;
     }
   }
   @media screen and (max-width: 425px) {

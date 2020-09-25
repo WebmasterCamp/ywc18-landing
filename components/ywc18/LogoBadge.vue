@@ -23,6 +23,11 @@ const Wrapper = styled.div`
   @media screen and (max-width: 425px) {
     border: 6px solid #f27236;
   }
+  &.no-border {
+    border: none !important;
+    background: transparent;
+  }
+
   a {
     transform: scale(1.25);
   }
@@ -30,7 +35,10 @@ const Wrapper = styled.div`
     width: 200px;
     height: 200px;
     margin: 10px 25px;
-
+    &.horizontal {
+      width: 290px;
+      height: auto;
+    }
     @media screen and (max-width: 768px) {
       width: 150px;
       height: 150px;
