@@ -10,7 +10,7 @@
       <SponsorBadge
         fileName="sponsors/1-3-SCB-Academy.svg"
         alt="SCB Academy"
-        link="https://www.scb.co.th/"
+        link="#"
         class="horizontal"
         style="height: 60px;"
       />

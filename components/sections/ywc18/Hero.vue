@@ -11,10 +11,10 @@
         alt="Theme Logo"
         class="theme-logo"
       />
-      <SponsorBox v-if="false" />
       <Button to="https://register.ywc18.ywc.in.th/" v-if="isRegOpen"
         >สมัครค่าย</Button
       >
+      <SponsorBox />
     </div>
   </section>
 </template>

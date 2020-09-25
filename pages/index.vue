@@ -15,7 +15,7 @@
     <!-- <PaperDivider /> -->
     <QA />
     <FollowUs />
-    <SponsorGroup class="sponsor-box" />
+    <SponsorBox class="sponsor-box" />
     <Footer />
     <PolicyToast />
   </div>
@@ -41,7 +41,7 @@ export default {
     // PaperDivider: () => import('~/components/sections/ywc18/PaperDivider'),
     QA: () => import('~/components/sections/ywc18/QA'),
     FollowUs: () => import('~/components/sections/ywc18/FollowUs'),
-    SponsorGroup: () => import('~/components/ywc18/SponsorGroup'),
+    SponsorBox: () => import('~/components/SponsorBox'),
     Footer: () => import('~/components/sections/ywc18/Footer'),
     PolicyToast: () => import('~/components/ywc18/PolicyToast'),
   },
