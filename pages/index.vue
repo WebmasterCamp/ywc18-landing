@@ -9,8 +9,8 @@
     <Blog />
     <Location />
     <Guru />
-    <Gallery />
     <Sponsor />
+    <Gallery />
     <!-- <MediaPartner /> -->
     <!-- <PaperDivider /> -->
     <QA />

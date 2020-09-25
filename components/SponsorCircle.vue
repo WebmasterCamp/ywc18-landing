@@ -2,8 +2,9 @@
   <SponsorBadge :size="size" :transparent="transparent">
     <a
       :href="link"
-      :target="link === '#' ? `` : `_blank`"
+      target="_blank"
       rel="noopener noreferrer"
+      v-if="!!link && link !== '#'"
     >
       <Picture
         v-if="fileName != ''"
@@ -12,6 +13,14 @@
         :defaultType="type"
       />
     </a>
+    <span>
+      <Picture
+        v-if="fileName != ''"
+        :fileName="fileName"
+        :alt="alt"
+        :defaultType="type"
+      />
+    </span>
   </SponsorBadge>
 </template>
 
@@ -52,7 +61,8 @@ const SponsorBadge = styled('div', circleProps)`
   max-width: 100%;
   overflow: hidden;
 
-  a {
+  a,
+  span {
     display: flex;
     justify-content: center;
     align-items: center;
