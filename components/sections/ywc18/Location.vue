@@ -284,8 +284,16 @@ export default {
     }
   }
   .scb-academy {
+    picture {
+      height: auto;
+    }
     img {
       height: 64px;
+      margin-bottom: 0.5em;
+      @media screen and (max-width: 425px) {
+        margin-bottom: 1em;
+        max-width: 280px;
+      }
     }
   }
   @media screen and (max-width: 425px) {
