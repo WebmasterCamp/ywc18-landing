@@ -13,6 +13,18 @@
         :class="sponsor.class"
       />
     </div>
+    <div class="sponsor-gold-wrapper">
+      <SponsorCircle
+        :transparent="true"
+        size="lg"
+        v-for="(sponsor, index) in sponsors.gold"
+        :key="index"
+        :fileName="`sponsors/${sponsor.img}`"
+        :link="sponsor.link"
+        :alt="sponsor.alt"
+        :class="sponsor.class"
+      />
+    </div>
     <div class="sponsor-silver-wrapper">
       <SponsorCircle
         v-for="(sponsor, index) in sponsors.silver"
@@ -70,7 +82,14 @@ export default {
             link: '',
           },
         ],
-        gold: [],
+        gold: [
+          {
+            class: ['sp-brikl'],
+            img: '2-1-brikl.svg',
+            alt: 'Brikl',
+            link: 'https://www.brikl.com',
+          },
+        ],
         silver: [
           {
             class: ['sp-Pantip'],
@@ -83,6 +102,12 @@ export default {
             img: '3-4-CampHUB.svg',
             alt: 'CampHUB',
             link: 'https://www.camphub.in.th',
+          },
+          {
+            class: ['sp-rainmaker'],
+            img: '3-3-Rainmaker.svg',
+            alt: 'Rainmaker',
+            link: 'https://www.rainmaker.in.th',
           },
         ],
       },
@@ -130,8 +155,8 @@ section {
 }
 .sp-Pantip {
   a picture {
-    width: 90px !important;
-    height: 48px !important;
+    width: 70px !important;
+    height: auto !important;
   }
 }
 .sp-CampHUB {
@@ -141,6 +166,24 @@ section {
   a picture {
     width: 100% !important;
     height: 24px;
+  }
+}
+.sp-brikl {
+  width: 100% !important;
+  max-width: 220px !important;
+  max-height: 84px;
+  a picture {
+    width: 100% !important;
+    height: 84px;
+  }
+}
+.sp-rainmaker {
+  width: 100% !important;
+  max-width: 60px !important;
+  max-height: 60px;
+  a picture {
+    width: 100% !important;
+    height: 60px;
   }
 }
 </style>
@@ -198,29 +241,28 @@ section {
 
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(1, auto);
   grid-gap: 10px;
   align-items: center;
   margin: 10px auto;
-  margin-bottom: 20px;
 
   @media screen and (min-width: 375px) {
     width: 80%;
   }
   @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(1, auto);
   }
 }
 .sponsor-silver-wrapper {
   width: 100%;
-  max-width: 300px;
+  max-width: 420px;
   min-width: 220px;
   display: grid;
   justify-items: center;
   align-items: center;
   margin: 15px auto 70px;
   grid-column-gap: 20px;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(3, auto);
 
   // HANDLE 7 LOGO, CAN BE REMOVED IF ADD MORE LOGO
   // @media screen and (min-width: 737px) {
@@ -233,7 +275,7 @@ section {
   @media screen and (max-width: 736px) {
     width: 70%;
     max-width: 300px;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(1, auto);
     grid-column-gap: 20px;
     & > div {
       height: 75px;
