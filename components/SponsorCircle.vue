@@ -42,7 +42,7 @@ const size = {
   sm: {
     picSize: 102, // 64
     smallMobile: 90,
-    mobile: 74,
+    mobile: 85,
   },
 }
 
