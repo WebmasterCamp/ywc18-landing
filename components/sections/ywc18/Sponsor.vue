@@ -155,17 +155,17 @@ section {
 }
 .sp-Pantip {
   a picture {
-    width: 70px !important;
+    width: 85px !important;
     height: auto !important;
   }
 }
 .sp-CampHUB {
   width: 100% !important;
-  max-width: 145px !important;
+  max-width: 140px !important;
   max-height: 24px;
   a picture {
     width: 100% !important;
-    height: 24px;
+    height: 22px;
   }
 }
 .sp-brikl {
