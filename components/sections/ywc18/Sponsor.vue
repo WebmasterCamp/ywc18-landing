@@ -89,6 +89,12 @@ export default {
             alt: 'Brikl',
             link: 'https://www.brikl.com',
           },
+          {
+            class: ['sp-thairath'],
+            img: '2-2-Thairath.svg',
+            alt: 'Thairath',
+            link: 'https://www.thairath.co.th',
+          },
         ],
         silver: [
           {
@@ -108,6 +114,12 @@ export default {
             img: '3-3-Rainmaker.svg',
             alt: 'Rainmaker',
             link: 'https://www.rainmaker.in.th',
+          },
+          {
+            class: ['sp-pandt'],
+            img: '3-4-P-and-T.svg',
+            alt: 'P&T Hosting',
+            link: 'https://www.pathosting.co.th',
           },
         ],
       },
@@ -168,6 +180,15 @@ section {
     height: 22px;
   }
 }
+.sp-pandt {
+  width: 100% !important;
+  max-width: 104px !important;
+  max-height: 28px;
+  a picture {
+    width: 100% !important;
+    height: 28px;
+  }
+}
 .sp-brikl {
   width: 100% !important;
   max-width: 220px !important;
@@ -184,6 +205,15 @@ section {
   a picture {
     width: 100% !important;
     height: 60px;
+  }
+}
+.sp-thairath {
+  width: 100% !important;
+  max-width: 155px !important;
+  max-height: 58px;
+  a picture {
+    width: 100% !important;
+    height: 58px;
   }
 }
 </style>
@@ -237,20 +267,20 @@ section {
 }
 .sponsor-gold-wrapper {
   width: 100%;
-  max-width: 260px;
+  max-width: 420px;
 
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(1, auto);
   grid-gap: 10px;
   align-items: center;
-  margin: 10px auto;
+  margin: 20px auto;
 
   @media screen and (min-width: 375px) {
     width: 80%;
   }
   @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(1, auto);
+    grid-template-columns: repeat(2, auto);
   }
 }
 .sponsor-silver-wrapper {
@@ -262,7 +292,7 @@ section {
   align-items: center;
   margin: 15px auto 70px;
   grid-column-gap: 20px;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(4, auto);
 
   // HANDLE 7 LOGO, CAN BE REMOVED IF ADD MORE LOGO
   // @media screen and (min-width: 737px) {
@@ -275,7 +305,7 @@ section {
   @media screen and (max-width: 736px) {
     width: 70%;
     max-width: 300px;
-    grid-template-columns: repeat(1, auto);
+    grid-template-columns: repeat(2, auto);
     grid-column-gap: 20px;
     & > div {
       height: 75px;
