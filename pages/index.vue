@@ -14,8 +14,8 @@
     <!-- <PaperDivider /> -->
     <QA />
     <FollowUs />
-    <SponsorBox class="sponsor-box" />
     <MediaPartner />
+    <SponsorBox class="sp-vip-box" />
     <Footer />
     <PolicyToast />
   </div>
@@ -55,7 +55,7 @@ export default {
   text-align: center;
 }
 
-.sponsor-box {
+.sp-vip-box {
   margin: 50px 0;
 }
 
