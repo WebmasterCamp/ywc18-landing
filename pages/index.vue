@@ -11,11 +11,11 @@
     <Guru />
     <Sponsor />
     <Gallery />
-    <!-- <MediaPartner /> -->
     <!-- <PaperDivider /> -->
     <QA />
     <FollowUs />
-    <SponsorBox class="sponsor-box" />
+    <MediaPartner />
+    <SponsorBox class="sp-vip-box" />
     <Footer />
     <PolicyToast />
   </div>
@@ -37,7 +37,7 @@ export default {
     Guru: () => import('~/components/sections/ywc18/Guru'),
     Gallery: () => import('~/components/sections/ywc18/Gallery'),
     Sponsor: () => import('~/components/sections/ywc18/Sponsor'),
-    // MediaPartner: () => import('~/components/sections/ywc18/MediaPartner'),
+    MediaPartner: () => import('~/components/sections/ywc18/MediaPartner'),
     // PaperDivider: () => import('~/components/sections/ywc18/PaperDivider'),
     QA: () => import('~/components/sections/ywc18/QA'),
     FollowUs: () => import('~/components/sections/ywc18/FollowUs'),
@@ -55,7 +55,7 @@ export default {
   text-align: center;
 }
 
-.sponsor-box {
+.sp-vip-box {
   margin: 50px 0;
 }
 
