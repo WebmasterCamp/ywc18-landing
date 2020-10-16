@@ -32,7 +32,6 @@ const Container = styled('div', { align: String, size: String, color: String })`
   font-weight: bold;
   font-size: ${(props) => sizes[props.size].fontSize}px;
   line-height: 101px;
-  box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.25);
   background: url(${require('../../assets/images/ywc18/section-head-bg.png')});
   background-position: center center;
   background-size: 436px 101px;
