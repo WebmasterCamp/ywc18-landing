@@ -25,14 +25,6 @@ export default {
     gradientDarker:
       'linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), linear-gradient(51.02deg, #FEE141 13.7%, #FCB46F 58.75%, #FA7398 89.48%)'
   },
-  orange: {
-    normal: '#FF5D29',
-    darker: '#E65525',
-    gradient:
-      'linear-gradient(7.54deg, #E65525 13.7%, #FF5D29 38.75%, #F89742 89.48%)',
-    gradientDarker:
-      'linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), linear-gradient(51.02deg, #FEE141 13.7%, #FCB46F 38.75%, #FA7398 89.48%)'
-  },
   pink: {
     normal: '#FFCCE8',
     darker: '#FA5C87',
