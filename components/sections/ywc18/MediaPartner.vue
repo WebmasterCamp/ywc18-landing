@@ -13,7 +13,7 @@
         :transparent="true"
       />
     </div>
-    <NuxtLink to="#" style="text-decoration: none;" v-if="false">
+    <NuxtLink to="/press" style="text-decoration: none;">
       <Button size="lg">ร่วมประชาสัมพันธ์</Button>
     </NuxtLink>
   </section>

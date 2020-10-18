@@ -1,92 +1,59 @@
 <template>
   <div>
-    <SectionHead
-      size="sm"
-      color="white"
-      style="margin-top: 35px; line-height: 1.1;"
-    >
-      Press
-      <h5 class="subhead">ร่วมประชาสัมพันธ์โครงการ</h5>
-    </SectionHead>
+    <ThemeProvider :name="currTheme">
+    <SectionTitle title="ร่วมประชาสัมพันธ์" />
     <section class="container" style="margin-bottom: 60px;">
       <h3>เนื้อหาประชาสัมพันธ์</h3>
       <div ref="pr-content" class="pr-content">
         <h4 class="right">ข่าวประชาสัมพันธ์</h4>
         <h4 class="center">
-          สมาคมเว็บฯ เปิดค่าย Young Webmaster Camp รุ่น 17
-          ปั้นคนรุ่นใหม่สู่ตลาดดิจิทัล
+          Young Webmaster Camp ครั้งที่ 18 โอกาสครั้งใหญ่กับมิติใหม่ที่คุณจะได้ระเบิดศักยภาพในสายงานด้านดิจิทัล
         </h4>
         <p>
-          สมาคมผู้ดูแลเว็บไทย จับมือ คณะเทคโนโลยีสารสนเทศ
-          สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง เตรียมจัดค่าย Young
-          Webmaster Camp ครั้งที่ 17
-          เจาะลึกวิชาชีพเว็บมาสเตอร์และวงการดิจิทัลภายใต้หัวข้อ “Social Change,
-          Arrange The World - มิติใหม่ เว็บสร้างสังคม” 26-29 ธันวาคมนี้
+          กลับมาอีกครั้งกับค่ายที่จะมอบความรู้และประสบการณ์เจาะลึกหลากแง่มุมทางด้านเว็บไซต์และวงการดิจิทัลอย่างเต็มรูปแบบ <b>“Young Webmaster Camp ครั้งที่ 18 : New Normal, New Web, New World”</b> ค่ายสร้างเว็บไซต์ที่ยิ่งใหญ่ที่สุดในประเทศ เชิญชวนเหล่านิสิตนักศึกษา นักเรียนหรือบุคคลทั่วไป อายุระหว่าง 18 - 23 ปี ที่มีใจรักในการสร้างสรรค์เว็บไซต์ มาร่วมกันระเบิดศักยภาพ แสดงพลังไอเดียของเหล่าคนรุ่นใหม่ ที่พร้อมจะสร้างโลกใหม่ที่ดียิ่งขึ้น
         </p>
         <p>
-          นางสาวศิรณัชชา วุฒิประพันธ์พงศ์ ผู้จัดการโครงการ Young Webmaster Camp
-          ครั้งที่ 17 เปิดเผยว่า ในปีนี้สมาคมผู้ดูแลเว็บไทย ร่วมกับคณะไอที
-          สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-          โดยการสนับสนุนหลักของบริษัท เอ็กซอนโมบิล จำกัด, ธนาคารไทยพาณิชย์ และ
-          กองทุนพัฒนาสื่อปลอดภัยและสร้างสรรค์
-          จัดโครงการอบรมเชิงปฏิบัติการก้าวสู่วิชาชีพเว็บมาสเตอร์ หรือ Young
-          Webmaster Camp ขึ้น โดยโครงการนี้สมาคมฯ จัดต่อเนื่องมาเป็นปีที่ 17
-          มีผู้ผ่านการเข้าร่วมโครงการมาแล้วมากกว่า 1,000 คน
-          ซึ่งผู้เข้าร่วมโครงการจะได้รับการอบรมทั้งภาคทฤษฏีจากวิทยากรผู้ทรงคุณวุฒิในแวดวงดิจิทัลมากมายหลายท่าน
-          อาทิ คุณขจร เจียรนัยพานิชย์ หรือ Khajochi แห่ง Zero Publishing,
-          คุณอินทนนท์ ปัญญาโสภา ผู้ก่อตั้งเว็บไซต์ Grappik, คุณจักรพงษ์ คงมาลัย
-          จาก Moonshot Digital
-          ที่จะมาให้ทั้งความรู้และถ่ายทอดประสบการณ์การทำงานในสาขาต่าง ๆ
-          รวมทั้งภาคปฏิบัติจริงอีกด้วย โดยในปีนี้จัดภายใต้หัวข้อ “Social Change,
-          Arrange - มิติใหม่ เว็บสร้างสังคม”
-          ผู้เข้าร่วมโครงการจะได้ออกแบบและนำเสนอไอเดียในการพัฒนาเว็บไซต์โดยการนำเทคโนโลยีปัจจุบันมาประยุกต์ปรับใช้
-          เพื่อพัฒนาและยกระดับคุณภาพชีวิตของคนในสังคมให้ดีขึ้นและก่อให้เกิดการเปลี่ยนแปลงในวงกว้างผ่านการสร้างเว็บไซต์
+          ซึ่งกิจกรรมภายในค่ายได้เปิดโอกาสให้ผู้ร่วมกิจกรรม ได้ระดมไอเดียในการสร้างเว็บไซต์ที่สามารถใช้งานได้จริง พร้อมทั้งรับความรู้และประสบการณ์ในการทำงานจริง จากเหล่ากูรูผู้เชี่ยวชาญในวงการ ไม่ว่าจะเป็น พี่เอ็ม ขจร จาก Mango Zero, พี่ตั้ง จาก Wisesight, พี่โน้ต จาก Dek-D.com, พี่บอย จาก Pantip.com และอีกมากมาย โดยในวันสุดท้าย ผู้เข้าร่วมกิจกรรมจะได้นำเสนอผลงานต่อคณะกรรมการ พร้อมรับคำแนะนำเพื่อนำไปพัฒนาและฝึกฝนต่อในอนาคต
         </p>
         <p>
-          โครงการ Young Webmaster Camp ครั้งที่ 17 เปิดรับสมัคร 4 สาขา ได้แก่
+          ผู้เข้าร่วมกิจกรรมสามารถเลือกสมัครสาขาตามความสนใจหรือตามความถนัด ซึ่งประกอบไปด้วยทั้งหมด 4 สาขา คือ
         </p>
-        <ul>
+        <ol>
           <li>
-            สาขาการตลาด (Web Marketing) สาขาด้านการวางกลยุทธ์ทางการตลาด
-            และกำหนดแนวทางของเว็บไซต์
-            สร้างรายได้จากการแก้ปัญหาหรือตอบความต้องการของผู้ใช้งาน
+            สาขาเว็บคอนเทนต์ (Web Content) นักเล่าเรื่องตัวยงที่ก้าวทันสถานการณ์ พร้อมเรียบเรียงข้อมูลด้วยความสดใหม่ ใส่ใจประเด็น และมุ่งเน้นที่จะสร้างสรรค์สิ่งใหม่ให้ดีกว่าเดิม
           </li>
           <li>
-            สาขาคอนเทนต์ (Web Content) สาขาด้านการนำเสนอเนื้อหา
-            ถ่ายทอดเรื่องราวผ่านสื่อต่าง ๆ ไม่ว่าจะเป็นตัวอักษร ภาพ
-            หรือภาพเคลื่อนไหว เพื่อให้ผู้ใช้งานเข้าใจเกี่ยวกับเว็บไซต์ดียิ่งขึ้น
+            สาขาเว็บดีไซน์ (Web Design) ใจรักการสร้างภาพ ทำงานศิลป์ เล่นสีตอบโจทย์อารมณ์และความต้องการของผู้เข้าเว็บไซต์ ตลอดจนดึงดูดใจด้วยสไตล์การออกแบบ
           </li>
           <li>
-            สาขาดีไซน์ (Web Design) สาขาด้านการออกแบบ
-            ทั้งการออกแบบด้านความสวยงามและประสบการณ์ในการใช้งานภายในเว็บไซต์
-            เพื่อสร้างสรรค์เว็บไซต์ที่ทันสมัยและใช้งานง่ายในเวลาเดียวกัน
+            สาขาเว็บมาร์เก็ตติ้ง (Web Marketing) เผด็จศึกทุกปัญหาด้วยการวางกลยุทธ์ พร้อมปรับตัวและพัฒนาขีดจำกัดเพื่อการเติบโตของธุรกิจในทุกสภาวะอย่างมั่นคงแข็งแรง
           </li>
           <li>
-            สาขาโปรแกรมมิ่ง (Web Programming) สาขาด้านการสร้างเว็บไซต์
-            ให้กำเนิดเว็บไซต์จากการเขียนโค้ดด้วยภาษาต่าง ๆ
-            เป็นกำลังหลักที่จะนำทั้งเนื้อหา ประการณ์ ความสวยงาม
-            และการแก้ปัญหาที่ตรงจุดสู่ผู้ใช้งาน
+            สาขาเว็บโปรแกรมมิ่ง (Web Programming) เก่งในการจัดการความคิด รักการพัฒนา กล้าทดลองและสามารถเสกโค้ดสุดคูลเพื่อนำมาตอบสนองวิถีใหม่ในไลฟ์สไตล์ New Normal
           </li>
-        </ul>
+        </ol>
         <p>
-          ขอเชิญชวนนักศึกษาระดับอุดมศึกษาทั่วประเทศที่มีอายุระหว่าง 18-23
-          ปีสมัครเข้าร่วมโครงการ ผู้ผ่านการคัดเลือกจำนวน 80
-          คนจะได้เข้าค่ายระหว่างวันที่ 26 - 29 ธันวาคม 2562 ณ
-          คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-          โดยไม่เสียค่าใช้จ่าย
-          ผู้สนใจสมัครเข้าร่วมโครงการสามารถดูรายละเอียดและสมัครได้ตั้งแต่วันนี้ถึง
-          15 ต.ค. 62 ที่เว็บไซต์ ywc.in.th
+          ซึ่งในปีนี้ค่ายได้จัดขึ้นที่ SCB Academy ตั้งแต่วันที่ 24 - 27 ธันวาคม 2563 กิจกรรมเป็น รูปแบบไป-กลับ ถึงแม้ว่าในปีนี้จะไม่มีการค้างคืน แต่กิจกรรมภายในก็จัดมาแบบเน้น ๆ แบบเต็มอิ่ม ทั้งความรู้จากวิทยากร สถานที่ กิจกรรมและอาหารเหมือนเดิม และแน่นอนว่า “ไม่มีค่าใช้จ่ายในการสมัครและการเข้าร่วมกิจกรรมภายในค่าย” มาแค่ตัวกับใจ ได้เพื่อนและความรู้กลับไปแน่นอน!
+        </p>
+        <p>
+          สำหรับใครที่สนใจสมัครค่าย Young Webmaster Camp ครั้งที่ 18 สามารถสมัครได้ตั้งแต่วันนี้ - 7 พฤศจิกายน 2563 ที่ www.ywc.in.th
+        </p>
+        <p>
+          สามารถติดตามข่าวสารเพิ่มเติมได้ที่ <br>
+          Facebook : Young Webmaster Camp<br>
+          Instagram : @ywcth<br>
+          Twitter : @ywcth
         </p>
       </div>
       <BannerButton
-        color="pink"
+        color="orange"
         style="margin:0 auto;margin-top:10px;"
         @click="selectText($event, 'pr-content')"
       >
-        เลือกทั้งหมด
+        คัดลอกทั้งหมด
       </BannerButton>
     </section>
-    <section class="container">
+    <section class="container" style="margin-bottom: 120px;">
       <h3 style="margin-bottom:50px">ภาพแบนเนอร์</h3>
       <div v-for="(isShow, size) in bannerList" :key="size">
         <BannerItem>
@@ -95,10 +62,10 @@
           </BannerCol>
           <BannerCol>
             ขนาด {{ size }}px
-            <BannerButton color="pink" :href="getSrc(size)" target="_blank" rel="noopener noreferrer">
+            <BannerButton color="orange" :href="getSrc(size)" target="_blank" rel="noopener noreferrer">
               ดาวน์โหลด
             </BannerButton>
-            <BannerButton color="pink" @click="viewCode(size)">
+            <BannerButton color="orange" @click="viewCode(size)">
               {{ isShow ? 'ซ่อน' : 'แสดง' }} Code
             </BannerButton>
           </BannerCol>
@@ -110,14 +77,16 @@
         ></textarea>
       </div>
     </section>
+    <SponsorBox/>
     <Footer />
+    </ThemeProvider>
   </div>
 </template>
 <script>
 import styled from 'vue-styled-components'
-import SectionHead from '~/components/SectionHead.vue'
 import color from '~/utils/color'
 import { selectText } from '~/utils/dom'
+import ThemeProvider from '~/components/ThemeProvider.vue'
 const BannerItem = styled('div')`
   display: grid;
   grid-template-columns: 75% 25%;
@@ -152,7 +121,7 @@ const BannerButton = styled('a', { color: String })`
   height: 100%;
   font-family: 'CmPrasanmit', 'Sarabun';
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -182,12 +151,12 @@ export default {
   layout: 'secondary',
   head() {
     return {
-      title: 'ร่วมประชาสัมพันธ์โครงการ - 17th Young Webmaster Camp',
+      title: 'ร่วมประชาสัมพันธ์โครงการ - 18th Young Webmaster Camp',
       meta: [
         {
           hid: 'og:title',
           name: 'og:title',
-          content: 'ร่วมประชาสัมพันธ์โครงการ - 17th Young Webmaster Camp',
+          content: 'ร่วมประชาสัมพันธ์โครงการ - 18th Young Webmaster Camp',
         },
         { hid: 'og:description', name: 'og:description', content: '' }, // TODO: Add description
         { hid: 'description', name: 'description', content: '' }, // TODO: Add description
@@ -195,24 +164,26 @@ export default {
     }
   },
   components: {
-    SectionHead,
     BannerItem,
     BannerCol,
     BannerButton,
-    Footer: () => import('~/components/sections/Footer'),
+    ThemeProvider,
+    SectionTitle: () => import('~/components/ywc18/SectionHead.vue'),
+    Footer: () => import('~/components/sections/ywc18/Footer'),
+    SponsorBox: () => import('~/components/SponsorBox')
   },
   data() {
     return {
       bannerList: {
-        '160x600': false,
-        '300x50': false,
-        '300x250': false,
-        '300x600': false,
-        '320x50': false,
+        // '160x600': false,
+        // '300x50': false,
+        // '300x250': false,
+        // '300x600': false,
+        // '320x50': false,
         '320x100': false,
         '728x90': false,
-        '970x250': false,
-        '1200x628': false,
+        // '970x250': false,
+        // '1200x628': false,
       },
     }
   },
@@ -242,17 +213,15 @@ export default {
       return `<a href="https://bit.ly/YWC17-banner">${imgTag}</a>`
     },
   },
-  middleware({ redirect }) {
-    return redirect('/')
-  },
 }
 </script>
 <style lang="scss">
 .secondary.press {
   h3 {
+    font-family: Anuphan, system-ui, -apple-system, sans-sreif;
     text-align: center;
-    color: #ffcce8;
-    font-size: 24px;
+    color: #ffffff;
+    font-size: 28px;
   }
   .text-muted {
     color: whitesmoke;
