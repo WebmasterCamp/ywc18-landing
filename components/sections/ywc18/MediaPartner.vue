@@ -49,6 +49,12 @@ export default {
           alt: 'Content Shifu',
           link: 'https://contentshifu.com/',
         },
+        {
+          class: ['mp-j-mat'],
+          img: '4-2-J-MAT.svg',
+          alt: 'J_MAT',
+          link: 'https://www.facebook.com/SMARTJMAT/',
+        },
       ],
     }
   },
@@ -65,16 +71,25 @@ export default {
     height: 90px;
   }
 }
+.mp-j-mat {
+  width: 90px !important;
+  height: 90px;
+  max-height: 90px;
+  a picture {
+    width: 90px !important;
+    height: 90px;
+  }
+}
 .media-partner-wrapper {
   width: 100%;
-  max-width: 420px;
+  max-width: 260px;
   min-width: 220px;
   display: grid;
   justify-items: center;
   align-items: center;
   margin: 15px auto 70px;
   grid-column-gap: 20px;
-  grid-template-columns: repeat(1, auto);
+  grid-template-columns: repeat(2, auto);
 
   // HANDLE 7 LOGO, CAN BE REMOVED IF ADD MORE LOGO
   // @media screen and (min-width: 737px) {
@@ -87,7 +102,7 @@ export default {
   @media screen and (max-width: 736px) {
     width: 70%;
     max-width: 300px;
-    grid-template-columns: repeat(1, auto);
+    grid-template-columns: repeat(2, auto);
     grid-column-gap: 20px;
     & > div {
       height: 75px;
