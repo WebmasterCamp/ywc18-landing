@@ -305,14 +305,14 @@ section {
 }
 .sponsor-silver-wrapper {
   width: 100%;
-  max-width: 560px;
+  max-width: 420px; // 560
   min-width: 220px;
   display: grid;
   justify-items: center;
   align-items: center;
   margin: 15px auto 70px;
   grid-column-gap: 20px;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(4, auto);
 
   // HANDLE 7 LOGO, CAN BE REMOVED IF ADD MORE LOGO
   /* @media screen and (max-width: 737px) {
