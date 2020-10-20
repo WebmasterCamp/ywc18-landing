@@ -121,12 +121,12 @@ export default {
             alt: 'Rainmaker',
             link: 'https://www.rainmaker.in.th',
           },
-          {
-            class: ['sp-easyrice'],
-            img: '3-4-easyrice.png',
-            alt: 'Easy Rice Digital Technology',
-            link: 'https://www.easyrice.ai',
-          },
+          // {
+          //   class: ['sp-easyrice'],
+          //   img: '3-4-easyrice.png',
+          //   alt: 'Easy Rice Digital Technology',
+          //   link: 'https://www.easyrice.ai',
+          // },
           {
             class: ['sp-pandt'],
             img: '3-4-P-and-T.svg',
@@ -315,12 +315,12 @@ section {
   grid-template-columns: repeat(5, auto);
 
   // HANDLE 7 LOGO, CAN BE REMOVED IF ADD MORE LOGO
-  @media screen and (max-width: 737px) {
+  /* @media screen and (max-width: 737px) {
     grid-row-gap: 0px;
     & > div:last-child {
       grid-column: 1 / 3;
     }
-  }
+  } */
   //////////////////////////////////////////////////
   @media screen and (max-width: 736px) {
     width: 70%;
