@@ -95,6 +95,12 @@ export default {
             alt: 'Thairath',
             link: 'https://www.thairath.co.th',
           },
+          {
+            class: ['sp-lmwn'],
+            img: '2-3-LMWN.svg',
+            alt: 'LMWN',
+            link: 'https://lmwn.com',
+          },
         ],
         silver: [
           {
@@ -115,6 +121,12 @@ export default {
             alt: 'Rainmaker',
             link: 'https://www.rainmaker.in.th',
           },
+          // {
+          //   class: ['sp-easyrice'],
+          //   img: '3-4-easyrice.png',
+          //   alt: 'Easy Rice Digital Technology',
+          //   link: 'https://www.easyrice.ai',
+          // },
           {
             class: ['sp-pandt'],
             img: '3-4-P-and-T.svg',
@@ -198,6 +210,14 @@ section {
     height: 84px;
   }
 }
+.sp-lmwn {
+  width: 100% !important;
+  max-width: 140px !important;
+  a picture {
+    width: 100% !important;
+    height: auto;
+  }
+}
 .sp-rainmaker {
   width: 100% !important;
   max-width: 60px !important;
@@ -267,7 +287,7 @@ section {
 }
 .sponsor-gold-wrapper {
   width: 100%;
-  max-width: 420px;
+  max-width: 580px;
 
   display: grid;
   justify-items: center;
@@ -280,12 +300,12 @@ section {
     width: 80%;
   }
   @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
   }
 }
 .sponsor-silver-wrapper {
   width: 100%;
-  max-width: 420px;
+  max-width: 420px; // 560
   min-width: 220px;
   display: grid;
   justify-items: center;
@@ -295,12 +315,12 @@ section {
   grid-template-columns: repeat(4, auto);
 
   // HANDLE 7 LOGO, CAN BE REMOVED IF ADD MORE LOGO
-  // @media screen and (min-width: 737px) {
-  //   grid-row-gap: 0px;
-  //   & > div:last-child {
-  //     grid-column: 2 / 3;
-  //   }
-  // }
+  /* @media screen and (max-width: 737px) {
+    grid-row-gap: 0px;
+    & > div:last-child {
+      grid-column: 1 / 3;
+    }
+  } */
   //////////////////////////////////////////////////
   @media screen and (max-width: 736px) {
     width: 70%;
