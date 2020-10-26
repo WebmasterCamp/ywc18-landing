@@ -215,7 +215,7 @@ export default {
   data() {
     return {
       bannerList: {
-        // '160x600': false,
+        '160x600': false,
         // '300x50': false,
         '300x250': false,
         '300x600': false,
