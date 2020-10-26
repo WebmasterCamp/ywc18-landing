@@ -44,6 +44,12 @@ export default {
     return {
       media_partners: [
         {
+          class: ['mp-toffy'],
+          img: '4-3-toffy.svg',
+          alt: 'ท็อฟฟี่เป็นตุ๊ดซ่อมคอม',
+          link: 'https://www.facebook.com/toffieisitsupport/',
+        },
+        {
           class: ['mp-content-shifu'],
           img: '4-1-content-shifu.svg',
           alt: 'Content Shifu',
@@ -82,22 +88,22 @@ export default {
 }
 .media-partner-wrapper {
   width: 100%;
-  max-width: 260px;
+  max-width: 380px;
   min-width: 220px;
   display: grid;
   justify-items: center;
   align-items: center;
   margin: 15px auto 70px;
   grid-column-gap: 20px;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(3, auto);
 
   // HANDLE 7 LOGO, CAN BE REMOVED IF ADD MORE LOGO
-  // @media screen and (min-width: 737px) {
-  //   grid-row-gap: 0px;
-  //   & > div:last-child {
-  //     grid-column: 2 / 3;
-  //   }
-  // }
+  /* @media screen and (min-width: 737px) {
+    grid-row-gap: 0px;
+    & > div:last-child {
+      grid-column: 2 / 3;
+    }
+  } */
   //////////////////////////////////////////////////
   @media screen and (max-width: 736px) {
     width: 70%;
