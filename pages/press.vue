@@ -242,15 +242,15 @@ export default {
         ext = 'png'
       }
       return `${
-        notLocal ? 'https://ywc17.ywc.in.th' : ''
+        notLocal ? 'https://ywc18.ywc.in.th' : ''
       }/images/banner/${size}.${ext}`
     },
     getBannerCode(src, withoutATag) {
-      const imgTag = `<img src="${src}" alt="17th Young Webmaster Camp">`
+      const imgTag = `<img src="${src}" alt="18th Young Webmaster Camp">`
       if (withoutATag) {
         return imgTag
       }
-      return `<a href="https://bit.ly/YWC17-banner">${imgTag}</a>`
+      return `<a href="https://ywc18.ywc.in.th">${imgTag}</a>`
     },
   },
 }
