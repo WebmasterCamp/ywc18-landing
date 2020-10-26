@@ -97,21 +97,15 @@ export default {
   grid-column-gap: 20px;
   grid-template-columns: repeat(3, auto);
 
-  // HANDLE 7 LOGO, CAN BE REMOVED IF ADD MORE LOGO
-  /* @media screen and (min-width: 737px) {
-    grid-row-gap: 0px;
-    & > div:last-child {
-      grid-column: 2 / 3;
-    }
-  } */
   //////////////////////////////////////////////////
   @media screen and (max-width: 736px) {
     width: 70%;
     max-width: 300px;
     grid-template-columns: repeat(2, auto);
     grid-column-gap: 20px;
-    & > div {
-      height: 75px;
+    grid-row-gap: 0px;
+    & > div:last-child {
+      grid-column: 1 / 3;
     }
   }
 }
