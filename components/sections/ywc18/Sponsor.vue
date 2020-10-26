@@ -110,6 +110,12 @@ export default {
             link: 'https://www.pantip.com',
           },
           {
+            class: ['sp-easyrice'],
+            img: '3-4-easyrice.png',
+            alt: 'Easy Rice Digital Technology',
+            link: 'https://www.easyrice.ai',
+          },
+          {
             class: ['sp-CampHUB'],
             img: '3-4-CampHUB.svg',
             alt: 'CampHUB',
@@ -121,12 +127,6 @@ export default {
             alt: 'Rainmaker',
             link: 'https://www.rainmaker.in.th',
           },
-          // {
-          //   class: ['sp-easyrice'],
-          //   img: '3-4-easyrice.png',
-          //   alt: 'Easy Rice Digital Technology',
-          //   link: 'https://www.easyrice.ai',
-          // },
           {
             class: ['sp-pandt'],
             img: '3-4-P-and-T.svg',
@@ -305,22 +305,22 @@ section {
 }
 .sponsor-silver-wrapper {
   width: 100%;
-  max-width: 420px; // 560
+  max-width: 560px; // 560
   min-width: 220px;
   display: grid;
   justify-items: center;
   align-items: center;
   margin: 15px auto 70px;
   grid-column-gap: 20px;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
 
   // HANDLE 7 LOGO, CAN BE REMOVED IF ADD MORE LOGO
-  /* @media screen and (max-width: 737px) {
+  @media screen and (max-width: 737px) {
     grid-row-gap: 0px;
     & > div:last-child {
       grid-column: 1 / 3;
     }
-  } */
+  }
   //////////////////////////////////////////////////
   @media screen and (max-width: 736px) {
     width: 70%;
