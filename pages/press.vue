@@ -215,15 +215,17 @@ export default {
   data() {
     return {
       bannerList: {
-        // '160x600': false,
+        '160x600': false,
         // '300x50': false,
         '300x250': false,
         '300x600': false,
         // '320x50': false,
         '320x100': false,
         '728x90': false,
+        '702x702': false,
         // '970x250': false,
-        // '1200x628': false,
+        '1125x702': false,
+        '1200x630': false,
       },
     }
   },
@@ -238,19 +240,21 @@ export default {
     },
     getSrc(size, notLocal) {
       let ext = 'gif'
-      if (size === '1200x628') {
+      if (size === '1200x630') {
+        ext = 'jpg'
+      } else if (size === '702x702' || size === '1125x702') {
         ext = 'png'
       }
       return `${
-        notLocal ? 'https://ywc17.ywc.in.th' : ''
+        notLocal ? 'https://ywc18.ywc.in.th' : ''
       }/images/banner/${size}.${ext}`
     },
     getBannerCode(src, withoutATag) {
-      const imgTag = `<img src="${src}" alt="17th Young Webmaster Camp">`
+      const imgTag = `<img src="${src}" alt="18th Young Webmaster Camp">`
       if (withoutATag) {
         return imgTag
       }
-      return `<a href="https://bit.ly/YWC17-banner">${imgTag}</a>`
+      return `<a href="https://ywc18.ywc.in.th">${imgTag}</a>`
     },
   },
 }
