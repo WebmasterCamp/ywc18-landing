@@ -222,8 +222,10 @@ export default {
         // '320x50': false,
         '320x100': false,
         '728x90': false,
+        '702x702': false,
         // '970x250': false,
-        // '1200x628': false,
+        '1125x702': false,
+        '1200x630': false,
       },
     }
   },
@@ -238,7 +240,9 @@ export default {
     },
     getSrc(size, notLocal) {
       let ext = 'gif'
-      if (size === '1200x628') {
+      if (size === '1200x630') {
+        ext = 'jpg'
+      } else if (size === '702x702' || size === '1125x702') {
         ext = 'png'
       }
       return `${
