@@ -79,13 +79,26 @@
             Twitter : @ywcth
           </p>
         </div>
-        <BannerButton
-          color="orange"
-          style="margin:0 auto;margin-top:10px;"
-          @click="selectText($event, 'pr-content')"
+        <div
+          style="display:flex;justify-content:center; margin: 1em auto; max-width: 500px;flex-wrap: wrap;"
         >
-          คัดลอกทั้งหมด
-        </BannerButton>
+          <BannerButton
+            color="orange"
+            style="margin-left:1em;margin-right:1em;"
+            @click="selectText($event, 'pr-content')"
+          >
+            คัดลอกทั้งหมด
+          </BannerButton>
+          <BannerButton
+            color="orange"
+            href="https://drive.google.com/drive/folders/1ZlosDRYcIfadstIZ5Ji-Vg_XHMI4fqlM?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="margin-left:1em;margin-right:1em;"
+          >
+            รายละเอียดเพิ่มเติม
+          </BannerButton>
+        </div>
       </section>
       <section class="container" style="margin-bottom: 120px;">
         <h3 style="margin-bottom:50px">ภาพแบนเนอร์</h3>
