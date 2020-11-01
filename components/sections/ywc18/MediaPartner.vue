@@ -44,16 +44,22 @@ export default {
     return {
       media_partners: [
         {
-          class: ['mp-toffy'],
-          img: '4-3-toffy.svg',
-          alt: 'ท็อฟฟี่เป็นตุ๊ดซ่อมคอม',
-          link: 'https://www.facebook.com/toffieisitsupport/',
+          class: ['mp-songsue'],
+          img: '4-4-songsue.svg',
+          alt: 'Songsue',
+          link: 'https://www.songsue.co/',
         },
         {
           class: ['mp-content-shifu'],
           img: '4-1-content-shifu.svg',
           alt: 'Content Shifu',
           link: 'https://contentshifu.com/',
+        },
+        {
+          class: ['mp-toffy'],
+          img: '4-3-toffy.svg',
+          alt: 'ท็อฟฟี่เป็นตุ๊ดซ่อมคอม',
+          link: 'https://www.facebook.com/toffieisitsupport/',
         },
         {
           class: ['mp-j-mat'],
@@ -68,15 +74,8 @@ export default {
 </script>
 
 <style lang="scss">
-.mp-content-shifu {
-  width: 90px !important;
-  height: 90px;
-  max-height: 90px;
-  a picture {
-    width: 90px !important;
-    height: 90px;
-  }
-}
+.mp-content-shifu,
+.mp-songsue,
 .mp-j-mat {
   width: 90px !important;
   height: 90px;
@@ -86,16 +85,25 @@ export default {
     height: 90px;
   }
 }
+.mp-songsue {
+  width: 70px !important;
+  height: 70px;
+  max-height: 70px;
+  a picture {
+    width: 70px !important;
+    height: 70px;
+  }
+}
 .media-partner-wrapper {
   width: 100%;
-  max-width: 380px;
+  max-width: 450px;
   min-width: 220px;
   display: grid;
   justify-items: center;
   align-items: center;
   margin: 15px auto 70px;
   grid-column-gap: 20px;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(4, auto);
 
   //////////////////////////////////////////////////
   @media screen and (max-width: 736px) {
