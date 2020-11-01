@@ -112,9 +112,9 @@ export default {
     grid-template-columns: repeat(2, auto);
     grid-column-gap: 20px;
     grid-row-gap: 0px;
-    & > div:last-child {
+    /* & > div:last-child {
       grid-column: 1 / 3;
-    }
+    } */
   }
 }
 </style>
