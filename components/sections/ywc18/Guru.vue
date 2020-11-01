@@ -492,6 +492,12 @@ export default {
           role: `Chief Product Officer - WISESIGHT`,
           majors: ['programming'],
         },
+        {
+          img: 16,
+          name: 'สุธัม ธรรมวงศ์ (ป๋อม)',
+          role: `Senior Consultant & Experience Designer - ThoughtWorks`,
+          majors: ['design'],
+        },
       ],
     }
   },
