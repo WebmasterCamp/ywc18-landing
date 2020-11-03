@@ -67,6 +67,12 @@ export default {
           alt: 'J_MAT',
           link: 'https://www.facebook.com/SMARTJMAT/',
         },
+        {
+          class: ['mp-grappik'],
+          img: '4-5-Grappik.svg',
+          alt: 'Grappik',
+          link: 'https://www.grappik.com/',
+        },
       ],
     }
   },
@@ -94,16 +100,25 @@ export default {
     height: 70px;
   }
 }
+.mp-grappik {
+  width: 100px !important;
+  height: 100px;
+  max-height: 100px;
+  a picture {
+    width: 100px !important;
+    height: 100px;
+  }
+}
 .media-partner-wrapper {
   width: 100%;
-  max-width: 450px;
+  max-width: 550px;
   min-width: 220px;
   display: grid;
   justify-items: center;
   align-items: center;
   margin: 15px auto 70px;
-  grid-column-gap: 20px;
-  grid-template-columns: repeat(4, auto);
+  grid-column-gap: 15px;
+  grid-template-columns: repeat(5, auto);
 
   //////////////////////////////////////////////////
   @media screen and (max-width: 736px) {
@@ -112,9 +127,9 @@ export default {
     grid-template-columns: repeat(2, auto);
     grid-column-gap: 20px;
     grid-row-gap: 0px;
-    /* & > div:last-child {
+    & > div:last-child {
       grid-column: 1 / 3;
-    } */
+    }
   }
 }
 </style>
