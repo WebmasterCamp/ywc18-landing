@@ -44,22 +44,10 @@ export default {
     return {
       media_partners: [
         {
-          class: ['mp-songsue'],
-          img: '4-4-songsue.svg',
-          alt: 'Songsue',
-          link: 'https://www.songsue.co/',
-        },
-        {
           class: ['mp-content-shifu'],
           img: '4-1-content-shifu.svg',
           alt: 'Content Shifu',
           link: 'https://contentshifu.com/',
-        },
-        {
-          class: ['mp-toffy'],
-          img: '4-3-toffy.svg',
-          alt: 'ท็อฟฟี่เป็นตุ๊ดซ่อมคอม',
-          link: 'https://www.facebook.com/toffieisitsupport/',
         },
         {
           class: ['mp-j-mat'],
@@ -68,10 +56,34 @@ export default {
           link: 'https://www.facebook.com/SMARTJMAT/',
         },
         {
+          class: ['mp-toffy'],
+          img: '4-3-toffy.svg',
+          alt: 'ท็อฟฟี่เป็นตุ๊ดซ่อมคอม',
+          link: 'https://www.facebook.com/toffieisitsupport/',
+        },
+        {
+          class: ['mp-songsue'],
+          img: '4-4-songsue.svg',
+          alt: 'Songsue',
+          link: 'https://www.songsue.co/',
+        },
+        {
           class: ['mp-grappik'],
           img: '4-5-Grappik.svg',
           alt: 'Grappik',
           link: 'https://www.grappik.com/',
+        },
+        {
+          class: ['mp-Pantip'],
+          img: '3-2-Pantip.svg',
+          alt: 'Pantip',
+          link: 'https://www.pantip.com',
+        },
+        {
+          class: ['mp-dek-d'],
+          img: '3-3-Dek-D.svg',
+          alt: 'Dek-D',
+          link: 'https://www.dek-d.com/',
         },
       ],
     }
@@ -111,14 +123,17 @@ export default {
 }
 .media-partner-wrapper {
   width: 100%;
-  max-width: 550px;
+  max-width: 400px; // 550
   min-width: 220px;
   display: grid;
   justify-items: center;
   align-items: center;
   margin: 15px auto 70px;
   grid-column-gap: 15px;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(3, auto);
+  & > div:last-child {
+    grid-column: 2 / 3;
+  }
 
   //////////////////////////////////////////////////
   @media screen and (max-width: 736px) {
