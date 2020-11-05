@@ -498,6 +498,12 @@ export default {
           role: `Senior Consultant & Experience Designer - ThoughtWorks`,
           majors: ['design'],
         },
+        {
+          img: 17,
+          name: 'ดร.ธีรศานต์ สหัสสพาศน์ (ไอซ์)',
+          role: `ที่ปรึกษาสำนักงานบริหารนโยบายของนายกรัฐมนตรี<br>ผู้อำนวยการหลักสูตร #dnabyspu<br>คณะบริหารธุรกิจ มหาวิทยาลัยศรีปทุม`,
+          majors: ['marketing'],
+        },
       ],
     }
   },
