@@ -344,10 +344,10 @@ const MajorsList = styled.div`
 `
 
 class CountMajorRegistant {
-  programming = 0
-  design = 0
-  marketing = 0
-  content = 0
+  programming = 205
+  design = 143
+  marketing = 226
+  content = 155
 }
 
 export default {
@@ -369,9 +369,10 @@ export default {
     }
   },
   mounted() {
-    this.fetchCountRegistant().then((major) => {
-      this.major = major
-    })
+    this.major = new CountMajorRegistant()
+    // this.fetchCountRegistant().then((major) => {
+    //   this.major = major
+    // })
   },
   methods: {
     fetchCountRegistant() {
