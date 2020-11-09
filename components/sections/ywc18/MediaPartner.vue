@@ -85,6 +85,12 @@ export default {
           alt: 'Dek-D',
           link: 'https://www.dek-d.com/',
         },
+        {
+          class: ['mp-meestory'],
+          img: '4-8-meestory.svg',
+          alt: 'Mee Story',
+          link: 'https://www.facebook.com/2bearstalk/',
+        },
       ],
     }
   },
@@ -123,17 +129,17 @@ export default {
 }
 .media-partner-wrapper {
   width: 100%;
-  max-width: 400px; // 550
+  max-width: 450px; // 550
   min-width: 220px;
   display: grid;
   justify-items: center;
   align-items: center;
   margin: 15px auto 70px;
   grid-column-gap: 15px;
-  grid-template-columns: repeat(3, auto);
-  & > div:last-child {
+  grid-template-columns: repeat(4, auto);
+  /* & > div:last-child {
     grid-column: 2 / 3;
-  }
+  } */
 
   //////////////////////////////////////////////////
   @media screen and (max-width: 736px) {
@@ -142,9 +148,9 @@ export default {
     grid-template-columns: repeat(2, auto);
     grid-column-gap: 20px;
     grid-row-gap: 0px;
-    & > div:last-child {
+    /* & > div:last-child {
       grid-column: 1 / 3;
-    }
+    } */
   }
 }
 </style>
