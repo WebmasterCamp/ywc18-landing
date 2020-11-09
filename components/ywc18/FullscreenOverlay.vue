@@ -35,14 +35,14 @@
             type="primary"
             size="large"
             class="register-btn"
-            v-if="isRegOpen"
+            v-if="false"
             @click="goToRegister"
             >สมัครค่าย</a-button
           >
           <span
             v-else
             style="color: #eee;margin:0 auto;font-family: Anuphan,system-ui,-apple-system, sans-sreif;"
-            >เปิดรับสมัคร 14 กันยายน</span
+            >ประกาศผลสัมภาษณ์ 14 พฤศจิกายน</span
           >
         </slot>
       </BottomMenu>
