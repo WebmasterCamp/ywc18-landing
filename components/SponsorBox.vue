@@ -38,14 +38,14 @@ export default {
     margin-top: 6px;
     align-self: start;
     @media screen and (min-width: 768px) {
-      width: 200px;
-      margin-top: 4px;
+      width: 250px;
+      margin-top: 2px;
     }
   }
   .depa {
     width: 70px;
     @media screen and (min-width: 768px) {
-      width: 90px;
+      width: 120px;
     }
   }
 }
@@ -61,7 +61,7 @@ export default {
   height: 80px;
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(3, auto);
-    max-width: 450px;
+    max-width: 530px;
     grid-column-gap: 40px;
   }
 }
