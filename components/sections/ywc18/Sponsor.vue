@@ -76,6 +76,12 @@ export default {
             link: 'https://www.webmaster.or.th',
           },
           {
+            class: ['sp-depa'],
+            img: '1-3-depa.svg',
+            alt: 'depa',
+            link: 'https://www.depa.or.th/',
+          },
+          {
             class: ['sp-scb-academy'],
             img: '1-3-SCB-Academy.svg',
             alt: 'SCB Academy',
@@ -168,10 +174,21 @@ section {
     height: 72px;
   }
 }
+.sp-depa {
+  width: 120px !important;
+  height: 85px;
+  max-height: 85px;
+  a picture {
+    width: 120px !important;
+    height: 85px;
+  }
+}
 .sp-scb-academy {
   width: 270px !important;
   height: 60px;
   max-height: 60px;
+  margin-bottom: auto;
+  margin-top: 3px;
   span picture {
     width: 270px !important;
     height: 60px;
@@ -247,7 +264,7 @@ section {
   grid-template-columns: repeat(1, auto);
   justify-items: center;
   grid-column-gap: 32px;
-  grid-row-gap: 20px;
+  grid-row-gap: 4px;
   align-items: center;
   // HANDLE 3 LOGO, CAN BE REMOVED IF ADD MORE LOGO
   @media screen and (max-width: 736px) {
@@ -260,7 +277,7 @@ section {
   //////////////////////////////////////////////////
   @media screen and (min-width: 736px) {
     margin-bottom: 30px;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
   }
 }
 .sponsor-special-wrapper {
@@ -286,6 +303,7 @@ section {
   }
 }
 .sponsor-gold-wrapper {
+  transform: scale(0.95);
   width: 100%;
   max-width: 580px;
 
