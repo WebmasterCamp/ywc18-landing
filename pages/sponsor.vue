@@ -49,6 +49,7 @@
         <h1 class="package-detail-heading">รายละเอียด Package</h1>
         <PackageTable :items="PACKAGES" />
       </InfoContainer>
+      <SponsorBox />
       <Footer />
     </section>
   </ThemeProvider>
@@ -56,6 +57,7 @@
 <script>
 import ThemeProvider from '~/components/ThemeProvider.vue'
 import Loading from '~/components/result/Loading.vue'
+import SponsorBox from '~/components/SponsorBox.vue'
 import SponsorPackage from '~/components/ywc18/SponsorPackage.vue'
 import PackageTable from '~/components/ywc18/PackageTable.vue'
 import { PACKAGES } from '~/utils/const'
@@ -82,6 +84,7 @@ export default {
     Loading,
     SponsorPackage,
     PackageTable,
+    SponsorBox,
     SectionTitle: () => import('~/components/ywc18/SectionHead.vue'),
     InfoContainer: () => import('~/components/InfoContainer.vue'),
     Footer: () => import('~/components/sections/ywc18/Footer.vue'),

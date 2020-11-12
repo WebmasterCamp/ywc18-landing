@@ -108,7 +108,7 @@ export default {
         },
       },
       isActive: {
-        register: true,
+        register: false,
         announce: false,
         interview: false,
         finalist: false,
