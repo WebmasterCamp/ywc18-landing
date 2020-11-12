@@ -303,7 +303,7 @@ section {
   }
 }
 .sponsor-gold-wrapper {
-  transform: scale(0.95);
+  transform: scale(0.9);
   width: 100%;
   max-width: 580px;
 
