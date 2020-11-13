@@ -40,14 +40,14 @@
               </div>
               <div
                 v-for="(word, index) in item.text.split(' ').slice(-1)"
-                :key="index"
+                :key="`1-${index}`"
                 class="event__text"
               >
                 {{ word }}
               </div>
               <div
                 v-for="(word, index) in item.subText.split(' ')"
-                :key="index"
+                :key="`2-${index}`"
                 class="event__subtext"
               >
                 {{ word }}
