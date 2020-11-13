@@ -175,23 +175,23 @@ section {
   }
 }
 .sp-depa {
-  width: 120px !important;
-  height: 85px;
-  max-height: 85px;
+  width: 144px !important;
+  height: 102px;
+  max-height: 102px;
   a picture {
-    width: 120px !important;
-    height: 85px;
+    width: 144px !important;
+    height: 102px;
   }
 }
 .sp-scb-academy {
-  width: 270px !important;
-  height: 60px;
-  max-height: 60px;
+  width: 324px !important;
+  height: 72px;
+  max-height: 72px;
   margin-bottom: auto;
-  margin-top: 3px;
+  margin-top: 3.5px;
   span picture {
-    width: 270px !important;
-    height: 60px;
+    width: 324px !important;
+    height: 72px;
   }
 }
 .sp-Pantip {

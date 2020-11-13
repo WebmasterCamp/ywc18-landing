@@ -1,11 +1,15 @@
 <template>
   <div>
     <section class="questions">
-      <h3>การบ้านประจำสาขา <span class="themeText">Web {{ majorName }}</span></h3>
-      <div v-html="majorQuestion">
-      </div>
+      <h3 class="header">
+        การบ้านประจำสาขา <span class="themeText">Web {{ majorName }}</span>
+      </h3>
+      <div v-html="majorQuestion" class="major-homework"></div>
     </section>
-    <h3>รายชื่อผู้ผ่านการคัดเลือกเข้ารอบสัมภาษณ์ สาขา <span class="themeText">Web {{ majorName }}</span></h3>
+    <h3 class="header">
+      รายชื่อผู้ผ่านการคัดเลือกเข้ารอบสัมภาษณ์ สาขา
+      <span class="themeText">Web {{ majorName }}</span>
+    </h3>
     <SearchTable
       ref="table"
       :columns="columns"
@@ -27,58 +31,67 @@ const capitalize = (str) => {
 }
 export default {
   components: {
-    SearchTable
+    SearchTable,
   },
   props: {
-    majors: { type: Object, default: () => { return {} } },
-    results: { 
+    majors: {
       type: Object,
-      default: () => { return { content: [], design: [], marketing: [], programming: [] } } 
+      default: () => {
+        return {}
+      },
     },
-    isLoading: { type: Boolean, default: false }
+    results: {
+      type: Object,
+      default: () => {
+        return { content: [], design: [], marketing: [], programming: [] }
+      },
+    },
+    isLoading: { type: Boolean, default: false },
   },
-  data () {
+  data() {
     return {
       columns: INTERVIEW_COLUMNS,
-      searchColumns: ['name', 'ref']
+      searchColumns: ['name', 'ref'],
     }
   },
   computed: {
-    major () {
+    major() {
       return this.$route.params.major
     },
-    majorName () {
+    majorName() {
       if (!this.major) {
         return ''
       }
       return this.majors[this.major][0]
     },
-    majorTheme () {
+    majorTheme() {
       if (!this.major) {
         return ''
       }
       return this.majors[this.major][1]
     },
-    majorQuestion () {
+    majorQuestion() {
       return INTERVIEW_QUESTIONS[this.major]
     },
-    data () {
+    data() {
       if (!this.major) {
         return []
       }
       let i = 1
       return this.results[this.major].map((row) => {
         row.name = `${capitalize(row.firstName)} ${capitalize(row.lastName)}`
-        row.ref = `${this.majors[this.major][2]}${i < 10 ? '0' : ''}${i++}`
+        row.ref = `${this.majors[this.major][2]}${
+          i >= 100 ? '' : i < 10 ? '00' : '0'
+        }${i++}`
         row.round = row.interviewTime === 'morning' ? `เช้า` : `บ่าย`
         return row
       })
-    }
+    },
   },
-  beforeRouteUpdate (to, from, next) {
+  beforeRouteUpdate(to, from, next) {
     this.$refs.table.clearSearch()
     next()
-  }
+  },
 }
 </script>
 <style scoped lang="scss">
@@ -86,5 +99,15 @@ section {
   margin-top: 0 !important;
   margin-bottom: 44px;
   padding: 0;
+}
+.header {
+  font-family: 'Barlow Semi Condensed', Anuphan, system-ui, -apple-system,
+    sans-sreif;
+}
+.major-homework {
+  font-family: 'CmPrasanmit', system-ui, -apple-system, sans-sreif;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.65);
 }
 </style>

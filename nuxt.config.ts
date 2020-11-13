@@ -139,12 +139,12 @@ const config = {
     routes: [
       "/sponsor",
       "/policy",
-      "/terms"
-      // '/interview',
-      // '/interview/content',
-      // '/interview/design',
-      // '/interview/marketing',
-      // '/interview/programming',
+      "/terms",
+      '/interview',
+      '/interview/content',
+      '/interview/design',
+      '/interview/marketing',
+      '/interview/programming',
       // '/announcement',
       // '/announcement/majors',
       // '/announcement/majors/content',

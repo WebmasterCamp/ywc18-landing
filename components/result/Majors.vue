@@ -13,7 +13,10 @@
         }"
         @click.prevent="clickHandler(codename)"
       >
-        <img :src="require(`~/assets/images/web-${codename}.png`)" :alt="codename" />
+        <img
+          :src="require(`~/assets/images/web-${codename}-white.svg`)"
+          :alt="codename"
+        />
         Web {{ info[0] }}
       </Major>
     </MajorRow>
@@ -43,20 +46,21 @@ const Major = styled('a', { color: String })`
   position: relative;
   display: inline-grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 17.5%;
+  grid-template-rows: 1fr 30%;
   align-items: center;
   justify-content: center;
   text-align: center;
   text-decoration: none;
+  background: ${(props) => color[props.color].gradient};
 
-  font-family: 'CmPrasanmit';
-  color: ${(props) => color[props.color].darker};
+  font-family: 'Barlow Semi Condensed';
+  font-style: italic;
+  color: #ffffff;
   font-weight: bold;
-  font-size: 24px;
-
+  font-size: 25px;
+  text-transform: uppercase;
   height: 225px;
   padding: 12px 21.5px;
-  background: #ffffff;
   box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 
@@ -108,7 +112,6 @@ const Major = styled('a', { color: String })`
     max-width: 100%;
     max-height: 100%;
     margin: 0 auto;
-    margin-bottom: 16px;
 
     user-select: none;
     -webkit-user-drag: none;
@@ -135,3 +138,8 @@ export default {
   },
 }
 </script>
+<style scoped>
+.section-heading {
+  font-family: Anuphan, system-ui, -apple-system, sans-sreif;
+}
+</style>

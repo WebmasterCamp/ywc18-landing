@@ -109,7 +109,7 @@ export default {
       },
       isActive: {
         register: false,
-        announce: false,
+        announce: true,
         interview: false,
         finalist: false,
         camp: false,
