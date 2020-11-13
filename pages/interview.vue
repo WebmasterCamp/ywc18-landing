@@ -241,7 +241,8 @@ export default {
         .get(`https://api-prod.ywc18.ywc.in.th/users/interview/pass`)
         .then(({ status, data }) => {
           vm.isLoading = false
-          if (status === 200) {
+          console.log(data)
+          if (status === 200 && data.status !== 'error') {
             vm.results = data.payload
           }
         })
