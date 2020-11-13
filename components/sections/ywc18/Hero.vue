@@ -11,9 +11,7 @@
         alt="Theme Logo"
         class="theme-logo"
       />
-      <NuxtLink to="/interview" style="text-decoration: none;">
-        <Button>ประกาศผลรอบแรก</Button>
-      </NuxtLink>
+      <Button to="/interview">ประกาศผลรอบแรก</Button>
       <SponsorBox />
     </div>
   </section>

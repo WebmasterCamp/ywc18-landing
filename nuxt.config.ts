@@ -137,9 +137,9 @@ const config = {
   generate: {
     fallback: true, // For Firebase Hosting, see https://nuxtjs.org/api/configuration-generate#fallback
     routes: [
-      "/sponsor",
-      "/policy",
-      "/terms",
+      '/sponsor',
+      '/policy',
+      '/terms',
       '/interview',
       '/interview/content',
       '/interview/design',
