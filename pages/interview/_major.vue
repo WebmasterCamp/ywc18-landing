@@ -4,7 +4,7 @@
       <h3 class="header">
         การบ้านประจำสาขา <span class="themeText">Web {{ majorName }}</span>
       </h3>
-      <!-- <div v-html="majorQuestion" class="major-homework"></div> -->
+      <div v-html="majorQuestion" class="major-homework"></div>
     </section>
     <h3 class="header">
       รายชื่อผู้ผ่านการคัดเลือกเข้ารอบสัมภาษณ์ สาขา
