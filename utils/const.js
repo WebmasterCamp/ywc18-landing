@@ -35,8 +35,8 @@ export const INTERVIEW_QUESTIONS = {
   marketing: `<h3 class="themeText">ไม่มีการบ้าน</h3><p>ให้น้องเตรียมตัวสำหรับการสัมภาษณ์</p>`,
   programming: `
   <div style="text-align:center">
-    <a href="/images/interview/programming_desktop_full.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อแสดงภาพ Desktop ฉบับเต็ม"><img src="${require('~/assets/images/interview/programming_desktop.png')}" alt="ภาพตัวอย่างเว็บไซต์ Desktop" /></a>
-    <a href="/images/interview/programming_mobile_full.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อแสดงภาพ Mobile ฉบับเต็ม"><img src="${require('~/assets/images/interview/programming_mobile.png')}" alt="ภาพตัวอย่างเว็บไซต์ Mobile" /></a>
+    <a href="/images/interview/programming_desktop_full.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อแสดงภาพ Desktop ฉบับเต็ม"><img src="${require('~/assets/images/interview/programming_desktop.png')}" alt="ภาพตัวอย่างเว็บไซต์ Desktop" style="margin:1em;" /></a>
+    <a href="/images/interview/programming_mobile_full.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อแสดงภาพ Mobile ฉบับเต็ม"><img src="${require('~/assets/images/interview/programming_mobile.png')}" alt="ภาพตัวอย่างเว็บไซต์ Mobile" style="margin:1em;" /></a>
   </div>
   <center><i>คลิกที่ภาพเพื่อแสดงฉบับเต็ม</i></center><br />
   ให้พัฒนาเว็บไซต์ให้เหมือนกับภาพข้างบน โดยมีคุณสมบัติดังต่อไปนี้
