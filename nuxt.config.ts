@@ -40,7 +40,7 @@ const config = {
       },
       {
         property: "og:image",
-        content: "https://ywc18.ywc.in.th/images/ywc18/ywc18-open-register2.jpg",
+        content: "https://ywc18.ywc.in.th/images/ywc18/ogImage-20201114.jpg.jpg",
       },
       { property: "og:image:type", content: "image/jpeg" },
       { property: "og:image:width", content: "1200" },
@@ -50,7 +50,7 @@ const config = {
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:image:src",
-        content: "https://ywc18.ywc.in.th/images/ywc18/ywc18-open-register2.jpg",
+        content: "https://ywc18.ywc.in.th/images/ywc18/ogImage-20201114.jpg.jpg",
       },
     ],
     link: [
