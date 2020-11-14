@@ -238,7 +238,6 @@ export default {
         .get(`https://api-prod.ywc18.ywc.in.th/users/interview/pass`)
         .then(({ status, data }) => {
           vm.isLoading = false
-          console.log(data)
           if (status === 200 && data.status !== 'error') {
             vm.results = data.payload
           }
@@ -277,7 +276,7 @@ export default {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     text-align: left;
     margin: 0;
-    margin-top: 40px;
+    /* margin-top: 40px; */
   }
   .section-heading {
     text-align: center;

@@ -82,10 +82,8 @@ export default Vue.extend({
   },
   methods: {
     openDetail() {
-      console.log('opendetail')
       document.querySelector('body').style.overflow = 'hidden'
       this.show = true
-      console.log(this.show)
     },
     dismissOverlay() {
       document.querySelector('body').style.overflow = 'auto'
