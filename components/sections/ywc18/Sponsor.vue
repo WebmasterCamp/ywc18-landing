@@ -182,6 +182,9 @@ section {
     width: 144px !important;
     height: 102px;
   }
+  @media screen and (max-width: 425px) {
+   transform: scale(1.1);
+  }
 }
 .sp-scb-academy {
   width: 324px !important;
@@ -192,6 +195,9 @@ section {
   span picture {
     width: 324px !important;
     height: 72px;
+  }
+  @media screen and (max-width: 425px) {
+   transform: scale(0.9);
   }
 }
 .sp-Pantip {
