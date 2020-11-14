@@ -29,6 +29,20 @@ const capitalize = (str) => {
   }
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
 }
+
+/**
+ * จำนวนการสัมภาษณ์ในรอบเช้า
+ */
+const config = {
+    design: 20,
+    programming: 48,
+    marketing: 18,
+    content: 15
+  }
+const getRoundByNo = (major, no) => {
+  return no <= config[major] ? 'เช้า' : 'บ่าย'
+}
+
 export default {
   components: {
     SearchTable,
@@ -82,8 +96,10 @@ export default {
         row.name = `${capitalize(row.firstName)} ${capitalize(row.lastName)}`
         row.ref = `${this.majors[this.major][2]}${
           i >= 100 ? '' : i < 10 ? '00' : '0'
-        }${i++}`
-        row.round = row.interviewTime === 'morning' ? `เช้า` : `บ่าย`
+        }${i}`
+        // row.round = row.interviewTime === 'morning' ? `เช้า` : `บ่าย`
+        row.round = getRoundByNo(this.major, i)
+        i += 1
         return row
       })
     },

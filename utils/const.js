@@ -10,7 +10,7 @@ export const INTERVIEW_QUESTIONS = {
       <li>การบ้าน 1 ข้อ</li>
       <li>ให้น้องนำมาส่งวันสัมภาษณ์</li>
     </ul>
-    <p><b class="themeText">เหตุการณ์</b> : ในสถานการณ์ความแตกต่างของวัยที่ปัจจุบันมีความคิดต่าง ที่ทำให้เกิด Generation Gap มากขึ้นเรื่อยๆ ทั้งเรื่องการเมือง, LGBT, การแสดงออก, การแต่งกาย, ค่านิยมในการใช้ชีวิต และอีกมากมาย
+    <p><b class="themeText">เหตุการณ์</b> : ในสถานการณ์ความแตกต่างของวัยที่ปัจจุบันมีความคิดต่าง ที่ทำให้เกิด Generation Gap มากขึ้นเรื่อย ๆ ทั้งเรื่องการเมือง, LGBT+, การแสดงออก, การแต่งกาย, ค่านิยมในการใช้ชีวิตและอีกมากมาย
   </p><p>ทุกฝ่ายต่างมีเหตุผลของแต่ละฝั่ง และปิดกั้นการรับสื่อของฝ่ายตรงข้าม ทำให้เกิดการแตกแยก และขาดการสื่อสารที่ทำให้เกิดความเข้าใจในทั้งสองฝ่าย
 </p>
 <p>
@@ -32,7 +32,7 @@ export const INTERVIEW_QUESTIONS = {
     <li>ผู้ที่มาสัมภาษณ์<b class="themeText">รอบบ่าย</b> ให้มาลงทะเบียน<b class="themeText">ภายในเวลา 12:45 น. ทุกคน</b></li>
   </ol>
   `,
-  marketing: `<h3 class="themeText">ไม่มีการบ้าน</h3><p>ให้น้องเตรียมตัวสำหรับการสัมภาษณ์</p>`,
+  marketing: `<h3 class="themeText">ไม่มีการบ้าน</h3><p>ให้น้องเตรียมตัวสำหรับการสัมภาษณ์อย่างเต็มที่</p>`,
   programming: `
   <div style="text-align:center">
     <a href="/images/interview/programming_desktop_full.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อแสดงภาพ Desktop ฉบับเต็ม"><img src="${require('~/assets/images/interview/programming_desktop.png')}" alt="ภาพตัวอย่างเว็บไซต์ Desktop" style="margin:1em;" /></a>
