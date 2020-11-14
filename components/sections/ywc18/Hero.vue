@@ -11,9 +11,7 @@
         alt="Theme Logo"
         class="theme-logo"
       />
-      <Button to="https://register.ywc18.ywc.in.th/" v-if="false"
-        >สมัครค่าย</Button
-      >
+      <Button to="/interview">ประกาศผลรอบแรก</Button>
       <SponsorBox />
     </div>
   </section>

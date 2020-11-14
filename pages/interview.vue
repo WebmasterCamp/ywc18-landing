@@ -2,90 +2,109 @@
   <ThemeProvider :name="currTheme">
     <InfoContainer class="interview-intro">
       <h2>ประกาศผู้มีสิทธิ์เข้าสัมภาษณ์</h2>
-      การสัมภาษณ์จะจัดขึ้นใน
-      <span class="themeText">วันเสาร์ที่ 2 พฤศจิกายน 2562</span> ณ
-      <a
-        class="themeLink"
-        href="https://goo.gl/maps/rwbLzbCNvYH2"
-        title="คลิกเพื่อดูแผนที่บน Google Maps"
-        target="_blank"
-        rel="noopener noreferrer"
-      ><b>อาคาร ซี.พี.ทาวเวอร์ 1 (สีลม) ชั้น 11</b></a><br />
-      ซึ่งจะแบ่งออกเป็น 2 รอบ คือ
-      <span class="themeText">รอบเช้า (ตั้งแต่เวลา 09:00 ถึง 12:00 น.)</span>
-      และ
-      <span class="themeText">รอบบ่าย (ตั้งแต่เวลา 13:00 ถึง 18:00 น.)</span>
+      <p>
+        การสัมภาษณ์จะจัดขึ้นใน
+        <span class="themeText">วันเสาร์ที่ 21 พฤศจิกายน 2563</span> ณ
+        <a
+          class="themeLink"
+          href="https://goo.gl/maps/c9MCn4Q6mzU2WW1HA"
+          title="คลิกเพื่อดูแผนที่บน Google Maps"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><b>SCB Academy อาคาร SCB Park Plaza (East Tower) ชั้น 18</b></a
+        ><br />
+        ซึ่งจะแบ่งออกเป็น 2 รอบ คือ
+        <span class="themeText">รอบเช้า (ตั้งแต่เวลา 09:00 ถึง 12:00 น.)</span>
+        และ
+        <span class="themeText">รอบบ่าย (ตั้งแต่เวลา 13:00 ถึง 17:00 น.)</span>
+      </p>
+      <p>
+        <span class="themeText">หมายเหตุ </span> : ผู้เข้าสัมภาษณ์ทุกคนจะต้องกรอกแบบฟอร์มประเมินความเสี่ยงโรคติดเชื้อไวรัสโคโรนา 2019 (COVID-19) ดังนั้น กรุณาเดินทางมายังสถานที่สัมภาษณ์ ก่อนถึงเวลานัดหมาย<span class="themeText">อย่างน้อย 20 นาที</span>
+      </p>
       <h3>สิ่งที่ต้องเตรียมมาในวันสัมภาษณ์</h3>
       <ol>
         <li>
-          <span class="themeText">บัตรประจำตัวประชาชน</span>
-          (เพื่อใช้แลกบัตรเข้าอาคาร ซี.พี.ทาวเวอร์ 1 (สีลม)) และ<span
+          <span class="themeText">บัตรประจำตัวประชาชนตัวจริงเท่านั้น</span>
+          เพื่อใช้สำหรับการเข้าอาคาร หากน้อง ๆ ไม่มีบัตรประจำตัวประชาชน<span
             class="themeText"
-          >บัตรประจำตัวนักศึกษา</span>หรือบัตรประจำตัวที่หน่วยงานราชการหรือสถานศึกษาปัจจุบันออกให้และมีรูปถ่ายของผู้สัมภาษณ์
-          (เพื่อประกอบการลงทะเบียนเข้าสัมภาษณ์)
+            >ไม่สามารถเข้าอาคารได้</span
+          >
         </li>
         <li>
-          <span class="themeText">แต่งกายด้วยชุดนักเรียน นักศึกษา หรือชุดสุภาพ</span>
+          <span class="themeText">สำเนาบัตรประจำตัวประชาชน 1 ชุด</span>
+          โดยถ่ายมา<span class="themeText">เฉพาะด้านหน้าบัตร</span>
+          เพื่อใช้สำหรับการยืนยันตัวตนในการเข้าสัมภาษณ์ โดยให้เขียนบนสำเนาว่า
+          “ใช้สำหรับลงทะเบียนสัมภาษณ์ค่าย YWC18 เท่านั้น” เซ็นรับรองสำเนาถูกต้อง
+          พร้อมกับระบุวันที่ใช้สำเนาบัตรประชาชน (21 พฤศจิกายน 2563)
+          <a
+            href="/images/interview/example_national_id.jpg"
+            class="themeLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><b>ตัวอย่างไฟล์สำเนาบัตรประชาชน</b></a
+          >
+        </li>
+        <li>
+          <span class="themeText"
+            >แต่งกายด้วยชุดนักเรียน ชุดนักศึกษา หรือ ชุดสุภาพ
+          </span>
         </li>
         <li>
           <span class="themeText">การบ้านและสิ่งที่กรรมการกำหนดไว้</span>
           โปรดอ่านรายละเอียดการบ้านและสิ่งที่กรรมการกำหนดไว้ให้ครบถ้วน
-          หากต้องการใช้คอมพิวเตอร์พกพาประกอบการนำเสนอต่อคณะกรรมการ
-          โปรดเตรียมแบตเตอรี่มาให้เพียงพอและเตรียมอินเทอร์เน็ตมาให้พร้อม
-          เนื่องจากสถานที่สัมภาษณ์ไม่มีจัดเตรียมให้
+          หากต้องการใช้คอมพิวเตอร์พกพาเพื่อประกอบการนำเสนอต่อคณะกรรมการ
+          กรุณาเตรียมแบตเตอรี่และอินเทอร์เน็ตมาให้พร้อม
+          เนื่องจากสถานที่สัมภาษณ์ไม่มีการจัดเตรียมไว้ให้
         </li>
         <li>
           <span class="themeText">Portfolio</span>
           สามารถเตรียมมาเพื่อประกอบการพิจารณาได้ (โดยสาขา
           <span class="themeText webDesign">Web Design</span> จะต้องนำมาทุกคน)
         </li>
+        <li>กรุณาสวมใส่หน้ากากอนามัยตลอดการสัมภาษณ์ เพื่อเป็นการป้องกันการแพร่ระบาดของโรค COVID-19</li>
       </ol>
       <h3>การเดินทางมาสัมภาษณ์</h3>
       <ol>
         <li>
-          <span class="themeText">เดินทางด้วยตนเอง</span>
-          อาคารตั้งอยู่บนถนนสีลมฝั่งโรงแรมดุสิตธานี (ไม่มีที่จอดรถให้บริการ)
-          <strong style="color:red">ไม่แนะนำให้เดินทางด้วยวิธีนี้
-            เนื่องจากเป็นเส้นทางที่ได้รับผลกระทบจากการจัดการประชุมสุดยอดอาเซียน
-            ครั้งที่ 35</strong>
+          <span class="themeText">รถประจำทาง</span> สาย 104, 503 (ปอ.), 59, 63,
+          63 (ปอ.) ลงป้าย ป้ายรถประจำทาง ตึกช้าง 2
         </li>
         <li>
-          <span class="themeText">รถไฟฟ้า BTS</span> ลงที่สถานีศาลาแดง ทางออกที่
-          2
-        </li>
-        <li>
-          <span class="themeText">รถไฟฟ้า MRT</span> ลงที่สถานีสีลม ทางออกที่ 2
-          เดินเลียบทางเท้าถนนสีลมฝั่งโรงแรมดุสิตธานี
-        </li>
-        <li>
-          <span class="themeText">รถประจำทาง</span> สาย 15, 76, 77, 115, 172,
-          177, 504, 514 หรือ 547 ลงป้ายโรงพยาบาลกรุงเทพคริสเตียน
-          หรือป้ายใต้สถานีรถไฟฟ้า BTS ศาลาแดง
+          <span class="themeText">รถไฟฟ้า BTS</span> ลงสถานีรัชโยธิน ทางออกที่ 1 หรือ 2
         </li>
       </ol>
+      <span class="themeText">คำแนะนำ</span> : ควรเดินทางด้วยรถโดยสารสาธารณะ หากเดินทางด้วยรถส่วนบุคคล สามารถจอดรถได้ที่อาคาร SCB Park Plaza โดยมีค่าบริการ<span class="themeText">ชั่วโมงละ 100 บาท</span> ซึ่งผู้เข้าสัมภาษณ์จะต้องชำระค่าที่จอดรถด้วยตนเอง<br><br>
       <h3>สำหรับท่านที่ไม่สะดวกเดินทางมาสัมภาษณ์</h3>
-      ให้แจ้งใน Inbox ของเพจ
-      <a class="themeLink" href="https://m.me/ywcth" target="_blank" rel="noopener noreferrer"><b>Facebook : Young Webmaster Camp</b></a>
-      ภายในวันที่ 30 ตุลาคม 2562
+      <p>
+        สามารถแจ้งได้ใน Inbox ของเพจ
+        <a
+          class="themeLink"
+          href="https://m.me/ywcth"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><b>Facebook : Young Webmaster Camp</b></a
+        >
+        ภายในวันที่ 18 พฤศจิกายน 2563 เท่านั้น
+      </p>
       <h3>มีข้อสงสัยเพิ่มเติม โปรดติดต่อ</h3>
       <table>
         <tbody>
           <tr>
-            <td width="70"><span class="themeText">พี่บอส</span></td>
+            <td width="70"><span class="themeText">พี่ไตเติ้ล</span></td>
             <td>
-              โทร. <a class="themeLink" href="tel:0823651885">082-365-1885</a>
+              โทร. <a class="themeLink" href="tel:0859526272">085-952-6272</a>
             </td>
           </tr>
           <tr>
-            <td><span class="themeText">พี่ปู</span></td>
+            <td><span class="themeText">พี่มิว</span></td>
             <td>
-              โทร. <a class="themeLink" href="tel:0929595167">092-959-5167</a>
+              โทร. <a class="themeLink" href="tel:0852545588">085-254-5588</a>
             </td>
           </tr>
           <tr>
-            <td><span class="themeText">พี่จุ้ย</span></td>
+            <td><span class="themeText">พี่ใบพลู</span></td>
             <td>
-              โทร. <a class="themeLink" href="tel:0988256861">098-825-6861</a>
+              โทร. <a class="themeLink" href="tel:0922483162">092-248-3162</a>
             </td>
           </tr>
         </tbody>
@@ -103,14 +122,18 @@
         :isLoading="isLoading"
       />
     </InfoContainer>
-    <Footer />
+    <div style="margin-top: 3em;">
+      <SponsorBox />
+      <Footer />
+    </div>
   </ThemeProvider>
 </template>
 <script>
 import ThemeProvider from '~/components/ThemeProvider.vue'
 import InfoContainer from '~/components/InfoContainer.vue'
 import Majors from '~/components/result/Majors.vue'
-import Footer from '~/components/sections/Footer.vue'
+import SponsorBox from '~/components/SponsorBox.vue'
+import Footer from '~/components/sections/ywc18/Footer.vue'
 import { colorScheme } from '~/utils/color'
 import { majors } from '~/utils/const'
 
@@ -125,7 +148,7 @@ export default {
         this.$route.params.major
           ? `สาขา Web ${majors[this.$route.params.major][0]}`
           : ''
-      } - 17th Young Webmaster Camp`,
+      } - 18th Young Webmaster Camp`,
       meta: [
         {
           hid: 'og:title',
@@ -134,7 +157,7 @@ export default {
             this.$route.params.major
               ? `สาขา Web ${majors[this.$route.params.major][0]}`
               : ''
-          } - 17th Young Webmaster Camp`,
+          } - 18th Young Webmaster Camp`,
         },
         { hid: 'og:description', name: 'og:description', content: '' }, // TODO: Add description
         { hid: 'description', name: 'description', content: '' }, // TODO: Add description
@@ -147,6 +170,7 @@ export default {
     Majors,
     InfoContainer,
     Footer,
+    SponsorBox,
   },
   data() {
     return {
@@ -169,7 +193,7 @@ export default {
   created() {
     if (process.client) {
       window.scrollTo(0, 0)
-      this.changeBackground(this.major)
+      // this.changeBackground(this.major)
     }
   },
   mounted() {
@@ -180,7 +204,7 @@ export default {
       if (major === this.major) {
         major = ''
       }
-      this.changeBackground(major)
+      // this.changeBackground(major)
       this.$router.replace(`/interview/${major ? `${major}/` : ''}`, () => {
         setTimeout(() => {
           this.$scrollTo(major ? `#interview-box` : `#select-major`)
@@ -200,9 +224,9 @@ export default {
         document.getElementsByTagName('body')[0].setAttribute(
           'style',
           `background: #401b19;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(69.01deg, #C73884 7.27%, #E13C6F 51.46%, #9B308E 95.22%);
-      background-size: cover;
-      background-attachment: fixed;`
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(69.01deg, #C73884 7.27%, #E13C6F 51.46%, #9B308E 95.22%);
+        background-size: cover;
+        background-attachment: fixed;`
         )
       }
     },
@@ -210,10 +234,10 @@ export default {
       const vm = this
       vm.isLoading = true
       vm.$axios
-        .get(`https://api.ywc.in.th/users/interview/pass`)
+        .get(`https://api-prod.ywc18.ywc.in.th/users/interview/pass`)
         .then(({ status, data }) => {
           vm.isLoading = false
-          if (status === 200) {
+          if (status === 200 && data.status !== 'error') {
             vm.results = data.payload
           }
         })
@@ -234,9 +258,10 @@ export default {
     }
     next()
   },
-
-  middleware({ redirect }) {
-    return redirect('/')
+  middleware(ctx) {
+    return (
+      new Date() < new Date('2020-11-10T11:00:00.000Z') && ctx.redirect('/')
+    )
   },
 }
 </script>
@@ -250,14 +275,15 @@ export default {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     text-align: left;
     margin: 0;
-    margin-top: 40px;
+    /* margin-top: 40px; */
   }
   .section-heading {
     text-align: center;
     user-select: none;
   }
   input {
-    font-family: 'Sarabun', serif, Tahoma;
+    font-family: CmPrasanmit, system-ui, -apple-system, sans-sreif;
+    font-size: 24px;
   }
   .interview-intro,
   .interview-box {
@@ -272,8 +298,13 @@ export default {
     }
   }
   .interview-intro {
-    h2:first-of-type {
+    font-family: CmPrasanmit, system-ui, -apple-system, sans-sreif;
+    font-size: 24px;
+    h2:first-of-type,
+    h3 {
       margin-top: 0px;
+      font-size: 22px;
+      font-family: Anuphan, system-ui, -apple-system, sans-sreif;
     }
     ol {
       padding-left: 20px;
@@ -281,6 +312,9 @@ export default {
     ul {
       list-style-type: none;
       padding-left: 0;
+    }
+    p {
+      margin-bottom: 2em;
     }
   }
   #interview-box {

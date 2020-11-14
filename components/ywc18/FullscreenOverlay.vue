@@ -35,9 +35,9 @@
             type="primary"
             size="large"
             class="register-btn"
-            v-if="false"
-            @click="goToRegister"
-            >สมัครค่าย</a-button
+            href="/interview"
+            v-if="true"
+            >ผลการคัดเลือก</a-button
           >
           <span
             v-else
