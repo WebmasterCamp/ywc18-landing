@@ -186,6 +186,7 @@ const CurrentGuru = styled.div`
     @media screen and (max-width: 425px) {
       position: absolute;
       top: 30px;
+      max-width: 90%;
     }
   }
   .guru-detail {
