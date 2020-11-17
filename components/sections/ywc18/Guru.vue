@@ -17,7 +17,7 @@
               </template>
             </transition>
           </div>
-          <div>
+          <div class="guru-detail-wrapper">
             <transition name="guru-detail" mode="out-in">
               <div
                 class="guru-content"
@@ -182,7 +182,12 @@ const CurrentGuru = styled.div`
     padding: 170px 0 30px;
     height: 680px;
   }
-
+  .guru-detail-wrapper {
+    @media screen and (max-width: 425px) {
+      position: absolute;
+      top: 30px;
+    }
+  }
   .guru-detail {
     position: relative;
     display: grid;
@@ -427,7 +432,7 @@ export default {
           name: 'ขจร เจียรนัยพานิชย์ (เอ็ม)',
           role: `Executive Editor - MangoZero.com & The Zero Publishing`,
           majors: ['content'],
-          order: 5
+          order: 5,
         },
         {
           img: 5,
@@ -455,7 +460,7 @@ export default {
           name: 'เจริญ ลักษณ์เลิศกุล (เจ)',
           role: `Associate Director - Strategic Planning<br>หน่วยงาน Online Station (True Digital Group)`,
           majors: ['marketing'],
-          order: 13
+          order: 13,
         },
         {
           img: 9,
@@ -497,7 +502,7 @@ export default {
           name: 'ไชยพงศ์ ลาภเลี้ยงตระกูล (พงศ์)',
           role: `Co-Founder & Chief Executive Officer - 3DS Interactive`,
           majors: ['programming'],
-          order: 17
+          order: 17,
         },
         {
           img: 15,
@@ -525,7 +530,7 @@ export default {
           name: 'สุธีรพันธุ์ สักรวัตร (ตูน)',
           role: `ผู้ช่วยผู้จัดการใหญ่ ผู้บริหารสายงานการตลาด - ธนาคารไทยพาณิชย์<br>อุปนายกสมาคมผู้ดูแลเว็บไทย`,
           majors: ['marketing'],
-          order: 2
+          order: 2,
         },
       ].sort((a, b) => a.order - b.order),
     }
