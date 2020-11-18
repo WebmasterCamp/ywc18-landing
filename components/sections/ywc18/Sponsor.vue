@@ -134,6 +134,12 @@ export default {
             link: 'https://www.rainmaker.in.th',
           },
           {
+            class: ['sp-cpall'],
+            img: '3-9-cpall.svg',
+            alt: 'CPALL',
+            link: 'https://www.cpall.co.th/',
+          },
+          {
             class: ['sp-pandt'],
             img: '3-4-P-and-T.svg',
             alt: 'P&T Hosting',
@@ -183,7 +189,7 @@ section {
     height: 102px;
   }
   @media screen and (max-width: 425px) {
-   transform: scale(1.1);
+    transform: scale(1.1);
   }
 }
 .sp-scb-academy {
@@ -197,7 +203,7 @@ section {
     height: 72px;
   }
   @media screen and (max-width: 425px) {
-   transform: scale(0.9);
+    transform: scale(0.9);
   }
 }
 .sp-Pantip {
@@ -236,6 +242,14 @@ section {
 .sp-lmwn {
   width: 100% !important;
   max-width: 140px !important;
+  a picture {
+    width: 100% !important;
+    height: auto;
+  }
+}
+.sp-cpall {
+  width: 70px !important;
+  max-width: 70px !important;
   a picture {
     width: 100% !important;
     height: auto;
@@ -329,21 +343,22 @@ section {
 }
 .sponsor-silver-wrapper {
   width: 100%;
-  max-width: 560px; // 560
+  max-width: 680px; // 560
   min-width: 220px;
   display: grid;
   justify-items: center;
   align-items: center;
   margin: 15px auto 70px;
   grid-column-gap: 20px;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(6, auto);
 
   // HANDLE 7 LOGO, CAN BE REMOVED IF ADD MORE LOGO
   @media screen and (max-width: 737px) {
     grid-row-gap: 0px;
-    & > div:last-child {
+    grid-row-gap: 8px;
+    /* & > div:last-child {
       grid-column: 1 / 3;
-    }
+    } */
   }
   //////////////////////////////////////////////////
   @media screen and (max-width: 736px) {
