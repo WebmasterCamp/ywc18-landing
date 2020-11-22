@@ -390,7 +390,7 @@ export default {
         .then(({ status, data }) => {
           vm.candidateLoadingText()
           vm.candidateLoading = null
-          if (status === 200) {
+          if (status === 200 && data.status === 'success') {
             if (!data.payload) {
               vm.isCandidateLoading = false
               vm.major = ''
