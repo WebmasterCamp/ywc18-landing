@@ -2,25 +2,25 @@
   <ThemeProvider :name="currTheme">
     <Loading v-if="!isInit" />
     <CenterContainer v-else class="announcement-box">
-      <div style="width:90%">
+      <div class="announcement-box__wrapper">
         <img
-          src="~/assets/images/ywc-logo-pink.png"
+          src="~/assets/images/ywc18/ywc18-logo-orange.svg"
           class="ywc-logo"
-          alt="17th Young Webmaster Camp"
+          alt="18 th Young Webmaster Camp"
         />
         <template v-if="!finalistInfo">
           <h3>
             ประกาศผลสัมภาษณ์
-            <br class="mobile" />Young Webmaster Camp ครั้งที่ 17
+            <br class="mobile" />Young Webmaster Camp ครั้งที่ 18
           </h3>
           กรอกรหัสสัมภาษณ์ของคุณ
           <div class="ref-input">
-            <div v-for="idx in [0, 1, 2, 3]" :key="`ref${idx}`">
+            <div v-for="idx in [0, 1, 2, 3, 4]" :key="`ref${idx}`">
               <a-input
                 :ref="`ref${idx}`"
                 v-model="ref[idx]"
                 size="large"
-                :placeholder="'CT01'.charAt(idx)"
+                :placeholder="'CT001'.charAt(idx)"
                 :disabled="isCandidateLoading"
                 type="text"
                 maxlength="1"
@@ -37,14 +37,13 @@
         <template v-else>
           <h3>
             ผลสัมภาษณ์
-            <br class="mobile" />Young Webmaster Camp ครั้งที่ 17
+            <br class="mobile" />Young Webmaster Camp ครั้งที่ 18
           </h3>
           ของ {{ finalistInfo.firstName }} {{ finalistInfo.lastName }} รหัส
           {{ refCode }}
           <template v-if="isFinalistLoading">
             <h1 class="themeText">
-              คุณ
-              <span id="notPassText">ไม่</span>ผ่านการคัดเลือก
+              คุณ<span id="notPassText">ไม่</span>ผ่านการคัดเลือก
             </h1>
             <p>{{ statusText }}</p>
           </template>
@@ -62,7 +61,9 @@
                 <p>
                   เพื่อยืนยันสิทธิ์การเข้าค่าย กรุณา
                   <b>โอนเงินมัดจำ</b> จำนวน
-                  <b class="themeText">{{ finalistInfo.verificationAmount.toFixed(2) }} บาท</b>
+                  <b class="themeText"
+                    >{{ finalistInfo.verificationAmount.toFixed(2) }} บาท</b
+                  >
                   เข้าบัญชี
                 </p>
                 <p style="text-align:center">
@@ -105,9 +106,14 @@
       </div>
     </CenterContainer>
     <div class="more-details">
-      <NuxtLink v-if="!finalistInfo" to="/announcement/majors/">
+      <NuxtLink
+        v-if="!finalistInfo"
+        to="/announcement/majors/"
+        class="show-all-finalist"
+      >
         <b>แสดงรายชื่อทั้งหมด</b>
       </NuxtLink>
+      <SponsorBox />
       <Footer />
     </div>
   </ThemeProvider>
@@ -131,12 +137,12 @@ export default {
   layout: 'secondary',
   head() {
     return {
-      title: `ประกาศผลสัมภาษณ์ - 17th Young Webmaster Camp`,
+      title: `ประกาศผลสัมภาษณ์ - 18th Young Webmaster Camp`,
       meta: [
         {
           hid: 'og:title',
           name: 'og:title',
-          content: `ประกาศผลสัมภาษณ์ - 17th Young Webmaster Camp`,
+          content: `ประกาศผลสัมภาษณ์ - 18th Young Webmaster Camp`,
         },
         { hid: 'og:description', name: 'og:description', content: '' }, // TODO: Add description
         { hid: 'description', name: 'description', content: '' }, // TODO: Add description
@@ -148,10 +154,11 @@ export default {
     Loading,
     CenterContainer,
     Button: () => import('~/components/result/Button.vue'),
-    Footer: () => import('~/components/sections/Footer.vue'),
+    SponsorBox: () => import('~/components/SponsorBox'),
+    Footer: () => import('~/components/sections/ywc18/Footer.vue'),
   },
   middleware({ redirect }) {
-    return redirect('/')
+    // return redirect('/')
   },
   data() {
     return {
@@ -174,7 +181,13 @@ export default {
   },
   computed: {
     refCode() {
-      return (this.ref[0] + this.ref[1] + this.ref[2] + this.ref[3])
+      return (
+        this.ref[0] +
+        this.ref[1] +
+        this.ref[2] +
+        this.ref[3] +
+        this.ref[4]
+      )
         .toString()
         .toUpperCase()
     },
@@ -210,9 +223,9 @@ export default {
         document.getElementsByTagName('body')[0].setAttribute(
           'style',
           `background: ${colorScheme[majorColor].normal};
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), ${colorScheme[majorColor].background};
-      background-size: cover;
-      background-attachment: fixed;`
+        background: ${colorScheme[majorColor].backgroundGradient};
+        background-size: cover;
+        background-attachment: fixed;`
         )
         if (this.isPass && !this.isReserve) {
           this.$confetti.start()
@@ -220,13 +233,13 @@ export default {
         }
       } else {
         this.currTheme = ''
-        document.getElementsByTagName('body')[0].setAttribute(
-          'style',
-          `background: #401b19;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(69.01deg, #C73884 7.27%, #E13C6F 51.46%, #9B308E 95.22%);
-      background-size: cover;
-      background-attachment: fixed;`
-        )
+        //   document.getElementsByTagName('body')[0].setAttribute(
+        //     'style',
+        //     `background: #401b19;
+        // background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(69.01deg, #C73884 7.27%, #E13C6F 51.46%, #9B308E 95.22%);
+        // background-size: cover;
+        // background-attachment: fixed;`
+        //   )
       }
     },
     animateText() {
@@ -263,7 +276,7 @@ export default {
         return false
       }
 
-      if (idx < 3 && $event.target.value.length === 1) {
+      if (idx < 4 && $event.target.value.length === 1) {
         this.$refs[`ref${idx + 1}`][0].focus()
       }
     },
@@ -272,13 +285,14 @@ export default {
       switch ($event.type) {
         case 'paste':
           value = (event.clipboardData || window.clipboardData).getData('text')
-          if (value.length === 4) {
+          if (value.length === 5) {
             const ref = value.split('')
             if (
               isalpha.test(ref[0]) &&
               isalpha.test(ref[1]) &&
               isnumber.test(ref[2]) &&
-              isnumber.test(ref[3])
+              isnumber.test(ref[3]) &&
+              isnumber.test(ref[4])
             ) {
               $event.preventDefault()
               this.ref = ref
@@ -334,14 +348,18 @@ export default {
       return true
     },
     checkRefCode() {
-      if (this.isCandidateLoading || this.refCode.length !== 4) {
-        if (this.refCode.length !== 4) {
-          this.$message.error('กรุณากรอกรหัสสัมภาษณ์ให้ครบถ้วนทั้ง 4 ตัว')
+      console.log(this.refCode)
+      if (this.isCandidateLoading || this.refCode.length !== 5) {
+        if (this.refCode.length !== 5) {
+          this.$message.error('กรุณากรอกรหัสสัมภาษณ์ให้ครบถ้วนทั้ง 5 ตัว')
         }
         return false
       }
       const refMajor = (this.ref[0] + this.ref[1]).toUpperCase()
-      const refIdx = parseInt(this.ref[2]) * 10 + parseInt(this.ref[3])
+      const refIdx =
+        parseInt(this.ref[2]) * 100 +
+        parseInt(this.ref[3]) * 10 +
+        parseInt(this.ref[4])
 
       let major = ''
       Object.keys(majors).map((codename) => {
@@ -366,7 +384,9 @@ export default {
     loadFinalist() {
       const vm = this
       vm.$axios
-        .get(`https://api.ywc.in.th/users/announcement/${vm.refCode}`)
+        .get(
+          `https://api-prod.ywc18.ywc.in.th/users/announcement/${vm.refCode}`
+        )
         .then(({ status, data }) => {
           vm.candidateLoadingText()
           vm.candidateLoading = null
@@ -423,12 +443,17 @@ export default {
   .announcement-box {
     padding: 40px 0;
 
-    font-family: 'CmPrasanmit';
+    font-family: 'Anuphan', system-ui, -apple-system, sans-sreif;
     font-size: 18px;
     @media screen and (max-width: 576px) {
       font-size: 16px;
     }
-
+    &__wrapper {
+      width: 600px;
+      @media screen and (max-width: 576px) {
+        width: unset;
+      }
+    }
     .ywc-logo {
       display: block;
       width: 280px;
@@ -440,7 +465,9 @@ export default {
       }
     }
     p {
-      font-family: 'Sarabun';
+      font-family: 'CmPrasanmit', system-ui, -apple-system, sans-sreif;
+      font-size: 24px;
+      font-weight: 600;
     }
     h1 {
       font-size: 48px;
@@ -452,22 +479,31 @@ export default {
       }
     }
     h2 {
-      font-weight: normal;
+      font-weight: 400;
       margin: 0;
       margin-top: 10px;
-      font-size: 24px;
+      font-size: 22px;
     }
+    h1,
+    h2,
+    h3 {
+      font-family: 'Anuphan', system-ui, -apple-system, sans-sreif;
+    }
+
     .alignLeft {
       text-align: left;
     }
     .ref-input {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       margin: 0 auto;
       margin-top: 20px;
       margin-bottom: 20px;
-      max-width: 400px;
+      gap: 0 16px;
+      max-width: 504px;
       input {
+        font-family: 'Barlow Semi Condensed', system-ui, -apple-system,
+          sans-sreif;
         font-size: 64px;
         width: 88px;
         height: 137px;
@@ -476,8 +512,8 @@ export default {
 
         @media screen and (max-width: 576px) {
           font-size: 48px;
-          width: 66px;
-          height: 104px;
+          width: 48px;
+          height: 86px;
         }
       }
     }
@@ -497,14 +533,13 @@ export default {
       left: unset;
       top: unset;
     }
-    a,
-    a:hover,
-    a:visited,
-    a:active {
+    .show-all-finalist {
+      font-family: 'CmPrasanmit', system-ui, -apple-system, sans-sreif;
+      font-size: 24px;
       color: white;
       text-decoration: underline !important;
     }
-    & > div {
+    & > div:not(.footer) {
       margin-top: 100px;
     }
   }

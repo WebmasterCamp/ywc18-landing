@@ -3,24 +3,24 @@ import styled from 'vue-styled-components'
 import color, { colorScheme } from '~/utils/color'
 export default styled('div', { name: String })`
   .themeText {
-    color: ${props =>
+    color: ${(props) =>
       props.name ? colorScheme[props.name].normal : color.main};
     font-weight: bold;
   }
   .themeLink,
   .questions a {
     text-decoration: underline;
-    color: ${props =>
+    color: ${(props) =>
       props.name ? colorScheme[props.name].normal : color.main};
     &:visited,
     &:active,
     &:hover {
-      color: ${props =>
+      color: ${(props) =>
         props.name ? colorScheme[props.name].normal : color.main};
     }
   }
   .themeButton {
-    background-color: ${props =>
+    background-color: ${(props) =>
       props.name ? colorScheme[props.name].normal : color.main};
   }
   .webDesign {
@@ -41,7 +41,7 @@ export default styled('div', { name: String })`
   }
   // Table Head
   .ant-table-thead > tr > th {
-    color: ${props =>
+    color: ${(props) =>
       props.name ? colorScheme[props.name].normal : color.main};
 
     background: none;
@@ -49,7 +49,7 @@ export default styled('div', { name: String })`
   }
   .agendaTable {
     .ant-table-thead tr:first-of-type th {
-      background: ${props =>
+      background: ${(props) =>
         props.name ? colorScheme[props.name].normal : color.main};
       color: white;
     }
@@ -62,7 +62,7 @@ export default styled('div', { name: String })`
   .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
   .ant-table-thead > tr:hover:not(.ant-table-expanded-row) > td,
   .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
-    background: ${props =>
+    background: ${(props) =>
       props.name ? colorScheme[props.name].light : `rgba(255, 94, 41, 0.15)`};
   }
   // Table Sorter - Inactive Color
@@ -75,13 +75,13 @@ export default styled('div', { name: String })`
     > th.ant-table-column-has-actions.ant-table-column-has-sorters:active
     .ant-table-column-sorter-down:not(.on),
   .ant-table-thead > tr > th .ant-table-column-sorter {
-    color: ${props =>
+    color: ${(props) =>
       props.name ? colorScheme[props.name].light : colorScheme.pink.light};
   }
   // Table Sorter - Active Color
   .ant-table-thead > tr > th .ant-table-column-sorter-up.on,
   .ant-table-thead > tr > th .ant-table-column-sorter-down.on {
-    color: ${props =>
+    color: ${(props) =>
       props.name ? colorScheme[props.name].normal : colorScheme.pink.normal};
   }
   .ant-table-tbody > tr > td.ant-table-column-sort {
@@ -93,34 +93,34 @@ export default styled('div', { name: String })`
   .ant-table-thead
     > tr
     > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover {
-    background: ${props =>
+    background: ${(props) =>
       props.name ? colorScheme[props.name].light : colorScheme.orange.light};
   }
   // Table Filter Active Color
   .ant-table-thead > tr > th .ant-table-filter-selected.anticon-filter {
-    color: ${props =>
+    color: ${(props) =>
       props.name ? colorScheme[props.name].normal : colorScheme.pink.normal};
   }
   .ant-table-filter-dropdown-link {
-    color: ${props =>
+    color: ${(props) =>
       props.name ? colorScheme[props.name].normal : colorScheme.pink.normal};
   }
   // Input
   .ant-input:hover,
   .ant-input:focus {
-    border-color: ${props =>
-      props.name ? colorScheme[props.name].normal : colorScheme.pink.normal};
+    border-color: ${(props) =>
+      props.name ? colorScheme[props.name].normal : colorScheme.orange.normal};
   }
   .ant-input:focus {
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
   }
   .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
-    border-color: ${props =>
+    border-color: ${(props) =>
       props.name ? colorScheme[props.name].normal : colorScheme.pink.normal};
   }
   // Spinner
   .ant-spin-dot i {
-    background-color: ${props =>
+    background-color: ${(props) =>
       props.name ? colorScheme[props.name].normal : colorScheme.pink.normal};
   }
   // Button
@@ -130,17 +130,17 @@ export default styled('div', { name: String })`
   .ant-btn-primary:hover,
   .ant-btn-primary:focus {
     color: white;
-    background-color: ${props =>
+    background-color: ${(props) =>
       props.name ? colorScheme[props.name].light : colorScheme.orange.dark};
-    border-color: ${props =>
+    border-color: ${(props) =>
       props.name ? colorScheme[props.name].light : colorScheme.orange.dark};
   }
   .ant-btn-primary,
   .ant-btn-primary:active,
   .ant-btn-primary.active {
-    background-color: ${props =>
+    background-color: ${(props) =>
       props.name ? colorScheme[props.name].normal : colorScheme.orange.normal};
-    border-color: ${props =>
+    border-color: ${(props) =>
       props.name ? colorScheme[props.name].normal : colorScheme.orange.normal};
   }
 `

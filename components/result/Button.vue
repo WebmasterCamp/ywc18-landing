@@ -11,28 +11,28 @@ import styled from 'vue-styled-components'
 const ButtonStyle = `
 display: inline-block;
 width: fit-content;
-background: #E1426F;
+background: #FF5D29;
 box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
 border-radius: 100px;
 border: none;
 outline: none;
+padding: .5em 1em;
 transition: all 0.3s;
 
 cursor: pointer;
 user-select: none;
 
-font-family: CmPrasanmit;
-font-weight: bold;
+font-family: 'Anuphan', system-ui, -apple-system, sans-sreif;
+font-weight: 600;
 font-size: 20px;
 text-align: center;
-padding: 7px 20px;
 color: white;
 
 &:hover {
-  background: #f74f7e;
+  background: #E65525;
 }
 &:active {
-  background: #bf345b;
+  background: #E65525;
 }
 &:disabled {
   background: whitesmoke;
