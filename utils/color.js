@@ -59,13 +59,17 @@ export const colorScheme = {
     light: 'rgba(0, 169, 37, 0.2)',
     normal: '#00A925',
     background:
-      'linear-gradient(45deg, #00A030 0.08%, #00AC4F 11.17%, #00B96E 24.54%, #00BE7A 32%, #01BD93 54.11%, #01BC9D 67.51%, #01AF97 74.35%, #018D87 86.96%, #016473 100.01%)',
+      'linear-gradient(180deg, #11631D 0%, rgba(17, 99, 29, 0.4) 100%)',
+    backgroundGradient:
+      'linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(180deg, #5BE482 0%, rgba(255, 255, 255, 0) 100%), #00C42B',
   },
   yellow: {
     light: 'rgba(255, 206, 33, 0.2)',
-    normal: '#E29127',
+    normal: '#FFAF33', // #E29127
     background:
       'linear-gradient(180deg, #E29127 0%, rgba(226, 145, 39, 0.4) 100%)',
+    backgroundGradient:
+      'linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(180deg, #FFD74B 0%, rgba(255, 255, 255, 0) 100%), #FFAF33',
   },
   pink: {
     light: '#FFCCE8',
@@ -77,7 +81,9 @@ export const colorScheme = {
     light: 'rgba(20, 81, 199, 0.2)',
     normal: '#1451C7',
     background:
-      'linear-gradient(45deg, #07CACE -0.25%, #4D9ED5 50.1%, #9470DC 99.85%)',
+      'linear-gradient(180deg, #123E84 0%, rgba(18, 62, 132, 0.4) 100%)',
+    backgroundGradient:
+      'linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(180deg, #4583FB 0%, rgba(255, 255, 255, 0) 100%), #1451C7',
   },
   gray: {
     normal: 'gray',
@@ -93,6 +99,8 @@ export const colorScheme = {
     light: 'rgba(231, 74, 80, 0.4)',
     normal: '#E73239',
     background:
-      'linear-gradient(45deg, #C73884 -0.26%, #E73239 50.77%, #FF7745 99.73%)',
+      'linear-gradient(180deg, #8F1423 0%, rgba(142, 21, 35, 0.4) 100%)',
+    backgroundGradient:
+      'linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(180deg, #E74A50 0%, rgba(255, 255, 255, 0) 100%), #E73239',
   },
 }
