@@ -81,7 +81,7 @@ export const FINALIST_BANKACCOUNT = {
   bank: 'ไทยพาณิชย์',
 }
 export const FINALIST_FORM_LINK = (info) => {
-  return `https://bit.ly/ywc18-cf`
+  return `https://bit.ly/ywc18confirm-2020`
 }
 export const FINALIST_COLUMNS = [
   {
