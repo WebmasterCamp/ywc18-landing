@@ -369,7 +369,7 @@ export default {
         return codename
       })
 
-      if (!major || refIdx < 1 || refIdx > 62) {
+      if (!major || refIdx < 1 || refIdx > 103) {
         this.$message.error('รหัสสัมภาษณ์ไม่ถูกต้อง')
         return false
       }
