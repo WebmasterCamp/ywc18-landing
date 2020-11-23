@@ -109,9 +109,9 @@ export default {
       },
       isActive: {
         register: false,
-        announce: true,
+        announce: false,
         interview: false,
-        finalist: false,
+        finalist: true,
         camp: false,
       },
       isPending: {
