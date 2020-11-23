@@ -76,12 +76,12 @@ export const INTERVIEW_COLUMNS = [
 
 export const FINALIST_LOAD_TIME = 4000
 export const FINALIST_BANKACCOUNT = {
-  no: '0-202-9269-7198',
-  name: 'น.ส. วรัญญา วิมลเกียรติ',
-  bank: 'ออมสิน',
+  no: '333-2-70210-6',
+  name: 'นายธนกร ภาแสงเทียน',
+  bank: 'ไทยพาณิชย์',
 }
 export const FINALIST_FORM_LINK = (info) => {
-  return `https://bit.ly/ywc17-cf`
+  return `https://bit.ly/ywc18-cf`
 }
 export const FINALIST_COLUMNS = [
   {
