@@ -467,7 +467,6 @@ export default {
     p {
       font-family: 'CmPrasanmit', system-ui, -apple-system, sans-sreif;
       font-size: 24px;
-      font-weight: 600;
     }
     h1 {
       font-size: 48px;
