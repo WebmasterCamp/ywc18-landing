@@ -35,7 +35,10 @@
         :isLoading="isLoading"
       />
     </InfoContainer>
-    <Footer />
+    <div style="margin-top: 44px">
+      <SponsorBox />
+      <Footer />
+    </div>
   </ThemeProvider>
 </template>
 <script>
@@ -77,7 +80,8 @@ export default {
     Majors,
     InfoContainer: () => import('~/components/InfoContainer.vue'),
     Button: () => import('~/components/result/Button.vue'),
-    Footer: () => import('~/components/sections/Footer.vue'),
+    SponsorBox: () => import('~/components/SponsorBox'),
+    Footer: () => import('~/components/sections/ywc18/Footer.vue'),
   },
   data() {
     return {
