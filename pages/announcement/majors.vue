@@ -13,11 +13,18 @@
         <h3>ข้อมูลสำหรับผู้ผ่านการคัดเลือก (ตัวจริง)</h3>
         <p>
           ผู้ที่ผ่านการคัดเลือก (ตัวจริง) ให้ยืนยันสิทธิ์โดย<b>การโอนเงิน</b>
-          และแจ้งการยืนยันสิทธิ์ได้ถึง<b>วันศุกร์ที่ 8 พฤศจิกายน เวลา 23:59 น.</b><br />
+          และแจ้งการยืนยันสิทธิ์ได้ถึง<b
+            >วันเสาร์ที่ 28 พฤศจิกายน เวลา 23:59 น.</b
+          ><br />
           หากเลยกำหนดจะทำการเรียกตัวสำรองลำดับถัดไป
           และทางค่ายจะทำการคืนเงินเมื่อคุณเข้าค่ายครบตามระยะเวลาการจัดค่าย
         </p>
-        <Button link :href="FINALIST_FORM_LINK()" target="_blank" rel="noopener noreferrer">
+        <Button
+          link
+          :href="FINALIST_FORM_LINK()"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           ยืนยันสิทธิ์
         </Button>
       </section>
@@ -28,13 +35,16 @@
         :isLoading="isLoading"
       />
     </InfoContainer>
-    <Footer />
+    <div style="margin-top: 44px">
+      <SponsorBox />
+      <Footer />
+    </div>
   </ThemeProvider>
 </template>
 <script>
 import ThemeProvider from '~/components/ThemeProvider.vue'
 import Majors from '~/components/result/Majors.vue'
-import { colorScheme } from '~/utils/color'
+// import { colorScheme } from '~/utils/color'
 import { majors, FINALIST_FORM_LINK } from '~/utils/const'
 
 export default {
@@ -48,7 +58,7 @@ export default {
         this.$route.params.major
           ? `สาขา Web ${majors[this.$route.params.major][0]}`
           : ''
-      } - 17th Young Webmaster Camp`,
+      } - 18th Young Webmaster Camp`,
       meta: [
         {
           hid: 'og:title',
@@ -57,7 +67,7 @@ export default {
             this.$route.params.major
               ? `สาขา Web ${majors[this.$route.params.major][0]}`
               : ''
-          } - 17th Young Webmaster Camp`,
+          } - 18th Young Webmaster Camp`,
         },
         { hid: 'og:description', name: 'og:description', content: '' }, // TODO: Add description
         { hid: 'description', name: 'description', content: '' }, // TODO: Add description
@@ -70,7 +80,8 @@ export default {
     Majors,
     InfoContainer: () => import('~/components/InfoContainer.vue'),
     Button: () => import('~/components/result/Button.vue'),
-    Footer: () => import('~/components/sections/Footer.vue'),
+    SponsorBox: () => import('~/components/SponsorBox'),
+    Footer: () => import('~/components/sections/ywc18/Footer.vue'),
   },
   data() {
     return {
@@ -122,29 +133,29 @@ export default {
       )
     },
     changeBackground(major) {
-      if (major) {
-        document.getElementsByTagName('body')[0].setAttribute(
-          'style',
-          `background: ${colorScheme[majors[major][1]].normal};
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), ${colorScheme[majors[major][1]].background};
-      background-size: cover;
-      background-attachment: fixed;`
-        )
-      } else {
-        document.getElementsByTagName('body')[0].setAttribute(
-          'style',
-          `background: #401b19;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(69.01deg, #C73884 7.27%, #E13C6F 51.46%, #9B308E 95.22%);
-      background-size: cover;
-      background-attachment: fixed;`
-        )
-      }
+      // if (major) {
+      //   document.getElementsByTagName('body')[0].setAttribute(
+      //     'style',
+      //     `background: ${colorScheme[majors[major][1]].normal};
+      // background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), ${colorScheme[majors[major][1]].background};
+      // background-size: cover;
+      // background-attachment: fixed;`
+      //   )
+      // } else {
+      //   document.getElementsByTagName('body')[0].setAttribute(
+      //     'style',
+      //     `background: #401b19;
+      // background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(69.01deg, #C73884 7.27%, #E13C6F 51.46%, #9B308E 95.22%);
+      // background-size: cover;
+      // background-attachment: fixed;`
+      //   )
+      // }
     },
     loadData() {
       const vm = this
       vm.isLoading = true
       vm.$axios
-        .get(`https://api.ywc.in.th/users/announcement`)
+        .get(`https://api-prod.ywc18.ywc.in.th/users/announcement`)
         .then(({ status, data }) => {
           vm.isLoading = false
           if (status === 200) {
@@ -200,9 +211,14 @@ export default {
       font-size: 16px;
     }
     h3 {
+      font-family: 'Anuphan', system-ui, -apple-system, sans-sreif;
       margin: 0;
       margin-top: 25px;
       margin-bottom: 25px;
+    }
+    p {
+      font-family: 'CmPrasanmit', system-ui, -apple-system, sans-sreif;
+      font-size: 24px;
     }
     section {
       margin-top: 0 !important;
