@@ -66,6 +66,10 @@ section {
 }
 </style>
 <style lang="scss">
+.guru__wrapper {
+  margin-bottom: 150px;
+}
+
 .guru__wrapper,
 .current-guru__wrapper {
   position: relative;
@@ -537,8 +541,22 @@ export default {
           img: 19,
           name: 'ชวรงค์ ลิมป์ปัทมปาณี (อ.ป๋อง)',
           role: `ประธานสภาการสื่อมวลชนแห่งชาติ<br>กรรมการควบคุมจริยธรรม สมาคมผู้ดูแลเว็บไทย`,
-          majors: [],
+          majors: ['content'],
           order: 2,
+        },
+        {
+          img: 20,
+          name: 'ดร.ภัทรพร เย็นบุตร',
+          role: `หัวหน้างานส่งเสริมเศรษฐกิจดิจิทัล ฝ่ายส่งเสริมเมืองอัจฉริยะ<br> สำนักงานส่งเสริมเศรษฐกิจดิจิทัล (depa)`,
+          majors: [],
+          order: 5,
+        },
+        {
+          img: 21,
+          name: 'ดร.สมิตา เต็มเพิ่มพูน',
+          role: `หัวหน้างานส่งเสริมเศรษฐกิจดิจิทัล ฝ่ายส่งเสริมเมืองอัจฉริยะ<br> สำนักงานส่งเสริมเศรษฐกิจดิจิทัล (depa)`,
+          majors: [],
+          order: 5,
         },
       ].sort((a, b) => a.order - b.order),
     }

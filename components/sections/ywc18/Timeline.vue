@@ -111,7 +111,7 @@ export default {
         register: false,
         announce: false,
         interview: false,
-        finalist: true,
+        finalist: false,
         camp: false,
       },
       isPending: {
