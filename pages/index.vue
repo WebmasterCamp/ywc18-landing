@@ -3,12 +3,12 @@
     <Hero />
     <!-- <PaperDivider /> -->
     <WhatIsYWC />
+    <Guru />
     <Timeline />
     <DiverderTwoM />
     <Majors />
     <Blog />
     <Location />
-    <Guru />
     <Sponsor />
     <Gallery />
     <!-- <PaperDivider /> -->
