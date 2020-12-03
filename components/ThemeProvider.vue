@@ -56,14 +56,14 @@ export default styled('div', { name: String })`
   }
   // Table Row Hover Color
   .ant-table table {
-    font-family: Anuphan;
+    font-family: 'Anuphan', system-ui, -apple-system, sans-sreif;
   }
   .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
   .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
   .ant-table-thead > tr:hover:not(.ant-table-expanded-row) > td,
   .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
     background: ${(props) =>
-      props.name ? colorScheme[props.name].light : `rgba(255, 94, 41, 0.15)`};
+      props.name ? colorScheme[props.name].light : `#ffe8e2`};
   }
   // Table Sorter - Inactive Color
   .ant-table-thead

@@ -3,11 +3,11 @@
     <InfoContainer class="agenda-info">
       <h2>
         กำหนดการโครงการอบรมเชิงปฏิบัติการ<br class="mdBreak" />
-        Young Webmaster Camp ครั้งที่ 17
+        Young Webmaster Camp ครั้งที่ 18
       </h2>
       <h3>
-        วันที่ 26 - 29 ธันวาคม 2562<br />
-        ณ คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+        วันที่ 24 - 27 ธันวาคม 2563<br />
+        ณ SCB Academy ธนาคารไทยพาณิชย์ สำนักงานใหญ่
       </h3>
       <AgendaTable
         v-for="{ name, items } in AGENDA"
@@ -30,24 +30,24 @@ export default {
   layout: 'secondary',
   head() {
     return {
-      title: `กำหนดการโครงการ - 17th Young Webmaster Camp`,
+      title: `กำหนดการโครงการ - 18th Young Webmaster Camp`,
       meta: [
         {
           hid: 'og:title',
           name: 'og:title',
-          content: `กำหนดการโครงการ - 17th Young Webmaster Camp`,
+          content: `กำหนดการโครงการ - 18th Young Webmaster Camp`,
         },
         {
           hid: 'og:description',
           name: 'og:description',
           content:
-            'กำหนดการโครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 17 วันที่ 26 - 29 ธันวาคม 2562 ณ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง',
+            'กำหนดการโครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 18 วันที่ 24 - 27 ธันวาคม 2563 ณ SCB Academy ธนาคารไทยพาณิชย์ สำนักงานใหญ่',
         },
         {
           hid: 'description',
           name: 'description',
           content:
-            'กำหนดการโครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 17 วันที่ 26 - 29 ธันวาคม 2562 ณ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง',
+            'กำหนดการโครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 18 วันที่ 24 - 27 ธันวาคม 2563 ณ SCB Academy ธนาคารไทยพาณิชย์ สำนักงานใหญ่',
         },
       ],
     }
@@ -88,12 +88,17 @@ export default {
       font-size: 16px;
     }
     h3 {
+      font-family: 'Anuphan', system-ui, -apple-system, sans-sreif;
       margin: 0;
       margin-top: 25px;
       margin-bottom: 25px;
+      font-size: 20px;
+      font-weight: 600;
     }
     h2 {
+      font-family: 'Anuphan', system-ui, -apple-system, sans-sreif;
       line-height: 1.3;
+      font-size: 24px;
     }
     h2:first-of-type,
     h3:first-of-type {
