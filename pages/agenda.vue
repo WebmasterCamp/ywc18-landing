@@ -16,6 +16,7 @@
         :items="items"
       />
     </InfoContainer>
+    <SponsorBox />
     <Footer />
   </ThemeProvider>
 </template>
@@ -23,7 +24,6 @@
 import ThemeProvider from '~/components/ThemeProvider.vue'
 import InfoContainer from '~/components/InfoContainer.vue'
 import AgendaTable from '~/components/AgendaTable.vue'
-import Footer from '~/components/sections/Footer.vue'
 import { AGENDA } from '~/utils/const'
 
 export default {
@@ -56,7 +56,8 @@ export default {
     ThemeProvider,
     InfoContainer,
     AgendaTable,
-    Footer,
+    SponsorBox: () => import('~/components/SponsorBox'),
+    Footer: () => import('~/components/sections/ywc18/Footer.vue'),
   },
   data() {
     return {
