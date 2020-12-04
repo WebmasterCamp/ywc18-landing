@@ -16,10 +16,15 @@ import antDesignVueTable from '~/plugins/ant-design-vue-table'
 ANTD_THAI.Table.sortTitle = 'เรียง'
 export default {
   props: {
-    items: { type: Array, default: () => { return [] } },
-    name: { type: String, default: 'วันที่' }
+    items: {
+      type: Array,
+      default: () => {
+        return []
+      },
+    },
+    name: { type: String, default: 'วันที่' },
   },
-  data () {
+  data() {
     return {
       ANTD_THAI,
       columns: [
@@ -30,33 +35,44 @@ export default {
               title: 'เวลา',
               dataIndex: 'time',
               width: '20%',
-              align: 'center'
+              align: 'center',
             },
             {
               title: 'กิจกรรม',
               dataIndex: 'events',
               customRender: (value, row, index) => {
-                return <tbody class={ row.events.length > 1 ? 'ant-table-tbody' : ''} style="display: table; width: 100%;">
-                  {row.events.map((event, idx) => 
-                    <tr>
-                      <td
-                        domPropsInnerHTML={event}
-                        style={ row.events.length - 1 === idx 
-                          ? { borderBottom: 'none', padding: '10px', paddingLeft: 0 }
-                          : { padding: '10px', paddingLeft: 0 }}
-                      />
-                    </tr>
-                  )}
-                </tbody>
-              }
-            }
-          ]
-        }
-      ]
+                return (
+                  <tbody
+                    class={row.events.length > 1 ? 'ant-table-tbody' : ''}
+                    style='display: table; width: 100%;'
+                  >
+                    {row.events.map((event, idx) => (
+                      <tr key={idx}>
+                        <td
+                          domPropsInnerHTML={event}
+                          style={
+                            row.events.length - 1 === idx
+                              ? {
+                                  borderBottom: 'none',
+                                  padding: '10px',
+                                  paddingLeft: 0,
+                                }
+                              : { padding: '10px', paddingLeft: 0 }
+                          }
+                        />
+                      </tr>
+                    ))}
+                  </tbody>
+                )
+              },
+            },
+          ],
+        },
+      ],
     }
   },
-  created () {
+  created() {
     antDesignVueTable()
-  }
+  },
 }
 </script>
