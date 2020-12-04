@@ -402,7 +402,9 @@ export const AGENDA = [
       },
       {
         time: '8:45 - 9:05 น.',
-        events: [`พิธีเปิด โดย นายกสมาคมผู้ดูแลเว็บไทย`],
+        events: [
+          `พิธีเปิด<br>โดย <b>คุณวโรรส โรจนะ</b> <i>นายกสมาคมผู้ดูแลเว็บไทย</i>`,
+        ],
       },
       {
         time: '9:05 - 9:35 น.',
@@ -421,30 +423,32 @@ export const AGENDA = [
       {
         time: '10:35 - 11:35 น.',
         events: [
-          `บรรยายสาขา Content หัวข้อ “เทคนิคการเล่าเรื่องให้คนจำจนวันตาย”<br>โดย <b>คุณอภิศิลป์ ตรุงกานนท์</b>`,
+          `บรรยายสาขา Web Content หัวข้อ “เทคนิคการเล่าเรื่องให้คนจำจนวันตาย”<br>โดย <b>คุณอภิศิลป์ ตรุงกานนท์</b>`,
         ],
       },
       {
         time: '10:35 - 12:05 น.',
         events: [
-          `บรรยายสาขา Design หัวข้อ “User Interface Design”<br>โดย <b>คุณอินทนนท์ ปัญญาโสภา</b>`,
-          `บรรยายสาขา Marketing หัวข้อ “Online Marketing Platform Analysis”<br>โดย <b>ดร.ธีรศานต์ สหัสสพาศน์</b>`,
-          `บรรยายสาขา Programming หัวข้อ “การสร้างผลงานแบบ Minimum Viable Product และ Task Management for Developer”<br>โดย <b>คุณปัญจมพงศ์ เสริมสวัสดิ์ศรี</b>`,
+          `บรรยายสาขา Web Design หัวข้อ “User Interface Design”<br>โดย <b>คุณอินทนนท์ ปัญญาโสภา</b>`,
+          `บรรยายสาขา Web Marketing หัวข้อ “Online Marketing Platform Analysis”<br>โดย <b>ดร.ธีรศานต์ สหัสสพาศน์</b>`,
+          `บรรยายสาขา Web Programming หัวข้อ “การสร้างผลงานแบบ Minimum Viable Product และ Task Management for Developer”<br>โดย <b>คุณปัญจมพงศ์ เสริมสวัสดิ์ศรี</b>`,
         ],
       },
       {
         time: '11:35 - 12:30 น.',
-        events: [`สาขา Content รับประทานอาหารกลางวัน`],
+        events: [`สาขา Web Content รับประทานอาหารกลางวัน`],
       },
       {
         time: '12:05 - 13:00 น.',
-        events: [`สาขา Design, Marketing, Programming รับประทานอาหารกลางวัน`],
+        events: [
+          `สาขา Web Design, Web Marketing, Web Programming รับประทานอาหารกลางวัน`,
+        ],
       },
       { time: '', events: [`การบรรยายสาขา ช่วงที่ 2`] },
       {
         time: '12:30 - 14:30 น.',
         events: [
-          `บรรยายสาขา Content หัวข้อ “Creating Impact with Content & Digital Content Technique และ Valuable Creative Content” <br>
+          `บรรยายสาขา Web Content หัวข้อ “Creating Impact with Content & Digital Content Technique และ Valuable Creative Content” <br>
       โดย <b>คุณขจร เจียรนัยพานิชย์</b> และ <b>คุณจักรพงษ์ คงมาลัย</b>`,
         ],
       },
@@ -554,7 +558,7 @@ export const AGENDA = [
       {
         time: '16:30 – 17:00 น.',
         events: [
-          'พิธีปิดโครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 18',
+          `พิธีปิดโครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 18<br>โดย <b>คุณศิรณัชชา วุฒิประพันธ์พงศ์</b> <i>ผู้จัดการโครงการ และเลขาธิการ สมาคมผู้ดูแลเว็บไทย</i>`,
         ],
       },
       {
