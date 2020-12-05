@@ -450,7 +450,7 @@ export default {
         {
           img: 7,
           name: 'อินทนนท์ ปัญญาโสภา (เบนซ์)',
-          role: `ผู้ก่อตั้งเว็บไซต์ Grappik`,
+          role: `ผู้ก่อตั้งเว็บไซต์ Grappik<br>กรรมการสมาคมผู้ดูแลเว็บไทย`,
           majors: ['design'],
           order: 8,
         },
@@ -492,7 +492,7 @@ export default {
         {
           img: 13,
           name: 'วีระ เจียรนัยพาณิชย์ (โอ)',
-          role: `ที่ปรึกษาด้านพัฒนากลยุทธ์ธุรกิจ SME<br> Line Certified Coach 2019`,
+          role: `ที่ปรึกษาด้านพัฒนากลยุทธ์ธุรกิจ SME<br> Line Certified Coach 2019<br>กรรมการสมาคมผู้ดูแลเว็บไทย`,
           majors: ['marketing'],
           order: 15,
         },
