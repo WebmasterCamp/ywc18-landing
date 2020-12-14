@@ -11,7 +11,7 @@
         alt="Theme Logo"
         class="theme-logo"
       />
-      <Button to="/announcement">ประกาศผลสัมภาษณ์</Button>
+      <Button to="/agenda">กำหนดการโครงการ</Button>
       <SponsorBox />
     </div>
   </section>
