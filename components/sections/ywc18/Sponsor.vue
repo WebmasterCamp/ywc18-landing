@@ -107,6 +107,12 @@ export default {
             alt: 'LMWN',
             link: 'https://lmwn.com',
           },
+          {
+            class: ['sp-appman'],
+            img: '2-4-appman.svg',
+            alt: 'appman',
+            link: 'https://www.appman.co.th',
+          },
         ],
         silver: [
           {
@@ -239,7 +245,8 @@ section {
     height: 84px;
   }
 }
-.sp-lmwn {
+.sp-lmwn,
+.sp-appman {
   width: 100% !important;
   max-width: 140px !important;
   a picture {
@@ -325,11 +332,11 @@ section {
 .sponsor-gold-wrapper {
   transform: scale(0.9);
   width: 100%;
-  max-width: 580px;
+  max-width: 810px;
 
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(1, auto);
+  grid-template-columns: repeat(2, auto);
   grid-gap: 10px;
   align-items: center;
   margin: 20px auto;
@@ -338,7 +345,7 @@ section {
     width: 80%;
   }
   @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
   }
 }
 .sponsor-silver-wrapper {
