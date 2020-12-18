@@ -429,7 +429,7 @@ export const AGENDA = [
       {
         time: '10:35 - 12:05 น.',
         events: [
-          `บรรยายสาขา Web Design หัวข้อ “User Interface Design”<br>โดย <b>คุณอินทนนท์ ปัญญาโสภา</b>`,
+          `บรรยายสาขา Design หัวข้อ “User Experience Design”<br>โดย <b>คุณสุธัม ธรรมวงศ์</b>`,
           `บรรยายสาขา Web Marketing หัวข้อ “Online Marketing Platform Analysis”<br>โดย <b>ดร.ธีรศานต์ สหัสสพาศน์</b>`,
           `บรรยายสาขา Web Programming หัวข้อ “การสร้างผลงานแบบ Minimum Viable Product และ Task Management for Developer”<br>โดย <b>คุณปัญจมพงศ์ เสริมสวัสดิ์ศรี</b>`,
         ],
@@ -455,7 +455,7 @@ export const AGENDA = [
       {
         time: '13:00 - 14:30 น.',
         events: [
-          `บรรยายสาขา Design หัวข้อ “User Experience Design”<br>โดย <b>คุณสุธัม ธรรมวงศ์</b>`,
+          `บรรยายสาขา Web Design หัวข้อ “User Interface Design”<br>โดย <b>คุณอินทนนท์ ปัญญาโสภา</b>`,
           `บรรยายสาขา Marketing หัวข้อ “How to make conversion from customer” <br>โดย <b>คุณสุธีรพันธุ์ สักรวัตร</b>`,
           `บรรยายสาขา Programming หัวข้อ “Web Optimizations” <br>โดย <b>คุณวรัทธน์ วงศ์มณีกิจ</b>`,
         ],
