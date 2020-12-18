@@ -190,6 +190,7 @@ const CurrentGuru = styled.div`
     @media screen and (max-width: 425px) {
       position: absolute;
       top: 30px;
+      max-width: 90%;
     }
   }
   .guru-detail {
@@ -418,12 +419,6 @@ export default {
           majors: ['programming'],
           order: 1,
         },
-        // {
-        //   img: 2,
-        //   name: 'อัครวุฒิ ตำราเรียง (บัง)',
-        //   role: `กรรมการผู้จัดการ บ.มาร์เวลิค เอ็นจิ้น จก.<br>กรรมการควบคุมจริยธรรม สมาคมผู้ดูแลเว็บไทย`,
-        //   majors: []
-        // },
         {
           img: 3,
           name: 'อภิศิลป์ ตรุงกานนท์ (บอย)',
