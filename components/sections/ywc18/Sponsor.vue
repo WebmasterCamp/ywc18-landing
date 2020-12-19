@@ -103,9 +103,15 @@ export default {
           },
           {
             class: ['sp-lmwn'],
-            img: '2-3-LMWN.svg',
+            img: '2-3-LMWN-cropped.svg',
             alt: 'LMWN',
             link: 'https://lmwn.com',
+          },
+          {
+            class: ['sp-appman'],
+            img: '2-4-appman-cropped.svg',
+            alt: 'appman',
+            link: 'https://www.appman.co.th',
           },
         ],
         silver: [
@@ -233,18 +239,28 @@ section {
 .sp-brikl {
   width: 100% !important;
   max-width: 220px !important;
-  max-height: 84px;
+  height: 90px;
   a picture {
     width: 100% !important;
-    height: 84px;
+    height: 90px;
   }
 }
 .sp-lmwn {
   width: 100% !important;
-  max-width: 140px !important;
+  max-width: 135px !important;
+  height: 90px;
   a picture {
     width: 100% !important;
-    height: auto;
+    height: 90px;
+  }
+}
+.sp-appman {
+  width: 100% !important;
+  max-width: 165px !important;
+  height: 90px;
+  a picture {
+    width: 100% !important;
+    height: 90px;
   }
 }
 .sp-cpall {
@@ -267,10 +283,10 @@ section {
 .sp-thairath {
   width: 100% !important;
   max-width: 155px !important;
-  max-height: 58px;
+  height: 90px;
   a picture {
     width: 100% !important;
-    height: 58px;
+    height: 90px;
   }
 }
 </style>
@@ -325,7 +341,7 @@ section {
 .sponsor-gold-wrapper {
   transform: scale(0.9);
   width: 100%;
-  max-width: 580px;
+  max-width: 810px;
 
   display: grid;
   justify-items: center;
@@ -338,7 +354,7 @@ section {
     width: 80%;
   }
   @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
   }
 }
 .sponsor-silver-wrapper {
