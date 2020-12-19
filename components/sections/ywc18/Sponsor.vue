@@ -103,13 +103,13 @@ export default {
           },
           {
             class: ['sp-lmwn'],
-            img: '2-3-LMWN.svg',
+            img: '2-3-LMWN-cropped.svg',
             alt: 'LMWN',
             link: 'https://lmwn.com',
           },
           {
             class: ['sp-appman'],
-            img: '2-4-appman.svg',
+            img: '2-4-appman-cropped.svg',
             alt: 'appman',
             link: 'https://www.appman.co.th',
           },
@@ -239,19 +239,28 @@ section {
 .sp-brikl {
   width: 100% !important;
   max-width: 220px !important;
-  max-height: 84px;
+  height: 90px;
   a picture {
     width: 100% !important;
-    height: 84px;
+    height: 90px;
   }
 }
-.sp-lmwn,
-.sp-appman {
+.sp-lmwn {
   width: 100% !important;
-  max-width: 140px !important;
+  max-width: 135px !important;
+  height: 90px;
   a picture {
     width: 100% !important;
-    height: auto;
+    height: 90px;
+  }
+}
+.sp-appman {
+  width: 100% !important;
+  max-width: 165px !important;
+  height: 90px;
+  a picture {
+    width: 100% !important;
+    height: 90px;
   }
 }
 .sp-cpall {
@@ -274,10 +283,10 @@ section {
 .sp-thairath {
   width: 100% !important;
   max-width: 155px !important;
-  max-height: 58px;
+  height: 90px;
   a picture {
     width: 100% !important;
-    height: 58px;
+    height: 90px;
   }
 }
 </style>
@@ -336,7 +345,7 @@ section {
 
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(1, auto);
   grid-gap: 10px;
   align-items: center;
   margin: 20px auto;
