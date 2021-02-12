@@ -580,6 +580,13 @@ export default {
           majors: ['programming'],
           order: 27,
         },
+        {
+          img: 28,
+          name: 'ดร.นนท์ อัครประเสริฐกุล',
+          role: `ฝ่ายส่งเสริมเมืองอัจฉริยะ<br>สำนักงานส่งเสริมเศรษฐกิจดิจิทัล`,
+          majors: [],
+          order: 5,
+        },
       ].sort((a, b) => a.order - b.order),
     }
   },
