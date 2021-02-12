@@ -11,7 +11,7 @@
         alt="Theme Logo"
         class="theme-logo"
       />
-      <Button to="/agenda">กำหนดการโครงการ</Button>
+      <Button v-if="false" to="/agenda">กำหนดการโครงการ</Button>
       <SponsorBox />
     </div>
   </section>

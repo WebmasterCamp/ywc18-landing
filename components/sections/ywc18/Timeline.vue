@@ -104,7 +104,7 @@ export default {
           text: 'CAMP DAY',
           subText: 'วันเข้าค่าย (ไม่ค้างคืน)',
           image: require('~/assets/images/ywc18/timeline/camp-day.png'),
-          topDate: '24 - 27 DEC',
+          topDate: '1 - 4 APR',
         },
       },
       isActive: {
