@@ -8,7 +8,7 @@
     <DiverderTwoM />
     <Majors />
     <Blog />
-    <Location />
+    <!-- <Location /> -->
     <Sponsor />
     <Gallery />
     <!-- <PaperDivider /> -->
@@ -33,7 +33,7 @@ export default {
     DiverderTwoM: () => import('~/components/sections/ywc18/2m'),
     Majors: () => import('~/components/sections/ywc18/Majors'),
     Blog: () => import('~/components/sections/ywc18/Blog'),
-    Location: () => import('~/components/sections/ywc18/Location'),
+    // Location: () => import('~/components/sections/ywc18/Location'),
     Guru: () => import('~/components/sections/ywc18/Guru'),
     Gallery: () => import('~/components/sections/ywc18/Gallery'),
     Sponsor: () => import('~/components/sections/ywc18/Sponsor'),
