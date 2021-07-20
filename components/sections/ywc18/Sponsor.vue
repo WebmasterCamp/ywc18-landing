@@ -387,9 +387,9 @@ section {
   @media screen and (max-width: 737px) {
     grid-row-gap: 0px;
     grid-row-gap: 8px;
-    /* & > div:last-child {
+    & > div:last-child {
       grid-column: 1 / 3;
-    } */
+    }
   }
   //////////////////////////////////////////////////
   @media screen and (max-width: 736px) {
