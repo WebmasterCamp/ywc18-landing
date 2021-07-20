@@ -513,7 +513,7 @@ export default {
         {
           img: 16,
           name: 'สุธัม ธรรมวงศ์ (ป๋อม)',
-          role: `Senior Consultant & Experience Designer - ThoughtWorks`,
+          role: `Head of Experience Design - Bitkub`,
           majors: ['design'],
           order: 9,
         },
@@ -544,13 +544,6 @@ export default {
           role: `ผู้จัดการโครงการ Young Webmaster Camp ครั้งที่ 18<br>เลขาธิการสมาคมผู้ดูแลเว็บไทย<br>ผู้จัดการฝ่ายสื่อสารองค์กร - บริษัท ที.เอช.นิค จำกัด`,
           majors: [],
           order: 3,
-        },
-        {
-          img: 23,
-          name: 'ไพบูลย์ อมรภิญโญเกียรติ',
-          role: `ผู้เชี่ยวชาญด้านกฏหมายคอมพิวเตอร์<br>กรรมการผู้จัดการ - บริษัท ที่ปรึกษากฎหมาย ไพบูลย์ จำกัด<br>ที่ปรึกษากฎหมาย - สมาคมผู้ดูแลเว็บไทย`,
-          majors: [],
-          order: 2,
         },
         {
           img: 24,
@@ -586,6 +579,13 @@ export default {
           role: `ฝ่ายส่งเสริมเมืองอัจฉริยะ<br>สำนักงานส่งเสริมเศรษฐกิจดิจิทัล`,
           majors: [],
           order: 5,
+        },
+        {
+          img: 29,
+          name: 'ธนภูมิ เจริญศิริ  ',
+          role: `CEO - AppMan`,
+          majors: ['programming'],
+          order: 29,
         },
       ].sort((a, b) => a.order - b.order),
     }
