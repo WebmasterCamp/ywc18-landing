@@ -125,7 +125,7 @@ export default {
             class: ['sp-easyrice'],
             img: '3-4-easyrice.png',
             alt: 'Easy Rice Digital Technology',
-            link: 'https://www.easyrice.ai',
+            link: 'https://easyrice.ai',
           },
           {
             class: ['sp-CampHUB'],
@@ -139,18 +139,24 @@ export default {
             alt: 'Rainmaker',
             link: 'https://www.rainmaker.in.th',
           },
-          {
-            class: ['sp-cpall'],
-            img: '3-9-cpall.svg',
-            alt: 'CPALL',
-            link: 'https://www.cpall.co.th/',
-          },
-          {
-            class: ['sp-pandt'],
-            img: '3-4-P-and-T.svg',
-            alt: 'P&T Hosting',
-            link: 'https://www.pathosting.co.th',
-          },
+          // {
+          //   class: ['sp-cpall'],
+          //   img: '3-9-cpall.svg',
+          //   alt: 'CPALL',
+          //   link: 'https://www.cpall.co.th/',
+          // },
+          // {
+          //   class: ['sp-pandt'],
+          //   img: '3-4-P-and-T.svg',
+          //   alt: 'P&T Hosting',
+          //   link: 'https://www.pathosting.co.th',
+          // },
+          // {
+          //   class: ['sp-shippop'],
+          //   img: '3-10-shippop.svg',
+          //   alt: 'Shippop',
+          //   link: 'https://www.shippop.com/',
+          // },
         ],
       },
     }
@@ -227,6 +233,15 @@ section {
     height: 22px;
   }
 }
+.sp-shippop {
+  width: 100% !important;
+  max-width: 140px !important;
+  max-height: 24px;
+  a picture {
+    width: 100% !important;
+    height: 22px;
+  }
+}
 .sp-pandt {
   width: 100% !important;
   max-width: 104px !important;
@@ -264,8 +279,8 @@ section {
   }
 }
 .sp-cpall {
-  width: 70px !important;
-  max-width: 70px !important;
+  width: 66px !important;
+  max-width: 66px !important;
   a picture {
     width: 100% !important;
     height: auto;
@@ -359,14 +374,14 @@ section {
 }
 .sponsor-silver-wrapper {
   width: 100%;
-  max-width: 680px; // 560
+  max-width: 460px; // 560
   min-width: 220px;
   display: grid;
   justify-items: center;
   align-items: center;
   margin: 15px auto 70px;
   grid-column-gap: 20px;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(4, auto);
 
   // HANDLE 7 LOGO, CAN BE REMOVED IF ADD MORE LOGO
   @media screen and (max-width: 737px) {

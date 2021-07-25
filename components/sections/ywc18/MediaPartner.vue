@@ -1,6 +1,6 @@
 <template>
   <section>
-    <SectionName title="MEDIA PARTNER" bgRight style="margin-bottom: 0;" />
+    <SectionName title="MEDIA PARTNER & PARTER" bgRight style="margin-bottom: 0;" />
     <div class="media-partner-wrapper">
       <SponsorCircle
         v-for="(partner, index) in media_partners"
@@ -92,6 +92,24 @@ export default {
           alt: 'Mee Story',
           link: 'https://www.facebook.com/2bearstalk/',
         },
+        {
+            class: ['sp-cpall'],
+            img: '3-9-cpall.svg',
+            alt: 'CPALL',
+            link: 'https://www.cpall.co.th/',
+          },
+          {
+            class: ['sp-pandt'],
+            img: '3-4-P-and-T.svg',
+            alt: 'P&T Hosting',
+            link: 'https://www.pathosting.co.th',
+          },
+          {
+            class: ['sp-shippop'],
+            img: '3-10-shippop.svg',
+            alt: 'Shippop',
+            link: 'https://www.shippop.com/',
+          },
       ],
     }
   },
@@ -130,28 +148,26 @@ export default {
 }
 .media-partner-wrapper {
   width: 100%;
-  max-width: 450px; // 550
+  max-width: 660px; // 550
   min-width: 220px;
-  display: grid;
+  display: flex;
+  justify-content: space-evenly;
   justify-items: center;
   align-items: center;
   margin: 15px auto 70px;
-  grid-column-gap: 15px;
-  grid-template-columns: repeat(4, auto);
-  /* & > div:last-child {
-    grid-column: 2 / 3;
-  } */
+  flex-wrap: wrap;
 
   //////////////////////////////////////////////////
   @media screen and (max-width: 736px) {
+    display: grid;
     width: 70%;
     max-width: 300px;
     grid-template-columns: repeat(2, auto);
     grid-column-gap: 20px;
     grid-row-gap: 0px;
-    /* & > div:last-child {
+    & > div:last-child {
       grid-column: 1 / 3;
-    } */
+    }
   }
 }
 </style>
