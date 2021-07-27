@@ -1,6 +1,6 @@
 <template>
   <section>
-    <SectionName title="MEDIA PARTNER & PARTER" bgRight style="margin-bottom: 0;" />
+    <SectionName title="MEDIA PARTNER & PARTNER" bgRight style="margin-bottom: 0;" />
     <div class="media-partner-wrapper">
       <SponsorCircle
         v-for="(partner, index) in media_partners"
