@@ -6,8 +6,7 @@
         Young Webmaster Camp ครั้งที่ 18
       </h2>
       <h3>
-        วันที่ 1 - 4 เมษายน 2564<br />
-        ณ SCB Academy ธนาคารไทยพาณิชย์ สำนักงานใหญ่
+        วันที่ 12 - 15 สิงหาคม 2564
       </h3>
       <AgendaTable
         v-for="{ name, items } in AGENDA"
@@ -41,13 +40,13 @@ export default {
           hid: 'og:description',
           name: 'og:description',
           content:
-            'กำหนดการโครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 18 วันที่ 24 - 27 ธันวาคม 2563 ณ SCB Academy ธนาคารไทยพาณิชย์ สำนักงานใหญ่',
+            'กำหนดการโครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 18 วันที่ 12 - 15 สิงหาคม 2564',
         },
         {
           hid: 'description',
           name: 'description',
           content:
-            'กำหนดการโครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 18 วันที่ 24 - 27 ธันวาคม 2563 ณ SCB Academy ธนาคารไทยพาณิชย์ สำนักงานใหญ่',
+            'กำหนดการโครงการอบรมเชิงปฏิบัติการ Young Webmaster Camp ครั้งที่ 18 วันที่ 12 - 15 สิงหาคม 2564',
         },
       ],
     }
