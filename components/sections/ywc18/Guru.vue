@@ -555,7 +555,7 @@ export default {
         {
           img: 24,
           name: 'ภูมิปรินทร์ มะโน',
-          role: `Developer Advocate - BRIKL`,
+          role: `Head of Platform - BRIKL`,
           majors: ['programming'],
           order: 24,
         },
