@@ -407,7 +407,7 @@ export const AGENDA = [
       {
         time: '10:30 - 10.40 น.',
         events: [
-          `พักเบรค`,
+          `พักเบรก`,
         ],
       },
       {
@@ -442,7 +442,11 @@ export const AGENDA = [
       {
         time: '14:00 - 15:00 น.',
         events: [
-          `บรรยายสาขา Web Content หัวข้อ “เทคนิคการเล่าเรื่องให้คนจำจนวันตาย”<br>โดย <b>คุณอภิศิลป์ ตรุงกานนท์</b>`,
+          `บรรยายสาขา Web Content หัวข้อ “เทคนิคการเล่าเรื่องให้คนจำจนวันตาย”<br>โดย <b>คุณอภิศิลป์ ตรุงกานนท์</b>`],
+      },
+      {
+        time: '14:00 - 15:30 น.',
+        events: [
           `บรรยายสาขา Web Design หัวข้อ “User Experience Design”<br>โดย <b>คุณสุธัม ธรรมวงศ์</b>`,
           `บรรยายสาขา Web Marketing หัวข้อ “Online Marketing Platform Analysis”<br>โดย <b>ดร.ธีรศานต์ สหัสสพาศน์</b>`,
           `บรรยายสาขา Web Programming หัวข้อ “การสร้างผลงานแบบ Minimum Viable Product และ Task Management for Developer”<br>โดย <b>คุณปัญจมพงศ์ เสริมสวัสดิ์ศรี</b>`,
@@ -450,7 +454,11 @@ export const AGENDA = [
       },
       {
         time: '15:00 - 15:15 น.',
-        events: [`พักเบรก`],
+        events: [`พักเบรก Web Content`],
+      },
+      {
+        time: '15:30 - 15:45 น.',
+        events: [`พักเบรก Web Design, Web Marketing, Web Programming`],
       },
       { time: '', events: [`การบรรยายสาขา ช่วงที่ 2`] },
       {
@@ -458,6 +466,11 @@ export const AGENDA = [
         events: [
           `บรรยายสาขา Web Content หัวข้อ “Creating Impact with Content & Digital Content Technique และ Valuable Creative Content” <br>
       โดย <b>คุณขจร เจียรนัยพานิชย์</b> และ <b>คุณจักรพงษ์ คงมาลัย</b>`,
+        ],
+      },
+      {
+        time: '15:45 - 17:15 น.',
+        events: [
           `บรรยายสาขา Web Design หัวข้อ “User Interface Design”<br>โดย <b>คุณอินทนนท์ ปัญญาโสภา</b>`,
           `บรรยายสาขา Web Marketing หัวข้อ “How to make conversion from customer” <br>โดย <b>คุณสุธีรพันธุ์ สักรวัตร</b>`,
           `บรรยายสาขา Web Programming หัวข้อ “Web Optimizations” <br>โดย <b>คุณวรัทธน์ วงศ์มณีกิจ</b>`,
