@@ -3,16 +3,20 @@
     <section class="container">
       <SectionTitle title="ถ่ายทอดสด" />
       <InfoContainer>
+        <!-- <div class="live-detail">
+          <p><b>Session :</b> Todo add session title</p>
+        </div> -->
         <div class="facebook-responsive">
-        <iframe
-          src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fywcth%2Fvideos%2F2872655839451667%2F&show_text=false&t=0"
-          width="560" height="315"
-          style="border: none; overflow: hidden"
-          scrolling="no"
-          frameborder="0"
-          allowfullscreen="true"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        ></iframe>
+          <iframe
+            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fywcth%2Fvideos%2F2872655839451667%2F&show_text=false&t=0"
+            width="560"
+            height="315"
+            style="border: none; overflow: hidden"
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          ></iframe>
         </div>
       </InfoContainer>
       <Footer />
@@ -47,18 +51,25 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .facebook-responsive {
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
 }
 .facebook-responsive iframe {
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.live-detail {
+  p {
+    font-family: CmPrasanmit, system-ui, -apple-system, sans-sreif;
+    font-size: 24px;
+    font-weight: 600;
+  }
 }
 </style>
