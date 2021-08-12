@@ -11,7 +11,8 @@
         alt="Theme Logo"
         class="theme-logo"
       />
-      <Button v-if="false" to="/agenda">กำหนดการโครงการ</Button>
+      <!-- <Button to="/agenda">กำหนดการโครงการ</Button> -->
+      <Button to="/live">ถ่ายทอดสด</Button>
       <SponsorBox />
     </div>
   </section>
