@@ -607,46 +607,46 @@ export const BLOGS = [
     url:
       'https://www.facebook.com/sirinda.limsong/posts/5895312377206582',
   },
-  {
-    title: '#YWC16 : 4 วัน 3 คืนกับค่ายที่เป็นมากกว่าค่าย',
-    cover: '/images/ywc18/blog/cover/01.jpeg',
-    avatar: '/images/ywc18/blog/avatar/01.jpeg',
-    name: 'Chonrada Kongmuang',
-    url:
-      'https://medium.com/@chnrd.k/ywc16-4-%E0%B8%A7%E0%B8%B1%E0%B8%99-3-%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%81%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2-62320272dfc8',
-  },
-  {
-    title: 'YWC ก็เหมือนเซ็กส์ (บันทึกชีวิตในค่าย + ระบายจากใจฝั่งคอนเทนต์)',
-    cover: '/images/ywc18/blog/cover/02.jpeg',
-    avatar: '/images/ywc18/blog/avatar/02.jpeg',
-    name: 'Pattranit Kongsaenkam',
-    url:
-      'https://medium.com/@pattranitkongsaenkam/ywc-%E0%B8%81%E0%B9%87%E0%B9%80%E0%B8%AB%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%81%E0%B8%AA%E0%B9%8C-%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B9%83%E0%B8%99%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2-%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B9%83%E0%B8%88%E0%B8%9D%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%99%E0%B8%95%E0%B9%8C-ffe01af1b978',
-  },
-  {
-    title:
-      'รีวิวค่าย YWC: ทำไมค่ายแค่ 4 วัน ถึงส่งยังคงส่งผลกับชีวิตเรามามากกว่า 4 ปี',
-    cover: '/images/ywc18/blog/cover/03.jpg',
-    avatar: '/images/ywc18/blog/avatar/03.jpg',
-    name: 'ORN SMITH',
-    url: 'https://ornsmith.com/post-ywc-review/',
-  },
-  {
-    title: 'ค่ายบ้าอะไร แทบไม่ได้นอน YWC#14',
-    cover: '/images/ywc18/blog/cover/04.jpg',
-    avatar: '/images/ywc18/blog/avatar/04.jpeg',
-    name: "P'Benz YWC14",
-    url:
-      'https://microbenz.in.th/%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-%E0%B9%81%E0%B8%97%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%99%E0%B8%AD%E0%B8%99-ywc14-b9471330ed54',
-  },
-  {
-    title: 'ประสบการณ์เข้าค่าย #YWC16',
-    cover: '/images/ywc18/blog/cover/05.jpeg',
-    avatar: '/images/ywc18/blog/avatar/05.jpeg',
-    name: 'Janjie Khemanij',
-    url:
-      'https://medium.com/@jankhemanij/%E0%B8%9A%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%9A%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2-ywc16-1a397bcf5044',
-  },
+  // {
+  //   title: '#YWC16 : 4 วัน 3 คืนกับค่ายที่เป็นมากกว่าค่าย',
+  //   cover: '/images/ywc18/blog/cover/01.jpeg',
+  //   avatar: '/images/ywc18/blog/avatar/01.jpeg',
+  //   name: 'Chonrada Kongmuang',
+  //   url:
+  //     'https://medium.com/@chnrd.k/ywc16-4-%E0%B8%A7%E0%B8%B1%E0%B8%99-3-%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%81%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2-62320272dfc8',
+  // },
+  // {
+  //   title: 'YWC ก็เหมือนเซ็กส์ (บันทึกชีวิตในค่าย + ระบายจากใจฝั่งคอนเทนต์)',
+  //   cover: '/images/ywc18/blog/cover/02.jpeg',
+  //   avatar: '/images/ywc18/blog/avatar/02.jpeg',
+  //   name: 'Pattranit Kongsaenkam',
+  //   url:
+  //     'https://medium.com/@pattranitkongsaenkam/ywc-%E0%B8%81%E0%B9%87%E0%B9%80%E0%B8%AB%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%81%E0%B8%AA%E0%B9%8C-%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B9%83%E0%B8%99%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2-%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B9%83%E0%B8%88%E0%B8%9D%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%99%E0%B8%95%E0%B9%8C-ffe01af1b978',
+  // },
+  // {
+  //   title:
+  //     'รีวิวค่าย YWC: ทำไมค่ายแค่ 4 วัน ถึงส่งยังคงส่งผลกับชีวิตเรามามากกว่า 4 ปี',
+  //   cover: '/images/ywc18/blog/cover/03.jpg',
+  //   avatar: '/images/ywc18/blog/avatar/03.jpg',
+  //   name: 'ORN SMITH',
+  //   url: 'https://ornsmith.com/post-ywc-review/',
+  // },
+  // {
+  //   title: 'ค่ายบ้าอะไร แทบไม่ได้นอน YWC#14',
+  //   cover: '/images/ywc18/blog/cover/04.jpg',
+  //   avatar: '/images/ywc18/blog/avatar/04.jpeg',
+  //   name: "P'Benz YWC14",
+  //   url:
+  //     'https://microbenz.in.th/%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-%E0%B9%81%E0%B8%97%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%99%E0%B8%AD%E0%B8%99-ywc14-b9471330ed54',
+  // },
+  // {
+  //   title: 'ประสบการณ์เข้าค่าย #YWC16',
+  //   cover: '/images/ywc18/blog/cover/05.jpeg',
+  //   avatar: '/images/ywc18/blog/avatar/05.jpeg',
+  //   name: 'Janjie Khemanij',
+  //   url:
+  //     'https://medium.com/@jankhemanij/%E0%B8%9A%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%9A%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2-ywc16-1a397bcf5044',
+  // },
 ]
 
 export const OPEN_REGISTRATION = '2020-09-14T11:00:00.000Z' // 14/09/2020 18.00
