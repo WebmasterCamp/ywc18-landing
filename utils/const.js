@@ -600,7 +600,7 @@ export const BLOGS = [
       'https://www.facebook.com/napat.busaba/posts/6400787806605679',
   },
   {
-    title: 'รีวิวครั้งหนึ่งในชีวิตกับค่าย Young Webmaster Camp ค่ายบ้าอะไรแทบไม่ได้นอน!!!',
+    title: 'ครั้งหนึ่งในชีวิตกับค่าย Young Webmaster Camp ค่ายบ้าอะไรแทบไม่ได้นอน!!!',
     cover: '/images/ywc18/blog/cover/11.jpeg',
     avatar: '/images/ywc18/blog/avatar/11.jpeg',
     name: 'Sirinda Limsong',
