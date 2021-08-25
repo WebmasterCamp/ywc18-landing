@@ -560,6 +560,54 @@ export const AGENDA = [
 
 export const BLOGS = [
   {
+    title: 'รีวิวค่าย YWC18',
+    cover: '/images/ywc18/blog/cover/06.jpeg',
+    avatar: '/images/ywc18/blog/avatar/06.jpeg',
+    name: 'Jirunthanin Pimapidisaya',
+    url:
+      'https://www.facebook.com/permalink.php?story_fbid=1233639703734767&id=100012662464770',
+  },
+  {
+    title: 'จบค่าย #YWC18 กับ 2 รางวัล Outstanding & Best Teamwork',
+    cover: '/images/ywc18/blog/cover/07.jpeg',
+    avatar: '/images/ywc18/blog/avatar/07.jpeg',
+    name: 'Amonpan Lertbanapan',
+    url:
+      'https://www.facebook.com/surubamark/posts/3057134764522587',
+  },
+  {
+    title: 'รีวิวประสบการณ์ค่าย Young web master camp ครั้ง ที่ 18 ฉบับเด็กเอ๋อสมัครครั้งแรก',
+    cover: '/images/ywc18/blog/cover/08.jpeg',
+    avatar: '/images/ywc18/blog/avatar/08.jpeg',
+    name: 'Theeraphan Sutthiprapha',
+    url:
+      'https://www.facebook.com/biw.teerapan/posts/1941221752711406',
+  },
+  {
+    title: 'รีวิวค่าย YWC - Young Webmaster Camp ครั้งที่ 18 "ค่ายสร้างเว็บที่ได้อะไรมากกว่าแค่สร้างเว็บ"',
+    cover: '/images/ywc18/blog/cover/09.jpeg',
+    avatar: '/images/ywc18/blog/avatar/09.jpeg',
+    name: 'Chachrist Thongsumrit',
+    url:
+      'https://www.facebook.com/imswiftie1989/posts/4298155463595004',
+  },
+  {
+    title: 'รีวิว #YWC18',
+    cover: '/images/ywc18/blog/cover/10.jpeg',
+    avatar: '/images/ywc18/blog/avatar/10.jpeg',
+    name: 'Naphat Butsaba',
+    url:
+      'https://www.facebook.com/napat.busaba/posts/6400787806605679',
+  },
+  {
+    title: 'รีวิวครั้งหนึ่งในชีวิตกับค่าย Young Webmaster Camp ค่ายบ้าอะไรแทบไม่ได้นอน!!!',
+    cover: '/images/ywc18/blog/cover/11.jpeg',
+    avatar: '/images/ywc18/blog/avatar/11.jpeg',
+    name: 'Sirinda Limsong',
+    url:
+      'https://www.facebook.com/sirinda.limsong/posts/5895312377206582',
+  },
+  {
     title: '#YWC16 : 4 วัน 3 คืนกับค่ายที่เป็นมากกว่าค่าย',
     cover: '/images/ywc18/blog/cover/01.jpeg',
     avatar: '/images/ywc18/blog/avatar/01.jpeg',

@@ -12,7 +12,7 @@
         class="theme-logo"
       />
       <!-- <Button to="/agenda">กำหนดการโครงการ</Button> -->
-      <Button to="/live">ถ่ายทอดสด</Button>
+      <!-- <Button to="/live">ถ่ายทอดสด</Button> -->
       <SponsorBox />
     </div>
   </section>
@@ -20,14 +20,13 @@
 
 <script>
 import Picture from '~/components/Picture.vue'
-import Button from '~/components/ywc18/Button.vue'
+// import Button from '~/components/ywc18/Button.vue'
 import { OPEN_REGISTRATION } from '~/utils/const'
 import SponsorBox from '~/components/SponsorBox.vue'
 export default {
   components: {
     Picture,
     SponsorBox,
-    Button,
   },
   data: () => ({ isRegOpen: false }),
   mounted() {

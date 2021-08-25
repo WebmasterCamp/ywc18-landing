@@ -108,7 +108,6 @@ export default {
         '/images/gallery/ywc18/11.jpg',
         '/images/gallery/ywc18/12.jpg',
         '/images/gallery/ywc18/13.jpg',
-        '/images/gallery/ywc18/14.jpg',
       ],
     }
   },
